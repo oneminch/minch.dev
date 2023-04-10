@@ -1,6 +1,6 @@
 # Portfolio V3
 
-This is the third iteration of my personal portfolio site.
+This is the current & third iteration of my personal portfolio site.
 
 ## What's New
 
