@@ -4,7 +4,7 @@ import yaml from "js-yaml";
 
 const config = useRuntimeConfig();
 
-const accessToken = config.apiKey;
+const accessToken = config.githubApiKey;
 const owner = "oneminch";
 const repo = "garden";
 const path = "/Posts/Published"; // specify the folder path here

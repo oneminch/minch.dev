@@ -24,10 +24,10 @@
 <script setup>
   const navLinks = {
     Home: "",
-    About: "about",
     Articles: "articles",
     Projects: "projects",
-    Resume: "resume"
+    Resume: "resume",
+    Picks: "picks"
   };
 </script>
 
