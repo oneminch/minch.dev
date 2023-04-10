@@ -9,7 +9,7 @@
       <div class="w-full">
         <!-- Article Header Image -->
         <img
-          src="/social-image.jpg"
+          src="/cover.jpg"
           alt="Profile Picture"
           class="w-full h-24 md:h-32 rounded-lg object-cover"
         />
