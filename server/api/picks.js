@@ -2,16 +2,16 @@ import axios from "axios";
 
 const config = useRuntimeConfig();
 
-const { raindropTestApiKey } = config;
+const { raindropTestToken, raindropCollectionId } = config;
 
 const axiosConfig = {
   headers: {
     Accept: "application/json",
-    Authorization: `Bearer ${raindropTestApiKey}`
+    Authorization: `Bearer ${raindropTestToken}`
   }
 };
 
-const url = "https://api.raindrop.io/rest/v1/raindrops/32242796";
+const url = `https://api.raindrop.io/rest/v1/raindrops/${raindropCollectionId}`;
 
 export default defineEventHandler(async () => {
   try {

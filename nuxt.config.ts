@@ -20,8 +20,9 @@ export default defineNuxtConfig({
   },
   modules: ["@nuxtjs/tailwindcss", "nuxt-icon", "@vueuse/nuxt"],
   runtimeConfig: {
-    githubApiKey: process.env.GITHUB_TOKEN,
-    raindropTestApiKey: process.env.RAINDROP_TEST_TOKEN
+    githubToken: process.env.GITHUB_TOKEN,
+    raindropTestToken: process.env.RAINDROP_TEST_TOKEN,
+    raindropCollectionId: process.env.RAINDROP_COLLECTION_ID
   }
   // routeRules: {
   //   "/*": { static: true },

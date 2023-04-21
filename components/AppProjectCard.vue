@@ -11,7 +11,7 @@
         class="rounded-lg w-96 h-auto bg-white border border-gray-300 dark:border-gray-600"
       />
       <div
-        class="py-4 px-6 min-h-[12rem] bg-white dark:bg-gray-800 rounded-lg sm:-ml-48 -ml-72 flex flex-col justify-evenly"
+        class="py-4 px-6 min-h-[12rem] sm:-ml-48 -ml-72 flex flex-col justify-evenly relative rounded-lg bg-white dark:bg-gray-800 before:custom-border-gradient before:opacity-75 dark:before:opacity-[.35]"
       >
         <h3 class="font-semibold">Deadlines</h3>
         <p class="mb-4 text-gray-700 dark:text-gray-300">
@@ -32,7 +32,7 @@
 
     <a
       href="https://deadlines.oneminch.dev/"
-      class="flex flex-col py-4 px-6 bg-white dark:bg-gray-800 items-start w-1/2 min-h-44 mt-6"
+      class="flex flex-col py-4 px-6 items-start w-1/2 min-h-44 mt-6 relative rounded-lg bg-white dark:bg-gray-800 before:custom-border-gradient before:opacity-75 dark:before:opacity-[.35]"
     >
       <div class="relative">
         <h3 class="font-bold">Deadlines</h3>
@@ -54,13 +54,13 @@
     </a>
 
     <section
-      class="flex flex-col items-center w-72 rounded-lg overflow-hidden mt-6"
+      class="flex flex-col items-center w-72 mt-6 relative rounded-lg bg-white dark:bg-gray-800 before:custom-border-gradient before:opacity-75 dark:before:opacity-[.35]"
     >
       <img
         src="https://raw.githubusercontent.com/oneminch/deadlines/main/src/assets/screenshot.jpg"
-        class="w-full h-44 bg-gray-100 object-cover"
+        class="w-full h-44 rounded-t-lg bg-gray-100 object-cover"
       />
-      <div class="py-4 px-6 min-36 bg-white dark:bg-gray-900">
+      <div class="py-4 px-6 min-36">
         <h3 class="font-bold">Deadlines</h3>
         <p class="mb-4">
           Deadlines is a simple, offline deadline tracker made with Vue.js and
@@ -91,11 +91,11 @@
 
   a:nth-of-type(2),
   #test > div {
-    @apply relative rounded-lg;
+    /* @apply relative rounded-lg bg-white dark:bg-gray-800; */
   }
 
   a:nth-of-type(2):before,
   #test > div:before {
-    @apply content-[""] absolute inset-0 z-[-1] m-[-1px] dark:m-[-1px] rounded-lg bg-gradient-to-b from-[#51cf66] to-[#c0eb75];
+    /* @apply before:custom-border-gradient before:opacity-75 dark:before:opacity-[.35]; */
   }
 </style>

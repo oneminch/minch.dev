@@ -1,9 +1,9 @@
 <template>
   <main class="mx-1 w-full">
-    <h1 class="font-bold text-2xl mb-4">Picks</h1>
+    <h1 class="font-bold text-2xl mb-6">Picks</h1>
     <template v-for="(pick, index) in picks" :key="index">
       <a
-        class="w-full flex justify-start items-center border-2 border-gray-300 dark:border-gray-600 px-4 py-2 mb-2 rounded-md"
+        class="w-full flex justify-start items-center px-4 py-2 mb-4 rounded-md before:custom-border-gradient before:opacity-50 dark:before:opacity-[.35]"
         :href="pick.link"
       >
         <img
@@ -29,3 +29,9 @@
   // console.log(picks);
   // console.log(JSON.parse(JSON.stringify(data.value)));
 </script>
+
+<style scoped>
+  a {
+    @apply bg-white dark:bg-gray-800 relative rounded-lg;
+  }
+</style>

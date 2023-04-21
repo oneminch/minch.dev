@@ -4,7 +4,7 @@ import yaml from "js-yaml";
 
 const config = useRuntimeConfig();
 
-const accessToken = config.githubApiKey;
+const { githubToken } = config;
 const owner = "oneminch";
 const repo = "garden";
 const path = "/Posts/Published"; // specify the folder path here
@@ -13,7 +13,7 @@ const apiUrl = `https://api.github.com/repos/${owner}/${repo}/contents${path}`;
 const axiosConfig = {
   headers: {
     Accept: "application/json",
-    Authorization: `token ${accessToken}`
+    Authorization: `token ${githubToken}`
   }
 };
 
@@ -50,7 +50,7 @@ const query = `
   }
 `;
 
-const postsMetadata = {};
+const posts = {};
 
 export default defineEventHandler(async () => {
   const response = await axios.post(
@@ -89,8 +89,8 @@ export default defineEventHandler(async () => {
   //     ? yaml.load(ast.attributes.frontmatter)
   //     : {};
 
-  //   postsMetadata[post.title] = frontmatter;
+  //   posts[post.title] = frontmatter;
   // });
 
-  // return postsMetadata;
+  // return posts;
 });
