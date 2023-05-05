@@ -18,41 +18,34 @@
     <!-- Article Title -->
     <h3 class="font-bold text-gray-50 mt-auto">{{ articleTitle }}</h3>
     <!-- Publish Date -->
-    <p class="text-sm text-gray-400">{{ readTime }} &bull; {{ pubDate }}</p>
+    <p class="text-xs text-gray-400">
+      <!-- {{ readTime }} &bull; -->
+      {{ lastUpdateTime }}
+    </p>
   </a>
 </template>
 
 <script setup>
-  defineProps({
-    desc: {
-      default: "",
-      type: String
-    },
-    articleTitle: {
-      default: "",
-      type: String
-    },
-    url: {
-      default: "#",
-      type: String
-    },
-    imageUrl: {
-      default: "",
-      type: String
-    },
-    tags: {
-      default() {
-        return [];
-      },
-      type: Array
-    },
-    readTime: {
-      default: "",
-      type: String
-    },
-    pubDate: {
-      default: "",
-      type: String
-    }
+  const props = defineProps({
+    desc: String,
+    articleTitle: String,
+    url: String,
+    title: String,
+    tags: Array,
+    readTime: String,
+    pubDate: Number
+  });
+
+  const imageUrl = `https://github.com/oneminch/garden/raw/main/Assets/Images/posts.${props.title.toLowerCase()}.header.png`;
+
+  const lastUpdateTime = computed(() => {
+    const dateObj = new Date(props.pubDate);
+    // return `${} ${}, ${}`
+
+    return dateObj.toLocaleDateString("en-US", {
+      year: "numeric",
+      month: "short",
+      day: "numeric"
+    });
   });
 </script>

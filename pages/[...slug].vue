@@ -6,7 +6,9 @@
 
 <template>
   <section class="w-full">
-    <article class="w-full prose lg:prose-lg prose-slate mx-auto text-gray-800">
+    <article
+      class="w-full prose lg:prose-lg prose-slate mx-auto text-gray-800 dark:text-gray-100"
+    >
       <ContentDoc v-slot="{ doc }">
         <h1>{{ doc.title }}</h1>
         <ContentRenderer :value="doc" />

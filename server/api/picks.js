@@ -21,9 +21,9 @@ export default defineEventHandler(async () => {
       return {
         cover: item.cover || "https://fakeimg.pl/100",
         title: item.title,
-        link: item.link,
-        date: item.created
+        link: item.link
       };
+      // date: item.created
     });
 
     return picks;

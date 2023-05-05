@@ -18,11 +18,28 @@ export default defineNuxtConfig({
     },
     pageTransition: { name: "slide", mode: "out-in" }
   },
-  modules: ["@nuxtjs/tailwindcss", "nuxt-icon", "@vueuse/nuxt"],
+  modules: [
+    "@nuxtjs/tailwindcss",
+    "nuxt-icon",
+    "@vueuse/nuxt",
+    "@nuxt/content"
+  ],
   runtimeConfig: {
     githubToken: process.env.GITHUB_TOKEN,
     raindropTestToken: process.env.RAINDROP_TEST_TOKEN,
     raindropCollectionId: process.env.RAINDROP_COLLECTION_ID
+  },
+  content: {
+    sources: {
+      github: {
+        prefix: "/articles",
+        driver: "github",
+        repo: "oneminch/garden",
+        branch: "main",
+        dir: "Posts/Published",
+        token: process.env.GITHUB_TOKEN
+      }
+    }
   }
   // routeRules: {
   //   "/*": { static: true },
