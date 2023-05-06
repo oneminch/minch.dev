@@ -20,6 +20,7 @@
 <script setup>
   definePageMeta({
     // colorMode: "dark"
+    // middleware: ["routeChange"]
   });
 </script>
 

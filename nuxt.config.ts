@@ -40,9 +40,9 @@ export default defineNuxtConfig({
         token: process.env.GITHUB_TOKEN
       }
     }
+  },
+  routeRules: {
+    // "/*": { static: true }
+    // "/articles": { ssr: false }
   }
-  // routeRules: {
-  //   "/*": { static: true },
-  //   "/articles": { ssr: false }
-  // }
 });

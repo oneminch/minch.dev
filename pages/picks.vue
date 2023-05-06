@@ -21,13 +21,6 @@
 
 <script setup>
   const { data: picks } = reactive(await useFetch("/api/picks"));
-
-  // const picks = ref([]);
-  // watch(data, (newData) => {
-  //   data = newData;
-  // });
-  // console.log(picks);
-  // console.log(JSON.parse(JSON.stringify(data.value)));
 </script>
 
 <style scoped>

@@ -6,12 +6,7 @@
   <NuxtPage />
 </template>
 
-<!-- <script
-  async
-  defer
-  data-website-id="d1c29b81-2b65-4740-89f9-e6bf2967fd19"
-  src="https://measure.oneminch.dev/minch-measure.js"
-></script> -->
+<script setup></script>
 
 <style>
   @tailwind utilities;
