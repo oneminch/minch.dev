@@ -1,6 +1,6 @@
 <!-- Article: Card -->
 <template>
-  <a
+  <NuxtLink
     id="article-card"
     :style="{
       backgroundImage: `linear-gradient(to bottom, rgba(17, 24, 39, 0.5), rgba(17, 24, 39, 0.5)), linear-gradient(to bottom, transparent, rgb(17, 24, 39)), url(${imageUrl})`,
@@ -28,7 +28,7 @@
       <!-- {{ readTime }} &bull; -->
       {{ lastUpdateTime }}
     </p>
-  </a>
+  </NuxtLink>
 </template>
 
 <script setup>

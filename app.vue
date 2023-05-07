@@ -35,15 +35,19 @@
   }
 
   body {
-    @apply m-0 p-0 w-full h-full bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-100;
+    @apply m-0 p-0 w-full sm:h-screen bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-100;
+    /* overflow: hidden; */
   }
 
   #app {
-    @apply w-full flex items-start flex-col sm:flex-row px-4 py-6 h-screen max-w-7xl mx-auto relative;
+    @apply w-full h-full flex items-start flex-col sm:flex-row px-4 py-6 max-w-7xl mx-auto overflow-y-auto;
+    /* overflow-x-hidden; */
   }
 
   main {
-    @apply w-full rounded-lg px-4 sm:px-10 py-4 mb-8 bg-gray-50 dark:bg-gray-800 font-normal z-0;
+    @apply w-full rounded-lg px-4 sm:px-10 py-4 mb-8 bg-gray-50 dark:bg-gray-800 font-normal z-0  overflow-x-hidden;
+    /* @apply w-full sm:w-3/4 ml-auto max-w-[calc(100%-17rem)] md:max-w-[calc(100%-21rem)]; */
+    /* overflow: hidden; */
   }
 
   main.wip {

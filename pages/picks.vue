@@ -1,5 +1,5 @@
 <template>
-  <main class="mx-1 w-full">
+  <main class="">
     <h1 class="font-bold text-2xl mb-6">Picks</h1>
     <template v-for="(pick, index) in picks" :key="index">
       <a
