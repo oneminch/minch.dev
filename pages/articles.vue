@@ -22,4 +22,6 @@
 
 <script setup>
   const articles = await queryContent("articles").find();
+
+  // console.log(articles);
 </script>
