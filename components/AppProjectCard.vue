@@ -1,8 +1,8 @@
 <!-- Project: Card -->
 <template>
   <div>
-    <a
-      href="https://deadlines.oneminch.dev/"
+    <NuxtLink
+      to="https://deadlines.oneminch.dev/"
       id="test"
       class="flex items-center w-full"
     >
@@ -28,10 +28,10 @@
           </span>
         </div>
       </div>
-    </a>
+    </NuxtLink>
 
-    <a
-      href="https://deadlines.oneminch.dev/"
+    <NuxtLink
+      to="https://deadlines.oneminch.dev/"
       class="flex flex-col py-4 px-6 items-start w-1/2 min-h-44 mt-6 relative rounded-lg bg-white dark:bg-gray-800 before:custom-border-gradient before:opacity-75 dark:before:opacity-[.35]"
     >
       <div class="relative">
@@ -51,7 +51,7 @@
           class="mr-2 rounded-full"
         />
       </div>
-    </a>
+    </NuxtLink>
 
     <section
       class="flex flex-col items-center w-72 mt-6 relative rounded-lg bg-white dark:bg-gray-800 before:custom-border-gradient before:opacity-75 dark:before:opacity-[.35]"

@@ -5,23 +5,21 @@
       class="flex items-center text-sm font-medium text-gray-500 dark:text-gray-400"
     >
       Built with
-      <a
+      <NuxtLink
         class="icon-link focused-link"
-        href="https://nuxt.com/"
-        rel="noopener noreferrer"
-        title="Nuxt"
+        to="https://nuxt.com/"
+        title="NuxtJS"
       >
         <Icon name="logos:nuxt-icon" size="1.25rem" />
-      </a>
+      </NuxtLink>
       +
-      <a
+      <NuxtLink
         class="icon-link focused-link"
-        href="https://tailwindcss.com/"
+        to="https://tailwindcss.com/"
         title="Tailwind CSS"
-        rel="noopener noreferrer"
       >
         <Icon name="logos:tailwindcss-icon" />
-      </a>
+      </NuxtLink>
     </p>
   </footer>
 </template>

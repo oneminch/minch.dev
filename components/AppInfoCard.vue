@@ -15,17 +15,16 @@
     <div
       class="w-full h-8 flex items-center justify-center text-gray-900 dark:text-gray-200"
     >
-      <a
+      <NuxtLink
         v-for="(profile, key) in profiles"
         :key="profile"
         class="focused-link icon-link"
-        :href="profile"
+        :to="profile"
         :title="key"
         target="_blank"
-        rel="noopener noreferrer"
       >
         <Icon :name="`simple-icons:${key.toLowerCase()}`" />
-      </a>
+      </NuxtLink>
     </div>
     <button
       class="focused-link w-6 h-6 md:w-8 md:h-8 flex items-center justify-center rounded-full bg-gray-700 text-gray-100 dark:bg-gray-300 dark:text-gray-900 p-0 mx-0 absolute top-3 right-3"

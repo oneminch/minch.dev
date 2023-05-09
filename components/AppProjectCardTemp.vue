@@ -1,6 +1,6 @@
 <template>
-  <a
-    href="https://deadlines.oneminch.dev/"
+  <NuxtLink
+    to="https://deadlines.oneminch.dev/"
     class="flex flex-col py-4 px-6 mb-4 items-start w-full min-h-44 relative rounded-lg bg-white dark:bg-gray-800 before:custom-border-gradient before:opacity-75 dark:before:opacity-[.35]"
   >
     <div class="relative">
@@ -20,5 +20,5 @@
         class="mr-2 rounded-full"
       />
     </div>
-  </a>
+  </NuxtLink>
 </template>

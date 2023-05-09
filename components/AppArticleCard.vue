@@ -8,7 +8,7 @@
       transition: 'transform 200ms linear'
     }"
     class="w-full h-48 relative border border-gray-300 dark:border-gray-700 bg-cover bg-center rounded-lg overflow-hidden p-4 flex flex-col justify-between last:[&>*]:mb-0 [&>*]:mb-2 mb-5 bg-no-repeat"
-    :href="url"
+    :to="url"
     ref="articleCard"
   >
     <!-- hover:-translate-y-1 transition-all duration-200 -->

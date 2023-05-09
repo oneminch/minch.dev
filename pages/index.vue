@@ -68,6 +68,18 @@
     // middleware: ["routeChange"]
   });
 
+  useHead({
+    script: [
+      {
+        type: "text/partytown",
+        src: "https://measure.oneminch.dev/minch-measure.js",
+        defer: true,
+        async: true,
+        "data-website-id": "d1c29b81-2b65-4740-89f9-e6bf2967fd19"
+      }
+    ]
+  });
+
   const skills = ref([
     "Python",
     "JavaScript",

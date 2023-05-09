@@ -30,9 +30,8 @@
     <div
       id="article-card"
       class="w-full mb-5 flex flex-col items-start overflow-hidden hover:-translate-y-1 transition-all duration-200 first-of-type:[column-span:all] [&>a>div_img]:first-of-type:h-32 md:[&>a>div_img]:first-of-type:h-52 relative"
-      :href="url"
     >
-      <a :href="url" class="w-full">
+      <NuxtLink :to="url" class="w-full">
         <div class="w-full">
           <!-- Article Header Image -->
           <img
@@ -60,7 +59,7 @@
           {{ desc }}
         </p> -->
         </div>
-      </a>
+      </NuxtLink>
       <button
         v-if="isSupported"
         @click="
