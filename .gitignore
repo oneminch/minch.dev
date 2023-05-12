@@ -9,3 +9,5 @@ dist
 .DS_Store
 *.code-workspace
 about.txt
+
+vercel.json

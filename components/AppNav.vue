@@ -33,6 +33,8 @@
 </template>
 
 <script setup>
+  import { useToggle } from "@vueuse/nuxt";
+
   const menuToggled = ref(false);
   const toggleMenu = useToggle(menuToggled);
 
