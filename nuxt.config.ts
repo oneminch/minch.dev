@@ -22,9 +22,9 @@ export default defineNuxtConfig({
     "@nuxtjs/tailwindcss",
     "nuxt-icon",
     "@vueuse/nuxt",
-    "@nuxt/content",
-    "@nuxtjs/partytown"
+    "@nuxt/content"
   ],
+  // "@nuxtjs/partytown"
   runtimeConfig: {
     githubToken: process.env.GITHUB_TOKEN,
     raindropTestToken: process.env.RAINDROP_TEST_TOKEN,
