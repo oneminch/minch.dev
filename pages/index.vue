@@ -5,12 +5,12 @@
     <!-- <img src="/cover-img.png" alt="" class="w-full rounded-lg object-cover" /> -->
 
     <!-- Information Banner -->
-    <div
-      class="py-2 font-bold rounded-md bg-lime-100 text-gray-700 text-sm text-center"
+    <!-- <div
+      class="py-2 font-bold rounded-md bg-lime-100 text-slate-700 text-sm text-center"
     >
       Actively looking for job opportunities.
       <NuxtLink to="/contact">Contact me</NuxtLink>
-    </div>
+    </div> -->
     <!-- Introduction -->
     <section>
       <h1 class="font-semibold text-2xl mb-6">Hi, my name is Dawit.</h1>
@@ -45,7 +45,7 @@
       <span
         v-for="skill in skills"
         :key="skill"
-        class="px-3 py-1 inline-block bg-lime-500 font-semibold rounded-full text-gray-800 text-sm mr-1 mb-1"
+        class="px-3 py-1 inline-block bg-lime-500 font-semibold rounded-full text-slate-800 text-sm mr-1 mb-1"
         >{{ skill }}</span
       >
     </section>
@@ -72,10 +72,9 @@
     script: [
       {
         type: "text/partytown",
-        src: "https://measure.oneminch.dev/minch-measure.js",
-        defer: true,
+        src: "https://measure.oneminch.dev/minch-measure",
         async: true,
-        "data-website-id": "d1c29b81-2b65-4740-89f9-e6bf2967fd19"
+        "data-website-id": "1e0e9daa-a25b-4943-af4e-68c91b2d3c72"
       }
     ]
   });

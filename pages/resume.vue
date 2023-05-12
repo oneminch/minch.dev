@@ -17,20 +17,22 @@
 
     <!-- Experience timeline -->
     <h3 class="font-bold text-2xl my-6">Experience</h3>
-    <section class="border-l-2 border-gray-300 dark:border-gray-600 my-4 w-5/6">
+    <section
+      class="border-l-2 border-slate-300 dark:border-slate-600 my-4 w-5/6"
+    >
       <div
         v-for="(experience, expIndex) in experiences"
         :key="expIndex"
         class="timeline-item"
       >
-        <h3 class="font-bold text-gray-700 dark:text-gray-200">
+        <h3 class="font-bold text-slate-700 dark:text-slate-200">
           {{ experience.role }}
           <br />
           <span class="text-[#51cf66]">
             {{ experience.company }}
           </span>
           <br />
-          <span class="text-gray-500 dark:text-gray-400">
+          <span class="text-slate-500 dark:text-slate-400">
             ({{ experience.from }} - {{ experience.to }})
           </span>
         </h3>
@@ -50,16 +52,18 @@
 
     <!-- Education Timeline -->
     <h3 class="font-bold text-2xl my-6">Education</h3>
-    <section class="border-l-2 border-gray-300 dark:border-gray-600 my-4 w-5/6">
+    <section
+      class="border-l-2 border-slate-300 dark:border-slate-600 my-4 w-5/6"
+    >
       <div class="timeline-item">
-        <h3 class="font-bold text-gray-700 dark:text-gray-200">
+        <h3 class="font-bold text-slate-700 dark:text-slate-200">
           {{ education.institution }}
           <br />
           <span class="text-[#51cf66]">
             {{ education.degree }} - {{ education.major }}
           </span>
           <br />
-          <span class="text-gray-500 dark:text-gray-400">
+          <span class="text-slate-500 dark:text-slate-400">
             ({{ education.from }} - {{ education.to }})
           </span>
         </h3>
@@ -110,10 +114,10 @@
 
 <style scoped>
   .timeline-item {
-    @apply px-8 py-4 relative text-gray-700 dark:text-gray-300 first:first:before:bg-[#51cf66] dark:first:first:before:bg-[#51cf66];
+    @apply px-8 py-4 relative text-slate-700 dark:text-slate-300 first:first:before:bg-[#51cf66] dark:first:first:before:bg-[#51cf66];
   }
   .timeline-item::before {
-    @apply [content:''] absolute left-0 top-1/2 -translate-y-1/2 translate-x-[calc(-50%-1px)] w-3 h-3 rounded-full inline-block bg-gray-300 dark:bg-gray-600 print:hidden;
+    @apply [content:''] absolute left-0 top-1/2 -translate-y-1/2 translate-x-[calc(-50%-1px)] w-3 h-3 rounded-full inline-block bg-slate-300 dark:bg-slate-600 print:hidden;
   }
   .timeline-item:first-of-type::before {
     /* @apply bg-[#edae49]; */

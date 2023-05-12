@@ -3,7 +3,7 @@
     <!-- Alternative Card (3) -->
     <div
       id="article-card-3"
-      class="w-full h-32 relative bg-cover -z-20 bg-center bg-gray-900 rounded-md overflow-hidden p-4 flex justify-start first:[&>*]:mb-0 [&>*]:mb-2 mb-5"
+      class="w-full h-32 relative bg-cover -z-20 bg-center bg-slate-900 rounded-md overflow-hidden p-4 flex justify-start first:[&>*]:mb-0 [&>*]:mb-2 mb-5"
     >
       <!-- Article Image -->
       <img
@@ -13,13 +13,13 @@
       />
       <div class="flex flex-col">
         <!-- Publish Date -->
-        <p class="text-sm text-gray-400">Oct 21, 2023 &bull; 3 mins</p>
+        <p class="text-sm text-slate-400">Oct 21, 2023 &bull; 3 mins</p>
         <!-- Article Title -->
         <h3 class="font-bold">DNS</h3>
         <!-- Article Tags -->
         <div class="my-1 mt-auto">
           <span
-            class="px-2 py-[.1rem] inline-block rounded-full bg-[#c0eb75] font-semibold font-mono text-gray-800 text-xs mr-1"
+            class="px-2 py-[.1rem] inline-block rounded-full bg-[#c0eb75] font-semibold font-mono text-slate-800 text-xs mr-1"
             v-for="tag in ['TailwindCSS', 'VueJS', 'localForage']"
             :key="tag"
             >{{ tag.toUpperCase() }}
@@ -42,20 +42,20 @@
           <!-- Share Button -->
         </div>
         <div class="py-1 text-left">
-          <p class="text-sm text-gray-600">Oct 21, 2023</p>
+          <p class="text-sm text-slate-600">Oct 21, 2023</p>
           <!-- Article Title -->
           <h3 class="font-bold">{{ articleTitle }}</h3>
           <!-- Article Tags -->
           <div class="my-1">
             <span
-              class="px-2 py-[.1rem] inline-block rounded-full bg-[#c0eb75] font-semibold font-mono text-gray-800 text-xs mr-1"
+              class="px-2 py-[.1rem] inline-block rounded-full bg-[#c0eb75] font-semibold font-mono text-slate-800 text-xs mr-1"
               v-for="tag in tags"
               :key="tag"
               >{{ tag.toUpperCase() }}
             </span>
           </div>
           <!-- Article Excerpt -->
-          <!-- <p class="text-sm text-gray-600">
+          <!-- <p class="text-sm text-slate-600">
           {{ desc }}
         </p> -->
         </div>

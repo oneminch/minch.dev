@@ -2,7 +2,7 @@
 <template>
   <footer class="w-full flex items-center justify-center h-6 bg-transparent">
     <p
-      class="flex items-center text-sm font-medium text-gray-500 dark:text-gray-400"
+      class="flex items-center text-sm font-medium text-slate-500 dark:text-slate-400"
     >
       Built with
       <NuxtLink

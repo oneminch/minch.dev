@@ -1,6 +1,6 @@
 <template>
   <section
-    class="flex flex-col py-4 px-6 items-start w-full min-h-[6rem] relative rounded-lg bg-white dark:bg-gray-800 before:custom-border-gradient before:opacity-75 dark:before:opacity-[.35] mb-4"
+    class="custom-border-gradient flex flex-col py-4 px-6 items-start w-full min-h-[6rem] relative rounded-lg bg-white dark:bg-slate-800 mb-4"
   >
     <h2 class="font-bold text-lg mb-2">
       {{ statusType }}
