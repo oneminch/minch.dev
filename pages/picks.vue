@@ -1,5 +1,5 @@
 <template>
-  <main class="">
+  <main class="picks">
     <h1 class="font-bold text-2xl mb-6">Picks</h1>
     <p>
       <blockquote>
@@ -9,7 +9,7 @@
     <br>
     <template v-for="(pick, index) in picks" :key="index">
       <NuxtLink
-        class="focused-link w-full flex justify-start items-center px-4 py-2 mb-4 border border-slate-300 dark:border-slate-600 dark:bg-slate-700 bg-white relative rounded-md"
+        class="focused-link card-style w-full flex justify-start items-center px-4 py-2 mb-4 relative"
         :to="pick.link"
       >
         <img

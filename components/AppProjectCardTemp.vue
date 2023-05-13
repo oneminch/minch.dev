@@ -1,7 +1,7 @@
 <template>
   <NuxtLink
     to="https://deadlines.oneminch.dev/"
-    class="focused-link custom-border-gradient flex flex-col py-4 px-6 mb-4 items-start w-full min-h-44 relative rounded-lg bg-white dark:bg-slate-800"
+    class="focused-link card-style flex flex-col py-4 px-6 mb-4 items-start w-full min-h-44 relative"
   >
     <!-- Project Title -->
     <h3 class="font-bold">Deadlines</h3>

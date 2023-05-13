@@ -36,6 +36,6 @@
   }
 
   .breadcrumb-nav::before {
-    @apply content-[''] absolute origin-center w-full h-full scale-x-150 scale-y-125 rounded-md -z-10 bg-gradient-to-r from-green-200 to-lime-200 dark:from-transparent dark:to-transparent dark:bg-slate-700;
+    @apply content-[''] absolute origin-center w-full h-full scale-x-150 scale-y-125 rounded-md -z-10 bg-gradient-to-r from-green-200 to-yellow-200 dark:from-transparent dark:to-transparent dark:bg-slate-700;
   }
 </style>

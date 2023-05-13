@@ -1,80 +1,58 @@
-<template>
-  <section>
-    <!-- Alternative Card (3) -->
-    <div
-      id="article-card-3"
-      class="w-full h-32 relative bg-cover -z-20 bg-center bg-slate-900 rounded-md overflow-hidden p-4 flex justify-start first:[&>*]:mb-0 [&>*]:mb-2 mb-5"
-    >
-      <!-- Article Image -->
-      <img
-        src="https://cdn.hashnode.com/res/hashnode/image/upload/v1612381741215/ZBUN5T-cX.png?w=1600&h=840&fit=crop&crop=entropy&auto=compress,format&format=webp"
-        alt="Article Image"
-        class="w-24 h-24 mr-4 bg-cover rounded-lg"
-      />
-      <div class="flex flex-col">
-        <!-- Publish Date -->
-        <p class="text-sm text-slate-400">Oct 21, 2023 &bull; 3 mins</p>
-        <!-- Article Title -->
-        <h3 class="font-bold">DNS</h3>
-        <!-- Article Tags -->
-        <div class="my-1 mt-auto">
+<!-- <template>
+  <div
+    id="article-card"
+    class="w-full mb-5 flex flex-col items-start overflow-hidden hover:-translate-y-1 transition-all duration-200 relative"
+  >
+    <NuxtLink :to="url" class="w-full focused-link">
+      <div class="w-full">
+        <img
+          src="/cover-img.png"
+          alt="Profile Picture"
+          class="w-full h-24 md:h-32 rounded-lg object-cover"
+        />
+      </div>
+      <div class="py-1 text-left">
+        <p class="text-sm text-slate-600">Oct 21, 2023</p>
+        <h3 class="font-bold">{{ articleTitle }}</h3>
+        <div class="my-1">
           <span
             class="px-2 py-[.1rem] inline-block rounded-full bg-lime-300 font-semibold font-mono text-slate-800 text-xs mr-1"
-            v-for="tag in ['TailwindCSS', 'VueJS', 'localForage']"
+            v-for="tag in tags"
             :key="tag"
             >{{ tag.toUpperCase() }}
           </span>
         </div>
       </div>
+    </NuxtLink>    
+  </div>
+</template> -->
+
+<template>
+  <NuxtLink
+    id="article-card"
+    :style="{
+      backgroundImage: `linear-gradient(to bottom, rgba(17, 24, 39, 0.5), rgba(17, 24, 39, 0.5)), linear-gradient(to bottom, transparent, rgb(17, 24, 39)), url(${imageUrl})`
+    }"
+    class="focused-link w-full h-48 relative border border-slate-300 dark:border-slate-700 bg-cover bg-center rounded-lg overflow-hidden p-4 flex flex-col justify-between last:[&>*]:mb-0 [&>*]:mb-2 mb-5 bg-no-repeat hover:scale-[1.025] duration-200 transition-all ease-linear"
+    :to="url"
+  >
+    <!-- Article Tags -->
+    <div>
+      <span
+        class="px-2 py-[.1rem] inline-block rounded-full bg-green-400 font-semibold font-mono text-slate-800 text-xs mr-1"
+        v-for="tag in tags"
+        :key="tag"
+        >{{ tag.toLowerCase() }}
+      </span>
     </div>
-    <div
-      id="article-card"
-      class="w-full mb-5 flex flex-col items-start overflow-hidden hover:-translate-y-1 transition-all duration-200 first-of-type:[column-span:all] [&>a>div_img]:first-of-type:h-32 md:[&>a>div_img]:first-of-type:h-52 relative"
-    >
-      <NuxtLink :to="url" class="w-full focused-link">
-        <div class="w-full">
-          <!-- Article Header Image -->
-          <img
-            src="/cover-img.png"
-            alt="Profile Picture"
-            class="w-full h-24 md:h-32 rounded-lg object-cover"
-          />
-          <!-- Share Button -->
-        </div>
-        <div class="py-1 text-left">
-          <p class="text-sm text-slate-600">Oct 21, 2023</p>
-          <!-- Article Title -->
-          <h3 class="font-bold">{{ articleTitle }}</h3>
-          <!-- Article Tags -->
-          <div class="my-1">
-            <span
-              class="px-2 py-[.1rem] inline-block rounded-full bg-lime-300 font-semibold font-mono text-slate-800 text-xs mr-1"
-              v-for="tag in tags"
-              :key="tag"
-              >{{ tag.toUpperCase() }}
-            </span>
-          </div>
-          <!-- Article Excerpt -->
-          <!-- <p class="text-sm text-slate-600">
-          {{ desc }}
-        </p> -->
-        </div>
-      </NuxtLink>
-      <button
-        v-if="isSupported"
-        @click="
-          share({
-            articleTitle,
-            desc,
-            url
-          })
-        "
-        class="icon-link share-btn"
-      >
-        <Icon name="octicon:share-16" />
-      </button>
-    </div>
-  </section>
+    <!-- Article Title -->
+    <h3 class="font-bold text-slate-50 mt-auto">{{ articleTitle }}</h3>
+    <!-- Publish Date -->
+    <p class="text-xs text-slate-400">
+      <!-- {{ readTime }} &bull; -->
+      {{ lastUpdateTime }}
+    </p>
+  </NuxtLink>
 </template>
 
 <script setup>
@@ -89,15 +67,19 @@
   }
 
   defineProps({
-    desc: {
-      default: "",
-      type: String
-    },
     articleTitle: {
       default: "",
       type: String
     },
     url: {
+      default: "#",
+      type: String
+    },
+    pubDate: {
+      default: "#",
+      type: String
+    },
+    readTime: {
       default: "#",
       type: String
     },

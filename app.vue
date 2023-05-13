@@ -17,6 +17,11 @@
   @tailwind utilities;
 
   @layer utilities {
+    /* Uniform Card Style */
+    .card-style {
+      @apply border border-slate-300 dark:border-slate-600 dark:bg-slate-700 bg-white rounded-lg;
+    }
+
     /* Gradient Border: Content Backdrop */
     .custom-border-gradient {
       /* @apply z-0; */
@@ -28,7 +33,7 @@
 
     /* Gradient Border: Colorful Backdrop */
     .custom-border-gradient::after {
-      @apply content-[""] -z-30 absolute inset-0 m-[-1.5px] dark:m-[-1px] rounded-lg bg-gradient-to-b from-green-500 to-lime-300 opacity-75 dark:opacity-50;
+      @apply content-[""] -z-30 absolute inset-0 m-[-1.5px] dark:m-[-1px] rounded-lg bg-gradient-to-b from-green-400 to-lime-200 opacity-75;
     }
 
     .bg-circuit {
@@ -46,22 +51,16 @@
   }
 
   html {
-    @apply m-0 p-0;
+    @apply m-0 p-0 sm:overflow-hidden;
     font-family: "Roboto Mono", monospace;
   }
 
   body {
-    @apply m-0 p-0 w-full sm:h-screen bg-slate-50 dark:bg-slate-900 text-slate-800 dark:text-slate-100;
-    /* overflow: hidden; */
-  }
-
-  #app {
-    @apply w-full h-full flex items-start flex-col sm:flex-row px-4 pt-4 pb-6 max-w-7xl mx-auto overflow-y-auto;
-    /* overflow-x-hidden; */
+    @apply w-full sm:h-screen bg-slate-50 dark:bg-slate-900 text-slate-800 dark:text-slate-100 flex items-start flex-col sm:flex-row px-4 pt-4 pb-6 max-w-7xl mx-auto sm:overflow-y-auto;
   }
 
   main {
-    @apply w-full rounded-lg px-4 pt-6 sm:px-10 py-4 mb-8 bg-slate-50 dark:bg-slate-800 font-normal overflow-x-hidden -z-0;
+    @apply w-full rounded-lg px-4 pt-6 sm:px-10 py-4 pb-8 bg-slate-50 dark:bg-slate-800 font-normal overflow-x-hidden -z-0;
     /* @apply w-full sm:w-3/4 ml-auto max-w-[calc(100%-17rem)] md:max-w-[calc(100%-21rem)]; */
     /* overflow: hidden; */
   }

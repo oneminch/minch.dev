@@ -2,7 +2,7 @@
 <template>
   <section
     id="sidebar"
-    class="flex flex-col items-center justify-start w-full sm:w-1/4 min-w-[16rem] md:min-w-[20rem] h-full max-h-[40rem] rounded-t-xl p-5 pb-2 mr-4 sm:mb-0 mb-6 box-border text-slate-900 bg-white dark:bg-slate-800 border border-transparent print:hidden relative sm:sticky sm:top-0 -z-0"
+    class="flex flex-col items-center justify-start w-full sm:w-1/4 min-w-[16rem] md:min-w-[20rem] h-full max-h-[40rem] rounded-t-xl p-5 pb-2 mr-4 sm:mb-0 mb-6 box-border text-slate-900 bg-white dark:bg-slate-800 border border-transparent print:hidden relative sm:sticky top-0 -z-0"
     :class="{ hidden: routeRegEx.test($route.fullPath) }"
   >
     <!-- Info card: Profile Picture, Name, Title + Social Profiles -->

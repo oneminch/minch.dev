@@ -2,29 +2,38 @@
 <template>
   <NuxtLink
     id="article-card"
-    :style="{
-      backgroundImage: `linear-gradient(to bottom, rgba(17, 24, 39, 0.5), rgba(17, 24, 39, 0.5)), linear-gradient(to bottom, transparent, rgb(17, 24, 39)), url(${imageUrl})`
-    }"
-    class="focused-link w-full h-48 relative border border-slate-300 dark:border-slate-700 bg-cover bg-center rounded-lg overflow-hidden p-4 flex flex-col justify-between last:[&>*]:mb-0 [&>*]:mb-2 mb-5 bg-no-repeat hover:scale-[1.025] duration-200 transition-all ease-linear"
+    class="card-style w-full min-h-[8rem] h-auto p-0 overflow-hidden flex justify-start first:[&>*]:mb-0 [&>*]:mb-2 mb-5 [&_img]:hover:scale-105"
     :to="url"
   >
-    <!-- hover:-translate-y-1 transition-all duration-200 -->
-    <!-- Article Tags -->
-    <div>
-      <span
-        class="px-2 py-[.1rem] inline-block rounded-full bg-lime-300 font-semibold font-mono text-slate-800 text-xs mr-1"
-        v-for="tag in tags"
-        :key="tag"
-        >{{ tag.toLowerCase() }}
-      </span>
+    <!-- Article Image -->
+    <div
+      class="w-0 md:w-1/3 hidden md:inline-block flex-shrink-0 min-h-full overflow-hidden mr-2"
+    >
+      <img
+        :src="imageUrl"
+        alt="Cover Image"
+        class="h-full object-cover bg-cover origin-center"
+      />
     </div>
-    <!-- Article Title -->
-    <h3 class="font-bold text-slate-50 mt-auto">{{ articleTitle }}</h3>
-    <!-- Publish Date -->
-    <p class="text-xs text-slate-400">
-      <!-- {{ readTime }} &bull; -->
-      {{ lastUpdateTime }}
-    </p>
+    <div
+      class="flex flex-col justify-between py-4 px-6 flex-shrink-0 w-full md:w-2/3 min-h-full"
+    >
+      <!-- Publish Date -->
+      <p class="text-sm text-slate-400">
+        {{ lastUpdateTime }} &bull; {{ readTime }}
+      </p>
+      <!-- Article Title -->
+      <h3 class="font-bold">{{ articleTitle }}</h3>
+      <!-- Article Tags -->
+      <div class="my-1 mt-auto">
+        <span
+          class="px-2 py-[.1rem] inline-block rounded-full bg-green-300 font-semibold font-mono text-slate-800 text-xs mr-1"
+          v-for="tag in ['TailwindCSS', 'VueJS', 'localForage']"
+          :key="tag"
+          >{{ tag.toUpperCase() }}
+        </span>
+      </div>
+    </div>
   </NuxtLink>
 </template>
 

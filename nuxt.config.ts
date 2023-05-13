@@ -2,6 +2,7 @@
 export default defineNuxtConfig({
   app: {
     rootId: "app",
+    rootTag: "body",
     head: {
       title: "Dawit",
       meta: [{ name: "description", content: "My amazing site." }],

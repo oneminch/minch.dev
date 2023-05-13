@@ -16,7 +16,10 @@
     </p>
 
     <!-- Experience timeline -->
-    <h3 class="font-bold text-2xl my-6">Experience</h3>
+    <h3 class="font-bold text-2xl my-6 flex items-center">
+      Experience
+      <Icon name="ic:baseline-work-history" class="ml-3" />
+    </h3>
     <section
       class="border-l-2 border-slate-300 dark:border-slate-600 my-4 w-full"
     >
@@ -28,7 +31,7 @@
         <h3 class="font-bold text-slate-700 dark:text-slate-200">
           {{ experience.role }}
           <br />
-          <span class="text-green-600">
+          <span class="text-green-600 dark:text-green-500">
             {{ experience.company }}
           </span>
           <br />
@@ -51,7 +54,10 @@
     </section>
 
     <!-- Education Timeline -->
-    <h3 class="font-bold text-2xl my-6">Education</h3>
+    <h3 class="font-bold text-2xl my-6 flex items-center">
+      Education
+      <Icon name="ic:round-school" class="ml-3" />
+    </h3>
     <section
       class="border-l-2 border-slate-300 dark:border-slate-600 my-4 w-full"
     >
@@ -59,7 +65,7 @@
         <h3 class="font-bold text-slate-700 dark:text-slate-200">
           {{ education.institution }}
           <br />
-          <span class="text-green-600">
+          <span class="text-green-600 dark:text-green-500">
             {{ education.degree }} - {{ education.major }}
           </span>
           <br />
@@ -114,7 +120,7 @@
 
 <style scoped>
   .timeline-item {
-    @apply px-8 py-4 relative text-slate-700 dark:text-slate-300 first:first:before:bg-green-600 dark:first:first:before:bg-green-600;
+    @apply px-8 py-4 relative text-slate-700 dark:text-slate-300 first:first:before:bg-green-500 dark:first:first:before:bg-green-500;
   }
   .timeline-item::before {
     @apply [content:''] absolute left-0 top-1/2 -translate-y-1/2 translate-x-[calc(-50%-1px)] w-3 h-3 rounded-full inline-block bg-slate-300 dark:bg-slate-600 print:hidden;
