@@ -4,6 +4,9 @@
 
   <!-- Main Content -->
   <NuxtPage />
+
+  <!-- Mobile Navigation -->
+  <AppNav class="sm:hidden flex custom-border-gradient"></AppNav>
 </template>
 
 <script setup></script>
@@ -14,16 +17,16 @@
   @layer utilities {
     /* Gradient Border: Content Backdrop */
     .custom-border-gradient {
-      /* @apply -z-0; */
+      /* @apply z-0; */
     }
 
     .custom-border-gradient::before {
-      @apply content-[""] -z-10 absolute inset-0 rounded-lg bg-slate-50 dark:bg-slate-800;
+      @apply content-[""] -z-20 absolute inset-0 rounded-lg bg-slate-50 dark:bg-slate-800;
     }
 
     /* Gradient Border: Colorful Backdrop */
     .custom-border-gradient::after {
-      @apply content-[""] -z-20 absolute inset-0 m-[-1.5px] dark:m-[-1px] rounded-lg bg-gradient-to-b from-[#51cf66] to-[#c0eb75] opacity-50 dark:opacity-[.35];
+      @apply content-[""] -z-30 absolute inset-0 m-[-1.5px] dark:m-[-1px] rounded-lg bg-gradient-to-b from-[#51cf66] to-[#c0eb75] opacity-50 dark:opacity-[.35];
     }
 
     .bg-circuit {
@@ -56,7 +59,7 @@
   }
 
   main {
-    @apply w-full rounded-lg px-4 sm:px-10 py-4 mb-8 bg-slate-50 dark:bg-slate-800 font-normal overflow-x-hidden -z-10;
+    @apply w-full rounded-lg px-4 sm:px-10 py-4 mb-8 bg-slate-50 dark:bg-slate-800 font-normal overflow-x-hidden -z-0;
     /* @apply w-full sm:w-3/4 ml-auto max-w-[calc(100%-17rem)] md:max-w-[calc(100%-21rem)]; */
     /* overflow: hidden; */
   }

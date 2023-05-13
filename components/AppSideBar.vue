@@ -9,7 +9,7 @@
     <AppInfoCard></AppInfoCard>
 
     <!-- Navigation: Links -->
-    <AppNav></AppNav>
+    <AppNav class="hidden sm:flex"></AppNav>
 
     <!-- Footer: Tech Stack -->
     <AppFooter class="hidden sm:flex"></AppFooter>

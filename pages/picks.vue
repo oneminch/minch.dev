@@ -8,12 +8,12 @@
       >
         <img
           :src="pick.cover"
-          class="w-12 h-10 object-cover rounded-md mr-3 overflow-hidden"
+          class="w-12 h-10 flex-shrink-0 object-cover rounded-md mr-3 overflow-hidden"
           alt="Link Cover Image"
         />
         <!-- <img v-else src="" alt="" /> -->
         <span>{{ pick.title }}</span>
-        <Icon name="octicon:arrow-up-right-16" class="ml-auto" />
+        <Icon name="octicon:arrow-up-right-16" class="ml-auto flex-shrink-0" />
       </NuxtLink>
     </template>
   </main>

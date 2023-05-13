@@ -11,7 +11,7 @@
         class="rounded-lg w-96 h-auto bg-white border border-slate-300 dark:border-slate-600"
       />
       <div
-        class="py-4 px-6 min-h-[12rem] sm:-ml-48 -ml-72 flex flex-col justify-evenly relative rounded-lg bg-white dark:bg-slate-800 before:custom-border-gradient before:opacity-75 dark:before:opacity-[.35]"
+        class="py-4 px-6 min-h-[12rem] sm:-ml-48 -ml-72 flex flex-col justify-evenly relative rounded-lg bg-white dark:bg-slate-800 relative custom-border-gradient"
       >
         <h3 class="font-semibold">Deadlines</h3>
         <p class="mb-4 text-slate-700 dark:text-slate-300">
@@ -32,7 +32,7 @@
 
     <NuxtLink
       to="https://deadlines.oneminch.dev/"
-      class="flex flex-col py-4 px-6 items-start w-1/2 min-h-44 mt-6 relative rounded-lg bg-white dark:bg-slate-800 before:custom-border-gradient before:opacity-75 dark:before:opacity-[.35]"
+      class="flex flex-col py-4 px-6 items-start w-1/2 min-h-44 mt-6 relative rounded-lg bg-white dark:bg-slate-800 relative custom-border-gradient"
     >
       <div class="relative">
         <h3 class="font-bold">Deadlines</h3>
@@ -54,7 +54,7 @@
     </NuxtLink>
 
     <section
-      class="flex flex-col items-center w-72 mt-6 relative rounded-lg bg-white dark:bg-slate-800 before:custom-border-gradient before:opacity-75 dark:before:opacity-[.35]"
+      class="flex flex-col items-center w-72 mt-6 relative rounded-lg bg-white dark:bg-slate-800 relative custom-border-gradient"
     >
       <img
         src="https://raw.githubusercontent.com/oneminch/deadlines/main/src/assets/screenshot.jpg"
@@ -84,18 +84,4 @@
   const tags = ref(["TailwindCSS", "VueJS", "localForage"]);
 </script>
 
-<style scoped>
-  #test > img {
-    /* @apply -z-10; */
-  }
-
-  a:nth-of-type(2),
-  #test > div {
-    /* @apply relative rounded-lg bg-white dark:bg-slate-800; */
-  }
-
-  a:nth-of-type(2):before,
-  #test > div:before {
-    /* @apply before:custom-border-gradient before:opacity-75 dark:before:opacity-[.35]; */
-  }
-</style>
+<style scoped></style>
