@@ -19,7 +19,7 @@
         <!-- Article Tags -->
         <div class="my-1 mt-auto">
           <span
-            class="px-2 py-[.1rem] inline-block rounded-full bg-[#c0eb75] font-semibold font-mono text-slate-800 text-xs mr-1"
+            class="px-2 py-[.1rem] inline-block rounded-full bg-lime-300 font-semibold font-mono text-slate-800 text-xs mr-1"
             v-for="tag in ['TailwindCSS', 'VueJS', 'localForage']"
             :key="tag"
             >{{ tag.toUpperCase() }}
@@ -31,7 +31,7 @@
       id="article-card"
       class="w-full mb-5 flex flex-col items-start overflow-hidden hover:-translate-y-1 transition-all duration-200 first-of-type:[column-span:all] [&>a>div_img]:first-of-type:h-32 md:[&>a>div_img]:first-of-type:h-52 relative"
     >
-      <NuxtLink :to="url" class="w-full">
+      <NuxtLink :to="url" class="w-full focused-link">
         <div class="w-full">
           <!-- Article Header Image -->
           <img
@@ -48,7 +48,7 @@
           <!-- Article Tags -->
           <div class="my-1">
             <span
-              class="px-2 py-[.1rem] inline-block rounded-full bg-[#c0eb75] font-semibold font-mono text-slate-800 text-xs mr-1"
+              class="px-2 py-[.1rem] inline-block rounded-full bg-lime-300 font-semibold font-mono text-slate-800 text-xs mr-1"
               v-for="tag in tags"
               :key="tag"
               >{{ tag.toUpperCase() }}

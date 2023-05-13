@@ -28,7 +28,7 @@
 
     <!-- Projects -->
     <h2 class="font-semibold text-2xl mb-6">
-      <NuxtLink to="/projects" class="flex items-center">
+      <NuxtLink to="/projects" class="focused-link flex items-center">
         Projects
         <Icon name="octicon:chevron-right-16" class="ml-2" />
       </NuxtLink>
@@ -45,7 +45,7 @@
       <span
         v-for="skill in skills"
         :key="skill"
-        class="px-3 py-1 inline-block bg-lime-500 font-semibold rounded-full text-slate-800 text-sm mr-1 mb-1"
+        class="px-3 py-1 inline-block bg-green-500 font-semibold rounded-full text-slate-800 text-sm mr-1 mb-1"
         >{{ skill }}</span
       >
     </section>

@@ -1,9 +1,15 @@
 <template>
   <main class="">
     <h1 class="font-bold text-2xl mb-6">Picks</h1>
+    <p>
+      <blockquote>
+        Content from across the web I found interesting.
+      </blockquote>
+    </p>
+    <br>
     <template v-for="(pick, index) in picks" :key="index">
       <NuxtLink
-        class="custom-border-gradient w-full flex justify-start items-center px-4 py-2 mb-4 rounded-md"
+        class="focused-link w-full flex justify-start items-center px-4 py-2 mb-4 border border-slate-300 dark:border-slate-600 dark:bg-slate-700 bg-white relative rounded-md"
         :to="pick.link"
       >
         <img
@@ -11,9 +17,8 @@
           class="w-12 h-10 flex-shrink-0 object-cover rounded-md mr-3 overflow-hidden"
           alt="Link Cover Image"
         />
-        <!-- <img v-else src="" alt="" /> -->
         <span>{{ pick.title }}</span>
-        <Icon name="octicon:arrow-up-right-16" class="ml-auto flex-shrink-0" />
+        <Icon name="octicon:arrow-up-right-16" size="1.25rem" class="ml-auto flex-shrink-0 text-green-500 bg-slate-100 dark:bg-slate-600 rounded-full p-1 w-7 h-7" />
       </NuxtLink>
     </template>
   </main>
@@ -23,8 +28,4 @@
   const { data: picks } = reactive(await useFetch("/api/picks"));
 </script>
 
-<style scoped>
-  a {
-    @apply bg-white dark:bg-slate-800 relative rounded-lg;
-  }
-</style>
+<style scoped></style>

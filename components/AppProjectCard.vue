@@ -4,7 +4,7 @@
     <NuxtLink
       to="https://deadlines.oneminch.dev/"
       id="test"
-      class="flex items-center w-full"
+      class="focused-link flex items-center w-full"
     >
       <img
         src="https://raw.githubusercontent.com/oneminch/deadlines/main/src/assets/screenshot.jpg"
@@ -32,7 +32,7 @@
 
     <NuxtLink
       to="https://deadlines.oneminch.dev/"
-      class="flex flex-col py-4 px-6 items-start w-1/2 min-h-44 mt-6 relative rounded-lg bg-white dark:bg-slate-800 relative custom-border-gradient"
+      class="focused-link flex flex-col py-4 px-6 items-start w-1/2 min-h-44 mt-6 relative rounded-lg bg-white dark:bg-slate-800 custom-border-gradient"
     >
       <div class="relative">
         <h3 class="font-bold">Deadlines</h3>

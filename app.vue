@@ -6,7 +6,9 @@
   <NuxtPage />
 
   <!-- Mobile Navigation -->
-  <AppNav class="sm:hidden flex custom-border-gradient"></AppNav>
+  <AppNav
+    class="sm:hidden flex after:shadow-2xl border border-green-400"
+  ></AppNav>
 </template>
 
 <script setup></script>
@@ -21,12 +23,12 @@
     }
 
     .custom-border-gradient::before {
-      @apply content-[""] -z-20 absolute inset-0 rounded-lg bg-slate-50 dark:bg-slate-800;
+      @apply content-[""] -z-20 absolute inset-0 rounded-[.425rem] bg-slate-50 dark:bg-slate-800;
     }
 
     /* Gradient Border: Colorful Backdrop */
     .custom-border-gradient::after {
-      @apply content-[""] -z-30 absolute inset-0 m-[-1.5px] dark:m-[-1px] rounded-lg bg-gradient-to-b from-[#51cf66] to-[#c0eb75] opacity-50 dark:opacity-[.35];
+      @apply content-[""] -z-30 absolute inset-0 m-[-1.5px] dark:m-[-1px] rounded-lg bg-gradient-to-b from-green-500 to-lime-300 opacity-75 dark:opacity-50;
     }
 
     .bg-circuit {
@@ -54,12 +56,12 @@
   }
 
   #app {
-    @apply w-full h-full flex items-start flex-col sm:flex-row px-4 py-6 max-w-7xl mx-auto overflow-y-auto;
+    @apply w-full h-full flex items-start flex-col sm:flex-row px-4 pt-4 pb-6 max-w-7xl mx-auto overflow-y-auto;
     /* overflow-x-hidden; */
   }
 
   main {
-    @apply w-full rounded-lg px-4 sm:px-10 py-4 mb-8 bg-slate-50 dark:bg-slate-800 font-normal overflow-x-hidden -z-0;
+    @apply w-full rounded-lg px-4 pt-6 sm:px-10 py-4 mb-8 bg-slate-50 dark:bg-slate-800 font-normal overflow-x-hidden -z-0;
     /* @apply w-full sm:w-3/4 ml-auto max-w-[calc(100%-17rem)] md:max-w-[calc(100%-21rem)]; */
     /* overflow: hidden; */
   }
@@ -70,7 +72,7 @@
   }
 
   .focused-link {
-    @apply focus:outline-none focus:ring-2 focus:ring-inset focus:ring-[#69db7c] focus:ring-opacity-75;
+    @apply focus:outline-none focus:ring-2 focus:ring-inset focus:ring-green-300 focus:ring-opacity-75;
   }
 
   .icon-link {
