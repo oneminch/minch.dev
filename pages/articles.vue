@@ -17,6 +17,7 @@
       <!-- :desc="article.description" -->
       <!-- :imageUrl="article.imageUrl" -->
       <!-- :readTime="article.readTime" -->
+      <AppCodeSolutionCard></AppCodeSolutionCard>
     </section>
   </main>
 </template>

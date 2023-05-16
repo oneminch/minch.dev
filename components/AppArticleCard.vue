@@ -2,7 +2,7 @@
 <template>
   <NuxtLink
     id="article-card"
-    class="card-style w-full min-h-[8rem] h-auto p-0 overflow-hidden flex justify-start first:[&>*]:mb-0 [&>*]:mb-2 mb-5 [&_img]:hover:scale-105"
+    class="card-style focused-link w-full min-h-[8rem] h-auto p-0 overflow-hidden flex justify-start first:[&>*]:mb-0 [&>*]:mb-2 mb-5 [&_img]:hover:scale-105"
     :to="url"
   >
     <!-- Article Image -->

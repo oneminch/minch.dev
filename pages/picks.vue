@@ -10,6 +10,7 @@
     <template v-for="(pick, index) in picks" :key="index">
       <NuxtLink
         class="focused-link card-style w-full flex justify-start items-center px-4 py-2 mb-4 relative"
+        target="_blank"
         :to="pick.link"
       >
         <img
