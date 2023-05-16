@@ -28,5 +28,3 @@
 <script setup>
   const { data: picks } = reactive(await useFetch("/api/picks"));
 </script>
-
-<style scoped></style>

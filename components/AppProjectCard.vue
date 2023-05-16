@@ -4,14 +4,14 @@
     <NuxtLink
       to="https://deadlines.oneminch.dev/"
       id="test"
-      class="focused-link flex items-center w-full"
+      class="focused-link min-h-[12rem] lg:flex-col flex-row items-center justify-start w-full"
     >
       <img
         src="https://raw.githubusercontent.com/oneminch/deadlines/main/src/assets/screenshot.jpg"
-        class="rounded-lg w-96 h-auto bg-white border border-slate-300 dark:border-slate-600"
+        class="rounded-lg w-1/3 lg:w-full lg:mb-2 h-full max-h-[10rem] flex-shrink-0 mr-1 bg-white border border-slate-300 dark:border-slate-600 overflow-hidden object-cover bg-top"
       />
       <div
-        class="card-style py-4 px-6 min-h-[12rem] sm:-ml-48 -ml-72 flex flex-col justify-evenly relative"
+        class="card-style w-3/4 lg:w-full min-h-full max-h-[14rem] flex-shrink-0 py-4 px-6 flex flex-col justify-evenly relative"
       >
         <h3 class="font-semibold">Deadlines</h3>
         <p class="mb-4 text-slate-700 dark:text-slate-300">
@@ -53,9 +53,7 @@
       </div>
     </NuxtLink>
 
-    <section
-      class="card-style flex flex-col items-center w-72 mt-6 relative"
-    >
+    <section class="card-style flex flex-col items-center w-1/2 mt-6 relative">
       <img
         src="https://raw.githubusercontent.com/oneminch/deadlines/main/src/assets/screenshot.jpg"
         class="w-full h-44 rounded-t-lg bg-slate-100 object-cover"
@@ -83,5 +81,3 @@
 <script setup>
   const tags = ref(["TailwindCSS", "VueJS", "localForage"]);
 </script>
-
-<style scoped></style>

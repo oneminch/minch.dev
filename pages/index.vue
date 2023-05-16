@@ -98,5 +98,3 @@
     Playing: "Little Nightmares II"
   };
 </script>
-
-<style scoped></style>

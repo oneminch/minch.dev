@@ -17,6 +17,8 @@
     <!-- Button for toggling theme -->
     <button
       class="focused-link w-6 h-6 md:w-8 md:h-8 flex items-center justify-center rounded-full bg-slate-700 text-slate-100 dark:bg-slate-300 dark:text-slate-900 p-0 mx-0 absolute top-3 right-3"
+      aria-label="Switch Theme"
+      title="Switch Theme"
       @click="toggleDark()"
     >
       <Icon v-if="isDark" name="octicon:sun-16" />

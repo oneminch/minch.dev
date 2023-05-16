@@ -31,6 +31,8 @@
       <button
         @click="toggleMenu()"
         class="sm:hidden w-full h-11 py-2 px-4 flex items-center justify-center rounded-md font-semibold hover:bg-green-400 bg-green-400 text-slate-800"
+        aria-label="Menu"
+        title="Menu"
       >
         <!-- :class="{ 'dark:bg-slate-700 bg-slate-200': menuToggled }" -->
         Menu

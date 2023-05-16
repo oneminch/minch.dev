@@ -26,7 +26,8 @@
 
       === Captcha Validation ===
 
-      <button type="submit">Send</button>
+      <button type="submit" aria-label="Submit Form"
+      title="Submit Form">Send</button>
     </form> -->
   </main>
 </template>
