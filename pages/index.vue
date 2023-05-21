@@ -1,16 +1,6 @@
 <!-- Landing Page -->
 <template>
-  <main id="home" class="[&>*]:mb-6">
-    <!-- <AppConstruction></AppConstruction> -->
-    <!-- <img src="/cover-img.png" alt="" class="w-full rounded-lg object-cover" /> -->
-
-    <!-- Information Banner -->
-    <!-- <div
-      class="py-2 font-bold rounded-md bg-lime-100 text-slate-700 text-sm text-center"
-    >
-      Actively looking for job opportunities.
-      <NuxtLink to="/contact">Contact me</NuxtLink>
-    </div> -->
+  <main id="home" class="[&>*]:mb-6 last:[&>*]:mb-0">
     <!-- Introduction -->
     <section>
       <h1 class="font-semibold text-2xl mb-6">Hi, my name is Dawit.</h1>
@@ -34,9 +24,14 @@
       </NuxtLink>
     </h2>
     <section class="columns-1 lg:columns-2 gap-6">
-      <AppProjectCardTemp></AppProjectCardTemp>
-      <AppProjectCardTemp></AppProjectCardTemp>
-      <!-- <AppProjectCardTemp></AppProjectCardTemp> -->
+      <AppProjectCard
+        :hideImage="true"
+        projectTitle="Deadlines"
+      ></AppProjectCard>
+      <AppProjectCard
+        :hideImage="true"
+        projectTitle="EncryptedList"
+      ></AppProjectCard>
     </section>
 
     <!-- Skills -->
@@ -59,14 +54,15 @@
         :status-content="content"
       ></AppStatusCard>
     </section>
+
+    <AppFooter></AppFooter>
   </main>
 </template>
 
 <script setup>
-  definePageMeta({
-    // colorMode: "dark"
-    // middleware: ["routeChange"]
-  });
+  // const { data } = reactive(await useFetch("/api/leetcode"));
+
+  // console.log(JSON.parse(JSON.stringify(data)));
 
   useHead({
     script: [

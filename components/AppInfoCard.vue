@@ -4,10 +4,6 @@
     id="info-card"
     class="w-full flex flex-col items-center bg-transparent relative"
   >
-    <!-- <img
-      src="/cover-img.png"
-      class="absolute -z-10 h-36 rounded-lg object-cover"
-    /> -->
     <img
       src="/profile.png"
       alt="Profile Picture"

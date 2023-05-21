@@ -3,7 +3,8 @@
   <main id="contact">
     <h1>Send me a message.</h1>
 
-    <!-- <form action="https://formend.vercel.app/submit/portfolio" method="post">
+    <!-- <form action="https://formend.vercel.app/submit/portfolio" method="post"> -->
+    <!-- <form action="/api/contact" method="post">
       <label for="name">
         Name:
         <input type="text" name="name" id="name" />

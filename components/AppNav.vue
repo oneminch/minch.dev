@@ -1,17 +1,19 @@
 <!-- Navigation: Links -->
 <template>
   <nav
-    class="flex-col justify-center items-center rounded-[.6rem] p-1 sm:px-4 text-slate-900 dark:text-slate-200 sm:w-full h-auto w-32 sm:right-0 sm:bottom-0 fixed sm:relative bottom-6 right-4 sm:border-none sm:bg-transparent dark:sm:bg-transparent dark:bg-slate-800 bg-slate-100 z-[9999]"
-    :class="{ visible: menuToggled }"
+    class="flex-col justify-center items-center rounded-[.6rem] p-1 sm:px-4 text-slate-900 dark:text-slate-200 sm:w-full w-32 sm:max-h-64 max-h-16 sm:right-0 sm:bottom-0 fixed sm:relative bottom-6 right-4 sm:border-none sm:bg-transparent dark:sm:bg-transparent dark:bg-slate-800 bg-slate-100 z-50 origin-bottom-right"
+    :class="{ toggled: menuToggled }"
   >
-    <ul class="w-full h-full hidden sm:flex flex-col p-2">
+    <ul
+      class="w-full h-full invisible opacity-0 sm:visible sm:opacity-100 hidden sm:flex flex-col"
+    >
       <li
         v-for="(route, link) in navLinks"
         :key="link"
-        class="font-bold h-full flex items-center relative mb-1 last:mb-0 rounded-md overflow-hidden"
+        class="font-bold h-auto flex items-center relative mb-2 rounded-md overflow-hidden"
       >
         <NuxtLink
-          class="nav-links focused-link w-full h-11 py-2 px-4 flex items-center rounded-md font-semibold hover:bg-slate-200 dark:hover:bg-slate-700 [&>svg]:hover:translate-x-1"
+          class="nav-links focused-link w-full h-10 py-1 px-4 flex items-center rounded-md font-semibold hover:bg-slate-200 dark:hover:bg-slate-700 [&>svg]:hover:translate-x-1"
           :to="`/${route}`"
         >
           {{ link }}
@@ -30,11 +32,10 @@
     >
       <button
         @click="toggleMenu()"
-        class="sm:hidden w-full h-11 py-2 px-4 flex items-center justify-center rounded-md font-semibold hover:bg-green-400 bg-green-400 text-slate-800"
+        class="sm:hidden w-full h-10 py-1 px-4 flex items-center justify-center rounded-md font-semibold hover:bg-green-400 bg-green-400 text-slate-800"
         aria-label="Menu"
         title="Menu"
       >
-        <!-- :class="{ 'dark:bg-slate-700 bg-slate-200': menuToggled }" -->
         Menu
         <Icon name="octicon:three-bars-16" class="ml-2" />
       </button>
@@ -49,40 +50,38 @@
 
   const navLinks = {
     Home: "",
-    Articles: "articles",
+    Blog: "blog",
     Projects: "projects",
     Resume: "resume",
     Picks: "picks"
   };
-
-  // const menuButton = ref(null);
-
-  // onClickOutside(menuButton, () => {
-  //   if (menuToggled) {
-  //     menuToggled = false;
-  //   }
-  // });
 </script>
 
 <style scoped>
-  nav.visible {
-    @apply w-[calc(100%-2rem)] flex h-auto;
+  nav {
+    transition-property: width, max-height;
+    transition-duration: 150ms;
   }
 
-  nav.visible > ul {
-    @apply flex sm:flex mb-2;
+  ul {
+    transition-property: opacity, visibility;
+    transition-duration: 500ms;
+    transition-delay: 500ms;
   }
 
-  nav.visible > button {
+  nav.toggled {
+    @apply w-[calc(100%-2rem)] flex max-h-80 overflow-hidden;
+  }
+
+  nav.toggled > ul {
+    @apply flex visible opacity-100;
+  }
+
+  nav.toggled > button {
     @apply mt-3;
-  }
-
-  .nav-links:hover svg {
-    /* @apply ; */
   }
 
   .nav-links.router-link-active {
     @apply focus:ring-0 bg-lime-100 dark:bg-slate-700 border border-lime-300 dark:border-slate-600;
-    /* @apply bg-gradient-to-r from-green-200 to-lime-200 dark:from-transparent dark:to-transparent ; */
   }
 </style>

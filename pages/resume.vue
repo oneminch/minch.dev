@@ -125,7 +125,4 @@
   .timeline-item::before {
     @apply [content:''] absolute left-0 top-1/2 -translate-y-1/2 translate-x-[calc(-50%-1px)] w-3 h-3 rounded-full inline-block bg-slate-300 dark:bg-slate-600 print:hidden;
   }
-  .timeline-item:first-of-type::before {
-    /* @apply bg-green-400; */
-  }
 </style>

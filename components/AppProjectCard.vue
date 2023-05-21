@@ -1,83 +1,63 @@
 <!-- Project: Card -->
 <template>
-  <div>
-    <NuxtLink
-      to="https://deadlines.oneminch.dev/"
-      id="test"
-      class="focused-link min-h-[12rem] lg:flex-col flex-row items-center justify-start w-full"
+  <NuxtLink
+    to="https://deadlines.oneminch.dev/"
+    target="_blank"
+    class="card-style focused-link w-full min-h-[8rem] h-auto p-0 overflow-hidden flex justify-start first:[&>*]:mb-0 [&>*]:mb-2 mb-5 [&_img]:hover:scale-105"
+  >
+    <div
+      v-if="!hideImage"
+      class="w-0 lg:w-1/3 hidden lg:inline-block flex-shrink-0 min-h-full overflow-hidden mr-2 border-r border-slate-100"
     >
       <img
-        src="https://raw.githubusercontent.com/oneminch/deadlines/main/src/assets/screenshot.jpg"
-        class="rounded-lg w-1/3 lg:w-full lg:mb-2 h-full max-h-[10rem] flex-shrink-0 mr-1 bg-white border border-slate-300 dark:border-slate-600 overflow-hidden object-cover bg-top"
+        :src="imgUrl"
+        alt="Cover Image"
+        class="h-full object-cover bg-cover origin-center"
       />
-      <div
-        class="card-style w-3/4 lg:w-full min-h-full max-h-[14rem] flex-shrink-0 py-4 px-6 flex flex-col justify-evenly relative"
-      >
-        <h3 class="font-semibold">Deadlines</h3>
-        <p class="mb-4 text-slate-700 dark:text-slate-300">
-          Deadlines is a simple, offline deadline tracker made with Vue.js and
-          localForage.
-        </p>
-        <div>
-          <span
-            :key="index"
-            v-for="(tag, index) in tags"
-            class="px-3 mr-2 bg-slate-300 dark:bg-slate-700 text-sm rounded-full inline-block"
-          >
-            {{ tag }}
-          </span>
-        </div>
-      </div>
-    </NuxtLink>
-
-    <NuxtLink
-      to="https://deadlines.oneminch.dev/"
-      class="focused-link card-style flex flex-col py-4 px-6 items-start w-1/2 min-h-44 mt-6 relative"
+    </div>
+    <div
+      class="flex flex-col justify-between py-4 px-6 flex-shrink-0 w-full"
+      :class="{
+        'lg:w-full': hideImage,
+        'lg:w-2/3': !hideImage
+      }"
     >
-      <div class="relative">
-        <h3 class="font-bold">Deadlines</h3>
-        <p class="mb-4">
-          Deadlines is a simple, offline deadline tracker made with Vue.js and
-          localForage.
-        </p>
+      <!-- Project Title -->
+      <h3 class="font-bold mb-2">{{ projectTitle }}</h3>
+      <!-- Project Description -->
+      <p class="mb-4">
+        Deadlines is a simple, offline deadline tracker made with Vue.js and
+        localForage.
+      </p>
+      <!-- Project Tech Stack -->
+      <div>
         <Icon
           name="skill-icons:vuejs-light"
           size="1.5rem"
-          class="mr-2 rounded-full"
+          class="mr-2 rounded-full inline-block"
         />
         <Icon
           name="skill-icons:tailwindcss-light"
           size="1.5rem"
-          class="mr-2 rounded-full"
+          class="mr-2 rounded-full inline-block"
         />
       </div>
-    </NuxtLink>
-
-    <section class="card-style flex flex-col items-center w-1/2 mt-6 relative">
-      <img
-        src="https://raw.githubusercontent.com/oneminch/deadlines/main/src/assets/screenshot.jpg"
-        class="w-full h-44 rounded-t-lg bg-slate-100 object-cover"
-      />
-      <div class="py-4 px-6 min-36">
-        <h3 class="font-bold">Deadlines</h3>
-        <p class="mb-4">
-          Deadlines is a simple, offline deadline tracker made with Vue.js and
-          localForage.
-        </p>
-        <div>
-          <span
-            :key="i"
-            v-for="i in 4"
-            class="px-3 mr-2 bg-slate-700 rounded-full inline-block mb-1"
-          >
-            {{ `tag-${i}` }}
-          </span>
-        </div>
-      </div>
-    </section>
-  </div>
+    </div>
+  </NuxtLink>
 </template>
 
 <script setup>
-  const tags = ref(["TailwindCSS", "VueJS", "localForage"]);
+  const imgUrl =
+    "https://raw.githubusercontent.com/oneminch/deadlines/main/src/assets/screenshot.jpg";
+
+  defineProps({
+    projectTitle: {
+      type: String,
+      default: ""
+    },
+    hideImage: {
+      type: Boolean,
+      default: false
+    }
+  });
 </script>

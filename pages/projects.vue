@@ -4,7 +4,7 @@
     <!-- <main id="projects" class="wip"> -->
     <h1 class="text-3xl text-left font-bold mb-6">Projects</h1>
 
-    <!-- <AppConstruction></AppConstruction> -->
-    <AppProjectCard></AppProjectCard>
+    <AppProjectCard projectTitle="Deadlines"></AppProjectCard>
+    <AppProjectCard projectTitle="EncryptedList"></AppProjectCard>
   </main>
 </template>

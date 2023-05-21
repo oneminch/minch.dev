@@ -43,7 +43,7 @@ export default defineNuxtConfig({
   content: {
     sources: {
       github: {
-        prefix: "/articles",
+        prefix: "/blog",
         driver: "github",
         repo: "oneminch/garden",
         branch: "main",
@@ -54,6 +54,6 @@ export default defineNuxtConfig({
   },
   routeRules: {
     // "/*": { static: true }
-    // "/articles": { ssr: false }
+    // "/blog": { ssr: false }
   }
 });

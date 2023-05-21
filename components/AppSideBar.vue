@@ -11,9 +11,6 @@
     <!-- Desktop Navigation: Links -->
     <AppNav class="hidden sm:flex"></AppNav>
 
-    <!-- Footer: Tech Stack -->
-    <!-- <AppFooter class="hidden sm:flex"></AppFooter> -->
-
     <!-- Button for toggling theme -->
     <button
       class="focused-link w-6 h-6 md:w-8 md:h-8 flex items-center justify-center rounded-full bg-slate-700 text-slate-100 dark:bg-slate-300 dark:text-slate-900 p-0 mx-0 absolute top-3 right-3"
@@ -32,8 +29,8 @@
   const isDark = useDark();
   const toggleDark = useToggle(isDark);
 
-  // Regex pattern for article url
-  const routeRegEx = /\/articles\/.*/i;
+  // Regex pattern for any blog post route
+  const routeRegEx = /\/blog\/(?!(cps|snippets)).*/i;
 </script>
 
 <style scoped>

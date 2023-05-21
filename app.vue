@@ -3,7 +3,9 @@
   <AppSideBar></AppSideBar>
 
   <!-- Main Content -->
-  <NuxtPage />
+  <NuxtLayout>
+    <NuxtPage />
+  </NuxtLayout>
 
   <!-- Mobile Navigation -->
   <AppNav
@@ -45,7 +47,7 @@
   }
 
   * {
-    transition: all 300ms, color, background-color, border-color,
+    transition: all 250ms, color, background-color, border-color,
       text-decoration-color, fill, stroke 100ms;
     /* @apply outline outline-1 outline-red-500; */
   }
@@ -82,7 +84,7 @@
 
   .slide-enter-active,
   .slide-leave-active {
-    transition: all 0.2s;
+    transition: all 150ms;
   }
   .slide-enter-from,
   .slide-leave-to {
