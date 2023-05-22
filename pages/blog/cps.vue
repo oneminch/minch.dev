@@ -9,4 +9,8 @@
   definePageMeta({
     layout: "blog-layout"
   });
+
+  const blogPosts = await queryContent("blog", "cps").find();
+
+  console.log(blogPosts);
 </script>

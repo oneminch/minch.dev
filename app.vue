@@ -62,7 +62,7 @@
   }
 
   main {
-    @apply w-full rounded-lg px-4 pt-6 sm:px-10 py-4 pb-8 bg-slate-50 dark:bg-slate-800 font-normal overflow-x-hidden -z-0;
+    @apply w-full rounded-lg px-1 pt-6 sm:px-10 py-4 pb-8 bg-transparent sm:bg-slate-50 sm:dark:bg-slate-800 font-normal overflow-x-hidden -z-0;
     /* @apply w-full sm:w-3/4 ml-auto max-w-[calc(100%-17rem)] md:max-w-[calc(100%-21rem)]; */
     /* overflow: hidden; */
   }

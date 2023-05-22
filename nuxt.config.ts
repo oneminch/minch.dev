@@ -43,11 +43,11 @@ export default defineNuxtConfig({
   content: {
     sources: {
       github: {
-        prefix: "/blog",
+        prefix: "/",
         driver: "github",
         repo: "oneminch/garden",
         branch: "main",
-        dir: "Posts/Published",
+        // dir: "",
         token: process.env.GITHUB_TOKEN
       }
     }
