@@ -18,7 +18,7 @@
     layout: "blog-layout"
   });
 
-  const blogPosts = await queryContent("blog", "").find();
+  const blogPosts = await queryContent().find();
 
-  console.log(blogPosts);
+  // console.log(blogPosts);
 </script>

@@ -10,7 +10,7 @@
     layout: "blog-layout"
   });
 
-  const blogPosts = await queryContent("blog", "cps").find();
+  // const blogPosts = await queryContent("blog", "cps").find();
 
-  console.log(blogPosts);
+  // console.log(blogPosts);
 </script>
