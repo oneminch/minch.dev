@@ -43,7 +43,6 @@ export default defineNuxtConfig({
   content: {
     sources: {
       github: {
-        prefix: "/",
         driver: "github",
         repo: "oneminch/garden",
         branch: "main",
