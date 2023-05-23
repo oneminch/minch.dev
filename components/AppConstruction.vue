@@ -6,7 +6,7 @@
     >
       Under Construction
     </h2>
-    <p class="text-2xl font-bold text-slate-400 block sm:hidden">
+    <p class="text-2xl font-bold text-slate-400 block md:hidden">
       (View on Desktop)
     </p>
   </section>

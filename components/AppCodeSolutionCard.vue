@@ -9,7 +9,7 @@
     <Icon
       :name="`simple-icons:${platform.toLowerCase()}`"
       size="2.5rem"
-      class="flex-shrink-0 bg-gray-200 dark:bg-gray-800 rounded-full p-2 mr-2"
+      class="flex-shrink-0 bg-slate-200 dark:bg-slate-800 rounded-full p-2 mr-2"
     />
     <div class="px-2 py-1">
       <!-- Problem Title -->

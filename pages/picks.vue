@@ -9,13 +9,13 @@
     <br>
     <template v-for="(pick, index) in picks" :key="index">
       <NuxtLink
-        class="focused-link card-style w-full flex justify-start items-center sm:px-4 px-2 py-2 mb-4 relative"
+        class="focused-link card-style w-full flex justify-start items-center md:px-4 px-2 py-2 mb-4 relative"
         target="_blank"
         :to="pick.link"
       >
         <img
           :src="pick.cover"
-          class="w-8 h-8 sm:w-12 sm:10 flex-shrink-0 object-cover rounded-md mr-3 overflow-hidden"
+          class="w-8 h-8 md:w-12 md:10 flex-shrink-0 object-cover rounded-md mr-3 overflow-hidden"
           alt="Link Cover Image"
         />
         <span>{{ pick.title }}</span>

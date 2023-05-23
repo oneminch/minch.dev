@@ -9,7 +9,7 @@
 
   <!-- Mobile Navigation -->
   <AppNav
-    class="sm:hidden flex after:shadow-2xl border border-green-400"
+    class="md:hidden flex after:shadow-2xl border border-green-400"
   ></AppNav>
 </template>
 
@@ -53,23 +53,16 @@
   }
 
   html {
-    @apply m-0 p-0 sm:overflow-hidden;
+    @apply m-0 p-0 md:overflow-hidden;
     font-family: "Roboto Mono", monospace;
   }
 
   body {
-    @apply w-full sm:h-screen bg-slate-50 dark:bg-slate-900 text-slate-800 dark:text-slate-100 flex items-start flex-col sm:flex-row px-4 pt-4 pb-6 max-w-7xl mx-auto sm:overflow-y-auto;
+    @apply w-full md:h-screen bg-slate-50 dark:bg-slate-900 text-slate-800 dark:text-slate-100 flex items-start flex-col md:flex-row px-4 pt-4 pb-6 max-w-7xl mx-auto md:overflow-y-auto;
   }
 
   main {
-    @apply w-full rounded-lg px-1 pt-6 sm:px-10 py-4 pb-8 bg-transparent sm:bg-slate-50 sm:dark:bg-slate-800 font-normal overflow-x-hidden -z-0;
-    /* @apply w-full sm:w-3/4 ml-auto max-w-[calc(100%-17rem)] md:max-w-[calc(100%-21rem)]; */
-    /* overflow: hidden; */
-  }
-
-  main.wip {
-    @apply h-full min-h-[25rem] flex flex-col items-center justify-center;
-    @apply bg-transparent bg-circuit dark:bg-circuit-dark;
+    @apply w-full rounded-lg px-1 pt-6 md:px-10 py-4 pb-8 bg-transparent md:bg-slate-50 md:dark:bg-slate-800 font-normal overflow-x-hidden -z-0;
   }
 
   .focused-link {
@@ -79,7 +72,6 @@
   .icon-link {
     @apply w-8 h-8 flex items-center justify-center mx-1 rounded-full;
     @apply [&>svg]:w-5 [&>svg]:h-5;
-    /* [&>svg]:md:w-5 [&>svg]:md:h-5; */
   }
 
   .slide-enter-active,

@@ -7,7 +7,7 @@
     <img
       src="/profile.png"
       alt="Profile Picture"
-      class="sm:w-36 w-1/4 max-w-[14rem] min-w-[4rem] rounded-full"
+      class="md:w-36 w-1/4 max-w-[14rem] min-w-[4rem] rounded-full"
     />
     <h2 class="text-2xl font-bold text-slate-900 dark:text-slate-100">
       Dawit U

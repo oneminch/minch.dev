@@ -1,11 +1,11 @@
 <!-- Navigation: Links -->
 <template>
   <nav
-    class="flex-col justify-center items-center rounded-[.6rem] p-1 sm:px-4 text-slate-900 dark:text-slate-200 sm:w-full w-32 sm:max-h-64 max-h-16 sm:right-0 sm:bottom-0 fixed sm:relative bottom-6 right-4 sm:border-none sm:bg-transparent dark:sm:bg-transparent dark:bg-slate-800 bg-slate-100 z-50 origin-bottom-right"
+    class="flex-col justify-center items-center rounded-[.6rem] p-1 md:px-4 text-slate-900 dark:text-slate-200 md:w-full w-32 md:max-h-64 max-h-16 md:right-0 md:bottom-0 fixed md:relative bottom-6 right-4 md:border-none md:bg-transparent dark:md:bg-transparent dark:bg-slate-800 bg-slate-100 z-50 origin-bottom-right"
     :class="{ toggled: menuToggled }"
   >
     <ul
-      class="w-full h-full invisible opacity-0 sm:visible sm:opacity-100 hidden sm:flex flex-col"
+      class="w-full h-full invisible opacity-0 md:visible md:opacity-100 hidden md:flex flex-col"
     >
       <li
         v-for="(route, link) in navLinks"
@@ -32,7 +32,7 @@
     >
       <button
         @click="toggleMenu()"
-        class="sm:hidden w-full h-10 py-1 px-4 flex items-center justify-center rounded-md font-semibold hover:bg-green-400 bg-green-400 text-slate-800"
+        class="md:hidden w-full h-10 py-1 px-4 flex items-center justify-center rounded-md font-semibold hover:bg-green-400 bg-green-400 text-slate-800"
         aria-label="Menu"
         title="Menu"
       >
