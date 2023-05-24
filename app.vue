@@ -53,16 +53,16 @@
   }
 
   html {
-    @apply m-0 p-0 md:overflow-hidden;
+    @apply m-0 p-0;
     font-family: "Roboto Mono", monospace;
   }
 
   body {
-    @apply w-full md:h-screen bg-slate-50 dark:bg-slate-900 text-slate-800 dark:text-slate-100 flex items-start flex-col md:flex-row px-4 pt-4 pb-6 max-w-7xl mx-auto md:overflow-y-auto;
+    @apply w-full md:min-h-screen px-5 md:px-4 pt-4 pb-6 max-w-7xl mx-auto bg-slate-50 dark:bg-slate-900 text-slate-800 dark:text-slate-100 flex items-start flex-col md:flex-row md:overflow-y-auto;
   }
 
   main {
-    @apply w-full rounded-lg px-1 pt-6 md:px-10 py-4 pb-8 bg-transparent md:bg-slate-50 md:dark:bg-slate-800 font-normal overflow-x-hidden -z-0;
+    @apply w-full rounded-lg pt-6 md:px-10 py-4 pb-8 bg-transparent md:bg-slate-50 md:dark:bg-slate-800 font-normal overflow-x-hidden -z-0;
   }
 
   .focused-link {

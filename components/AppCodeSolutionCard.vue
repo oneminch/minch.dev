@@ -6,14 +6,25 @@
     :title="problemTitle"
   >
     <!-- Platform Icon e.g. Leetcode -->
-    <Icon
-      :name="`simple-icons:${platform.toLowerCase()}`"
+    <!-- <Icon
+      :name="`simple-icons:${
+        platform == 'binarysearch' ? 'leetcode' : platform
+      }`"
       size="2.5rem"
-      class="flex-shrink-0 bg-slate-200 dark:bg-slate-800 rounded-full p-2 mr-2"
-    />
+    /> -->
+    <div
+      class="w-10 h-10 flex-shrink-0 flex items-center justify-center bg-slate-200 dark:bg-slate-800 rounded-full p-1 mr-2 overflow-hidden"
+    >
+      <img
+        :src="`/icons/${platform}.png`"
+        :alt="`${platform}`"
+        :title="`${platform}`"
+        class="object-cover rounded-full"
+      />
+    </div>
     <div class="px-2 py-1">
       <!-- Problem Title -->
-      <h3 class="font-semibold mb-1">{{ title }}</h3>
+      <h3 class="font-semibold mb-1">{{ problemTitle }}</h3>
       <!-- Tags -->
       <div class="mb-1">
         <span
@@ -28,15 +39,15 @@
 </template>
 
 <script setup>
-  const title = "Two Sum";
-  const url = "http://leetcode.com/";
-  const tags = ["Python", "Array", "String"];
-  const platform = "Leetcode";
-
   const props = defineProps({
     problemTitle: String,
     url: String,
-    platform: String,
-    tags: Array
+    tags: Array,
+    problemUrl: String
+  });
+
+  const platform = computed(() => {
+    let urlHostname = new URL(props.problemUrl).hostname.split(".");
+    return urlHostname[urlHostname.length - 2].toLowerCase();
   });
 </script>

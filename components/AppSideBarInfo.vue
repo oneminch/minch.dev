@@ -2,17 +2,21 @@
 <template>
   <div
     id="info-card"
-    class="w-full flex flex-col items-center bg-transparent relative"
+    class="w-full flex flex-col items-center bg-transparent relative [&>*]:mb-1 md:[&>*]:mb-2 last:[&>*]:mb-0 pb-2 md:pb-0"
   >
     <img
       src="/profile.png"
       alt="Profile Picture"
-      class="md:w-36 w-1/4 max-w-[14rem] min-w-[4rem] rounded-full"
+      class="md:w-36 w-1/4 max-w-[8rem] min-w-[5rem] rounded-full"
     />
-    <h2 class="text-2xl font-bold text-slate-900 dark:text-slate-100">
+    <h2
+      class="text-xl md:text-2xl font-bold text-slate-900 dark:text-slate-100"
+    >
       Dawit U
     </h2>
-    <h2 class="text-xl font-medium text-slate-700 dark:text-slate-400">
+    <h2
+      class="text-lg md:text-xl font-medium text-slate-700 dark:text-slate-400"
+    >
       Software Engineer
     </h2>
     <div
@@ -42,9 +46,3 @@
     Unsplash: "https://unsplash.com/@oneminch"
   };
 </script>
-
-<style scoped>
-  #info-card > * {
-    @apply mb-2 last:mb-0;
-  }
-</style>

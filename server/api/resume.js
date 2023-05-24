@@ -20,7 +20,7 @@ export default defineEventHandler(async () => {
   try {
     const response = await axios.get(resumeApiUrl, axiosConfig);
 
-    console.log(response);
+    // console.log(response);
 
     return response.json();
   } catch (error) {

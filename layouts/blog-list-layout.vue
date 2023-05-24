@@ -12,15 +12,15 @@
           </NuxtLink>
         </li>
         <li class="">
-          <NuxtLink class="nav-item focused-link" to="/blog/cps">
-            Coding Solutions
+          <NuxtLink class="nav-item focused-link" to="/leetcode">
+            Code Solutions
           </NuxtLink>
         </li>
-        <li class="">
+        <!-- <li class="">
           <NuxtLink class="nav-item focused-link" to="/blog/snippets">
             Snippets
           </NuxtLink>
-        </li>
+        </li> -->
       </ul>
     </nav>
 

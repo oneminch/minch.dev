@@ -20,7 +20,7 @@
     >
       <!-- Publish Date + Read time -->
       <p class="text-sm text-slate-400">
-        {{ lastUpdateTime }} &bull; {{ readTime }}
+        {{ lastUpdateTime }} {{ readTime ? `&bull; ${readTime}` : "" }}
       </p>
       <!-- Blog Title -->
       <h3 class="font-bold">{{ blogTitle }}</h3>
@@ -28,9 +28,9 @@
       <div class="my-1 mt-auto">
         <span
           class="px-2 py-[.1rem] inline-block rounded-full bg-green-300 font-semibold font-mono text-slate-800 text-xs mr-1"
-          v-for="tag in ['TailwindCSS', 'VueJS', 'localForage']"
+          v-for="tag in tags"
           :key="tag"
-          >{{ tag.toUpperCase() }}
+          >{{ tag }}
         </span>
       </div>
     </div>
@@ -48,7 +48,13 @@
     pubDate: Number
   });
 
-  const imageUrl = `https://github.com/oneminch/garden/raw/main/Assets/Images/posts.${props.title.toLowerCase()}.header.png`;
+  // console.log();
+  // const readTime = "3 min";
+
+  const imageUrl = computed(
+    () =>
+      `https://github.com/oneminch/garden/raw/main/Blog/Assets/${props.title.toLowerCase()}.cover.png`
+  );
 
   const lastUpdateTime = computed(() => {
     const dateObj = new Date(props.pubDate);

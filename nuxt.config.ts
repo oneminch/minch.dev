@@ -42,17 +42,21 @@ export default defineNuxtConfig({
   },
   content: {
     sources: {
-      github: {
+      posts: {
         prefix: "/blog",
         driver: "github",
         repo: "oneminch/garden",
         branch: "main",
-        // dir: "",
+        dir: "Blog",
         token: process.env.GITHUB_TOKEN
       }
+    },
+    highlight: {
+      theme: "github-dark"
     }
   },
   routeRules: {
+    "/blog/**": { static: true }
     // "/*": { static: true }
     // "/blog": { ssr: false }
   }

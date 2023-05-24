@@ -13,11 +13,11 @@ const options = {
 axios
   .request(options)
   .then(function (response) {
-    console.log(response.data);
-    console.log(response.data.matchedUser.submitStats.totalSubmissionNum);
+    // console.log(response.data);
+    // console.log(response.data.matchedUser.submitStats.totalSubmissionNum);
   })
   .catch(function (error) {
-    console.error(error);
+    // console.error(error);
   });
 
 export default defineEventHandler(async () => {

@@ -1,39 +1,40 @@
 <template>
-  <section class="w-full">
-    <article
-      class="w-full prose dark:prose-invert prose-img:rounded-xl lg:prose-base prose-slate mx-auto text-slate-800 dark:text-slate-100 font-serif"
-    >
-      <!-- Breadcrumb nav menu -->
-      <nav class="flex items-center mb-6 py-2 px-4 text-lg [&>*]:mr-4">
-        <NuxtLink
-          class="breadcrumb-nav-item focused-link dark:text-slate-200 hover:before:visible before:invisible relative -z-0 no-underline"
-          to="/"
-          >Home</NuxtLink
-        >
-        <Icon name="octicon:chevron-right-16" />
-        <NuxtLink
-          class="breadcrumb-nav-item focused-link dark:text-slate-200 hover:before:visible before:invisible relative -z-0 no-underline"
-          to="/blog"
-          >Blog</NuxtLink
-        >
-      </nav>
-      <!-- Blog Post -->
-      <ContentDoc v-slot="{ doc }">
-        <h1>{{ doc.title }}</h1>
-        <ContentRenderer :value="doc" />
-      </ContentDoc>
-    </article>
-  </section>
+  <ContentDoc v-slot="{ doc }">
+    <!-- Post title -->
+    <h1 class="mb-4">{{ doc.title }}</h1>
+
+    <!-- Additional info for leetcode solution posts -->
+    <template v-if="doc._dir == 'leetcode'">
+      <div class="mb-1">
+        <span
+          class="px-2 py-[.1rem] inline-block rounded-full bg-green-400 font-mono text-slate-800 text-sm mr-1 font-semibold"
+          v-for="tag in doc.tags"
+          :key="tag"
+          >{{ tag }}
+        </span>
+      </div>
+
+      <p>
+        <b class="mr-2">Problem URL:</b>
+        <NuxtLink v-if="doc.problemUrl" target="_blank" :to="doc.problemUrl">
+          {{ doc.title }}
+        </NuxtLink>
+      </p>
+    </template>
+
+    <!-- Main post content -->
+    <ContentRenderer :value="doc" />
+  </ContentDoc>
 </template>
 
-<script setup></script>
+<script setup>
+  definePageMeta({
+    layout: "blog-post-layout"
+  });
+</script>
 
 <style scoped>
-  article > div a {
-    @apply text-green-500 !important;
-  }
-
-  .breadcrumb-nav-item::before {
-    @apply content-[''] absolute origin-center w-full h-full scale-x-150 scale-y-125 rounded-md -z-10 bg-gradient-to-r from-green-200 to-yellow-200 dark:from-transparent dark:to-transparent dark:bg-slate-700;
+  #post a {
+    @apply no-underline border-b border-b-green-400;
   }
 </style>

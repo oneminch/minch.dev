@@ -5,6 +5,6 @@
 
 <script setup>
   definePageMeta({
-    layout: "blog-layout"
+    layout: "blog-list-layout"
   });
 </script>
