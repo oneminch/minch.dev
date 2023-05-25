@@ -19,6 +19,7 @@
     layout: "blog-list-layout"
   });
 
+  // Fetch all blog posts sans LeetCode solutions
   const { data: blogPosts } = await useAsyncData("blog", () =>
     queryContent("/")
       .where({ _dir: { $ne: "leetcode" } })
