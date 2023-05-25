@@ -41,16 +41,16 @@ export default defineNuxtConfig({
     raindropCollectionId: process.env.RAINDROP_COLLECTION_ID
   },
   content: {
-    sources: {
-      posts: {
-        prefix: "/blog",
-        driver: "github",
-        repo: "oneminch/garden",
-        branch: "main",
-        dir: "Blog",
-        token: process.env.GITHUB_TOKEN
-      }
-    },
+    //sources: {
+    //  posts: {
+    //    prefix: "/blog",
+    //    driver: "github",
+    //    repo: "oneminch/garden",
+    //    branch: "main",
+    //    dir: "Blog",
+    //   token: process.env.GITHUB_TOKEN
+    //  }
+    //},
     highlight: {
       theme: "github-dark"
     }
