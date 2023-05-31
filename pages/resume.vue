@@ -21,7 +21,7 @@
       <Icon name="ic:baseline-work-history" class="ml-3" />
     </h3>
     <section
-      class="border-l-2 border-slate-300 dark:border-slate-600 my-4 w-full"
+      class="ml-2 border-l-2 border-slate-300 dark:border-slate-600 my-4 w-full"
     >
       <div
         v-for="(experience, expIndex) in experiences"
@@ -59,7 +59,7 @@
       <Icon name="ic:round-school" class="ml-3" />
     </h3>
     <section
-      class="border-l-2 border-slate-300 dark:border-slate-600 my-4 w-full"
+      class="ml-2 border-l-2 border-slate-300 dark:border-slate-600 my-4 w-full"
     >
       <div class="timeline-item">
         <h3 class="font-bold text-slate-700 dark:text-slate-200">
