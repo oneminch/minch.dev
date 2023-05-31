@@ -6,6 +6,7 @@
         Content from across the web I found interesting.
       </blockquote>
     </p>
+    <p v-if="pending">Loading...</p>
     <br>
     <template v-for="(pick, index) in picks" :key="index">
       <NuxtLink
@@ -26,5 +27,7 @@
 </template>
 
 <script setup>
-  const { data: picks } = reactive(await useFetch("/api/picks"));
+  const { pending, data: picks } = reactive(await useFetch("/api/picks"));
+
+  if (pending) console.log("pending");
 </script>

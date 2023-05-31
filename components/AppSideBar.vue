@@ -6,7 +6,12 @@
     :class="{ hidden: routeRegEx.test($route.fullPath) }"
   >
     <!-- Info card: Profile Picture, Name, Title + Social Profiles -->
-    <AppSideBarInfo class="md:mb-4"></AppSideBarInfo>
+    <AppSideBarInfo class=""></AppSideBarInfo>
+
+    <hr
+      class="hidden md:inline-block w-3/4 md:my-3 border-none bg-gradient-to-r from-transparent via-slate-300 dark:via-slate-600 to-transparent h-[1px] rounded-full"
+    />
+    <!-- bg-slate-200 dark:bg-slate-700  -->
 
     <!-- Desktop Navigation: Links -->
     <AppNav class="hidden md:flex"></AppNav>
