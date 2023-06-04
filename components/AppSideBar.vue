@@ -22,8 +22,8 @@
       title="Switch Theme"
       @click="toggleDark()"
     >
-      <Icon v-if="isDark" name="octicon:sun-16" />
-      <Icon v-if="!isDark" name="octicon:moon-16" />
+      <Icon v-if="isDark" name="heroicons:sun-solid" />
+      <Icon v-if="!isDark" name="heroicons:moon-solid" />
     </button>
   </section>
 </template>

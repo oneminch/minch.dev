@@ -17,7 +17,10 @@
           :to="`/${route}`"
         >
           {{ link }}
-          <Icon name="octicon:chevron-right-12" class="ml-2 text-green-500" />
+          <Icon
+            name="heroicons:chevron-right-20-solid"
+            class="ml-2 text-green-500"
+          />
         </NuxtLink>
       </li>
     </ul>
@@ -37,7 +40,7 @@
         title="Menu"
       >
         Menu
-        <Icon name="octicon:three-bars-16" class="ml-2" />
+        <Icon name="heroicons:bars-3-bottom-right-solid" class="ml-2" />
       </button>
     </OnClickOutside>
   </nav>

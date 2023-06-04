@@ -18,7 +18,7 @@
     <!-- Experience timeline -->
     <h3 class="font-bold text-2xl my-6 flex items-center">
       Experience
-      <Icon name="ic:baseline-work-history" class="ml-3" />
+      <Icon name="heroicons:briefcase-solid" class="ml-3" />
     </h3>
     <section
       class="ml-2 border-l-2 border-slate-300 dark:border-slate-600 my-4 w-full"
@@ -56,7 +56,7 @@
     <!-- Education Timeline -->
     <h3 class="font-bold text-2xl my-6 flex items-center">
       Education
-      <Icon name="ic:round-school" class="ml-3" />
+      <Icon name="heroicons:academic-cap-solid" class="ml-3" />
     </h3>
     <section
       class="ml-2 border-l-2 border-slate-300 dark:border-slate-600 my-4 w-full"

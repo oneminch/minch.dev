@@ -4,10 +4,10 @@
   >
     <h2 class="font-bold text-lg mb-2">
       {{ statusType }}
-      <Icon :name="`twemoji:${icons[statusType.toLowerCase()]}`" />
+      <Icon :name="`mdi:${icons[statusType.toLowerCase()]}`" />
     </h2>
     <p class="font-normal flex items-center">
-      <Icon name="octicon:arrow-right-16" class="mr-1 text-green-400" />
+      <Icon name="heroicons:arrow-right-solid" class="mr-1 text-green-400" />
       {{ statusContent }}
     </p>
   </section>
@@ -20,9 +20,9 @@
   });
 
   const icons = ref({
-    reading: "open-book",
-    playing: "video-game",
-    listening: "studio-microphone",
+    reading: "book-open-page-variant",
+    playing: "gamepad-variant",
+    listening: "microphone",
     learning: "brain"
   });
 </script>

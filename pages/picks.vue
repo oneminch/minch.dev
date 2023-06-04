@@ -20,7 +20,7 @@
           alt="Link Cover Image"
         />
         <span>{{ pick.title }}</span>
-        <Icon name="octicon:arrow-up-right-16" size="1.25rem" class="ml-auto flex-shrink-0 text-green-500 bg-slate-100 dark:bg-slate-600 rounded-full p-1 w-7 h-7" />
+        <Icon name="heroicons:arrow-up-right-20-solid" size="1.25rem" class="ml-auto flex-shrink-0 text-green-500 bg-slate-100 dark:bg-slate-600 rounded-full p-1 w-7 h-7" />
       </NuxtLink>
     </template>
   </main>

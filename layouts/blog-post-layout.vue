@@ -10,7 +10,7 @@
           to="/"
           >Home</NuxtLink
         >
-        <Icon name="octicon:chevron-right-16" />
+        <Icon name="heroicons:chevron-right-solid" />
         <NuxtLink
           class="breadcrumb-nav-item focused-link dark:text-slate-200 hover:before:visible before:invisible relative -z-0 no-underline"
           to="/blog"

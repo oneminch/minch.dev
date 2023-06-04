@@ -32,12 +32,12 @@
       <!-- Project Tech Stack -->
       <div>
         <Icon
-          name="skill-icons:vuejs-light"
+          name="logos:vue"
           size="1.5rem"
           class="mr-2 rounded-full inline-block"
         />
         <Icon
-          name="skill-icons:tailwindcss-light"
+          name="logos:tailwindcs-icon"
           size="1.5rem"
           class="mr-2 rounded-full inline-block"
         />
