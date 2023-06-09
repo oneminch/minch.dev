@@ -42,7 +42,6 @@
     GitHub: "https://github.com/oneminch",
     Hashnode: "https://hashnode.com/@oneminch",
     DevDotTo: "https://dev.to/oneminch",
-    LeetCode: "https://leetcode.com/oneminch",
-    Unsplash: "https://unsplash.com/@oneminch"
+    LeetCode: "https://leetcode.com/oneminch"
   };
 </script>
