@@ -28,18 +28,6 @@ export default defineNuxtConfig({
     },
     pageTransition: { name: "slide", mode: "out-in" }
   },
-  modules: [
-    "@nuxtjs/tailwindcss",
-    "nuxt-icon",
-    "@vueuse/nuxt",
-    "@nuxt/content",
-    "@nuxtjs/partytown"
-  ],
-  runtimeConfig: {
-    githubToken: process.env.GITHUB_TOKEN,
-    raindropTestToken: process.env.RAINDROP_TEST_TOKEN,
-    raindropCollectionId: process.env.RAINDROP_COLLECTION_ID
-  },
   content: {
     //sources: {
     //  posts: {
@@ -55,9 +43,24 @@ export default defineNuxtConfig({
       theme: "github-dark"
     }
   },
+  modules: [
+    "@nuxtjs/tailwindcss",
+    "nuxt-icon",
+    "@vueuse/nuxt",
+    "@nuxt/content",
+    "@nuxtjs/partytown"
+  ],
+  nitro: {
+    preset: "cloudflare_pages"
+  },
   routeRules: {
-    "/blog/**": { static: true }
+    // "/blog/**": { static: true }
     // "/*": { static: true }
     // "/blog": { ssr: false }
+  },
+  runtimeConfig: {
+    githubToken: process.env.GITHUB_TOKEN,
+    raindropTestToken: process.env.RAINDROP_TEST_TOKEN,
+    raindropCollectionId: process.env.RAINDROP_COLLECTION_ID
   }
 });
