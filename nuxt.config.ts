@@ -51,7 +51,7 @@ export default defineNuxtConfig({
     "@nuxtjs/partytown"
   ],
   nitro: {
-    preset: "cloudflare-pages"
+    // preset: "cloudflare-pages"
   },
   routeRules: {
     // "/blog/**": { static: true }
