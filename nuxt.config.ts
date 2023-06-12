@@ -35,13 +35,6 @@ export default defineNuxtConfig({
     "@nuxt/content",
     "@nuxtjs/partytown"
   ],
-  "nitro": {
-    "output": {
-      dir: 'output',
-      serverDir: 'output/server',
-      publicDir: 'output/public'
-    }
-  },
   runtimeConfig: {
     githubToken: process.env.GITHUB_TOKEN,
     raindropTestToken: process.env.RAINDROP_TEST_TOKEN,
