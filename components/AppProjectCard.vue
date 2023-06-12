@@ -31,16 +31,22 @@
       </p>
       <!-- Project Tech Stack -->
       <div>
-        <Icon
+        <!-- <Icon
           name="logos:vue"
           size="1.5rem"
-          class="mr-2 rounded-full inline-block"
+          class="mr-2 rounded-sm inline-block"
         />
         <Icon
-          name="logos:tailwindcs-icon"
+          name="logos:tailwindcss-icon"
           size="1.5rem"
-          class="mr-2 rounded-full inline-block"
-        />
+          class="mr-2 rounded-sm inline-block"
+        /> -->
+        <span
+          class="text-sm py-1 px-3 border border-slate-300 bg-slate-200 dark:border-slate-500 dark:bg-slate-600 rounded-full mr-2"
+          v-for="(tag, index) in ['Vue.js', 'Tailwind CSS']"
+          :key="index"
+          >{{ tag }}</span
+        >
       </div>
     </div>
   </NuxtLink>
