@@ -13,7 +13,7 @@
     "@nuxtjs/tailwindcss": "^6.3.1",
     "@tailwindcss/typography": "^0.5.9",
     "@vueuse/nuxt": "^9.13.0",
-    "nuxt": "^3.4.3",
+    "nuxt": "^3.5.3",
     "nuxt-icon": "^0.3.3"
   },
   "dependencies": {

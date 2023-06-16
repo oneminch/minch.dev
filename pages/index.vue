@@ -26,11 +26,15 @@
     <section class="columns-1 lg:columns-2 gap-6">
       <AppProjectCard
         :hideImage="true"
-        projectTitle="Deadlines"
+        project-title="Deadlines"
+        project-description="Deadlines is a simple, offline deadline tracker made with Vue.js and localForage."
+        :tags="['Vue.js', 'localForage']"
       ></AppProjectCard>
       <AppProjectCard
         :hideImage="true"
-        projectTitle="EncryptedList"
+        project-title="EncryptedList"
+        project-description="EncryptedList is a List of Products & Services that Offer Zero-Knowledge or End-to-End Encryption."
+        :tags="['Vue.js', 'Tailwind CSS', 'Airtable']"
       ></AppProjectCard>
     </section>
 

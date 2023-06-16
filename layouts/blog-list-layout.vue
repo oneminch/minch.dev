@@ -4,24 +4,25 @@
     <h1 class="text-3xl text-left font-bold mb-6">Blog</h1>
 
     <!-- Blog Page Navigation -->
-    <nav class="flex items-center mb-6 py-2 text-base">
-      <ul class="flex items-center [&>*]:mr-2">
-        <li class="">
-          <NuxtLink class="nav-item focused-link" to="/blog">
-            Articles
-          </NuxtLink>
-        </li>
-        <li class="">
-          <NuxtLink class="nav-item focused-link" to="/leetcode">
-            Code Solutions
-          </NuxtLink>
-        </li>
-        <!-- <li class="">
-          <NuxtLink class="nav-item focused-link" to="/blog/snippets">
-            Snippets
-          </NuxtLink>
-        </li> -->
-      </ul>
+    <nav class="flex items-center mb-6 text-base [&>*]:mr-4 relative">
+      <NuxtLink
+        active-class="left-active"
+        class="nav-item focused-link inline-block -z-0"
+        to="/blog"
+      >
+        Articles
+      </NuxtLink>
+      <NuxtLink
+        active-class="right-active"
+        class="nav-item focused-link inline-block -z-0"
+        to="/leetcode"
+      >
+        LeetCode
+      </NuxtLink>
+      <!-- Current Tab Indicator -->
+      <span
+        class="nav-item h-full absolute -z-10 border border-slate-300 dark:border-slate-600 bg-slate-200 dark:bg-slate-700"
+      ></span>
     </nav>
 
     <slot />
@@ -29,11 +30,19 @@
 </template>
 
 <style>
-  #blog .nav-item {
-    @apply py-2 px-3 dark:text-slate-200 relative -z-0 no-underline rounded-md text-center w-auto duration-200 hover:bg-slate-200 dark:hover:bg-slate-700;
+  #blog .left-active.focused-link,
+  #blog .right-active.focused-link {
+    @apply focus:ring-0;
   }
 
-  #blog .router-link-active {
-    @apply focus:ring-0 bg-slate-200 border border-slate-300 dark:bg-slate-700 dark:border-slate-600;
+  #blog .left-active + span {
+    @apply translate-x-0;
+  }
+  #blog .right-active + span {
+    @apply translate-x-32;
+  }
+
+  #blog .nav-item {
+    @apply w-28 py-2 px-3 dark:text-slate-200 no-underline rounded-md text-center duration-150;
   }
 </style>

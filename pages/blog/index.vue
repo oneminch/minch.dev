@@ -5,12 +5,12 @@
       v-for="(blogPost, index) in blogPosts"
       :key="index"
       :tags="blogPost.tags"
-      :blogTitle="blogPost.alt_title || blogPost.title"
+      :blogTitle="blogPost.longTitle || blogPost.title"
       :title="blogPost.title"
       :url="blogPost._path"
-      :pubDate="blogPost.created"
+      :pubDate="blogPost.updated"
+      :coverImage="blogPost.coverImage"
     ></AppBlogCard>
-    <!-- :slug="blogPost.title" -->
   </section>
 </template>
 

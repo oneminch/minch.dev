@@ -22,27 +22,39 @@ export default defineNuxtConfig({
         },
         {
           rel: "stylesheet",
-          href: "https://fonts.bunny.net/css?family=roboto-mono:400,400i,500,600,700"
+          href: "https://fonts.bunny.net/css?family=roboto-mono:400,400i,500,600,700|inter:300,400,500,600,700,800"
         }
       ]
     },
     pageTransition: { name: "slide", mode: "out-in" }
   },
   content: {
-    //sources: {
-    //  posts: {
-    //    prefix: "/blog",
-    //    driver: "github",
-    //    repo: "oneminch/garden",
-    //    branch: "main",
-    //    dir: "Blog",
-    //   token: process.env.GITHUB_TOKEN
-    //  }
-    //},
+    sources: {
+      content: {
+        prefix: "/blog",
+        driver: "github",
+        repo: "oneminch/garden",
+        branch: "main",
+        dir: "/Blog/notes",
+        token: process.env.GITHUB_TOKEN
+      }
+    },
     highlight: {
       theme: "github-dark"
+    },
+    ignores: [
+      "root.md",
+      "/assets/",
+      "/.vscode/",
+      "\\.png$",
+      "\\.json$",
+      "\\.yml$"
+    ],
+    markdown: {
+      toc: { depth: 1, searchDepth: 2 }
     }
   },
+
   modules: [
     "@nuxtjs/tailwindcss",
     "nuxt-icon",
@@ -50,13 +62,19 @@ export default defineNuxtConfig({
     "@nuxt/content",
     "@nuxtjs/partytown"
   ],
-  nitro: {
-    // preset: "cloudflare-pages"
-  },
   routeRules: {
-    // "/blog/**": { static: true }
-    // "/*": { static: true }
-    // "/blog": { ssr: false }
+    // Static Pages
+    "/": { prerender: true },
+    "/contact": { prerender: true },
+    "/meta": { prerender: true },
+    "/resume": { prerender: true },
+    // Dynamic Pages
+    "/blog": { isr: true },
+    "/blog/**": { isr: true },
+    "/leetcode": { isr: true },
+    "/leetcode/**": { isr: true },
+    "/projects": { isr: true },
+    "/picks": { isr: true }
   },
   runtimeConfig: {
     githubToken: process.env.GITHUB_TOKEN,

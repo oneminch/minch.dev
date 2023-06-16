@@ -1,7 +1,15 @@
 <template>
   <ContentDoc v-slot="{ doc }">
     <!-- Post title -->
-    <h1 class="mb-4">{{ doc.title }}</h1>
+    <h1 class="mb-4">{{ doc.longTitle || doc.title }}</h1>
+
+    <!-- Post Cover Image -->
+    <ContentImage
+      v-if="doc.coverImage"
+      :image-src="doc.coverImage"
+      :alt-text="doc.title"
+      :is-cover-image="true"
+    />
 
     <!-- Additional info for leetcode solution posts -->
     <template v-if="doc._dir == 'leetcode'">
@@ -22,6 +30,17 @@
       </p>
     </template>
 
+    <!-- Table of Contents for Articles -->
+    <template v-if="doc._dir == 'blog' && doc.body.toc.links.length > 0">
+      <h2>Outline</h2>
+      <ol>
+        <li v-for="link of doc.body.toc.links" :key="link.id">
+          <a :href="`#${link.id}`">{{ link.text }}</a>
+        </li>
+      </ol>
+      <br />
+    </template>
+
     <!-- Main post content -->
     <ContentRenderer :value="doc" />
   </ContentDoc>
@@ -32,9 +51,3 @@
     layout: "blog-post-layout"
   });
 </script>
-
-<style scoped>
-  #post a {
-    @apply no-underline border-b border-b-green-400;
-  }
-</style>

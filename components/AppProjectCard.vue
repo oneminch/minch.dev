@@ -7,7 +7,7 @@
   >
     <div
       v-if="!hideImage"
-      class="w-0 lg:w-1/3 hidden lg:inline-block flex-shrink-0 min-h-full overflow-hidden mr-2 border-r border-slate-100"
+      class="w-0 lg:w-1/3 hidden lg:inline-block flex-shrink-0 min-h-full overflow-hidden mr-2 border-r border-slate-200"
     >
       <img
         :src="imgUrl"
@@ -25,10 +25,7 @@
       <!-- Project Title -->
       <h3 class="font-bold mb-2">{{ projectTitle }}</h3>
       <!-- Project Description -->
-      <p class="mb-4">
-        Deadlines is a simple, offline deadline tracker made with Vue.js and
-        localForage.
-      </p>
+      <p class="mb-4">{{ projectDescription }}</p>
       <!-- Project Tech Stack -->
       <div>
         <!-- <Icon
@@ -42,8 +39,8 @@
           class="mr-2 rounded-sm inline-block"
         /> -->
         <span
-          class="text-sm py-1 px-3 border border-slate-300 bg-slate-200 dark:border-slate-500 dark:bg-slate-600 rounded-full mr-2"
-          v-for="(tag, index) in ['Vue.js', 'Tailwind CSS']"
+          class="text-xs py-1 px-3 border border-slate-300 bg-slate-200 dark:border-slate-500 dark:bg-slate-600 rounded-full mr-2"
+          v-for="(tag, index) in tags"
           :key="index"
           >{{ tag }}</span
         >
@@ -53,17 +50,26 @@
 </template>
 
 <script setup>
-  const imgUrl =
-    "https://raw.githubusercontent.com/oneminch/deadlines/main/src/assets/screenshot.jpg";
-
   defineProps({
     projectTitle: {
       type: String,
       default: ""
     },
+    projectDescription: {
+      type: String,
+      default: ""
+    },
+    imgUrl: {
+      type: String,
+      default: "https://fakeimg.pl/500x300"
+    },
     hideImage: {
       type: Boolean,
       default: false
+    },
+    tags: {
+      type: Array,
+      default: () => []
     }
   });
 </script>

@@ -54,7 +54,8 @@
 
   html {
     @apply m-0 p-0;
-    font-family: "Roboto Mono", monospace;
+    font-family: "Inter", sans-serif;
+    /* font-family: "Roboto Mono", monospace; */
   }
 
   body {
