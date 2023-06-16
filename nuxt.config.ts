@@ -45,6 +45,7 @@ export default defineNuxtConfig({
     ignores: [
       "root.md",
       "/assets/",
+      "/drafts/",
       "/.vscode/",
       "\\.png$",
       "\\.json$",
