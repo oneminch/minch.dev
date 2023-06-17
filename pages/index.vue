@@ -20,7 +20,10 @@
     <h2 class="font-semibold text-2xl mb-6">
       <NuxtLink to="/projects" class="focused-link flex items-center">
         Projects
-        <Icon name="heroicons:chevron-right-solid" class="ml-2" />
+        <Icon
+          name="heroicons:chevron-right-solid"
+          class="ml-2 text-green-500"
+        />
       </NuxtLink>
     </h2>
     <section class="columns-1 lg:columns-2 gap-6">

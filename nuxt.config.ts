@@ -70,12 +70,12 @@ export default defineNuxtConfig({
     "/meta": { prerender: true },
     "/resume": { prerender: true },
     // Dynamic Pages
-    "/blog": { isr: true },
-    "/blog/**": { isr: true },
-    "/leetcode": { isr: true },
-    "/leetcode/**": { isr: true },
-    "/projects": { isr: true },
-    "/picks": { isr: true }
+    "/blog": { isr: 86400 },
+    "/blog/**": { isr: 86400 },
+    "/leetcode": { isr: 86400 },
+    "/leetcode/**": { isr: 86400 },
+    "/projects": { isr: 86400 },
+    "/picks": { isr: 86400 }
   },
   runtimeConfig: {
     githubToken: process.env.GITHUB_TOKEN,
