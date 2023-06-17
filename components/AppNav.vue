@@ -1,7 +1,7 @@
 <!-- Navigation: Links -->
 <template>
   <nav
-    class="flex-col justify-center items-center rounded-[.6rem] p-1 md:px-4 text-slate-900 dark:text-slate-200 md:w-full w-32 md:max-h-64 max-h-16 md:right-0 md:bottom-0 fixed md:relative bottom-6 right-4 md:border-none md:bg-transparent dark:md:bg-transparent dark:bg-slate-800 bg-slate-100 z-50 origin-bottom-right"
+    class="flex-col justify-center items-center rounded-xl p-[.375rem] md:px-4 text-slate-900 dark:text-slate-200 md:w-full w-32 md:max-h-64 max-h-16 md:right-0 md:bottom-0 fixed md:relative bottom-6 right-4 bg-transparent z-50 origin-bottom-right backdrop-blur-3xl md:backdrop-blur-none"
     :class="{ toggled: menuToggled }"
   >
     <ul
@@ -13,7 +13,7 @@
         class="font-bold h-auto flex items-center relative mb-2 rounded-md overflow-hidden"
       >
         <NuxtLink
-          class="nav-links focused-link w-full h-10 py-1 px-4 flex items-center rounded-md font-semibold hover:bg-slate-200 dark:hover:bg-slate-700 [&>svg]:hover:translate-x-1"
+          class="nav-links focused-link w-full h-10 py-1 px-4 flex items-center rounded-md font-semibold hover:bg-transparent md:hover:bg-slate-200 md:dark:hover:bg-slate-700 [&>svg]:hover:translate-x-1"
           :to="`/${route}`"
         >
           {{ link }}
@@ -39,8 +39,8 @@
         aria-label="Menu"
         title="Menu"
       >
-        Menu
-        <Icon name="heroicons:bars-3-bottom-right-solid" class="ml-2" />
+        Pages
+        <Icon name="octicon:project-roadmap-16" size="1.15rem" class="ml-2" />
       </button>
     </OnClickOutside>
   </nav>
@@ -73,7 +73,7 @@
   }
 
   nav.toggled {
-    @apply w-[calc(100%-2rem)] flex max-h-80 overflow-hidden;
+    @apply w-[calc(100%-2rem)] flex max-h-80 overflow-hidden p-3;
   }
 
   nav.toggled > ul {
@@ -85,6 +85,7 @@
   }
 
   .nav-links.router-link-active {
-    @apply focus:ring-0 bg-lime-100 dark:bg-slate-700 border border-lime-300 dark:border-slate-600;
+    @apply focus:ring-0 bg-lime-100 dark:bg-slate-700/75 md:dark:bg-slate-700/100 border border-lime-300 dark:border-slate-600;
+    /*  dark:bg-slate-700/75 md:dark:bg-slate-700/100 */
   }
 </style>
