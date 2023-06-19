@@ -3,7 +3,7 @@
   <NuxtLink
     to="https://deadlines.oneminch.dev/"
     target="_blank"
-    class="card-style focused-link w-full min-h-[8rem] h-auto p-0 overflow-hidden flex justify-start first:[&>*]:mb-0 [&>*]:mb-2 mb-5 [&_img]:hover:scale-105"
+    class="card-style focused-link relative w-full min-h-[8rem] h-auto p-0 overflow-hidden flex justify-start first:[&>*]:mb-0 [&>*]:mb-2 mb-5 [&_img]:hover:scale-105"
   >
     <div
       v-if="!hideImage"
@@ -39,13 +39,18 @@
           class="mr-2 rounded-sm inline-block"
         /> -->
         <span
-          class="text-xs py-1 px-3 border border-slate-300 bg-slate-200 dark:border-slate-500 dark:bg-slate-600 rounded-full mr-2"
+          class="px-3 py-[.1rem] inline-block rounded-full font-semibold font-mono text-xs mr-1 border border-slate-300 dark:border-slate-500 bg-slate-200 dark:bg-slate-600 text-slate-800 dark:text-slate-100"
           v-for="(tag, index) in tags"
           :key="index"
           >{{ tag }}</span
         >
       </div>
     </div>
+    <Icon
+      name="heroicons:arrow-up-right-20-solid"
+      size="1.25rem"
+      class="ml-auto absolute right-2 top-2 text-green-500 bg-slate-100 dark:bg-slate-600 rounded-full p-1 w-7 h-7"
+    />
   </NuxtLink>
 </template>
 

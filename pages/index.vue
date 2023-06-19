@@ -17,7 +17,7 @@
     </section>
 
     <!-- Projects -->
-    <h2 class="font-semibold text-2xl mb-6">
+    <h2 class="font-semibold text-xl mb-6">
       <NuxtLink to="/projects" class="focused-link flex items-center">
         Projects
         <Icon
@@ -42,7 +42,7 @@
     </section>
 
     <!-- Skills -->
-    <h2 class="font-semibold text-2xl mb-6">Skills</h2>
+    <h2 class="font-semibold text-xl mb-6">Skills</h2>
     <section>
       <span
         v-for="skill in skills"
@@ -52,7 +52,7 @@
       >
     </section>
     <!-- Status -->
-    <h2 class="font-semibold text-2xl mb-6">Currently</h2>
+    <h2 class="font-semibold text-xl mb-6">Currently</h2>
     <section class="columns-1 lg:columns-2 gap-6">
       <AppStatusCard
         v-for="(content, type) in currently"

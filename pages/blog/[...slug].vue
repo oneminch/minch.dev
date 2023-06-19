@@ -15,7 +15,7 @@
     <template v-if="doc._dir == 'leetcode'">
       <div class="mb-1">
         <span
-          class="px-2 py-[.1rem] inline-block rounded-full bg-green-400 font-mono text-slate-800 text-sm mr-1 font-semibold"
+          class="px-2 py-[.1rem] inline-block rounded-full font-semibold font-mono text-xs mr-1 border border-slate-300 dark:border-slate-500 bg-slate-200 dark:bg-slate-600 text-slate-800 dark:text-slate-100"
           v-for="tag in doc.tags"
           :key="tag"
           >{{ tag }}
