@@ -1,7 +1,6 @@
 <!-- Blog: Card -->
 <template>
   <NuxtLink
-    id="blog-card"
     class="card-style focused-link w-full min-h-[8rem] h-auto p-0 overflow-hidden flex justify-start mb-5 [&_img]:hover:scale-105"
     :to="url"
   >

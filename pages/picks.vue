@@ -6,10 +6,11 @@
         Content from across the web I found interesting.
       </blockquote>
     </p>
-    <p v-if="pending">Loading...</p>
     <br>
-    <template v-for="(pick, index) in picks" :key="index">
+    <template v-if="!pending || picks.length > 0">
       <NuxtLink
+        v-for="(pick, index) in picks"
+        :key="index"
         class="focused-link card-style w-full flex justify-start items-center md:px-4 px-2 py-2 mb-4 relative"
         target="_blank"
         :to="pick.link"
@@ -23,11 +24,15 @@
         <Icon name="heroicons:arrow-up-right-20-solid" size="1.25rem" class="ml-auto flex-shrink-0 text-green-500 bg-slate-100 dark:bg-slate-600 rounded-full p-1 w-7 h-7" />
       </NuxtLink>
     </template>
+    <template v-else>
+      <AppPickSkeleton v-for="i in 5" :key="i" />
+    </template>
   </main>
 </template>
 
 <script setup>
-  const { pending, data: picks } = reactive(await useFetch("/api/picks"));
+  const { pending, data: picks } = await useLazyFetch("/api/picks");
 
-  if (pending) console.log("pending");
+  // if (pending) console.log("pending");
+  // watch(picks, (newPicks) => console.log("loading"))
 </script>

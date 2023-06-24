@@ -1,7 +1,6 @@
-<!-- Info card: Profile Picture, Name, Title + Social Profiles -->
+<!-- Profile card: Profile Picture, Name, Title + Social Profiles -->
 <template>
   <div
-    id="info-card"
     class="w-full flex flex-col items-center bg-transparent relative [&>*]:mb-1 md:[&>*]:mb-2 last:[&>*]:mb-0 p-1 pb-2 md:pb-1"
   >
     <img

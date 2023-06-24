@@ -8,7 +8,7 @@
       :url="solution._path"
       :tags="solution.tags"
       :problemUrl="solution.problemUrl"
-    ></AppCodeSolutionCard>
+    />
   </section>
 </template>
 

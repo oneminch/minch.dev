@@ -1,19 +1,19 @@
 <!-- Sidebar -->
 <template>
-  <section
+  <aside
     id="sidebar"
     class="flex flex-col items-center justify-start w-full md:w-1/4 min-w-[16rem] md:min-w-[20rem] h-full max-h-[40rem] rounded-xl md:rounded-b-none p-5 pb-2 md:mr-4 md:mb-0 mb-6 box-border text-slate-900 bg-white dark:bg-slate-800 border border-transparent print:hidden relative md:sticky md:top-4 -z-0"
     :class="{ hidden: routeRegEx.test($route.fullPath) }"
   >
-    <!-- Info card: Profile Picture, Name, Title + Social Profiles -->
-    <AppSideBarInfo class=""></AppSideBarInfo>
+    <!-- Profile card: Profile Picture, Name, Title + Social Profiles -->
+    <AppProfileCard />
 
     <hr
       class="hidden md:inline-block w-3/4 md:my-3 border-none bg-gradient-to-r from-transparent via-slate-300 dark:via-slate-600 to-transparent h-[1px] rounded-full"
     />
 
     <!-- Desktop Navigation: Links -->
-    <AppNav class="hidden md:flex"></AppNav>
+    <AppNav class="hidden md:flex" />
 
     <!-- Button for toggling theme -->
     <button
@@ -25,7 +25,7 @@
       <Icon v-if="isDark" name="heroicons:sun-solid" />
       <Icon v-if="!isDark" name="heroicons:moon-solid" />
     </button>
-  </section>
+  </aside>
 </template>
 
 <script setup>

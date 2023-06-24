@@ -13,7 +13,7 @@
         class="font-bold h-auto flex items-center relative mb-2 rounded-md overflow-hidden"
       >
         <NuxtLink
-          class="nav-links focused-link w-full h-10 py-1 px-4 flex items-center rounded-md font-semibold hover:bg-transparent md:hover:bg-slate-200 md:dark:hover:bg-slate-700 [&>svg]:hover:translate-x-1"
+          class="nav-links focused-link w-full h-10 py-1 px-4 flex items-center rounded-md font-semibold hover:bg-transparent md:hover:bg-slate-100 md:dark:hover:bg-slate-700 [&>svg]:hover:translate-x-1"
           :to="`/${route}`"
         >
           {{ link }}
@@ -85,7 +85,6 @@
   }
 
   .nav-links.router-link-active {
-    @apply focus:ring-0 bg-lime-100 dark:bg-slate-700/75 md:dark:bg-slate-700/100 border border-lime-300 dark:border-slate-600;
-    /*  dark:bg-slate-700/75 md:dark:bg-slate-700/100 */
+    @apply focus:ring-0 bg-slate-200 dark:bg-slate-700/75 md:dark:bg-slate-700/100 border border-slate-300 dark:border-slate-600;
   }
 </style>

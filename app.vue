@@ -1,6 +1,8 @@
 <template>
+  <!-- <NuxtLoadingIndicator /> -->
+
   <!-- Sidebar -->
-  <AppSideBar></AppSideBar>
+  <AppSideBar />
 
   <!-- Main Content -->
   <NuxtLayout>
@@ -10,7 +12,7 @@
   <!-- Mobile Navigation -->
   <AppNav
     class="md:hidden flex after:shadow-2xl border-[1.5px] border-green-400"
-  ></AppNav>
+  />
 </template>
 
 <script setup></script>

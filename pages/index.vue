@@ -17,8 +17,8 @@
     </section>
 
     <!-- Projects -->
-    <h2 class="font-semibold text-xl mb-6">
-      <NuxtLink to="/projects" class="focused-link flex items-center">
+    <h2 class="font-semibold text-xl mb-2">
+      <NuxtLink to="/projects" class="focused-link flex items-center py-2">
         Projects
         <Icon
           name="heroicons:chevron-right-solid"
@@ -32,37 +32,37 @@
         project-title="Deadlines"
         project-description="Deadlines is a simple, offline deadline tracker made with Vue.js and localForage."
         :tags="['Vue.js', 'localForage']"
-      ></AppProjectCard>
+      />
       <AppProjectCard
         :hideImage="true"
         project-title="EncryptedList"
         project-description="EncryptedList is a List of Products & Services that Offer Zero-Knowledge or End-to-End Encryption."
         :tags="['Vue.js', 'Tailwind CSS', 'Airtable']"
-      ></AppProjectCard>
+      />
     </section>
 
     <!-- Skills -->
-    <h2 class="font-semibold text-xl mb-6">Skills</h2>
+    <h2 class="font-semibold text-xl mb-2 py-2">Skills</h2>
     <section>
       <span
         v-for="skill in skills"
         :key="skill"
-        class="px-3 py-1 inline-block bg-green-500 font-semibold rounded-full text-slate-800 text-sm mr-1 mb-1"
+        class="px-3 py-1 inline-block bg-green-400 font-semibold rounded-full text-slate-800 text-sm mr-1 mb-1"
         >{{ skill }}</span
       >
     </section>
     <!-- Status -->
-    <h2 class="font-semibold text-xl mb-6">Currently</h2>
+    <h2 class="font-semibold text-xl mb-2 py-2">Currently</h2>
     <section class="columns-1 lg:columns-2 gap-6">
       <AppStatusCard
         v-for="(content, type) in currently"
         :key="type"
         :status-type="type"
         :status-content="content"
-      ></AppStatusCard>
+      />
     </section>
 
-    <AppFooter></AppFooter>
+    <AppFooter />
   </main>
 </template>
 

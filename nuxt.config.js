@@ -28,6 +28,11 @@ export default defineNuxtConfig({
     },
     pageTransition: { name: "slide", mode: "out-in" }
   },
+  components: [
+    { path: "~/components/cards", pathPrefix: false },
+    { path: "~/components/skeletons", pathPrefix: false },
+    { path: "~/components", pathPrefix: false }
+  ],
   content: {
     sources: {
       content: {
@@ -57,11 +62,11 @@ export default defineNuxtConfig({
   },
 
   modules: [
-    "@nuxtjs/tailwindcss",
-    "nuxt-icon",
-    "@vueuse/nuxt",
     "@nuxt/content",
-    "@nuxtjs/partytown"
+    "@nuxtjs/partytown",
+    "@nuxtjs/tailwindcss",
+    "@vueuse/nuxt",
+    "nuxt-icon"
   ],
   routeRules: {
     // Static Pages
