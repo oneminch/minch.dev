@@ -7,7 +7,7 @@
       </blockquote>
     </p>
     <br>
-    <template v-if="!pending || picks.length > 0">
+    <template v-if="picks.length > 0">
       <NuxtLink
         v-for="(pick, index) in picks"
         :key="index"
