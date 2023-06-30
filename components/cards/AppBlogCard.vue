@@ -1,7 +1,7 @@
 <!-- Blog: Card -->
 <template>
   <NuxtLink
-    class="card-style focused-link w-full min-h-[8rem] h-auto p-0 overflow-hidden flex justify-start mb-5 [&_img]:hover:scale-105"
+    class="card-style focused-link w-full min-h-[7rem] md:min-h-[8rem] h-auto p-0 overflow-hidden flex justify-start mb-5 [&_img]:hover:scale-105"
     :to="url"
   >
     <!-- Blog Image -->
@@ -16,7 +16,7 @@
       />
     </div>
     <div
-      class="flex flex-col justify-between py-4 px-6 flex-shrink-0 w-full md:w-2/3 min-h-full"
+      class="flex flex-col justify-between py-2 px-4 flex-shrink-0 w-full md:w-2/3 min-h-full"
     >
       <!-- Blog Title -->
       <h3 class="font-bold">{{ blogTitle }}</h3>

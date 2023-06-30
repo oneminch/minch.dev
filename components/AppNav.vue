@@ -1,7 +1,7 @@
 <!-- Navigation: Links -->
 <template>
   <nav
-    class="flex-col justify-center items-center rounded-xl p-[.375rem] md:px-4 text-slate-900 dark:text-slate-200 md:w-full w-32 md:max-h-64 max-h-16 md:right-0 md:bottom-0 fixed md:relative bottom-6 right-4 bg-transparent z-50 origin-bottom-right backdrop-blur-3xl md:backdrop-blur-none"
+    class="flex-col justify-center items-center rounded-xl p-[.375rem] md:px-4 text-slate-900 dark:text-slate-200 md:w-full w-32 md:max-h-64 max-h-16 md:right-0 md:bottom-0 fixed md:relative bottom-6 right-4 bg-transparent z-50 origin-bottom-right backdrop-blur-2xl md:backdrop-blur-none"
     :class="{ toggled: menuToggled }"
   >
     <ul

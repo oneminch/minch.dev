@@ -2,10 +2,10 @@
   <section
     class="card-style flex flex-col py-4 px-6 items-start w-full min-h-[6rem] relative mb-4"
   >
-    <h2 class="font-bold text-lg mb-2">
+    <h3 class="font-bold text-lg mb-2">
       {{ statusType }}
       <Icon :name="`mdi:${icons[statusType.toLowerCase()]}`" />
-    </h2>
+    </h3>
     <p class="font-normal flex items-center">
       <Icon name="heroicons:arrow-right-solid" class="mr-1 text-green-400" />
       {{ statusContent }}

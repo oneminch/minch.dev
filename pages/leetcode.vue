@@ -1,28 +1,37 @@
-<!-- Blog: Coding Problems -->
+<!-- Blog: LeetCode Coding Problems -->
 <template>
-  <section>
-    <AppCodeSolutionCard
-      v-for="(solution, index) in codeSolutions"
-      :key="index"
-      :problemTitle="solution.title"
-      :url="solution._path"
-      :tags="solution.tags"
-      :problemUrl="solution.problemUrl"
-    />
-  </section>
+  <main id="leetcode">
+    <h1 class="text-3xl text-left font-bold mb-6">LeetCode Solutions</h1>
+
+    <section>
+      <template v-if="pending">
+        <AppCodeSolutionSkeleton v-for="i in 5" :key="i" />
+      </template>
+      <template v-else>
+        <AppCodeSolutionCard
+          v-for="(solution, index) in codeSolutions"
+          :key="index"
+          :problemTitle="solution.title"
+          :url="solution._path"
+          :tags="solution.tags"
+          :problemUrl="solution.problemUrl"
+        />
+      </template>
+    </section>
+  </main>
 </template>
 
 <script setup>
+  import AppCodeSolutionSkeleton from "../components/skeletons/AppCodeSolutionSkeleton.vue";
+
   definePageMeta({
     layout: "blog-list-layout"
   });
 
   // Fetch all LeetCode solutions
-  const { data: codeSolutions } = await useAsyncData("leetcode", () =>
+  const { pending, data: codeSolutions } = await useAsyncData("leetcode", () =>
     queryContent("/")
       .where({ _dir: { $eq: "leetcode" } })
       .find()
   );
-
-  // console.log(JSON.parse(JSON.stringify(codeSolutions.value)));
 </script>

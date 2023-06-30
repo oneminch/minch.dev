@@ -1,9 +1,9 @@
 <!-- Project: Card -->
 <template>
   <NuxtLink
-    to="https://deadlines.oneminch.dev/"
+    :to="projectUrl"
     target="_blank"
-    class="card-style focused-link relative w-full min-h-[8rem] h-auto p-0 overflow-hidden flex justify-start first:[&>*]:mb-0 [&>*]:mb-2 mb-5 [&_img]:hover:scale-105"
+    class="card-style focused-link relative w-full min-h-[7rem] md:min-h-[8rem] h-auto p-0 overflow-hidden flex justify-start first:[&>*]:mb-0 [&>*]:mb-2 mb-5 [&_img]:hover:scale-105"
   >
     <div
       v-if="!hideImage"
@@ -16,7 +16,7 @@
       />
     </div>
     <div
-      class="flex flex-col justify-between py-4 px-6 flex-shrink-0 w-full"
+      class="flex flex-col justify-between py-2 px-4 flex-shrink-0 w-full"
       :class="{
         'lg:w-full': hideImage,
         'lg:w-2/3': !hideImage
@@ -49,7 +49,7 @@
     <Icon
       name="heroicons:arrow-up-right-20-solid"
       size="1.25rem"
-      class="ml-auto absolute right-2 top-2 text-green-500 bg-slate-100 dark:bg-slate-600 rounded-full p-1 w-7 h-7"
+      class="ml-auto absolute right-0 top-0 text-green-500 bg-slate-100 dark:bg-slate-600 border-l border-b border-slate-300 dark:border-slate-700 rounded-bl-lg p-1 w-7 h-7"
     />
   </NuxtLink>
 </template>
@@ -63,6 +63,10 @@
     projectDescription: {
       type: String,
       default: ""
+    },
+    projectUrl: {
+      type: String,
+      default: "#"
     },
     imgUrl: {
       type: String,
