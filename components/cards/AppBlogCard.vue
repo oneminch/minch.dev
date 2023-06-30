@@ -50,9 +50,6 @@
     coverImage: String
   });
 
-  // console.log();
-  // const readTime = "3 min";
-
   const coverImagePrefix =
     "https://cdn.statically.io/gh/oneminch/garden/main/Blog/notes/assets/cover";
 

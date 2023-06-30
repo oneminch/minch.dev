@@ -69,10 +69,6 @@
 </template>
 
 <script setup>
-  // const { data } = reactive(await useFetch("/api/leetcode"));
-
-  // console.log(JSON.parse(JSON.stringify(data)));
-
   useHead({
     script: [
       {

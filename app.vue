@@ -1,6 +1,4 @@
 <template>
-  <!-- <NuxtLoadingIndicator /> -->
-
   <!-- Sidebar -->
   <AppSideBar />
 

@@ -10,7 +10,7 @@
       <template v-else>
         <AppBlogCard
           v-for="blogPost in blogPosts"
-          :key="blogPost._path"
+          :key="blogPost._id"
           :tags="blogPost.tags"
           :blogTitle="blogPost.longTitle || blogPost.title"
           :title="blogPost.title"
@@ -31,5 +31,5 @@
       .find()
   );
 
-  console.log(JSON.parse(JSON.stringify(blogPosts)));
+  // console.log(JSON.parse(JSON.stringify(blogPosts)));
 </script>

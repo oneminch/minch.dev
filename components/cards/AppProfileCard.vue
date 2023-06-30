@@ -6,7 +6,7 @@
     <img
       src="/profile.png"
       alt="Profile Picture"
-      class="md:w-36 w-1/4 max-w-[8rem] min-w-[5rem] rounded-full"
+      class="md:w-36 w-2/5 max-w-[8rem] min-w-[5rem] rounded-full border-[.05rem] border-slate-300 dark:border-none"
     />
     <h2
       class="text-xl md:text-2xl font-bold text-slate-900 dark:text-slate-100"
