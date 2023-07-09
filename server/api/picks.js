@@ -1,8 +1,6 @@
 import axios from "axios";
 
-const config = useRuntimeConfig();
-
-const { raindropTestToken, raindropCollectionId } = config;
+const { raindropTestToken, raindropCollectionId } = useRuntimeConfig();
 
 const axiosConfig = {
   headers: {
@@ -19,7 +17,7 @@ export default defineEventHandler(async () => {
 
     const picks = response.data.items.map((item) => {
       return {
-        cover: item.cover || "https://fakeimg.pl/100",
+        cover: item.cover ?? "https://fakeimg.pl/100",
         title: item.title,
         url: item.link
       };

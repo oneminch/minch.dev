@@ -101,14 +101,5 @@ export default defineNuxtConfig({
   },
   site: {
     url: "https://oneminch.dev"
-  },
-  sitemap: {
-    // provide dynamic URLs to be included
-    // urls: async () => {
-    //   const blogPages = await getBlogPages();
-    //   return blogPages.map((page) => ({
-    //     loc: `/blog/${page.slug}`
-    //   }));
-    // }
   }
 });
