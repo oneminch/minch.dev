@@ -15,7 +15,9 @@
     <div
       class="w-10 h-10 flex-shrink-0 flex items-center justify-center bg-slate-200 dark:bg-slate-800 rounded-full p-1 mr-2 overflow-hidden"
     >
-      <img
+      <nuxt-img
+        format="webp"
+        loading="lazy"
         :src="`/icons/${platform}.png`"
         :alt="`${platform}`"
         :title="`${platform}`"

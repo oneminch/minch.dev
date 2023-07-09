@@ -5,7 +5,9 @@
     target="_blank"
     :to="pick.url"
   >
-    <img
+    <nuxt-img
+      format="webp"
+      loading="lazy"
       :src="pick.cover"
       class="w-8 h-8 md:w-12 md:10 flex-shrink-0 text-xs object-cover rounded-[0.275rem] mr-3 overflow-hidden text-center bg-slate-200 dark:bg-slate-500 border-[.03rem] dark:border-none border-slate-300"
       alt="Cover Image"

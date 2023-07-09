@@ -2,7 +2,7 @@
 <template>
   <main id="resume">
     <!-- Name  -->
-    <h2 class="font-bold text-3xl">Dawit Urgessa</h2>
+    <h1 class="font-bold text-3xl">Dawit Urgessa</h1>
 
     <!-- Professional Summary -->
     <p class="w-full my-6">

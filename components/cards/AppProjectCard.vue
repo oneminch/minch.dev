@@ -3,23 +3,25 @@
   <NuxtLink
     :to="projectUrl"
     target="_blank"
-    class="card-style focused-link relative w-full min-h-[7rem] md:min-h-[8rem] h-auto p-0 overflow-hidden flex justify-start first:[&>*]:mb-0 [&>*]:mb-2 mb-5 [&_img]:hover:scale-105"
+    class="card-style focused-link w-full min-h-[7rem] md:min-h-[8rem] h-auto p-0 overflow-hidden flex justify-start border-none bg-transparent dark:bg-transparent mb-5 [&_img]:hover:scale-105"
   >
     <div
       v-if="!hideImage"
-      class="w-0 lg:w-1/3 hidden lg:inline-block flex-shrink-0 min-h-full overflow-hidden mr-2 border-r border-slate-200"
+      class="w-0 lg:w-1/3 hidden lg:inline-block flex-shrink-0 min-h-full overflow-hidden mr-2 rounded-lg"
     >
-      <img
+      <nuxt-img
+        format="webp"
+        loading="lazy"
         :src="imgUrl"
         alt="Cover Image"
         class="h-full object-cover bg-cover origin-center"
       />
     </div>
     <div
-      class="flex flex-col justify-between py-2 px-4 flex-shrink-0 w-full"
+      class="card-style relative flex flex-col justify-evenly py-2 pb-3 px-4 flex-shrink-0 w-full overflow-hidden"
       :class="{
         'lg:w-full': hideImage,
-        'lg:w-2/3': !hideImage
+        'lg:w-[calc(66%-.5rem)]': !hideImage
       }"
     >
       <!-- Project Title -->
@@ -28,16 +30,6 @@
       <p class="mb-4">{{ projectDescription }}</p>
       <!-- Project Tech Stack -->
       <div>
-        <!-- <Icon
-          name="logos:vue"
-          size="1.5rem"
-          class="mr-2 rounded-sm inline-block"
-        />
-        <Icon
-          name="logos:tailwindcss-icon"
-          size="1.5rem"
-          class="mr-2 rounded-sm inline-block"
-        /> -->
         <span
           class="px-3 py-[.1rem] inline-block rounded-full font-semibold font-mono text-xs mr-1 border border-slate-300 dark:border-slate-500 bg-slate-200 dark:bg-slate-600 text-slate-800 dark:text-slate-100"
           v-for="(tag, index) in tags"
@@ -45,12 +37,12 @@
           >{{ tag }}</span
         >
       </div>
+      <Icon
+        name="heroicons:arrow-up-right-20-solid"
+        size="1.25rem"
+        class="ml-auto absolute right-0 top-0 text-green-500 bg-slate-100 dark:bg-slate-600 border-l border-b border-slate-300 dark:border-slate-700 rounded-bl-lg p-1 w-7 h-7"
+      />
     </div>
-    <Icon
-      name="heroicons:arrow-up-right-20-solid"
-      size="1.25rem"
-      class="ml-auto absolute right-0 top-0 text-green-500 bg-slate-100 dark:bg-slate-600 border-l border-b border-slate-300 dark:border-slate-700 rounded-bl-lg p-1 w-7 h-7"
-    />
   </NuxtLink>
 </template>
 

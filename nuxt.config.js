@@ -63,11 +63,23 @@ export default defineNuxtConfig({
 
   modules: [
     "@nuxt/content",
+    "@nuxt/image",
     "@nuxtjs/partytown",
     "@nuxtjs/tailwindcss",
     "@vueuse/nuxt",
-    "nuxt-icon"
+    "nuxt-icon",
+    "nuxt-simple-robots",
+    "nuxt-simple-sitemap"
   ],
+  nitro: {
+    prerender: {
+      crawlLinks: true,
+      routes: ["/"]
+    },
+    sitemap: {
+      strictNuxtContentPaths: true
+    }
+  },
   routeRules: {
     // Static Pages
     "/": { prerender: true },
@@ -86,5 +98,17 @@ export default defineNuxtConfig({
     githubToken: process.env.GITHUB_TOKEN,
     raindropTestToken: process.env.RAINDROP_TEST_TOKEN,
     raindropCollectionId: process.env.RAINDROP_COLLECTION_ID
+  },
+  site: {
+    url: "https://oneminch.dev"
+  },
+  sitemap: {
+    // provide dynamic URLs to be included
+    // urls: async () => {
+    //   const blogPages = await getBlogPages();
+    //   return blogPages.map((page) => ({
+    //     loc: `/blog/${page.slug}`
+    //   }));
+    // }
   }
 });

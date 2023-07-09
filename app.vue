@@ -13,7 +13,9 @@
   />
 </template>
 
-<script setup></script>
+<script setup>
+  defineRobotMeta();
+</script>
 
 <style>
   @tailwind utilities;

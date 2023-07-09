@@ -25,7 +25,9 @@
 </script>
 
 <template>
-  <img
+  <nuxt-img
+    format="webp"
+    loading="lazy"
     :src="`${urlPrefix}${extraPath}${imageSrc}`"
     :alt="altText"
     class="border border-slate-300 dark:border-slate-600"

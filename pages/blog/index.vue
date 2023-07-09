@@ -16,7 +16,7 @@
           :title="blogPost.title"
           :url="blogPost._path"
           :pubDate="blogPost.updated"
-          :coverImage="blogPost.coverImage"
+          :coverImage="blogPost.image"
         />
       </template>
     </section>
