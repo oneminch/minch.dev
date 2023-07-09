@@ -49,7 +49,7 @@
       <span
         v-for="skill in skills"
         :key="skill"
-        class="px-3 py-1 inline-block bg-green-400 font-semibold rounded-full text-slate-800 text-sm mr-1 mb-1"
+        class="px-3 py-1 inline-block dark:border dark:border-green-500 bg-green-300 dark:bg-transparent text-slate-800 dark:text-green-500 font-medium rounded-full text-sm mr-1 mb-1"
         >{{ skill }}</span
       >
     </section>

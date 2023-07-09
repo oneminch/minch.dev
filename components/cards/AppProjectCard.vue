@@ -3,11 +3,11 @@
   <NuxtLink
     :to="projectUrl"
     target="_blank"
-    class="card-style focused-link w-full min-h-[7rem] md:min-h-[8rem] h-auto p-0 overflow-hidden flex justify-start border-none bg-transparent dark:bg-transparent mb-5 [&_img]:hover:scale-105"
+    class="card-style focused-link w-full min-h-[7rem] md:min-h-[8rem] h-auto p-0 overflow-hidden flex justify-between border-none mb-5 [&_img]:hover:scale-105"
   >
     <div
       v-if="!hideImage"
-      class="w-0 lg:w-1/3 hidden lg:inline-block flex-shrink-0 min-h-full overflow-hidden mr-2 rounded-lg"
+      class="card-style w-0 lg:w-1/3 hidden lg:inline-block flex-shrink-0 min-h-full overflow-hidden mr-1 rounded-lg"
     >
       <nuxt-img
         format="webp"
@@ -21,7 +21,7 @@
       class="card-style relative flex flex-col justify-evenly py-2 pb-3 px-4 flex-shrink-0 w-full overflow-hidden"
       :class="{
         'lg:w-full': hideImage,
-        'lg:w-[calc(66%-.5rem)]': !hideImage
+        'lg:w-[calc(66%-.25rem)]': !hideImage
       }"
     >
       <!-- Project Title -->
@@ -31,7 +31,7 @@
       <!-- Project Tech Stack -->
       <div>
         <span
-          class="px-3 py-[.1rem] inline-block rounded-full font-semibold font-mono text-xs mr-1 border border-slate-300 dark:border-slate-500 bg-slate-200 dark:bg-slate-600 text-slate-800 dark:text-slate-100"
+          class="px-3 py-[.1rem] inline-block rounded-full font-semibold font-mono text-xs mr-1 border border-slate-300 dark:border-slate-500 bg-slate-100 dark:bg-slate-600 text-slate-700 dark:text-slate-100"
           v-for="(tag, index) in tags"
           :key="index"
           >{{ tag }}</span
@@ -74,3 +74,9 @@
     }
   });
 </script>
+
+<style scoped>
+  a {
+    background: transparent !important;
+  }
+</style>
