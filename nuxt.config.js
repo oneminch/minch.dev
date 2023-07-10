@@ -35,7 +35,6 @@ export default defineNuxtConfig({
     { path: "~/components", pathPrefix: false }
   ],
   content: {
-    documentDriven: false,
     sources: {
       content: {
         prefix: "/blog",
