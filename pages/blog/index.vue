@@ -24,6 +24,11 @@
 </template>
 
 <script setup>
+  definePageMeta({
+    title: "Blog",
+    description: "Some ideas on software and web development topics."
+  });
+
   // Fetch all blog posts sans LeetCode solutions
   const { pending, data: blogPosts } = await useLazyAsyncData("blog", () =>
     queryContent("/")

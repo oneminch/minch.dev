@@ -15,6 +15,26 @@
 
 <script setup>
   defineRobotMeta();
+
+  const route = useRoute();
+
+  useSeoMeta({
+    title: () =>
+      route.meta.title ? `Dawit's ${route.meta.title}` : `${altTitle || ""}`,
+    description: () => route.meta.description,
+    ogDescription: () => route.meta.description,
+    twitterDescription: () => route.meta.description,
+    ogUrl: `http://oneminch.dev${route.fullPath}`,
+    ogType: "website",
+    ogLocale: "en_US",
+    ogtitle: () =>
+      route.meta.title ? `Dawit's ${route.meta.title}` : `${altTitle || ""}`,
+    ogImage: () => "/og-image.png",
+    twitterCard: "summary_large_image",
+    twittertitle: () =>
+      route.meta.title ? `Dawit's ${route.meta.title}` : `${altTitle || ""}`,
+    twitterImage: () => "/og-image.png"
+  });
 </script>
 
 <style>

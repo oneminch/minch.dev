@@ -32,3 +32,10 @@
     </form> -->
   </main>
 </template>
+
+<script setup>
+  definePageMeta({
+    title: "Contact",
+    description: "Some ideas on software and web development topics."
+  });
+</script>

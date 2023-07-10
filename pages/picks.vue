@@ -15,5 +15,10 @@
 <script setup>
   import AppPickCard from "../components/cards/AppPickCard.vue";
 
+  definePageMeta({
+    title: "Picks",
+    description: "Content from across the web I found interesting."
+  });
+
   const { pending, data: picks } = await useLazyFetch("/api/picks");
 </script>

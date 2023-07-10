@@ -19,3 +19,10 @@
     />
   </main>
 </template>
+
+<script setup>
+  definePageMeta({
+    title: "Projects",
+    description: "List of projects I have worked on & am currently working on."
+  });
+</script>

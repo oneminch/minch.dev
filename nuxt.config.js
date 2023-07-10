@@ -7,14 +7,7 @@ export default defineNuxtConfig({
       htmlAttrs: {
         lang: "en"
       },
-      title: "Dawit",
-      // titleTemplate: "",
-      meta: [
-        { "http-equiv": "X-UA-Compatible", content: "IE=edge" },
-        { charset: "utf-8" },
-        { name: "viewport", content: "width=device-width, initial-scale=1" },
-        { name: "description", content: "My amazing site." }
-      ],
+      meta: [{ "http-equiv": "X-UA-Compatible", content: "IE=edge" }],
       link: [
         {
           rel: "preconnect",
@@ -23,6 +16,14 @@ export default defineNuxtConfig({
         {
           rel: "stylesheet",
           href: "https://fonts.bunny.net/css?family=roboto-mono:400,400i,500,600,700|inter:300,400,500,600,700,800"
+        }
+      ],
+      script: [
+        {
+          type: "text/partytown",
+          src: "https://measure.oneminch.dev/minch-measure",
+          async: true,
+          "data-website-id": "1e0e9daa-a25b-4943-af4e-68c91b2d3c72"
         }
       ]
     },
@@ -34,6 +35,7 @@ export default defineNuxtConfig({
     { path: "~/components", pathPrefix: false }
   ],
   content: {
+    documentDriven: false,
     sources: {
       content: {
         prefix: "/blog",

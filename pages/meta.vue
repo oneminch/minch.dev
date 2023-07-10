@@ -26,3 +26,9 @@
     <section></section>
   </main>
 </template>
+
+<script setup>
+  definePageMeta({
+    altTitle: "Meta"
+  });
+</script>

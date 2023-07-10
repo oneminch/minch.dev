@@ -79,6 +79,11 @@
 </template>
 
 <script setup>
+  definePageMeta({
+    title: "Resume",
+    description: "My timeline of professional activity."
+  });
+
   const experiences = [
     {
       role: "Web Developer",

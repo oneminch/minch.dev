@@ -7,6 +7,7 @@
           useSeoMeta({
             title: () => `${doc.title} - Blog`,
             description: () => doc.desc,
+            altTitle: "hi",
             author: "Dawit (@oneminch)",
             robots: {
               index: true,

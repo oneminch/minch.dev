@@ -25,6 +25,8 @@
   import AppCodeSolutionSkeleton from "../components/skeletons/AppCodeSolutionSkeleton.vue";
 
   definePageMeta({
+    title: "LeetCode Solutions",
+    description: "My solutions to some LeetCode problems.",
     layout: "blog-list-layout"
   });
 
