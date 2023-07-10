@@ -35,6 +35,7 @@ export default defineNuxtConfig({
     { path: "~/components", pathPrefix: false }
   ],
   content: {
+    documentDriven: false,
     sources: {
       content: {
         prefix: "/blog",
@@ -75,6 +76,7 @@ export default defineNuxtConfig({
   nitro: {
     prerender: {
       crawlLinks: true,
+      ignore: ["/blog/**/*"],
       routes: ["/"]
     },
     sitemap: {
