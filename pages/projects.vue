@@ -21,8 +21,24 @@
 </template>
 
 <script setup>
-  definePageMeta({
-    title: "Projects",
-    description: "List of projects I have worked on & am currently working on."
+  const seoMeta = {
+    title: "Dawit's Projects",
+    description: "This page contains projects that I am currently working on and have worked on.",
+    image: "/og-image.png"
+  };
+
+  useServerSeoMeta({
+    title: seoMeta.title,
+    ogTitle: seoMeta.title,
+    twitterTitle: seoMeta.title,
+    description: seoMeta.description,
+    ogDescription: seoMeta.description,
+    twitterDescription: seoMeta.description,
+    ogImage: seoMeta.image,
+    twitterImage: seoMeta.image,
+    ogUrl: `http://oneminch.dev${useRoute().fullPath}`,
+    ogType: "website",
+    ogLocale: "en_US",
+    twitterCard: "summary_large_image"
   });
 </script>

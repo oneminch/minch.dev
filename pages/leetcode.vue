@@ -25,9 +25,29 @@
   import AppCodeSolutionSkeleton from "../components/skeletons/AppCodeSolutionSkeleton.vue";
 
   definePageMeta({
-    title: "LeetCode Solutions",
-    description: "My solutions to some LeetCode problems.",
     layout: "blog-list-layout"
+  });
+
+  const seoMeta = {
+    title: "Dawit's LeetCode Solutions",
+    description:
+      "This page contains my (imperfect) solutions to some LeetCode problems.",
+    image: "/og-image.png"
+  };
+
+  useServerSeoMeta({
+    title: seoMeta.title,
+    ogTitle: seoMeta.title,
+    twitterTitle: seoMeta.title,
+    description: seoMeta.description,
+    ogDescription: seoMeta.description,
+    twitterDescription: seoMeta.description,
+    ogImage: seoMeta.image,
+    twitterImage: seoMeta.image,
+    ogUrl: `http://oneminch.dev${useRoute().fullPath}`,
+    ogType: "website",
+    ogLocale: "en_US",
+    twitterCard: "summary_large_image"
   });
 
   // Fetch all LeetCode solutions

@@ -69,9 +69,25 @@
 </template>
 
 <script setup>
-  definePageMeta({
-    title: "Homepage",
-    description: "Software Engineer"
+  const seoMeta = {
+    title: "Dawit U - Frontend Engineer",
+    description: "I'm a frontend engineer who's passionate about the open web (JavaScript, React.js, Vue.js)",
+    image: "/og-image.png"
+  };
+
+  useServerSeoMeta({
+    title: seoMeta.title,
+    ogTitle: seoMeta.title,
+    twitterTitle: seoMeta.title,
+    description: seoMeta.description,
+    ogDescription: seoMeta.description,
+    twitterDescription: seoMeta.description,
+    ogImage: seoMeta.image,
+    twitterImage: seoMeta.image,
+    ogUrl: `http://oneminch.dev${useRoute().fullPath}`,
+    ogType: "website",
+    ogLocale: "en_US",
+    twitterCard: "summary_large_image"
   });
 
   const skills = ref([

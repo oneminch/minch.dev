@@ -28,7 +28,25 @@
 </template>
 
 <script setup>
-  definePageMeta({
-    altTitle: "Meta"
+  const seoMeta = {
+    title: "Meta",
+    description:
+      "This page contains a mix of related links about me, my interests and my work.",
+    image: "/og-image.png"
+  };
+
+  useServerSeoMeta({
+    title: seoMeta.title,
+    ogTitle: seoMeta.title,
+    twitterTitle: seoMeta.title,
+    description: seoMeta.description,
+    ogDescription: seoMeta.description,
+    twitterDescription: seoMeta.description,
+    ogImage: seoMeta.image,
+    twitterImage: seoMeta.image,
+    ogUrl: `http://oneminch.dev${useRoute().fullPath}`,
+    ogType: "website",
+    ogLocale: "en_US",
+    twitterCard: "summary_large_image"
   });
 </script>

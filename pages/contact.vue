@@ -34,8 +34,24 @@
 </template>
 
 <script setup>
-  definePageMeta({
-    title: "Contact",
-    description: "Some ideas on software and web development topics."
+  const seoMeta = {
+    title: "Contact Me",
+    description: "Send me a message.",
+    image: "/og-image.png"
+  };
+
+  useServerSeoMeta({
+    title: seoMeta.title,
+    ogTitle: seoMeta.title,
+    twitterTitle: seoMeta.title,
+    description: seoMeta.description,
+    ogDescription: seoMeta.description,
+    twitterDescription: seoMeta.description,
+    ogImage: seoMeta.image,
+    twitterImage: seoMeta.image,
+    ogUrl: `http://oneminch.dev${useRoute().fullPath}`,
+    ogType: "website",
+    ogLocale: "en_US",
+    twitterCard: "summary_large_image"
   });
 </script>

@@ -79,9 +79,25 @@
 </template>
 
 <script setup>
-  definePageMeta({
-    title: "Resume",
-    description: "My timeline of professional activity."
+  const seoMeta = {
+    title: "Dawit's Resume",
+    description: "This page contains my timeline of professional activity.",
+    image: "/og-image.png"
+  };
+
+  useServerSeoMeta({
+    title: seoMeta.title,
+    ogTitle: seoMeta.title,
+    twitterTitle: seoMeta.title,
+    description: seoMeta.description,
+    ogDescription: seoMeta.description,
+    twitterDescription: seoMeta.description,
+    ogImage: seoMeta.image,
+    twitterImage: seoMeta.image,
+    ogUrl: `http://oneminch.dev${useRoute().fullPath}`,
+    ogType: "website",
+    ogLocale: "en_US",
+    twitterCard: "summary_large_image"
   });
 
   const experiences = [

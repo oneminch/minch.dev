@@ -62,7 +62,6 @@ export default defineNuxtConfig({
       toc: { depth: 1, searchDepth: 2 }
     }
   },
-
   modules: [
     "@nuxt/content",
     "@nuxt/image",
@@ -70,39 +69,25 @@ export default defineNuxtConfig({
     "@nuxtjs/tailwindcss",
     "@vueuse/nuxt",
     "nuxt-icon",
-    "nuxt-simple-robots",
-    "nuxt-simple-sitemap"
+    "nuxt-simple-robots"
   ],
-  nitro: {
-    prerender: {
-      crawlLinks: true,
-      ignore: ["/blog/**/*"],
-      routes: ["/"]
-    },
-    sitemap: {
-      strictNuxtContentPaths: true
-    }
-  },
   routeRules: {
-    // Static Pages
+    // Static pages
     "/": { prerender: true },
     "/contact": { prerender: true },
-    "/meta": { prerender: true },
+    // "/meta": { prerender: true },
     "/resume": { prerender: true },
     // Dynamic Pages
-    "/blog": { isr: 86400 },
-    "/blog/**": { isr: 86400 },
-    "/leetcode": { isr: 86400 },
-    "/leetcode/**": { isr: 86400 },
-    "/projects": { isr: 86400 },
-    "/picks": { isr: 86400 }
+    "/blog": { swr: 86400 },
+    "/blog/**": { swr: 86400, robots: "index, follow" },
+    "/projects": { swr: 86400 },
+    "/picks": { swr: 86400 },
+    "/leetcode": { swr: 86400 },
+    "/leetcode/**": { swr: 86400 }
   },
   runtimeConfig: {
     githubToken: process.env.GITHUB_TOKEN,
     raindropTestToken: process.env.RAINDROP_TEST_TOKEN,
     raindropCollectionId: process.env.RAINDROP_COLLECTION_ID
-  },
-  site: {
-    url: "https://oneminch.dev"
   }
 });

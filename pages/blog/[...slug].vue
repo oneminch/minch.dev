@@ -4,15 +4,11 @@
       <!-- SEO metadata from blog data -->
       {{
         (() => {
-          useSeoMeta({
+          useServerSeoMeta({
             title: () => `${doc.title} - Blog`,
             description: () => doc.desc,
             altTitle: "hi",
             author: "Dawit (@oneminch)",
-            robots: {
-              index: true,
-              follow: true
-            },
             ogUrl: `http://oneminch.dev${doc._path}`,
             ogType: "article",
             ogLocale: "en_US",

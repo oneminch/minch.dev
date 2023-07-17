@@ -14,10 +14,9 @@
     "@nuxtjs/tailwindcss": "^6.8.0",
     "@tailwindcss/typography": "^0.5.9",
     "@vueuse/nuxt": "^10.2.0",
-    "nuxt": "^3.6.2",
+    "nuxt": "^3.6.3",
     "nuxt-icon": "^0.4.1",
-    "nuxt-simple-robots": "^3.0.1",
-    "nuxt-simple-sitemap": "^3.0.8"
+    "nuxt-simple-robots": "^3.0.1"
   },
   "dependencies": {
     "@vueuse/components": "^10.2.0",
