@@ -4,7 +4,7 @@
       <!-- SEO metadata from blog data -->
       {{
         (() => {
-          useServerSeoMeta({
+          useSeoMeta({
             title: () => `${doc.title} - Blog`,
             description: () => doc.desc,
             altTitle: "hi",

@@ -85,7 +85,7 @@
     image: "/og-image.png"
   };
 
-  useServerSeoMeta({
+  useSeoMeta({
     title: seoMeta.title,
     ogTitle: seoMeta.title,
     twitterTitle: seoMeta.title,

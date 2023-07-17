@@ -23,11 +23,12 @@
 <script setup>
   const seoMeta = {
     title: "Dawit's Projects",
-    description: "This page contains projects that I am currently working on and have worked on.",
+    description:
+      "This page contains projects that I am currently working on and have worked on.",
     image: "/og-image.png"
   };
 
-  useServerSeoMeta({
+  useSeoMeta({
     title: seoMeta.title,
     ogTitle: seoMeta.title,
     twitterTitle: seoMeta.title,

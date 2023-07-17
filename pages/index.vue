@@ -71,11 +71,12 @@
 <script setup>
   const seoMeta = {
     title: "Dawit U - Frontend Engineer",
-    description: "I'm a frontend engineer who's passionate about the open web (JavaScript, React.js, Vue.js)",
+    description:
+      "I'm a frontend engineer who's passionate about the open web (JavaScript, React.js, Vue.js)",
     image: "/og-image.png"
   };
 
-  useServerSeoMeta({
+  useSeoMeta({
     title: seoMeta.title,
     ogTitle: seoMeta.title,
     twitterTitle: seoMeta.title,
