@@ -24,9 +24,9 @@
 <script setup>
   import AppCodeSolutionSkeleton from "../components/skeletons/AppCodeSolutionSkeleton.vue";
 
-  definePageMeta({
-    layout: "blog-list-layout"
-  });
+  // definePageMeta({
+  //   layout: "blog-list-layout"
+  // });
 
   const seoMeta = {
     title: "Dawit's LeetCode Solutions",
@@ -51,9 +51,9 @@
   });
 
   // Fetch all LeetCode solutions
-  const { pending, data: codeSolutions } = await useAsyncData("leetcode", () =>
-    queryContent("/")
-      .where({ _dir: { $eq: "leetcode" } })
-      .find()
+  const { pending, data: codeSolutions } = await useAsyncData(
+    "leetcode",
+    () => queryContent("/leetcode").find()
+    // .where({ _dir: { $eq: "leetcode" } })
   );
 </script>

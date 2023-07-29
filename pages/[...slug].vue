@@ -2,7 +2,7 @@
   <ContentDoc tag="">
     <template #default="{ doc }">
       <!-- SEO metadata from blog data -->
-      {{
+      <!-- {{
         (() => {
           useSeoMeta({
             title: () => `${doc.title} - Blog`,
@@ -21,7 +21,7 @@
             twitterImage: () => `${imgCdnPrefix}/cover/${doc.image}`
           });
         })()
-      }}
+      }} -->
 
       <!-- Post title -->
       <h1 class="mb-4">
@@ -29,11 +29,13 @@
       </h1>
 
       <!-- Post Cover Image -->
-      <ContentImage
+      <nuxt-img
         v-if="doc.image"
-        :image-src="doc.image"
-        :alt-text="doc.title"
-        :is-cover-image="true"
+        format="webp"
+        loading="lazy"
+        :src="`../../assets/cover/${doc.image}`"
+        :alt="doc.title"
+        class=""
       />
 
       <!-- Additional info for leetcode solution posts -->
@@ -69,7 +71,7 @@
       <ContentRenderer :value="doc" />
 
       <!-- GitHub File Edit Link -->
-      <NuxtLink
+      <!-- <NuxtLink
         :to="`${fileRootDir}/${doc._dir == 'blog' ? '' : 'leetcode/'}${doc._path
           .split('/')
           .at(-1)}.md`"
@@ -78,7 +80,7 @@
       >
         Edit This Page on GitHub
         <Icon name="heroicons:pencil-solid" />
-      </NuxtLink>
+      </NuxtLink> -->
     </template>
     <template #not-found>
       <AppNotFound />
@@ -91,8 +93,18 @@
     layout: "blog-post-layout"
   });
 
-  const imgCdnPrefix =
-    "https://cdn.statically.io/gh/oneminch/garden/main/Blog/notes/assets";
+  // const { page } = useContent();
 
-  const fileRootDir = "https://github.com/oneminch/garden/edit/main/Blog/notes";
+  // useContentHead(page);
+
+  // const imgCdnPrefix =
+  //   "https://cdn.statically.io/gh/oneminch/garden/main/Blog/notes/assets";
+
+  // const fileRootDir = "https://github.com/oneminch/garden/edit/main/Blog/notes";
 </script>
+
+<style scoped>
+  img {
+    @apply h-full object-cover bg-cover origin-center border-[.75px] border-slate-300 dark:border-slate-600;
+  }
+</style>

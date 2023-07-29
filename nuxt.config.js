@@ -36,25 +36,25 @@ export default defineNuxtConfig({
   ],
   content: {
     documentDriven: false,
-    sources: {
-      content: {
-        prefix: "/blog",
-        driver: "github",
-        repo: "oneminch/garden",
-        branch: "main",
-        dir: "/Blog/notes",
-        token: process.env.GITHUB_TOKEN
-      }
-    },
+    // sources: {
+    //   content: {
+    //     prefix: "/blog",
+    //     driver: "github",
+    //     repo: "oneminch/garden",
+    //     branch: "main",
+    //     dir: "/Blog/notes",
+    //     token: process.env.GITHUB_TOKEN
+    //   }
+    // },
     highlight: {
       theme: "github-dark"
     },
     ignores: [
       "root.md",
-      "/assets/",
+      // "/assets/",
       "/drafts/",
       "/.vscode/",
-      "\\.png$",
+      // "\\.png$",
       "\\.json$",
       "\\.yml$"
     ],
@@ -63,6 +63,7 @@ export default defineNuxtConfig({
     }
   },
   modules: [
+    "nuxt-content-assets",
     "@nuxt/content",
     "@nuxt/image",
     "@nuxtjs/partytown",
@@ -73,17 +74,17 @@ export default defineNuxtConfig({
   ],
   routeRules: {
     // Static pages
-    "/": { prerender: true },
-    "/contact": { prerender: true },
+    "/**": { prerender: true },
+    // "/contact": { prerender: true },
     // "/meta": { prerender: true },
-    "/resume": { prerender: true },
+    // "/resume": { prerender: true },
     // Dynamic Pages
-    "/blog": { swr: 86400 },
-    "/blog/**": { swr: 86400, robots: "index, follow" },
+    // "/blog": { swr: 86400 },
+    // "/blog/**": { swr: 86400, robots: "index, follow" },
     "/projects": { swr: 86400 },
-    "/picks": { swr: 86400 },
-    "/leetcode": { swr: 86400 },
-    "/leetcode/**": { swr: 86400 }
+    "/picks": { swr: 86400 }
+    // "/leetcode": { swr: 86400 },
+    // "/leetcode/**": { swr: 86400 }
   },
   runtimeConfig: {
     githubToken: process.env.GITHUB_TOKEN,

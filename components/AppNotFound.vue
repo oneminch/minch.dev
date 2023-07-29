@@ -1,4 +1,4 @@
-<!-- Footer: Tech Stack -->
+<!-- Not Found -->
 <template>
   <section class="flex flex-col items-center justify-center h-96">
     <Icon

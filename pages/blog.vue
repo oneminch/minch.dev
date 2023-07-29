@@ -47,10 +47,10 @@
   });
 
   // Fetch all blog posts sans LeetCode solutions
-  const { pending, data: blogPosts } = await useLazyAsyncData("blog", () =>
-    queryContent("/")
-      .where({ _dir: { $ne: "leetcode" } })
-      .find()
+  const { pending, data: blogPosts } = await useLazyAsyncData(
+    "blog",
+    () => queryContent("/blog").find()
+    // .where({ _dir: { $ne: "leetcode" } })
   );
 
   // console.log(JSON.parse(JSON.stringify(blogPosts)));

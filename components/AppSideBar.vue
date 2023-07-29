@@ -34,7 +34,7 @@
   const toggleDark = useToggle(isDark);
 
   // Regex pattern for any blog post route
-  const routeRegEx = /\/blog\/.*/i;
+  const routeRegEx = /(\/blog|\/leetcode)\/.*/i;
 </script>
 
 <style scoped>

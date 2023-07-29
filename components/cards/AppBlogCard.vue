@@ -1,7 +1,7 @@
 <!-- Blog: Card -->
 <template>
   <NuxtLink
-    class="card-style focused-link w-full min-h-[7rem] md:min-h-[8rem] h-auto p-0 overflow-hidden flex justify-between border-none bg-none bg-transparent dark:bg-transparent mb-5 [&_img]:hover:scale-105"
+    class="card-style focus:ring-0 focus:outline-none w-full min-h-[7rem] md:min-h-[8rem] h-auto p-0 overflow-hidden flex justify-between border-none bg-none bg-transparent dark:bg-transparent mb-5 [&_img]:hover:scale-105"
     :to="url"
   >
     <!-- Blog Image -->
@@ -71,5 +71,9 @@
 <style scoped>
   a {
     background: transparent !important;
+  }
+
+  a:focus > div {
+    @apply focus:outline-none focus:ring-2 focus:ring-green-300 focus:ring-opacity-75 !important;
   }
 </style>

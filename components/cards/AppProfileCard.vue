@@ -6,7 +6,7 @@
     <nuxt-img
       format="webp"
       loading="lazy"
-      src="/profile.png"
+      src="/profiles.png"
       alt="Profile Picture"
       class="md:w-36 w-2/5 max-w-[8rem] min-w-[5rem] rounded-full border-[.05rem] border-slate-300 dark:border-none"
     />
@@ -18,7 +18,7 @@
     <h2
       class="text-lg md:text-xl font-medium text-slate-700 dark:text-slate-400"
     >
-      Software Engineer
+      Frontend Developer
     </h2>
     <div
       class="w-full h-8 flex items-center justify-center text-slate-900 dark:text-slate-200"
