@@ -1,18 +1,29 @@
 ---
 id: jYZ0sR3cQogjZjo5ru0oP
-title: HTTPS
-desc: "What is HTTPS?"
+title: "Computer Networks: HTTPS Basics"
+description: "What is HTTPS?"
 updated: 1688877769837
 created: 1645422195673
+image: "/content/cover/https.png"
+head:
+  meta:
+    - name: "keywords"
+      content: "http, https, networking, ssl"
+    - name: "robots"
+      content: "index, follow"
+    - name: "author"
+      content: "Dawit (@oneminch)"
+    - property: "og:type"
+      content: "article"
+    - name: "twitter:card"
+      content: "summary_large_image"
 tags:
-  - networking
   - http
   - https
+  - networking
   - ssl
-longTitle: "Computer Networks: HTTPS Basics"
-series: Basic Computer Networks
+series: Computer Networks
 navOrder: 3
-image: "https.png"
 ---
 
 **HTTPS** is a protocol which is an improvement over HTTP and is the short form of **HyperText Transfer Protocol Secure** (HTTP + SSL). In this article, we will look at the shortcomings of HTTP which lead to the development of HTTPS and some basic ideas behind HTTPS. It'll cover these sub topics:

@@ -1,5 +1,8 @@
 <template>
   <main class="picks">
+    <Title>{{ seoMeta.title }}</Title>
+    <Meta name="description" :content="seoMeta.description" />
+
     <h1 class="font-bold text-2xl mb-6">Picks</h1>
     <blockquote>Content from across the web I found interesting.</blockquote>
     <br />
@@ -22,7 +25,7 @@
     image: "/og-image.png"
   };
 
-  useSeoMeta({
+  useServerSeoMeta({
     title: seoMeta.title,
     ogTitle: seoMeta.title,
     twitterTitle: seoMeta.title,

@@ -1,6 +1,9 @@
 <!-- Resume Page -->
 <template>
   <main id="resume">
+    <Title>{{ seoMeta.title }}</Title>
+    <Meta name="description" :content="seoMeta.description" />
+
     <!-- Name  -->
     <h1 class="font-bold text-3xl">Dawit Urgessa</h1>
 
@@ -85,7 +88,7 @@
     image: "/og-image.png"
   };
 
-  useSeoMeta({
+  useServerSeoMeta({
     title: seoMeta.title,
     ogTitle: seoMeta.title,
     twitterTitle: seoMeta.title,

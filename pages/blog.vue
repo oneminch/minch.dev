@@ -1,6 +1,9 @@
 <!-- Blog: Posts -->
 <template>
   <main id="blog">
+    <Title>{{ seoMeta.title }}</Title>
+    <Meta name="description" :content="seoMeta.description" />
+
     <h1 class="text-3xl text-left font-bold mb-6">Blog</h1>
 
     <section>
@@ -31,7 +34,7 @@
     image: "/og-image.png"
   };
 
-  useSeoMeta({
+  useServerSeoMeta({
     title: seoMeta.title,
     ogTitle: seoMeta.title,
     twitterTitle: seoMeta.title,
@@ -47,11 +50,7 @@
   });
 
   // Fetch all blog posts sans LeetCode solutions
-  const { pending, data: blogPosts } = await useLazyAsyncData(
-    "blog",
-    () => queryContent("/blog").find()
-    // .where({ _dir: { $ne: "leetcode" } })
+  const { pending, data: blogPosts } = await useLazyAsyncData("blog", () =>
+    queryContent("/blog").find()
   );
-
-  // console.log(JSON.parse(JSON.stringify(blogPosts)));
 </script>

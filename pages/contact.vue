@@ -1,6 +1,9 @@
 <!-- About Page -->
 <template>
   <main id="contact">
+    <Title>{{ seoMeta.title }}</Title>
+    <Meta name="description" :content="seoMeta.description" />
+
     <h1>Send me a message.</h1>
 
     <!-- <form action="https://formend.vercel.app/submit/portfolio" method="post"> -->
@@ -40,7 +43,7 @@
     image: "/og-image.png"
   };
 
-  useSeoMeta({
+  useServerSeoMeta({
     title: seoMeta.title,
     ogTitle: seoMeta.title,
     twitterTitle: seoMeta.title,

@@ -1,6 +1,9 @@
 <!-- Projects Page -->
 <template>
   <main id="projects">
+    <Title>{{ seoMeta.title }}</Title>
+    <Meta name="description" :content="seoMeta.description" />
+
     <h1 class="text-3xl text-left font-bold mb-6">Projects</h1>
 
     <AppProjectCard
@@ -28,7 +31,7 @@
     image: "/og-image.png"
   };
 
-  useSeoMeta({
+  useServerSeoMeta({
     title: seoMeta.title,
     ogTitle: seoMeta.title,
     twitterTitle: seoMeta.title,

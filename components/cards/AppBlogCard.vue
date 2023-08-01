@@ -12,7 +12,7 @@
       <nuxt-img
         format="webp"
         loading="lazy"
-        :src="coverImageUrl(coverImage)"
+        :src="coverImage"
         alt="Cover Image"
         class="h-full object-cover bg-cover origin-center"
       />
@@ -42,7 +42,7 @@
 
 <script setup>
   const props = defineProps({
-    desc: String,
+    description: String,
     blogTitle: String,
     url: String,
     title: String,
@@ -52,10 +52,10 @@
     coverImage: String
   });
 
-  const coverImagePrefix =
-    "https://cdn.statically.io/gh/oneminch/garden/main/Blog/notes/assets/cover";
+  // const coverImagePrefix =
+  //   "https://cdn.statically.io/gh/oneminch/garden/main/Blog/notes/assets/cover";
 
-  const coverImageUrl = (fileSlug) => `${coverImagePrefix}/${fileSlug}`;
+  // const coverImageUrl = (fileSlug) => `${coverImagePrefix}/${fileSlug}`;
 
   const lastUpdateTime = computed(() => {
     const dateObj = new Date(props.pubDate);

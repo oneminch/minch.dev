@@ -1,6 +1,9 @@
 <!-- Blog: LeetCode Coding Problems -->
 <template>
   <main id="leetcode">
+    <Title>{{ seoMeta.title }}</Title>
+    <Meta name="description" :content="seoMeta.description" />
+
     <h1 class="text-3xl text-left font-bold mb-6">LeetCode Solutions</h1>
 
     <section>
@@ -24,9 +27,9 @@
 <script setup>
   import AppCodeSolutionSkeleton from "../components/skeletons/AppCodeSolutionSkeleton.vue";
 
-  // definePageMeta({
-  //   layout: "blog-list-layout"
-  // });
+  definePageMeta({
+    layout: "blog-list-layout"
+  });
 
   const seoMeta = {
     title: "Dawit's LeetCode Solutions",
@@ -35,7 +38,7 @@
     image: "/og-image.png"
   };
 
-  useSeoMeta({
+  useServerSeoMeta({
     title: seoMeta.title,
     ogTitle: seoMeta.title,
     twitterTitle: seoMeta.title,
@@ -51,9 +54,7 @@
   });
 
   // Fetch all LeetCode solutions
-  const { pending, data: codeSolutions } = await useAsyncData(
-    "leetcode",
-    () => queryContent("/leetcode").find()
-    // .where({ _dir: { $eq: "leetcode" } })
+  const { pending, data: codeSolutions } = await useAsyncData("leetcode", () =>
+    queryContent("/leetcode").find()
   );
 </script>

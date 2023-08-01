@@ -1,18 +1,29 @@
 ---
 id: bmYRMchdQ79b4wetoTzAV
-title: "DNS"
-desc: "What is the Domain Name System?"
+title: "Computer Networks: DNS Basics"
+description: "What is the Domain Name System?"
 updated: 1688877769861
 created: 1645422712314
+image: "/content/cover/dns.png"
+head:
+  meta:
+    - name: "keywords"
+      content: "dns, http, https, networking"
+    - name: "robots"
+      content: "index, follow"
+    - name: "author"
+      content: "Dawit (@oneminch)"
+    - property: "og:type"
+      content: "article"
+    - name: "twitter:card"
+      content: "summary_large_image"
 tags:
-  - networking
+  - dns
   - http
   - https
-  - dns
-longTitle: "Computer Networks: DNS Basics"
-series: Basic Computer Networks
+  - networking
+series: Computer Networks
 navOrder: 1
-image: "dns.png"
 ---
 
 ## Introduction
@@ -50,7 +61,7 @@ Let's assume a user wants to visit https://mozilla.org and types the URL in the 
 
 > **Note**: In occasions where the query contains a subdomain (e.g. https://developer.mozilla.org), there will be an extra nameserver that gets added to the end of the sequence which is responsible for that subdomain (`developer`).
 
-![DNS Resolution Flowchart](../assets/dns.resolution.png)
+![DNS Resolution Flowchart](/content/dns.resolution.png)
 
 All this process is performed whenever someone wants to visit a website, and it is completed in a matter of milliseconds.
 

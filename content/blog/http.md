@@ -1,17 +1,28 @@
 ---
 id: vOpWDwrzniiD9e2YgWVwk
-title: HTTP
-desc: "What is the HyperText Transfer Protocol?"
+title: "Computer Networks: HTTP Basics"
+description: "What is the HyperText Transfer Protocol?"
 updated: 1688877769852
 created: 1645422279906
+image: "/content/cover/http.png"
+head:
+  meta:
+    - name: "keywords"
+      content: "http, https, networking"
+    - name: "robots"
+      content: "index, follow"
+    - name: "author"
+      content: "Dawit (@oneminch)"
+    - property: "og:type"
+      content: "article"
+    - name: "twitter:card"
+      content: "summary_large_image"
 tags:
-  - networking
   - http
   - https
-longTitle: "Computer Networks: HTTP Basics"
-series: Basic Computer Networks
+  - networking
+series: Computer Networks
 navOrder: 2
-image: "http.png"
 ---
 
 In this article, I will discuss how HTTP requests work behind the scenes.
@@ -155,7 +166,7 @@ Connection: Closed
 
 To get a closer look at requests in your browser, you can navigate to 'Network' tab of your browser's Developer Tools, or just hit `Cmd + Opt + E` on Mac or `Ctrl + Shift + E` on Windows and Linux. Type the URL to any website and see all the requests and responses made. Usually there are several requests and responses made. Each request fetching a single file that is a component of the website to be rendered.
 
-![Developer Tools: Network Tab (Firefox)](../assets/http.network-tab.png)
+![Developer Tools: Network Tab (Firefox)](/content/http.network-tab.png)
 
 The above image shows a detailed look at what goes on behind the scenes when navigating to the [DuckDuckGo](https://duckduckgo.com/) website. As you can see in the bottom left corner, there were a total of 29 GET requests made. File types range from simple HTML, CSS & JavaScript files to images and font files. Greyed out rows indicate the requests has been cached from previously made requests. The right section of the image shows the details of the first request which fetches the HTML file for the website. Consecutive rows show the order by which the other file types are loaded. When working with requests, it's important to make sure the necessary files come first. In this case, the HTML file is the most relevant file. For users whose connection might be interrupted easily, having the HTML file is enough to make the search. All the CSS, images and font files are secondary, and they're not really necessary for someone to make a search on DuckDuckGo.
 

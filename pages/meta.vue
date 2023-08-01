@@ -1,5 +1,8 @@
 <template>
   <main>
+    <Title>{{ seoMeta.title }}</Title>
+    <Meta name="description" :content="seoMeta.description" />
+
     <h1 class="font-bold text-2xl mb-6">Meta</h1>
 
     <!-- Tech Stack -->
@@ -35,7 +38,7 @@
     image: "/og-image.png"
   };
 
-  useSeoMeta({
+  useServerSeoMeta({
     title: seoMeta.title,
     ogTitle: seoMeta.title,
     twitterTitle: seoMeta.title,

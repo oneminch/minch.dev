@@ -1,15 +1,26 @@
 ---
 id: 5bnxpbo182efvf38j331nes
-title: Deno vs. Node
-longTitle: How Deno differs from Node.js
-desc: "This article goes over the core differences between Deno and Node.js."
+title: How Deno differs from Node.js
+description: "This article goes over the core differences between Deno and Node.js."
 updated: 1688877769873
 created: 1686355733170
+image: "/content/cover/deno-vs-node.png"
+head:
+  meta:
+    - name: "keywords"
+      content: "deno, nodejs, shorts"
+    - name: "robots"
+      content: "index, follow"
+    - name: "author"
+      content: "Dawit (@oneminch)"
+    - property: "og:type"
+      content: "article"
+    - name: "twitter:card"
+      content: "summary_large_image"
 tags:
-  - shorts
-  - nodejs
   - deno
-image: "deno-vs-node.png"
+  - nodejs
+  - shorts
 ---
 
 [Deno](https://deno.land) improves upon [Node.js](https://nodejs.org) in some significant ways.

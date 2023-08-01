@@ -1,9 +1,8 @@
 /** @type {import('tailwindcss').Config} */
-// const defaultTheme = require("tailwindcss/defaultTheme");
 
 module.exports = {
   mode: "jit",
   darkMode: "class",
-  content: ["./app.vue", "./pages/**/*.vue", "./components/**/*.vue"],
+  content: ["./app.vue", "./**/*.vue"],
   plugins: [require("@tailwindcss/typography")]
 };

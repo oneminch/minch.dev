@@ -4,7 +4,7 @@
       <!-- SEO metadata from blog data -->
       <!-- {{
         (() => {
-          useSeoMeta({
+          useServerSeoMeta({
             title: () => `${doc.title} - Blog`,
             description: () => doc.desc,
             altTitle: "hi",
@@ -33,9 +33,8 @@
         v-if="doc.image"
         format="webp"
         loading="lazy"
-        :src="`../../assets/cover/${doc.image}`"
+        :src="doc.image"
         :alt="doc.title"
-        class=""
       />
 
       <!-- Additional info for leetcode solution posts -->
@@ -69,18 +68,6 @@
 
       <!-- Main post content -->
       <ContentRenderer :value="doc" />
-
-      <!-- GitHub File Edit Link -->
-      <!-- <NuxtLink
-        :to="`${fileRootDir}/${doc._dir == 'blog' ? '' : 'leetcode/'}${doc._path
-          .split('/')
-          .at(-1)}.md`"
-        target="_blank"
-        class="not-prose inline-block mt-8 py-2 px-3 rounded-md border border-slate-300 dark:border-slate-500 bg-slate-200 dark:bg-slate-700 text-slate-800 dark:text-slate-100 font-normal text-sm"
-      >
-        Edit This Page on GitHub
-        <Icon name="heroicons:pencil-solid" />
-      </NuxtLink> -->
     </template>
     <template #not-found>
       <AppNotFound />
@@ -92,15 +79,6 @@
   definePageMeta({
     layout: "blog-post-layout"
   });
-
-  // const { page } = useContent();
-
-  // useContentHead(page);
-
-  // const imgCdnPrefix =
-  //   "https://cdn.statically.io/gh/oneminch/garden/main/Blog/notes/assets";
-
-  // const fileRootDir = "https://github.com/oneminch/garden/edit/main/Blog/notes";
 </script>
 
 <style scoped>

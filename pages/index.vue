@@ -1,6 +1,9 @@
 <!-- Landing Page -->
 <template>
   <main id="home" class="[&>*]:mb-6 last:[&>*]:mb-0">
+    <Title>{{ seoMeta.title }}</Title>
+    <Meta name="description" :content="seoMeta.description" />
+
     <!-- Introduction -->
     <section>
       <h1 class="font-semibold text-2xl mb-6">Hi, my name is Dawit.</h1>
@@ -76,7 +79,7 @@
     image: "/og-image.png"
   };
 
-  useSeoMeta({
+  useServerSeoMeta({
     title: seoMeta.title,
     ogTitle: seoMeta.title,
     twitterTitle: seoMeta.title,
