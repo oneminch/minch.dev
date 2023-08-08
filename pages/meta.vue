@@ -18,10 +18,10 @@
     <section
       class="card-style w-full h-auto flex justify-evenly px-2 py-4 mb-4"
     >
-      <div class="bg-slate-900 rounded-full w-14 h-14"></div>
-      <div class="bg-slate-900 rounded-full w-14 h-14"></div>
-      <div class="bg-slate-900 rounded-full w-14 h-14"></div>
-      <div class="bg-slate-900 rounded-full w-14 h-14"></div>
+      <div class="bg-gray-900 rounded-full w-14 h-14"></div>
+      <div class="bg-gray-900 rounded-full w-14 h-14"></div>
+      <div class="bg-gray-900 rounded-full w-14 h-14"></div>
+      <div class="bg-gray-900 rounded-full w-14 h-14"></div>
     </section>
 
     <!-- Carbon  -->
@@ -35,7 +35,8 @@
     title: "Meta",
     description:
       "This page contains a mix of related links about me, my interests and my work.",
-    image: "/og-image.png"
+    image: "/og-image.png",
+    page: "meta"
   };
 
   useServerSeoMeta({
@@ -47,7 +48,8 @@
     twitterDescription: seoMeta.description,
     ogImage: seoMeta.image,
     twitterImage: seoMeta.image,
-    ogUrl: `http://oneminch.dev${useRoute().fullPath}`,
+    ogUrl: `https://oneminch.dev/${seoMeta.page}`,
+
     ogType: "website",
     ogLocale: "en_US",
     twitterCard: "summary_large_image"

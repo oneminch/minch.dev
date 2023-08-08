@@ -6,7 +6,7 @@
     :title="problemTitle"
   >
     <div
-      class="w-10 h-10 flex-shrink-0 flex items-center justify-center bg-slate-200 dark:bg-slate-800 rounded-full p-1 mr-2 overflow-hidden"
+      class="w-10 h-10 flex-shrink-0 flex items-center justify-center bg-gray-200 dark:bg-gray-800 rounded-full p-1 mr-2 overflow-hidden"
     >
       <nuxt-img
         format="webp"
@@ -23,7 +23,7 @@
       <!-- Tags -->
       <div class="mb-1">
         <span
-          class="px-3 py-[.1rem] inline-block rounded-full font-semibold font-mono text-xs mr-1 border border-slate-300 dark:border-slate-500 bg-slate-200 dark:bg-slate-600 text-slate-800 dark:text-slate-100"
+          class="px-3 py-[.1rem] inline-block rounded-full font-semibold font-mono text-xs mr-1 border border-gray-300 dark:border-gray-500 bg-gray-200 dark:bg-gray-600 text-gray-800 dark:text-gray-100"
           v-for="tag in tags"
           :key="tag"
           >{{ tag }}

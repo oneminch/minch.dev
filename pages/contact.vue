@@ -40,7 +40,8 @@
   const seoMeta = {
     title: "Contact Me",
     description: "Send me a message.",
-    image: "/og-image.png"
+    image: "/og-image.png",
+    page: "contact"
   };
 
   useServerSeoMeta({
@@ -52,7 +53,8 @@
     twitterDescription: seoMeta.description,
     ogImage: seoMeta.image,
     twitterImage: seoMeta.image,
-    ogUrl: `http://oneminch.dev${useRoute().fullPath}`,
+    ogUrl: `https://oneminch.dev/${seoMeta.page}`,
+
     ogType: "website",
     ogLocale: "en_US",
     twitterCard: "summary_large_image"

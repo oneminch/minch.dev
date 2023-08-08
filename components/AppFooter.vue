@@ -1,10 +1,10 @@
 <!-- Footer: Tech Stack -->
 <template>
   <footer
-    class="flex items-center justify-center w-72 h-8 rounded-full mx-auto border border-slate-200 bg-slate-100 dark:border-slate-600 dark:bg-slate-700"
+    class="flex items-center justify-center w-72 h-8 rounded-full mx-auto border border-gray-200 bg-gray-100 dark:border-gray-600 dark:bg-gray-700"
   >
     <p
-      class="flex items-center text-sm font-medium text-slate-600 dark:text-slate-300"
+      class="flex items-center text-sm font-medium text-gray-600 dark:text-gray-300"
     >
       Joyfully Built with
       <NuxtLink

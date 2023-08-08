@@ -8,20 +8,20 @@
     <section>
       <h1 class="font-semibold text-2xl mb-6">Hi, my name is Dawit.</h1>
       <p>
-        I am a results-oriented developer experienced in software development
-        through professional freelance work, internships, and open-source
-        contributions. I possess broad technical knowledge of software
-        engineering, a quick learning ability, and creative programming skills.
-        Furthermore, I'm fluent in several languages and frameworks including
-        Python, SQL, JavaScript, Vue.js, and, Node.js. I'm currently focused on
-        expanding my experience using C# (.NET), Angular, React.js, MongoDB &
-        TypeScript.
+        I'm a passionate Software Engineer with a B.Sc. in Computer Science and
+        4 years of experience designing and developing web applications. My
+        problem-solving and communication skills allow me to work in a
+        collaborative team environment, continuously learn, and apply my
+        expertise to build high quality products.
       </p>
     </section>
 
     <!-- Projects -->
-    <h2 class="font-semibold text-xl mb-2">
-      <NuxtLink to="/projects" class="focused-link flex items-center py-2">
+    <h2 class="font-semibold text-xl mb-2 w-auto">
+      <NuxtLink
+        to="/projects"
+        class="focused-link rounded-lg w-full flex items-center py-2"
+      >
         Projects
         <Icon
           name="heroicons:chevron-right-solid"
@@ -49,12 +49,13 @@
     <!-- Skills -->
     <h2 class="font-semibold text-xl mb-2 py-2">Skills</h2>
     <section>
-      <span
+      <li
         v-for="skill in skills"
         :key="skill"
-        class="px-3 py-1 inline-block dark:border dark:border-green-500 bg-green-300 dark:bg-transparent text-slate-800 dark:text-green-500 font-medium rounded-full text-sm mr-1 mb-1"
-        >{{ skill }}</span
+        class="px-3 py-1 inline-block dark:border dark:border-green-500 bg-green-300 dark:bg-transparent text-gray-800 dark:text-green-500 font-medium rounded-full text-sm mr-1 mb-1"
       >
+        {{ skill }}
+      </li>
     </section>
     <!-- Status -->
     <h2 class="font-semibold text-xl mb-2 py-2">Currently</h2>
@@ -76,7 +77,8 @@
     title: "Dawit U - Frontend Developer",
     description:
       "I'm a frontend engineer who's passionate about the open web (JavaScript, React.js, Vue.js)",
-    image: "/og-image.png"
+    image: "/og-image.png",
+    page: ""
   };
 
   useServerSeoMeta({
@@ -88,7 +90,8 @@
     twitterDescription: seoMeta.description,
     ogImage: seoMeta.image,
     twitterImage: seoMeta.image,
-    ogUrl: `http://oneminch.dev${useRoute().fullPath}`,
+    ogUrl: `https://oneminch.dev/${seoMeta.page}`,
+
     ogType: "website",
     ogLocale: "en_US",
     twitterCard: "summary_large_image"

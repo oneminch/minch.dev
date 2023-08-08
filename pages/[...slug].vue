@@ -9,7 +9,7 @@
             description: () => doc.desc,
             altTitle: "hi",
             author: "Dawit (@oneminch)",
-            ogUrl: `http://oneminch.dev${doc._path}`,
+            ogUrl: `https://oneminch.dev${doc._path}`,
             ogType: "article",
             ogLocale: "en_US",
             ogTitle: () => doc.longTitle || doc.title,
@@ -41,7 +41,7 @@
       <template v-if="doc._dir == 'leetcode'">
         <div class="mb-1">
           <span
-            class="px-2 py-[.1rem] inline-block rounded-full font-semibold font-mono text-xs mr-1 border border-slate-300 dark:border-slate-500 bg-slate-200 dark:bg-slate-600 text-slate-800 dark:text-slate-100"
+            class="px-2 py-[.1rem] inline-block rounded-full font-semibold font-mono text-xs mr-1 border border-gray-300 dark:border-gray-500 bg-gray-200 dark:bg-gray-600 text-gray-800 dark:text-gray-100"
             v-for="tag in doc.tags"
             :key="tag"
             >{{ tag }}
@@ -83,6 +83,6 @@
 
 <style scoped>
   img {
-    @apply h-full object-cover bg-cover origin-center border-[.75px] border-slate-300 dark:border-slate-600;
+    @apply h-full object-cover bg-cover origin-center border-[.75px] border-gray-300 dark:border-gray-600;
   }
 </style>

@@ -8,37 +8,54 @@
     <h1 class="font-bold text-3xl">Dawit Urgessa</h1>
 
     <!-- Professional Summary -->
-    <p class="w-full my-6">
-      A results-oriented developer experienced in software development through
-      professional freelance work, internships, and open-source contributions.
-      Possess broad technical knowledge of software engineering, a quick
-      learning ability, and creative programming skills. Fluent in several
-      languages and frameworks including Python, SQL, JavaScript, Vue.js, and,
-      Node.js. Focused on expanding my experience using C# (.NET), Angular,
-      React.js, MongoDB & TypeScript.
-    </p>
+    <p class="w-full my-6">{{ summary }}</p>
+
+    <!-- Skillset -->
+    <h2 class="font-bold text-2xl my-6 flex items-center">
+      Skills
+      <Icon name="heroicons:wrench-screwdriver-solid" class="ml-3" />
+    </h2>
+
+    <section class="my-4 w-full">
+      <div class="mb-1" v-for="(skills, category) in skillset" :key="category">
+        <h3
+          class="inline-block font-semibold text-lg mr-2 text-gray-700 dark:text-gray-200"
+        >
+          {{ category }}:
+        </h3>
+        <ul class="inline-block">
+          <li
+            v-for="skill in skills"
+            :key="skill"
+            class="px-3 py-[.125rem] inline-block dark:border dark:border-green-500 bg-green-300 dark:bg-transparent text-gray-800 dark:text-green-500 font-medium rounded-full text-sm mr-1 mb-1"
+          >
+            {{ skill }}
+          </li>
+        </ul>
+      </div>
+    </section>
 
     <!-- Experience timeline -->
-    <h3 class="font-bold text-2xl my-6 flex items-center">
+    <h2 class="font-bold text-2xl my-6 flex items-center">
       Experience
       <Icon name="heroicons:briefcase-solid" class="ml-3" />
-    </h3>
+    </h2>
     <section
-      class="ml-2 border-l-2 border-slate-300 dark:border-slate-600 my-4 w-full"
+      class="ml-2 border-l-2 border-gray-300 dark:border-gray-600 my-4 w-full"
     >
       <div
         v-for="(experience, expIndex) in experiences"
         :key="expIndex"
         class="timeline-item"
       >
-        <h3 class="font-bold text-slate-700 dark:text-slate-200">
+        <h3 class="font-bold text-gray-700 dark:text-gray-200">
           {{ experience.role }}
           <br />
           <span class="text-green-600 dark:text-green-500">
             {{ experience.company }}
           </span>
           <br />
-          <span class="text-slate-500 dark:text-slate-400">
+          <span class="text-gray-500 dark:text-gray-400">
             ({{ experience.from }} - {{ experience.to }})
           </span>
         </h3>
@@ -57,22 +74,22 @@
     </section>
 
     <!-- Education Timeline -->
-    <h3 class="font-bold text-2xl my-6 flex items-center">
+    <h2 class="font-bold text-2xl my-6 flex items-center">
       Education
       <Icon name="heroicons:academic-cap-solid" class="ml-3" />
-    </h3>
+    </h2>
     <section
-      class="ml-2 border-l-2 border-slate-300 dark:border-slate-600 my-4 w-full"
+      class="ml-2 border-l-2 border-gray-300 dark:border-gray-600 my-4 w-full"
     >
       <div class="timeline-item">
-        <h3 class="font-bold text-slate-700 dark:text-slate-200">
+        <h3 class="font-bold text-gray-700 dark:text-gray-200">
           {{ education.institution }}
           <br />
           <span class="text-green-600 dark:text-green-500">
             {{ education.degree }} - {{ education.major }}
           </span>
           <br />
-          <span class="text-slate-500 dark:text-slate-400">
+          <span class="text-gray-500 dark:text-gray-400">
             ({{ education.from }} - {{ education.to }})
           </span>
         </h3>
@@ -85,7 +102,8 @@
   const seoMeta = {
     title: "Dawit's Resume",
     description: "This page contains my timeline of professional activity.",
-    image: "/og-image.png"
+    image: "/og-image.png",
+    page: "resume"
   };
 
   useServerSeoMeta({
@@ -97,11 +115,14 @@
     twitterDescription: seoMeta.description,
     ogImage: seoMeta.image,
     twitterImage: seoMeta.image,
-    ogUrl: `http://oneminch.dev${useRoute().fullPath}`,
+    ogUrl: `https://oneminch.dev/${seoMeta.page}`,
     ogType: "website",
     ogLocale: "en_US",
     twitterCard: "summary_large_image"
   });
+
+  const summary =
+    "Passionate Software Engineer with a B.Sc. in Computer Science and 4 years of experience designing and developing web applications. My problem-solving and communication skills allow me to work in a collaborative team environment, continuously learn, and apply my expertise to build high quality products.";
 
   const experiences = [
     {
@@ -109,7 +130,22 @@
       company: "New Vision Safari",
       from: "Feb 2023",
       to: "Present",
-      responsibilities: []
+      responsibilities: [
+        "Redesigned and developed a mobile-first business website using frontend technologies.",
+        "Debugged and optimized code to increase performance and reduce loading times by 12%.",
+        "Refactored legacy code to cut project file size by 46%, lowering hosting costs and load times."
+      ]
+    },
+    {
+      role: "Frontend Developer",
+      company: "EncryptedList",
+      from: "Aug 2020",
+      to: "Present",
+      responsibilities: [
+        "Developed and deployed a mobile-first, component-based and interactive SPA using Vue.js.",
+        "Engineered a backend using a REST API and Node.js serverless functions to reduce latency by 19%.",
+        "Integrated client-side routing and state management using Vue libraries to improve overall UX."
+      ]
     },
     {
       role: "Software Developer Intern",
@@ -117,8 +153,8 @@
       from: "Sep 2019",
       to: "Feb 2020",
       responsibilities: [
-        "Aided the foundation's mission to advance computing research by contributing to its large publishing platform.",
-        "Wrote in-depth technical articles on web and computer science concepts such as networking, working with APIs, and fingerprinting."
+        "Contributed 11 new in-depth technical articles to OpenGenus IQ covering different web development concepts.",
+        "Explored different JavaScript web APIs to generate workable solutions to improve web performance."
       ]
     },
     {
@@ -127,8 +163,9 @@
       from: "Sep 2017",
       to: "Jun 2019",
       responsibilities: [
-        "Helped fellow computer science students grow their online presence by developing portfolio websites.",
-        "Created a landing page for a mobile application by a client. Designed an icon and mockups for the application."
+        "Developed landing pages for mobile applications to establish a web presence and provide more product information.",
+        "Designed product logo and UI mockups for mobile apps for use on websites and app store pages, providing a visual representation of the products.",
+        "Incorporated OpenSearch into open-source search engine websites to improve user experience and engagement."
       ]
     }
   ];
@@ -140,13 +177,26 @@
     from: "2017",
     to: "2021"
   };
+
+  const skillset = {
+    Programming: ["JavaScript", "HTML/HTML5", "CSS/CSS3"],
+    "Libraries/Frameworks": ["Vue.js", "React.js", "Nuxt.js"],
+    Familiarity: [
+      "Git",
+      "Python",
+      "Node.js",
+      "Flask",
+      "TypeScript",
+      "PostgreSQL"
+    ]
+  };
 </script>
 
 <style scoped>
   .timeline-item {
-    @apply px-8 py-4 relative text-slate-700 dark:text-slate-300 first:first:before:bg-green-500 dark:first:first:before:bg-green-500;
+    @apply px-8 py-4 relative text-gray-700 dark:text-gray-300 first:first:before:bg-green-500 dark:first:first:before:bg-green-500;
   }
   .timeline-item::before {
-    @apply [content:''] absolute left-0 top-1/2 -translate-y-1/2 translate-x-[calc(-50%-1px)] w-3 h-3 rounded-full inline-block bg-slate-300 dark:bg-slate-600 print:hidden;
+    @apply [content:''] absolute left-0 top-1/2 -translate-y-1/2 translate-x-[calc(-50%-1px)] w-3 h-3 rounded-full inline-block bg-gray-300 dark:bg-gray-600 print:hidden;
   }
 </style>

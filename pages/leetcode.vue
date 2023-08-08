@@ -35,7 +35,8 @@
     title: "Dawit's LeetCode Solutions",
     description:
       "This page contains my (imperfect) solutions to some LeetCode problems.",
-    image: "/og-image.png"
+    image: "/og-image.png",
+    page: "leetcode"
   };
 
   useServerSeoMeta({
@@ -47,7 +48,8 @@
     twitterDescription: seoMeta.description,
     ogImage: seoMeta.image,
     twitterImage: seoMeta.image,
-    ogUrl: `http://oneminch.dev${useRoute().fullPath}`,
+    ogUrl: `https://oneminch.dev/${seoMeta.page}`,
+
     ogType: "website",
     ogLocale: "en_US",
     twitterCard: "summary_large_image"

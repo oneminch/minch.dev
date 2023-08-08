@@ -22,7 +22,8 @@
     title: "Dawit's Picks",
     description:
       "This page contains content from across the web that I found interesting.",
-    image: "/og-image.png"
+    image: "/og-image.png",
+    page: "picks"
   };
 
   useServerSeoMeta({
@@ -34,7 +35,7 @@
     twitterDescription: seoMeta.description,
     ogImage: seoMeta.image,
     twitterImage: seoMeta.image,
-    ogUrl: `http://oneminch.dev${useRoute().fullPath}`,
+    ogUrl: `https://oneminch.dev/${seoMeta.page}`,
     ogType: "website",
     ogLocale: "en_US",
     twitterCard: "summary_large_image"

@@ -6,7 +6,7 @@
 
     <h1 class="text-3xl text-left font-bold mb-6">Blog</h1>
 
-    <section>
+    <section class="grid grid-cols-1 lg:grid-cols-2 gap-4">
       <template v-if="pending">
         <AppBlogSkeleton v-for="i in 5" :key="i" />
       </template>
@@ -31,7 +31,8 @@
     title: "Dawit's Blog",
     description:
       "This page contains my articles on various software and web development topics.",
-    image: "/og-image.png"
+    image: "/og-image.png",
+    page: "blog"
   };
 
   useServerSeoMeta({
@@ -43,7 +44,8 @@
     twitterDescription: seoMeta.description,
     ogImage: seoMeta.image,
     twitterImage: seoMeta.image,
-    ogUrl: `http://oneminch.dev${useRoute().fullPath}`,
+    ogUrl: `https://oneminch.dev/${seoMeta.page}`,
+
     ogType: "website",
     ogLocale: "en_US",
     twitterCard: "summary_large_image"

@@ -1,7 +1,7 @@
 <!-- Navigation: Links -->
 <template>
   <nav
-    class="flex-col justify-center items-center rounded-xl p-[.375rem] md:px-4 text-slate-900 dark:text-slate-200 md:w-full w-32 md:max-h-64 max-h-16 md:right-0 md:bottom-0 fixed md:relative bottom-6 right-4 bg-transparent z-50 origin-bottom-right backdrop-blur-xl md:backdrop-blur-none"
+    class="flex-col justify-center items-center rounded-xl p-[.375rem] md:px-4 text-gray-900 dark:text-gray-200 md:w-full w-32 md:max-h-64 max-h-16 md:right-0 md:bottom-0 fixed md:relative bottom-6 right-4 bg-transparent z-50 origin-bottom-right backdrop-blur-xl md:backdrop-blur-none"
     :class="{ toggled: menuToggled }"
   >
     <ul
@@ -13,7 +13,7 @@
         class="font-bold h-auto flex items-center relative mb-2 rounded-md overflow-hidden"
       >
         <NuxtLink
-          class="nav-links focused-link w-full h-10 py-1 px-4 flex items-center rounded-md font-semibold hover:bg-transparent md:hover:bg-slate-100 md:dark:hover:bg-slate-700 [&>svg]:hover:translate-x-1"
+          class="nav-links focused-link w-full h-10 py-1 px-4 flex items-center rounded-md font-semibold hover:bg-transparent md:hover:bg-gray-100 md:dark:hover:bg-gray-700 [&>svg]:hover:translate-x-1"
           :to="`/${route}`"
         >
           {{ link }}
@@ -35,7 +35,7 @@
     >
       <button
         @click="toggleMenu()"
-        class="md:hidden w-full h-10 py-1 px-4 flex items-center justify-center rounded-md font-semibold hover:bg-green-400 bg-green-400 text-slate-800"
+        class="md:hidden w-full h-10 py-1 px-4 flex items-center justify-center rounded-md font-semibold hover:bg-green-400 bg-green-400 text-gray-800"
         aria-label="Menu"
         title="Menu"
       >
@@ -84,7 +84,7 @@
     @apply mt-3;
   }
 
-  .nav-links.router-link-active {
-    @apply focus:ring-0 bg-slate-200 dark:bg-slate-700/75 md:dark:bg-slate-700/100 border border-slate-300 dark:border-slate-600;
+  nav .nav-links.router-link-active {
+    @apply focus:ring-0 bg-gray-200 dark:bg-gray-700/75 md:dark:bg-gray-700/100 border border-gray-300 dark:border-gray-600;
   }
 </style>
