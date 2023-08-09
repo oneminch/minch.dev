@@ -11,12 +11,12 @@
     <p class="w-full my-6">{{ summary }}</p>
 
     <!-- Skillset -->
-    <h2 class="font-bold text-2xl my-6 flex items-center">
-      Skills
-      <Icon name="heroicons:wrench-screwdriver-solid" class="ml-3" />
-    </h2>
-
     <section class="my-4 w-full">
+      <h2 class="font-bold text-2xl my-6 flex items-center">
+        Skills
+        <Icon name="heroicons:wrench-screwdriver-solid" class="ml-3" />
+      </h2>
+
       <div class="mb-1" v-for="(skills, category) in skillset" :key="category">
         <h3
           class="inline-block font-semibold text-lg mr-2 text-gray-700 dark:text-gray-200"
@@ -36,13 +36,13 @@
     </section>
 
     <!-- Experience timeline -->
-    <h2 class="font-bold text-2xl my-6 flex items-center">
-      Experience
-      <Icon name="heroicons:briefcase-solid" class="ml-3" />
-    </h2>
     <section
       class="ml-2 border-l-2 border-gray-300 dark:border-gray-600 my-4 w-full"
     >
+      <h2 class="font-bold text-2xl my-6 flex items-center">
+        Experience
+        <Icon name="heroicons:briefcase-solid" class="ml-3" />
+      </h2>
       <div
         v-for="(experience, expIndex) in experiences"
         :key="expIndex"
@@ -74,13 +74,13 @@
     </section>
 
     <!-- Education Timeline -->
-    <h2 class="font-bold text-2xl my-6 flex items-center">
-      Education
-      <Icon name="heroicons:academic-cap-solid" class="ml-3" />
-    </h2>
     <section
       class="ml-2 border-l-2 border-gray-300 dark:border-gray-600 my-4 w-full"
     >
+      <h2 class="font-bold text-2xl my-6 flex items-center">
+        Education
+        <Icon name="heroicons:academic-cap-solid" class="ml-3" />
+      </h2>
       <div class="timeline-item">
         <h3 class="font-bold text-gray-700 dark:text-gray-200">
           {{ education.institution }}

@@ -55,8 +55,7 @@ export default defineNuxtConfig({
   ],
   routeRules: {
     // Static pages
-    "/": { static: true },
-    "/**": { static: true },
+    "/": { prerender: true },
     // Dynamic Pages
     "/projects": { isr: true },
     "/picks": { isr: true },

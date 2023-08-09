@@ -17,49 +17,54 @@
     </section>
 
     <!-- Projects -->
-    <h2 class="font-semibold text-xl mb-2 w-auto">
-      <NuxtLink
-        to="/projects"
-        class="focused-link rounded-lg w-full flex items-center py-2"
-      >
-        Projects
-        <Icon
-          name="heroicons:chevron-right-solid"
-          class="ml-2 text-green-500"
+    <section>
+      <h2 class="font-semibold text-xl mb-2 w-auto">
+        <NuxtLink
+          to="/projects"
+          class="focused-link rounded-lg w-full flex items-center py-2"
+        >
+          Projects
+          <Icon
+            name="heroicons:chevron-right-solid"
+            class="ml-2 text-green-500"
+          />
+        </NuxtLink>
+      </h2>
+      <div class="columns-1 lg:columns-2 gap-6">
+        <AppProjectCard
+          :hideImage="true"
+          project-title="Deadlines"
+          project-url="https://deadlines.oneminch.dev/"
+          project-description="Deadlines is a simple, offline deadline tracker made with Vue.js and localForage."
+          :tags="['Vue.js', 'localForage']"
         />
-      </NuxtLink>
-    </h2>
-    <section class="columns-1 lg:columns-2 gap-6">
-      <AppProjectCard
-        :hideImage="true"
-        project-title="Deadlines"
-        project-url="https://deadlines.oneminch.dev/"
-        project-description="Deadlines is a simple, offline deadline tracker made with Vue.js and localForage."
-        :tags="['Vue.js', 'localForage']"
-      />
-      <AppProjectCard
-        :hideImage="true"
-        project-title="EncryptedList"
-        project-url="https://encryptedlist.xyz/"
-        project-description="EncryptedList is a List of Products & Services that Offer Zero-Knowledge or End-to-End Encryption."
-        :tags="['Vue.js', 'Tailwind CSS', 'Airtable']"
-      />
+        <AppProjectCard
+          :hideImage="true"
+          project-title="EncryptedList"
+          project-url="https://encryptedlist.xyz/"
+          project-description="EncryptedList is a List of Products & Services that Offer Zero-Knowledge or End-to-End Encryption."
+          :tags="['Vue.js', 'Tailwind CSS', 'Airtable']"
+        />
+      </div>
     </section>
 
     <!-- Skills -->
-    <h2 class="font-semibold text-xl mb-2 py-2">Skills</h2>
     <section>
-      <li
-        v-for="skill in skills"
-        :key="skill"
-        class="px-3 py-1 inline-block dark:border dark:border-green-500 bg-green-300 dark:bg-transparent text-gray-800 dark:text-green-500 font-medium rounded-full text-sm mr-1 mb-1"
-      >
-        {{ skill }}
-      </li>
+      <h2 class="font-semibold text-xl mb-2 py-2">Skills</h2>
+      <ul>
+        <li
+          v-for="skill in skills"
+          :key="skill"
+          class="px-3 py-1 inline-block dark:border dark:border-green-500 bg-green-300 dark:bg-transparent text-gray-800 dark:text-green-500 font-medium rounded-full text-sm mr-1 mb-1"
+        >
+          {{ skill }}
+        </li>
+      </ul>
     </section>
+
     <!-- Status -->
-    <h2 class="font-semibold text-xl mb-2 py-2">Currently</h2>
     <section class="columns-1 lg:columns-2 gap-6">
+      <h2 class="font-semibold text-xl mb-2 py-2">Currently</h2>
       <AppStatusCard
         v-for="(content, type) in currently"
         :key="type"

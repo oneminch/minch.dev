@@ -1,5 +1,5 @@
 <template>
-  <section
+  <div
     class="card-style flex flex-col py-4 px-6 items-start w-full min-h-[6rem] relative mb-4"
   >
     <h3 class="font-bold text-lg mb-2">
@@ -10,7 +10,7 @@
       <Icon name="heroicons:arrow-right-solid" class="mr-1 text-green-400" />
       {{ statusContent }}
     </p>
-  </section>
+  </div>
 </template>
 
 <script setup>
