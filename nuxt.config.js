@@ -55,12 +55,16 @@ export default defineNuxtConfig({
   ],
   routeRules: {
     // Static pages
-    "/": { prerender: true },
-    "/**": { prerender: true },
+    "/": { static: true },
+    "/blog": { static: true },
+    "/contact": { static: true },
+    "/meta": { static: true },
+    "/resume": { static: true },
     // Dynamic Pages
+    "/blog/**": { isr: true },
+    "/leetcode": { isr: true },
     "/projects": { isr: true },
-    "/picks": { isr: true },
-    "/blog/**": { isr: true }
+    "/picks": { isr: true }
   },
   runtimeConfig: {
     githubToken: process.env.GITHUB_TOKEN,
