@@ -51,11 +51,6 @@
     coverImage: String
   });
 
-  // const coverImagePrefix =
-  //   "https://cdn.statically.io/gh/oneminch/garden/main/Blog/notes/assets/cover";
-
-  // const coverImageUrl = (fileSlug) => `${coverImagePrefix}/${fileSlug}`;
-
   const lastUpdateTime = computed(() => {
     const dateObj = new Date(props.pubDate);
 

@@ -63,14 +63,16 @@
     </section>
 
     <!-- Status -->
-    <section class="columns-1 lg:columns-2 gap-6">
+    <section>
       <h2 class="font-semibold text-xl mb-2 py-2">Currently</h2>
-      <AppStatusCard
-        v-for="(content, type) in currently"
-        :key="type"
-        :status-type="type"
-        :status-content="content"
-      />
+      <div class="columns-1 lg:columns-2 gap-6">
+        <AppStatusCard
+          v-for="(content, type) in currently"
+          :key="type"
+          :status-type="type"
+          :status-content="content"
+        />
+      </div>
     </section>
 
     <AppFooter />

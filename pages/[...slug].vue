@@ -39,14 +39,15 @@
 
       <!-- Additional info for leetcode solution posts -->
       <template v-if="doc._dir == 'leetcode'">
-        <div class="mb-1">
-          <span
-            class="px-2 py-[.1rem] inline-block rounded-full font-semibold font-mono text-xs mr-1 border border-gray-300 dark:border-gray-500 bg-gray-200 dark:bg-gray-600 text-gray-800 dark:text-gray-100"
+        <ul class="mb-1">
+          <li
+            class="px-2 py-[.1rem] inline-block rounded-full font-semibold font-mono text-xs mr-1 border-[0.5px] border-gray-300 dark:border-gray-500 bg-gray-200 dark:bg-gray-600 text-gray-800 dark:text-gray-100"
             v-for="tag in doc.tags"
             :key="tag"
-            >{{ tag }}
-          </span>
-        </div>
+          >
+            {{ tag }}
+          </li>
+        </ul>
         <p>
           <b class="mr-2">Problem URL:</b>
           <NuxtLink v-if="doc.problemUrl" target="_blank" :to="doc.problemUrl">

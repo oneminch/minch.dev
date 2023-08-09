@@ -36,9 +36,7 @@
     </section>
 
     <!-- Experience timeline -->
-    <section
-      class="ml-2 border-l-2 border-gray-300 dark:border-gray-600 my-4 w-full"
-    >
+    <section class="ml-2 my-4 w-full">
       <h2 class="font-bold text-2xl my-6 flex items-center">
         Experience
         <Icon name="heroicons:briefcase-solid" class="ml-3" />
@@ -74,9 +72,7 @@
     </section>
 
     <!-- Education Timeline -->
-    <section
-      class="ml-2 border-l-2 border-gray-300 dark:border-gray-600 my-4 w-full"
-    >
+    <section class="ml-2 my-4 w-full">
       <h2 class="font-bold text-2xl my-6 flex items-center">
         Education
         <Icon name="heroicons:academic-cap-solid" class="ml-3" />
@@ -194,7 +190,7 @@
 
 <style scoped>
   .timeline-item {
-    @apply px-8 py-4 relative text-gray-700 dark:text-gray-300 first:first:before:bg-green-500 dark:first:first:before:bg-green-500;
+    @apply border-l-2 border-gray-300 dark:border-gray-600 px-8 py-4 relative text-gray-700 dark:text-gray-300 first-of-type:before:bg-green-500 dark:first-of-type:before:bg-green-500;
   }
   .timeline-item::before {
     @apply [content:''] absolute left-0 top-1/2 -translate-y-1/2 translate-x-[calc(-50%-1px)] w-3 h-3 rounded-full inline-block bg-gray-300 dark:bg-gray-600 print:hidden;

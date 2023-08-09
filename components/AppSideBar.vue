@@ -2,7 +2,7 @@
 <template>
   <aside
     id="sidebar"
-    class="flex flex-col items-center justify-start w-full md:w-1/4 min-w-[16rem] md:min-w-[20rem] h-full max-h-[40rem] rounded-xl md:rounded-b-none p-5 pb-2 md:mr-4 md:mb-0 mb-6 box-border text-gray-900 bg-white dark:bg-gray-800 border border-transparent print:hidden relative md:sticky md:top-4 -z-0"
+    class="flex flex-col items-center justify-start w-full md:w-1/4 min-w-[16rem] md:min-w-[20rem] h-full max-h-[40rem] rounded-xl md:rounded-b-none p-5 pb-2 md:mr-4 md:mb-0 mb-6 box-border text-gray-900 bg-white dark:bg-gray-800 border-[0.5px] border-transparent print:hidden relative md:sticky md:top-4 -z-0"
     :class="{ hidden: routeRegEx.test($route.fullPath) }"
   >
     <!-- Profile card: Profile Picture, Name, Title + Social Profiles -->
@@ -45,6 +45,6 @@
 
   /* Gradient Border: Colorful Backdrop */
   #sidebar::after {
-    @apply content-[""] -z-20 absolute inset-0 rounded-xl md:rounded-b-none bg-gradient-to-b from-green-500 via-lime-400 to-lime-400 md:to-transparent m-[-1.5px] dark:m-[-1px] md:mb-0;
+    @apply content-[""] -z-20 absolute inset-0 rounded-xl md:rounded-b-none bg-gradient-to-b from-green-500 via-lime-400 to-lime-400 md:to-transparent m-[-1px] md:mb-0;
   }
 </style>

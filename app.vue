@@ -23,7 +23,7 @@
   @layer utilities {
     /* Uniform Card Style */
     .card-style {
-      @apply border border-gray-300 dark:border-gray-600 dark:bg-gray-700 bg-white rounded-lg;
+      @apply border-[0.5px] border-gray-300 dark:border-gray-600 dark:bg-gray-700 bg-white rounded-lg;
     }
 
     .focused-link {
@@ -39,13 +39,11 @@
   * {
     transition: all 250ms, color, background-color, border-color,
       text-decoration-color, fill, stroke 100ms;
-    /* @apply outline outline-1 outline-red-500; */
   }
 
   html {
     @apply m-0 p-0;
     font-family: "Inter", sans-serif;
-    /* font-family: "Roboto Mono", monospace; */
   }
 
   body {

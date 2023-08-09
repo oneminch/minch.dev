@@ -40,7 +40,7 @@
       <Icon
         name="heroicons:arrow-up-right-20-solid"
         size="1.25rem"
-        class="ml-auto absolute right-2 top-2 text-green-500 bg-gray-100 dark:bg-gray-600 border border-gray-300 dark:border-gray-700 rounded-full p-1 w-7 h-7"
+        class="ml-auto absolute right-2 top-2 text-green-500 bg-gray-100 dark:bg-gray-600 border-[0.5px] border-gray-300 dark:border-none rounded-full p-1 w-7 h-7"
       />
     </div>
   </NuxtLink>

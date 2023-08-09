@@ -21,14 +21,14 @@
       <!-- Problem Title -->
       <h3 class="font-semibold mb-1">{{ problemTitle }}</h3>
       <!-- Tags -->
-      <div class="mb-1">
-        <span
-          class="px-3 py-[.1rem] inline-block rounded-full font-semibold font-mono text-xs mr-1 border border-gray-300 dark:border-gray-500 bg-gray-200 dark:bg-gray-600 text-gray-800 dark:text-gray-100"
+      <ul class="mb-1">
+        <li
+          class="px-3 py-[.1rem] inline-block rounded-full font-semibold font-mono text-xs mr-1 border-[0.5px] border-gray-300 dark:border-gray-500 bg-gray-200 dark:bg-gray-600 text-gray-800 dark:text-gray-100"
           v-for="tag in tags"
           :key="tag"
           >{{ tag }}
-        </span>
-      </div>
+        </li>
+      </ul>
     </div>
   </NuxtLink>
 </template>

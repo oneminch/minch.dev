@@ -8,7 +8,7 @@
 
     <section class="grid grid-cols-1 lg:grid-cols-2 gap-4">
       <template v-if="pending">
-        <AppBlogSkeleton v-for="i in 5" :key="i" />
+        <AppBlogSkeleton v-for="i in 5" :key="Math.random()" />
       </template>
       <template v-else>
         <AppBlogCard

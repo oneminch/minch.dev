@@ -8,7 +8,7 @@
   </main>
 
   <!-- Mobile Navigation -->
-  <AppNav class="md:hidden flex after:shadow-2xl border border-green-400" />
+  <AppNav class="md:hidden flex after:shadow-2xl border-[0.5px] border-green-400" />
 </template>
 
 <style scoped>
