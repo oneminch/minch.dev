@@ -39,9 +39,9 @@
 
       <!-- Additional info for leetcode solution posts -->
       <template v-if="doc._dir == 'leetcode'">
-        <ul class="mb-1">
+        <ul class="mb-1 p-0">
           <li
-            class="px-2 py-[.1rem] inline-block rounded-full font-semibold font-mono text-xs mr-1 border-[0.5px] border-gray-300 dark:border-gray-500 bg-gray-200 dark:bg-gray-600 text-gray-800 dark:text-gray-100"
+            class="px-2 py-[.1rem] inline-block rounded-full font-semibold font-mono text-xs mr-1 border-[0.75px] border-gray-300 dark:border-gray-500 bg-gray-200 dark:bg-gray-600 text-gray-800 dark:text-gray-100"
             v-for="tag in doc.tags"
             :key="tag"
           >

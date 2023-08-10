@@ -5,7 +5,7 @@
     :class="{ toggled: menuToggled }"
   >
     <ul
-      class="w-full h-full invisible opacity-0 md:visible md:opacity-100 hidden md:flex flex-col"
+      class="w-full h-full p-0 invisible opacity-0 md:visible md:opacity-100 hidden md:flex flex-col"
     >
       <li
         v-for="(route, link) in navLinks"
@@ -85,6 +85,6 @@
   }
 
   nav .nav-links.router-link-active {
-    @apply bg-gray-200 dark:bg-gray-700/75 md:dark:bg-gray-700/100 border-[0.5px] border-gray-300 dark:border-gray-600;
+    @apply bg-gray-200 dark:bg-gray-700/75 md:dark:bg-gray-700/100 border-[0.75px] border-gray-300 dark:border-gray-600;
   }
 </style>

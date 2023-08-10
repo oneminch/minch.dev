@@ -19,7 +19,7 @@
     </div>
     <div class="flex flex-col justify-between p-2 flex-shrink-0 w-full">
       <!-- Blog Tags -->
-      <ul class="mb-2">
+      <ul class="mb-2 p-0">
         <li
           class="px-2 py-[.1rem] inline-block rounded-full font-medium font-mono text-xs mr-1 border-[.5px] border-gray-300 dark:border-gray-500 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-100"
           v-for="tag in tags"

@@ -23,7 +23,7 @@
   @layer utilities {
     /* Uniform Card Style */
     .card-style {
-      @apply border-[0.5px] border-gray-300 dark:border-gray-600 dark:bg-gray-700 bg-white rounded-lg;
+      @apply border-[0.75px] border-gray-300 dark:border-gray-600 dark:bg-gray-700 bg-white rounded-lg;
     }
 
     .focused-link {

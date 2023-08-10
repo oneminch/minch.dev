@@ -21,12 +21,13 @@
       <!-- Problem Title -->
       <h3 class="font-semibold mb-1">{{ problemTitle }}</h3>
       <!-- Tags -->
-      <ul class="mb-1">
+      <ul class="mb-1 p-0">
         <li
-          class="px-3 py-[.1rem] inline-block rounded-full font-semibold font-mono text-xs mr-1 border-[0.5px] border-gray-300 dark:border-gray-500 bg-gray-200 dark:bg-gray-600 text-gray-800 dark:text-gray-100"
+          class="px-3 py-[.1rem] inline-block rounded-full font-semibold font-mono text-xs mr-1 border-[0.75px] border-gray-300 dark:border-gray-500 bg-gray-200 dark:bg-gray-600 text-gray-800 dark:text-gray-100"
           v-for="tag in tags"
           :key="tag"
-          >{{ tag }}
+        >
+          {{ tag }}
         </li>
       </ul>
     </div>

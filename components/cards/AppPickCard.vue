@@ -16,7 +16,7 @@
     <Icon
       name="heroicons:arrow-up-right-20-solid"
       size="1.25rem"
-      class="ml-auto flex-shrink-0 text-green-500 bg-gray-100 dark:bg-gray-600 border-[0.5px] border-gray-300 dark:border-none rounded-full p-1 w-7 h-7"
+      class="ml-auto flex-shrink-0 text-green-500 bg-gray-100 dark:bg-gray-600 border-[0.75px] border-gray-300 dark:border-none rounded-full p-1 w-7 h-7"
     />
   </NuxtLink>
 </template>

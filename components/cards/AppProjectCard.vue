@@ -28,7 +28,7 @@
       <!-- Project Description -->
       <p class="mb-3">{{ projectDescription }}</p>
       <!-- Project Tech Stack -->
-      <ul>
+      <ul class="p-0">
         <li
           class="px-3 py-[.1rem] inline-block rounded-full font-semibold font-mono text-xs mr-1 border-[.5px] border-gray-300 dark:border-gray-500 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-100"
           v-for="(tag, index) in tags"
@@ -40,7 +40,7 @@
       <Icon
         name="heroicons:arrow-up-right-20-solid"
         size="1.25rem"
-        class="ml-auto absolute right-2 top-2 text-green-500 bg-gray-100 dark:bg-gray-600 border-[0.5px] border-gray-300 dark:border-none rounded-full p-1 w-7 h-7"
+        class="ml-auto absolute right-2 top-2 text-green-500 bg-gray-100 dark:bg-gray-600 border-[0.75px] border-gray-300 dark:border-none rounded-full p-1 w-7 h-7"
       />
     </div>
   </NuxtLink>

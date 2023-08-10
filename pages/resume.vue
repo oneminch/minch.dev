@@ -23,7 +23,7 @@
         >
           {{ category }}:
         </h3>
-        <ul class="inline-block">
+        <ul class="inline-block p-0">
           <li
             v-for="skill in skills"
             :key="skill"
@@ -59,13 +59,16 @@
         </h3>
         <ul
           v-if="experience.responsibilities.length > 0"
-          class="list-disc pl-4 pt-2"
+          class="list-disc p-0 pl-4 pt-2"
         >
           <li
+            class="text-gray-400 dark:text-gray-500"
             v-for="(responsibility, respIndex) in experience.responsibilities"
             :key="respIndex"
           >
-            {{ responsibility }}
+            <span class="text-gray-800 dark:text-gray-100">{{
+              responsibility
+            }}</span>
           </li>
         </ul>
       </div>

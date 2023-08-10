@@ -51,7 +51,7 @@
     <!-- Skills -->
     <section>
       <h2 class="font-semibold text-xl mb-2 py-2">Skills</h2>
-      <ul>
+      <ul class="p-0">
         <li
           v-for="skill in skills"
           :key="skill"
