@@ -13,10 +13,6 @@
   />
 </template>
 
-<script setup>
-  defineRobotMeta();
-</script>
-
 <style>
   @tailwind utilities;
 
