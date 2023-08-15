@@ -8,7 +8,7 @@
 
     <section class="grid grid-cols-1 lg:grid-cols-2 gap-4">
       <template v-if="pending">
-        <AppBlogSkeleton v-for="i in 5" :key="Math.random()" />
+        <AppBlogSkeleton v-for="skeleton in skeletons" :key="skeleton" />
       </template>
       <template v-else>
         <AppBlogCard
@@ -50,6 +50,9 @@
     ogLocale: "en_US",
     twitterCard: "summary_large_image"
   });
+
+  // Skeletons
+  const skeletons = [...Array(5).fill(Math.random())];
 
   // Fetch all blog posts sans LeetCode solutions
   const { pending, data: blogPosts } = await useLazyAsyncData("blog", () =>

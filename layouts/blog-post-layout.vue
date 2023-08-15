@@ -6,7 +6,6 @@
         <NuxtLink
           class="focused-link flex justify-between items-center py-1 px-3 bg-gray-200 dark:bg-gray-700 dark:text-gray-200 duration-150 rounded-md no-underline border-[.5px] border-gray-300 dark:border-gray-600"
           to="/"
-          noPrefetch
         >
           <Icon name="heroicons:home-20-solid" class="mr-2" />
           Home
@@ -14,7 +13,6 @@
         <NuxtLink
           class="focused-link flex justify-between items-center py-1 px-3 bg-gray-200 dark:bg-gray-700 dark:text-gray-200 duration-150 rounded-md no-underline border-[.5px] border-gray-300 dark:border-gray-600"
           to="/blog"
-          noPrefetch
         >
           <Icon name="heroicons:rss-solid" class="mr-2" />
 
@@ -23,7 +21,6 @@
         <NuxtLink
           class="focused-link flex justify-between items-center py-1 px-3 bg-gray-200 dark:bg-gray-700 dark:text-gray-200 duration-150 rounded-md no-underline border-[.5px] border-gray-300 dark:border-gray-600"
           to="/leetcode"
-          noPrefetch
         >
           <Icon name="simple-icons:leetcode" class="mr-2" />
 

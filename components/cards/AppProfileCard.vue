@@ -20,14 +20,14 @@
       class="w-full h-8 flex items-center justify-center text-gray-900 dark:text-gray-200"
     >
       <NuxtLink
-        v-for="(profile, key) in profiles"
-        :key="profile"
+        v-for="(profileUrl, name) in profiles"
+        :key="name"
         class="focused-link icon-link"
-        :to="profile"
-        :title="key"
+        :to="profileUrl"
+        :title="name"
         target="_blank"
       >
-        <Icon :name="`simple-icons:${key.toLowerCase()}`" />
+        <Icon :name="`simple-icons:${name.toLowerCase()}`" />
       </NuxtLink>
     </div>
   </div>

@@ -7,7 +7,7 @@
     <blockquote>Content from across the web I found interesting.</blockquote>
     <br />
     <template v-if="pending">
-      <AppPickSkeleton v-for="i in 5" :key="i" />
+      <AppPickSkeleton v-for="skeleton in skeletons" :key="skeleton" />
     </template>
     <template v-else>
       <AppPickCard v-for="pick in picks" :key="pick.link" :pick="pick" />
@@ -40,6 +40,9 @@
     ogLocale: "en_US",
     twitterCard: "summary_large_image"
   });
+
+  // Skeletons
+  const skeletons = [...Array(5).fill(Math.random())];
 
   const { pending, data: picks } = await useLazyFetch("/api/picks");
 </script>

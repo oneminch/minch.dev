@@ -31,8 +31,8 @@
       <ul class="p-0">
         <li
           class="px-3 py-[.1rem] inline-block rounded-full font-semibold font-mono text-xs mr-1 border-[.5px] border-gray-300 dark:border-gray-500 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-100"
-          v-for="(tag, index) in tags"
-          :key="index"
+          v-for="tag in tags"
+          :key="tag"
         >
           {{ tag }}
         </li>

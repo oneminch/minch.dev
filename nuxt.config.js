@@ -57,12 +57,12 @@ export default defineNuxtConfig({
     // Static pages
     "/": { static: true },
     "/blog": { static: true },
+    "/blog/**": { static: true },
     "/contact": { static: true },
+    "/leetcode": { static: true },
     "/meta": { static: true },
     "/resume": { static: true },
     // Dynamic Pages
-    "/blog/**": { isr: true },
-    "/leetcode": { isr: true },
     "/projects": { isr: true },
     "/picks": { isr: true }
   },
@@ -70,5 +70,6 @@ export default defineNuxtConfig({
     githubToken: process.env.GITHUB_TOKEN,
     raindropTestToken: process.env.RAINDROP_TEST_TOKEN,
     raindropCollectionId: process.env.RAINDROP_COLLECTION_ID
-  }
+  },
+  telemetry: false
 });

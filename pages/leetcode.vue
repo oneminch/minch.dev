@@ -8,12 +8,12 @@
 
     <section>
       <template v-if="pending">
-        <AppCodeSolutionSkeleton v-for="i in 5" :key="i" />
+        <AppCodeSolutionSkeleton v-for="skeleton in skeletons" :key="skeleton" />
       </template>
       <template v-else>
         <AppCodeSolutionCard
-          v-for="(solution, index) in codeSolutions"
-          :key="index"
+          v-for="solution in codeSolutions"
+          :key="solution._path"
           :problemTitle="solution.title"
           :url="solution._path"
           :tags="solution.tags"
@@ -54,6 +54,9 @@
     ogLocale: "en_US",
     twitterCard: "summary_large_image"
   });
+
+  // Skeletons
+  const skeletons = [...Array(5).fill(Math.random())];
 
   // Fetch all LeetCode solutions
   const { pending, data: codeSolutions } = await useAsyncData("leetcode", () =>
