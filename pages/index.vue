@@ -6,7 +6,7 @@
 
     <!-- Introduction -->
     <section>
-      <h1 class="font-semibold text-2xl mb-6">Hi, my name is Dawit.</h1>
+      <h1 class="font-semibold text-2xl mb-6">Hi, my name is Dawit 👋</h1>
       <p>
         I'm a passionate Software Engineer with a B.Sc. in Computer Science and
         4 years of experience designing and developing web applications. My

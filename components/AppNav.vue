@@ -1,7 +1,7 @@
 <!-- Navigation: Links -->
 <template>
   <nav
-    class="flex-col justify-center items-center rounded-xl p-[.375rem] md:px-4 text-gray-900 dark:text-gray-200 md:w-full w-32 md:max-h-64 max-h-16 md:right-0 md:bottom-0 fixed md:relative bottom-6 right-4 bg-transparent z-50 origin-bottom-right backdrop-blur-xl md:backdrop-blur-none print:hidden"
+    class="flex-col justify-center items-center rounded-xl p-[.375rem] md:px-4 text-gray-900 dark:text-gray-200 md:w-full w-32 md:max-h-64 max-h-16 md:right-0 md:bottom-0 fixed md:relative bottom-6 right-4 bg-gray-100/75 dark:bg-gray-900/75 z-50 origin-bottom-right backdrop-blur-xl md:backdrop-blur-none print:hidden"
     :class="{ toggled: menuToggled }"
   >
     <ul
@@ -85,6 +85,6 @@
   }
 
   nav .nav-links.router-link-active {
-    @apply bg-gray-200 dark:bg-gray-700/75 md:dark:bg-gray-700/100 border-[0.75px] border-gray-300 dark:border-gray-600;
+    @apply bg-gray-600/10 dark:bg-gray-700/75 md:dark:bg-gray-700/100 border-[0.75px] border-gray-600/20 dark:border-gray-600;
   }
 </style>

@@ -1,28 +1,6 @@
 <template>
   <ContentDoc tag="">
     <template #default="{ doc }">
-      <!-- SEO metadata from blog data -->
-      <!-- {{
-        (() => {
-          useServerSeoMeta({
-            title: () => `${doc.title} - Blog`,
-            description: () => doc.desc,
-            altTitle: "hi",
-            author: "Dawit (@oneminch)",
-            ogUrl: `https://oneminch.dev${doc._path}`,
-            ogType: "article",
-            ogLocale: "en_US",
-            ogTitle: () => doc.longTitle || doc.title,
-            ogDescription: () => doc.desc,
-            ogImage: () => `${imgCdnPrefix}/cover/${doc.image}`,
-            twitterCard: "summary_large_image",
-            twitterTitle: () => doc.longTitle || doc.title,
-            twitterDescription: () => doc.desc,
-            twitterImage: () => `${imgCdnPrefix}/cover/${doc.image}`
-          });
-        })()
-      }} -->
-
       <!-- Post title -->
       <h1 class="mb-4">
         {{ doc.longTitle || doc.title }}
@@ -84,6 +62,6 @@
 
 <style scoped>
   img {
-    @apply h-full object-cover bg-cover origin-center border-[.75px] border-gray-300 dark:border-gray-600;
+    @apply w-full object-cover bg-cover origin-center border-[.75px] border-gray-300 dark:border-gray-600;
   }
 </style>
