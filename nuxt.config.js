@@ -50,8 +50,7 @@ export default defineNuxtConfig({
     "@nuxtjs/partytown",
     "@nuxtjs/tailwindcss",
     "@vueuse/nuxt",
-    "nuxt-icon",
-    "nuxt-simple-robots"
+    "nuxt-icon"
   ],
   routeRules: {
     // Static pages
