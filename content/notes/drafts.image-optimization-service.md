@@ -1,12 +1,16 @@
 ---
-id: GENERATED_BLOG_ID
-title: Template
-description: SHORT BLOG DESCRIPTION
+id: 682m5autvf0qs5w6ibl3vg9
+title: Self-Hosted Image Optimization using Caravaggio
+desc: ""
+updated: 1692300535381
+created: 1686355794322
+description: How to create your own image optimization service.
 tags:
   - TAG_1
   - TAG_2
   - TAG_3
 image: /content/cover/COVER-IMAGE.png
+description: SHORT BLOG DESCRIPTION
 head:
   meta:
     - name: robots

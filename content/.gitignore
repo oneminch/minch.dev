@@ -1,6 +1,5 @@
 node_modules
 .dendron.*
-drafts.*.md
 build
 seeds
 .next
