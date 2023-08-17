@@ -17,15 +17,15 @@ export default defineNuxtConfig({
           rel: "stylesheet",
           href: "https://fonts.bunny.net/css?family=roboto-mono:400,400i,500,600,700|inter:300,400,500,600,700,800"
         }
-      ],
-      script: [
-        {
-          type: "text/partytown",
-          src: "https://measure.oneminch.dev/minch-measure",
-          async: true,
-          "data-website-id": "1e0e9daa-a25b-4943-af4e-68c91b2d3c72"
-        }
       ]
+      // ,script: [
+      //   {
+      //     type: "text/partytown",
+      //     src: "https://measure.oneminch.dev/minch-measure",
+      //     async: true,
+      //     "data-website-id": "1e0e9daa-a25b-4943-af4e-68c91b2d3c72"
+      //   }
+      // ]
     },
     pageTransition: { name: "slide", mode: "out-in" }
   },
@@ -53,22 +53,23 @@ export default defineNuxtConfig({
     "nuxt-icon"
   ],
   routeRules: {
-    // Static pages
-    "/": { static: true },
-    "/blog": { static: true },
-    "/blog/**": { static: true },
-    "/contact": { static: true },
-    "/leetcode": { static: true },
-    "/meta": { static: true },
-    "/resume": { static: true },
-    // Dynamic Pages
+    "/": { isr: true },
+    "/blog": { isr: true },
+    "/blog/**": { isr: true },
+    "/contact": { isr: true },
+    "/leetcode": { isr: true },
+    "/meta": { isr: true },
+    "/resume": { isr: true },
     "/projects": { isr: true },
     "/picks": { isr: true }
   },
   runtimeConfig: {
     githubToken: process.env.GITHUB_TOKEN,
     raindropTestToken: process.env.RAINDROP_TEST_TOKEN,
-    raindropCollectionId: process.env.RAINDROP_COLLECTION_ID
+    raindropCollectionId: process.env.RAINDROP_COLLECTION_ID,
+    turnstile: {
+      secretKey: process.env.TURNSTILE_SECRET_KEY
+    }
   },
   telemetry: false
 });
