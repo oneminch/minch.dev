@@ -39,9 +39,27 @@ export default defineNuxtConfig({
     highlight: {
       theme: "github-dark"
     },
-    ignores: ["root.md", "/drafts/", "/.vscode/", "\\.json$", "\\.yml$"],
+    ignores: [
+      "root.md",
+      "drafts",
+      "template.md",
+      "/drafts/",
+      "/.vscode/",
+      "\\.code-workspace$",
+      "\\.gitignore$",
+      "\\.port$",
+      "\\.json$",
+      "\\.ws$",
+      "\\.yml$"
+    ],
     markdown: {
       toc: { depth: 1, searchDepth: 2 }
+    },
+    sources: {
+      content: {
+        driver: "fs",
+        base: "content/notes"
+      }
     }
   },
   modules: [

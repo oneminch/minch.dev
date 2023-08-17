@@ -11,3 +11,16 @@ dist
 about.txt
 
 vercel.json
+
+# Dendron specific stuff
+dendron.yml
+.dendron.*
+content/notes/assets/
+content/notes/.vscode/
+content/notes/root.schema.yml
+drafts.*.md
+build
+seeds
+.next
+pods/service-connections
+

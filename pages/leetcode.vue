@@ -8,7 +8,10 @@
 
     <section>
       <template v-if="pending">
-        <AppCodeSolutionSkeleton v-for="skeleton in skeletons" :key="skeleton" />
+        <AppCodeSolutionSkeleton
+          v-for="skeleton in skeletons"
+          :key="skeleton"
+        />
       </template>
       <template v-else>
         <AppCodeSolutionCard
