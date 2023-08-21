@@ -6,7 +6,7 @@
 
     <h1 class="text-3xl text-left font-bold mb-6">LeetCode Solutions</h1>
 
-    <section>
+    <section class="grid grid-cols-1 lg:grid-cols-2 gap-4">
       <template v-if="pending">
         <AppCodeSolutionSkeleton
           v-for="skeleton in skeletons"

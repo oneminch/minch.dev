@@ -1,7 +1,7 @@
 <!-- Coding Solution Card -->
 <template>
   <NuxtLink
-    class="focused-link card-style w-full flex justify-start items-center px-4 py-3 mb-4 relative"
+    class="focused-link card-style w-full flex justify-start items-center px-4 py-2 relative"
     :to="url"
     :title="problemTitle"
   >

@@ -30,7 +30,7 @@
           />
         </NuxtLink>
       </h2>
-      <div class="columns-1 lg:columns-2 gap-6">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
         <AppProjectCard
           project-title="Deadlines"
           project-url="https://deadlines.oneminch.dev/"
