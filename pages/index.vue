@@ -32,14 +32,12 @@
       </h2>
       <div class="columns-1 lg:columns-2 gap-6">
         <AppProjectCard
-          :hideImage="true"
           project-title="Deadlines"
           project-url="https://deadlines.oneminch.dev/"
           project-description="Deadlines is a simple, offline deadline tracker made with Vue.js and localForage."
           :tags="['Vue.js', 'localForage']"
         />
         <AppProjectCard
-          :hideImage="true"
           project-title="EncryptedList"
           project-url="https://encryptedlist.xyz/"
           project-description="EncryptedList is a List of Products & Services that Offer Zero-Knowledge or End-to-End Encryption."

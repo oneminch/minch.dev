@@ -3,34 +3,17 @@
   <NuxtLink
     :to="projectUrl"
     target="_blank"
-    class="focused-link rounded-lg relative w-full p-0 overflow-hidden flex flex-col border-none mb-5 [&_img]:hover:scale-105"
+    class="focused-link border border-transparent dark:border-green-500 rounded-lg relative w-full h-56 flex flex-col bg-cover origin-center bg-center transition-all duration-200 hover:-translate-y-1 overflow-hidden"
+    :class="bgUrl"
   >
     <div
-      v-if="!hideImage"
-      class="card-style flex items-center justify-center w-full max-h-32 flex-shrink-0 overflow-hidden mr-1 rounded-lg"
+      class="min-h-full flex flex-col items-start justify-end w-full flex-shrink-0 p-4 overflow-hidden mr-1 bg-gradient-to-b from-black/25 to-black/100 text-gray-100"
     >
-      <nuxt-img
-        format="webp"
-        loading="lazy"
-        :src="imgUrl"
-        alt="Project Image"
-        class="h-auto object-cover bg-cover origin-center bg-center"
-      />
-    </div>
-    <div
-      class="flex flex-col justify-evenly p-2 pb-3 flex-shrink-0 w-full overflow-hidden"
-      :class="{ 'card-style px-4': hideImage }"
-    >
-      <!-- Project Title -->
-      <h3 class="font-bold mb-2">
-        {{ projectTitle }}
-      </h3>
-      <!-- Project Description -->
+      <h3 class="font-bold mb-2">{{ projectTitle }}</h3>
       <p class="mb-3">{{ projectDescription }}</p>
-      <!-- Project Tech Stack -->
       <ul class="p-0">
         <li
-          class="px-3 py-[.1rem] inline-block rounded-full font-semibold font-mono text-xs mr-1 border-[.5px] border-gray-300 dark:border-gray-500 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-100"
+          class="px-3 py-[.1rem] inline-block rounded-full font-semibold font-mono text-xs mr-1 border-[.5px] border-gray-500 bg-gray-600 text-gray-100"
           v-for="tag in tags"
           :key="tag"
         >
@@ -40,14 +23,14 @@
       <Icon
         name="heroicons:arrow-up-right-20-solid"
         size="1.25rem"
-        class="ml-auto absolute right-2 top-2 text-green-500 bg-gray-100 dark:bg-gray-600 border-[0.75px] border-gray-300 dark:border-none rounded-full p-1 w-7 h-7"
+        class="ml-auto absolute right-2 top-2 bg-green-500 text-gray-600 rounded-full p-1 w-8 h-8"
       />
     </div>
   </NuxtLink>
 </template>
 
 <script setup>
-  defineProps({
+  const props = defineProps({
     projectTitle: {
       type: String,
       default: ""
@@ -62,15 +45,14 @@
     },
     imgUrl: {
       type: String,
-      default: "https://fakeimg.pl/500x300"
-    },
-    hideImage: {
-      type: Boolean,
-      default: false
+      default: ""
     },
     tags: {
       type: Array,
       default: () => []
     }
   });
+
+  const hideImage = computed(() => props.imgUrl.length === 0);
+  const bgUrl = computed(() => hideImage && `bg-[url('${props.imgUrl}')]`);
 </script>
