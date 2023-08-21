@@ -13,7 +13,8 @@
         class="font-bold h-auto flex items-center relative mb-2 rounded-md overflow-hidden"
       >
         <NuxtLink
-          class="nav-links focused-link focus:ring-inset focus:ring-1 w-full h-10 py-1 px-4 flex items-center rounded-md font-semibold hover:bg-transparent md:hover:bg-gray-100 md:dark:hover:bg-gray-700 [&>svg]:hover:translate-x-1"
+          class="focused-link focus:ring-inset focus:ring-1 w-full h-10 py-1 px-4 flex items-center rounded-md font-semibold hover:bg-transparent md:hover:bg-gray-100 md:dark:hover:bg-gray-700 [&>svg]:hover:translate-x-1"
+          activeClass="bg-gray-600/10 dark:bg-gray-700/75 md:bg-gray-200 md:dark:bg-gray-700/75 border-[0.75px] border-gray-600/20 dark:border-gray-600"
           :to="`/${route}`"
         >
           {{ link }}
@@ -82,9 +83,5 @@
 
   nav.toggled > button {
     @apply mt-3;
-  }
-
-  nav .nav-links.router-link-active {
-    @apply bg-gray-600/10 dark:bg-gray-700/75 md:bg-gray-200 md:dark:bg-gray-700/75 border-[0.75px] border-gray-600/20 dark:border-gray-600;
   }
 </style>
