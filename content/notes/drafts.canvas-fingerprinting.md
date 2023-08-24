@@ -2,24 +2,27 @@
 id: kn3e4dqgo1q4vg71z3ju4kv
 title: Canvas Fingerprinting
 desc: ""
-updated: 1692301513929
+updated: 1692905604518
 created: 1692301487830
 tags:
-  - TAG_1
-  - TAG_2
-  - TAG_3
-image: /content/cover/COVER-IMAGE.png
+  - fingerprinting
+  - canvas-fingerprinting
+image: /content/cover/canvas-fingerprinting.png
+cover_image: https://raw.githubusercontent.com/oneminch/portfolio/main/public/content/cover/canvas-fingerprinting.png
+canonical_url: https://oneminch.dev/blog/canvas-fingerprinting
 description: SHORT BLOG DESCRIPTION
 head:
   meta:
     - name: robots
       content: "index, follow"
     - name: author
-      content: Dawit (@oneminch)
+      content: Dawit U (@oneminch)
     - property: "og:type"
       content: article
     - name: "twitter:card"
       content: summary_large_image
+series: Web Tracking Technologies
+nav_order: 3
 ---
 
 In this article, we will explore a web tracking method called fingerprinting, more specifically **canvas fingerprinting**.

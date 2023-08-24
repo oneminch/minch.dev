@@ -5,6 +5,7 @@ description: "What is the HyperText Transfer Protocol?"
 updated: 1688877769852
 created: 1645422279906
 image: "/content/cover/http.png"
+cover_image: https://raw.githubusercontent.com/oneminch/portfolio/main/public/content/cover/http.png
 head:
   meta:
     - name: "keywords"
@@ -12,7 +13,7 @@ head:
     - name: "robots"
       content: "index, follow"
     - name: "author"
-      content: "Dawit (@oneminch)"
+      content: "Dawit U (@oneminch)"
     - property: "og:type"
       content: "article"
     - name: "twitter:card"
@@ -219,8 +220,10 @@ HTTP/1.1 200 OK
 
 HTTP requests can be easily intercepted or read by anyone at any point in the network. Therefore, sensitive information like credit card numbers and passwords should never be delivered using HTTP. Instead, an extension of HTTP known as HTTPS (HyperText Transfer Protocol Secure) is used. It creates a secure channel over the network so that encrypted data is transferred between the client and the server. This provides protection from potential eavesdroppers or man-in-the-middle attacks. This is one of the parameters your browser uses to notify you if a website is secure or not.
 
-## References
+## Futher Reading
 
 - [HTTP - Mozilla Developer Network](https://developer.mozilla.org/en-US/docs/Web/HTTP)
+
+---
 
 _Originally posted on [OpenGenus IQ](https://iq.opengenus.org/http-requests/)_

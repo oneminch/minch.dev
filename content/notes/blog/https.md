@@ -5,6 +5,8 @@ description: "What is HTTPS?"
 updated: 1688877769837
 created: 1645422195673
 image: "/content/cover/https.png"
+cover_image: https://raw.githubusercontent.com/oneminch/portfolio/main/public/content/cover/https.png
+canonical_url: https://iq.opengenus.org/idea-behind-https/
 head:
   meta:
     - name: "keywords"
@@ -12,7 +14,7 @@ head:
     - name: "robots"
       content: "index, follow"
     - name: "author"
-      content: "Dawit (@oneminch)"
+      content: "Dawit U (@oneminch)"
     - property: "og:type"
       content: "article"
     - name: "twitter:card"
@@ -63,8 +65,10 @@ However, HTTPS has its limitations. Domain names and IP addresses are not secure
 
 HTTPS is becoming adopted by more and more websites every day. Modern browsers like Firefox and Chrome warn users if a website has an invalid certificate or if the connection is not secure (if it uses http:// instead of https://). They use a lock icon to the left of each URL to indicate if the site is authenticated and if it uses HTTPS. Latest versions of these browsers even ask twice before navigating to insecure sites. Tools like Firefox's built-in [HTTPS-Only Mode](https://support.mozilla.org/en-US/kb/https-only-prefs) and extensions like [HTTPS Everywhere](https://www.eff.org/https-everywhere) work by rewriting insecure HTTP request to HTTPS. And with services like [Let's Encrypt](https://letsencrypt.org/), enabling HTTPS on sites is becoming more convenient.
 
-## References
+## Further Reading
 
-- [HTTP Basics](https://dev.to/oneminch/http-basics-nji)
+- [Computer Networks: HTTP Basics](https://oneminch.dev/blog/http)
+
+---
 
 _Originally posted on [OpenGenus IQ](https://iq.opengenus.org/idea-behind-https/)_

@@ -5,6 +5,7 @@ description: "This article goes over the core differences between Deno and Node.
 updated: 1688877769873
 created: 1686355733170
 image: "/content/cover/deno-vs-node.png"
+cover_image: https://raw.githubusercontent.com/oneminch/portfolio/main/public/content/cover/deno-vs-node.png
 head:
   meta:
     - name: "keywords"
@@ -12,7 +13,7 @@ head:
     - name: "robots"
       content: "index, follow"
     - name: "author"
-      content: "Dawit (@oneminch)"
+      content: "Dawit U (@oneminch)"
     - property: "og:type"
       content: "article"
     - name: "twitter:card"
@@ -21,6 +22,7 @@ tags:
   - deno
   - nodejs
   - shorts
+  - javascript
 ---
 
 [Deno](https://deno.land) improves upon [Node.js](https://nodejs.org) in some significant ways.

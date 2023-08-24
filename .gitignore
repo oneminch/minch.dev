@@ -14,6 +14,8 @@ vercel.json
 
 # Dendron specific stuff
 .dendron.*
+*.lnk
+*.schema.yml
 content/notes/assets/
 content/notes/.vscode/
 build

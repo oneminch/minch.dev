@@ -1,28 +1,31 @@
 ---
 id: 1tz3ihj42jnhw702jz8i56n
 title: Audio Fingerprinting using the AudioContext API
-desc: "How audio fingerprinting works using the AudioContext API"
-# description: SHORT BLOG DESCRIPTION
-updated: 1692300939528
+desc: ""
+description: "How audio fingerprinting works using the AudioContext API"
+updated: 1692905601017
 created: 1692300842027
 tags:
-  - TAG_1
-  - TAG_2
-  - TAG_3
-image: /content/cover/COVER-IMAGE.png
+  - fingerprinting
+  - audio-fingerprinting
+image: /content/cover/audio-fingerprinting.png
+cover_image: https://raw.githubusercontent.com/oneminch/portfolio/main/public/content/cover/audio-fingerprinting.png
+canonical_url: https://oneminch.dev/blog/audio-fingerprinting
 head:
   meta:
     - name: robots
       content: "index, follow"
     - name: author
-      content: Dawit (@oneminch)
+      content: Dawit U (@oneminch)
     - property: "og:type"
       content: article
     - name: "twitter:card"
       content: summary_large_image
+series: Web Tracking Technologies
+nav_order: 4
 ---
 
-Fingerprinting as introduced in [this article](https://iq.opengenus.org/canvas-fingerprinting/) is a way of identifying users based on one or more set of unique device characteristics. Along with Canvas fingerprinting, **Audio fingerprinting** takes advantage of device performance specs to build up an identifying fingerprint of a user. The problem is it does not need to take any **permission** from the users and works on all browsers and can be used to ==**track users**== across browsers.
+Fingerprinting as introduced in [this article](https://oneminch.dev/blog/canvas-fingerprinting/) is a way of identifying users based on one or more set of unique device characteristics. Along with Canvas fingerprinting, **Audio fingerprinting** takes advantage of device performance specs to build up an identifying fingerprint of a user. The problem is it does not need to take any **permission** from the users and works on all browsers and can be used to **track users** across browsers.
 
 It has the same basic process of doing this as canvas fingerprinting. Assign a task to the browser, record how it is executed, and use such data to build the fingerprint.
 

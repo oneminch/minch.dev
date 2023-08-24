@@ -5,6 +5,7 @@ description: "What is the Domain Name System?"
 updated: 1688877769861
 created: 1645422712314
 image: "/content/cover/dns.png"
+cover_image: https://raw.githubusercontent.com/oneminch/portfolio/main/public/content/cover/dns.png
 head:
   meta:
     - name: "keywords"
@@ -12,7 +13,7 @@ head:
     - name: "robots"
       content: "index, follow"
     - name: "author"
-      content: "Dawit (@oneminch)"
+      content: "Dawit U (@oneminch)"
     - property: "og:type"
       content: "article"
     - name: "twitter:card"
@@ -72,5 +73,7 @@ It is important to know that caching may cause some problems. If a certain websi
 As you saw from the above text on how DNS works, DNS queries pass through the DNS resolver, which is basically an ISP. The information being passed around is in plain text, which means anyone including the ISP and a potential attacker can view DNS queries and therefore where you want to navigate to. This can be used for surveillance, eavesdropping, or to manipulate actual data to make users visit malicious sites. This raises big security and privacy concerns.
 
 In recent years, there is a movement to implement encrypted DNS with a protocol known as DNS over HTTPS (DoH). DoH protocol takes advantage of the HTTPS protocol to encrypt DNS queries. It is the similar concept behind encrypting HTTP requests. It provides more security and privacy to users as it encrypts DNS data between the client and the resolver. Widely used browsers like Firefox Browser have already added these features in their settings, and it's being implemented by more and more browsers.
+
+---
 
 _Originally Posted on [OpenGenus IQ](https://iq.opengenus.org/domain-name-system-explained/)_

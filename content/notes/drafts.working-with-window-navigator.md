@@ -1,28 +1,31 @@
 ---
 id: l0ex9063hwaghnwl0okfs0z
 title: Working with the Window.navigator Property
-desc: ''
-updated: 1692301857142
+desc: ""
+updated: 1692905708838
 created: 1692301762949
 tags:
-  - TAG_1
-  - TAG_2
-  - TAG_3
-image: /content/cover/COVER-IMAGE.png
-description: SHORT BLOG DESCRIPTION
+  - web-tracking
+  - dom
+image: /content/cover/working-with-window-navigator.png
+cover_image: https://raw.githubusercontent.com/oneminch/portfolio/main/public/content/cover/working-with-window-navigator.png
+canonical_url: https://oneminch.dev/blog/working-with-window-navigator
+description: "This article looks into `window.navigator` property of a web document and use it to get information about the browser and load different code depending on browser."
 head:
   meta:
     - name: robots
-      content: 'index, follow'
+      content: "index, follow"
     - name: author
-      content: Dawit (@oneminch)
-    - property: 'og:type'
+      content: Dawit U (@oneminch)
+    - property: "og:type"
       content: article
-    - name: 'twitter:card'
+    - name: "twitter:card"
       content: summary_large_image
+series: Web Tracking Technologies
+nav_order: 2
 ---
 
-In this article, we will look into **navigator property of window object** of a web document and use it to get information about the browser and load different code depending on browser.
+This article looks into `window.navigator` property of a web document and use it to get information about the browser and load different code depending on browser.
 
 The Document Object Model (DOM) is a programming interface for HTML/XML documents which specifies their logical structure. It is basically a structural representation of a web document which contains the elements/blocks that build up that document and their corresponding contents. It allows developers to connect their programming languages to the document so that they can perform tasks on that document. The document and its content can be modified, styled or removed using programs. A very common example for a document is a web page. The DOM represents the content of a web page as objects and nodes, so developers can use a scripting language like JavaScript to perform desired tasks on a web page. This allows the addition, modification, or removal of content from pages using such languages.
 
