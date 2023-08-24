@@ -15,7 +15,7 @@
         :tags="['Vue.js', 'localForage']"
       />
       <AppProjectCard
-        img-url="https://repository-images.githubusercontent.com/321511833/01d2663a-69db-4aa1-9bbf-c566c94acdde"
+        img-url="https://raw.githubusercontent.com/oneminch/encrypted-list/main/public/screenshot.png"
         project-title="EncryptedList"
         project-description="EncryptedList is a List of Products & Services that Offer Zero-Knowledge or End-to-End Encryption."
         project-url="https://encryptedlist.xyz/"
