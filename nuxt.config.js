@@ -71,15 +71,9 @@ export default defineNuxtConfig({
     "nuxt-icon"
   ],
   routeRules: {
-    "/": { isr: true },
-    "/blog": { isr: true },
-    "/blog/**": { isr: true },
-    "/contact": { isr: true },
-    "/leetcode": { isr: true },
-    "/meta": { isr: true },
-    "/resume": { isr: true },
-    "/projects": { isr: true },
-    "/picks": { isr: true }
+    "/**": { isr: true },
+    "/projects": { isr: 3600 },
+    "/picks": { isr: 3600 }
   },
   runtimeConfig: {
     githubToken: process.env.GITHUB_TOKEN,
