@@ -1,6 +1,12 @@
+<script setup>
+  definePageMeta({
+    layout: "blog-post-layout"
+  });
+</script>
+
 <template>
-  <ContentDoc tag="">
-    <template #default="{ doc }">
+  <ContentRenderer :value="doc">
+    <template default="{ doc }">
       <!-- Post title -->
       <h1 class="mb-4">
         {{ doc.longTitle || doc.title }}
@@ -36,7 +42,6 @@
 
       <!-- Table of Contents for Articles -->
       <template v-if="doc._dir == 'blog' && doc.body.toc.links.length > 0">
-        <!-- <h2>Outline</h2> -->
         <details
           open
           class="border border-gray-200 dark:border-gray-700 rounded-lg flex items-center py-3 px-4 mb-2 self-start"
@@ -64,19 +69,13 @@
       </template>
 
       <!-- Main post content -->
-      <ContentRenderer :value="doc" />
+      <ContentRendererMarkdown :value="doc" />
     </template>
     <template #not-found>
       <AppNotFound />
     </template>
-  </ContentDoc>
+  </ContentRenderer>
 </template>
-
-<script setup>
-  definePageMeta({
-    layout: "blog-post-layout"
-  });
-</script>
 
 <style scoped>
   img {
