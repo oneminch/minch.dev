@@ -100,7 +100,6 @@
     ogImage: seoMeta.image,
     twitterImage: seoMeta.image,
     ogUrl: `https://oneminch.dev/${seoMeta.page}`,
-
     ogType: "website",
     ogLocale: "en_US",
     twitterCard: "summary_large_image"

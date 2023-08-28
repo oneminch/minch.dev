@@ -36,13 +36,31 @@
 
       <!-- Table of Contents for Articles -->
       <template v-if="doc._dir == 'blog' && doc.body.toc.links.length > 0">
-        <h2>Outline</h2>
-        <ol>
-          <li v-for="link of doc.body.toc.links" :key="link.id">
-            <a :href="`#${link.id}`">{{ link.text }}</a>
-          </li>
-        </ol>
-        <br />
+        <!-- <h2>Outline</h2> -->
+        <details
+          open
+          class="border border-gray-200 dark:border-gray-700 rounded-lg flex items-center py-3 px-4 mb-2 self-start"
+        >
+          <summary class="cursor-pointer list-none flex items-center">
+            <span class="inline-block text-lg font-bold mr-2">Outline</span>
+            <Icon
+              class="arrow-right text-green-500"
+              name="material-symbols:chevron-right-rounded"
+              size="1.5rem"
+            />
+            <Icon
+              class="arrow-down text-green-500"
+              name="material-symbols:expand-more-rounded"
+              size="1.5rem"
+            />
+          </summary>
+
+          <ol class="my-1">
+            <li v-for="link of doc.body.toc.links" :key="link.id">
+              <a :href="`#${link.id}`">{{ link.text }}</a>
+            </li>
+          </ol>
+        </details>
       </template>
 
       <!-- Main post content -->
@@ -63,5 +81,25 @@
 <style scoped>
   img {
     @apply w-full object-cover bg-cover origin-center border-[.75px] border-gray-300 dark:border-gray-600;
+  }
+
+  details {
+    @apply relative md:sticky md:top-4;
+  }
+
+  /* Collapsed */
+  details > summary .arrow-right {
+    @apply inline-block;
+  }
+  details > summary .arrow-down {
+    @apply hidden;
+  }
+
+  /* Expanded */
+  details[open] > summary .arrow-down {
+    @apply inline-block;
+  }
+  details[open] > summary .arrow-right {
+    @apply hidden;
   }
 </style>
