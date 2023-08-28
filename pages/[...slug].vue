@@ -5,8 +5,8 @@
 </script>
 
 <template>
-  <ContentRenderer :value="doc">
-    <template default="{ doc }">
+  <ContentDoc>
+    <template #default="{ doc }">
       <!-- Post title -->
       <h1 class="mb-4">
         {{ doc.longTitle || doc.title }}
@@ -69,21 +69,17 @@
       </template>
 
       <!-- Main post content -->
-      <ContentRendererMarkdown :value="doc" />
+      <ContentRenderer :value="doc" />
     </template>
     <template #not-found>
       <AppNotFound />
     </template>
-  </ContentRenderer>
+  </ContentDoc>
 </template>
 
 <style scoped>
   img {
     @apply w-full object-cover bg-cover origin-center border-[.75px] border-gray-300 dark:border-gray-600;
-  }
-
-  details {
-    @apply relative md:sticky md:top-4;
   }
 
   /* Collapsed */

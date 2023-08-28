@@ -71,7 +71,6 @@ export default defineNuxtConfig({
     "nuxt-icon"
   ],
   routeRules: {
-    "/**": { swr: true },
     "/projects": { swr: 3600 },
     "/picks": { swr: 3600 }
   },
