@@ -2,14 +2,14 @@
 <template>
   <aside
     id="sidebar"
-    class="flex flex-col items-center justify-start w-full md:w-1/4 min-w-[16rem] md:min-w-[20rem] h-full max-h-[40rem] rounded-xl md:rounded-b-none p-5 pb-2 md:mr-4 md:mb-0 mb-6 box-border text-gray-900 bg-white dark:bg-gray-800 border-[0.75px] border-transparent print:hidden relative md:sticky md:top-4 -z-0"
+    class="flex flex-col items-center justify-start w-full md:w-1/4 min-w-[16rem] md:min-w-[20rem] h-full max-h-[40rem] rounded-xl md:rounded-b-none p-5 pb-2 md:mr-4 md:mb-0 mb-6 box-border text-zinc-900 bg-white dark:bg-zinc-900 border-[0.75px] border-transparent print:hidden relative md:sticky md:top-4 -z-0"
     :class="{ hidden: routeRegEx.test($route.fullPath) }"
   >
     <!-- Profile card: Profile Picture, Name, Title + Social Profiles -->
     <AppProfileCard />
 
     <hr
-      class="hidden md:inline-block w-3/4 md:my-3 border-none bg-gradient-to-r from-transparent via-gray-300 dark:via-gray-600 to-transparent h-[1px] rounded-full"
+      class="hidden md:inline-block w-3/4 md:my-3 border-none bg-gradient-to-r from-transparent via-zinc-300 dark:via-zinc-700 to-transparent h-[1px] rounded-full"
     />
 
     <!-- Desktop Navigation: Links -->
@@ -17,7 +17,7 @@
 
     <!-- Button for toggling theme -->
     <button
-      class="focused-link w-6 h-6 md:w-8 md:h-8 flex items-center justify-center rounded-full bg-gray-700 text-gray-100 dark:bg-gray-300 dark:text-gray-900 p-0 mx-0 absolute top-3 right-3"
+      class="focused-link w-6 h-6 md:w-8 md:h-8 flex items-center justify-center rounded-full bg-zinc-800 text-zinc-100 dark:bg-zinc-400 dark:text-zinc-900 p-0 mx-0 absolute top-3 right-3"
       aria-label="Switch Theme"
       title="Switch Theme"
       @click="toggleDark()"
@@ -40,7 +40,7 @@
 <style scoped>
   /* Gradient Border: Content Backdrop */
   #sidebar::before {
-    @apply content-[""] -z-10 absolute inset-0 md:-mb-1 rounded-[.675rem] md:rounded-b-none bg-gradient-to-b from-white to-gray-50 dark:from-gray-800 dark:to-gray-900;
+    @apply content-[""] -z-10 absolute inset-0 md:-mb-1 rounded-[.675rem] md:rounded-b-none bg-gradient-to-b from-white to-zinc-50 dark:from-zinc-900 dark:to-zinc-950;
   }
 
   /* Gradient Border: Colorful Backdrop */

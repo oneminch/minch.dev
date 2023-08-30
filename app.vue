@@ -19,7 +19,7 @@
   @layer utilities {
     /* Uniform Card Style */
     .card-style {
-      @apply border-[0.75px] border-gray-300 dark:border-gray-600 dark:bg-gray-700 bg-white rounded-lg;
+      @apply border-[0.75px] border-zinc-300 dark:border-zinc-700 dark:bg-zinc-800 bg-white rounded-lg;
     }
 
     .focused-link {
@@ -43,11 +43,11 @@
   }
 
   body {
-    @apply w-full md:min-h-screen px-5 md:px-4 pt-4 pb-6 max-w-7xl mx-auto bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-100 flex items-start flex-col md:flex-row md:overflow-y-auto;
+    @apply w-full md:min-h-screen px-5 md:px-4 pt-4 pb-6 max-w-7xl mx-auto bg-zinc-50 dark:bg-zinc-950 text-zinc-800 dark:text-zinc-100 flex items-start flex-col md:flex-row md:overflow-y-auto;
   }
 
   main {
-    @apply w-full rounded-lg pt-6 md:px-10 py-4 pb-8 bg-transparent md:bg-gray-50 md:dark:bg-gray-800 font-normal overflow-x-hidden -z-0;
+    @apply w-full rounded-lg pt-6 md:px-10 py-4 pb-8 bg-transparent md:bg-zinc-50 md:dark:bg-zinc-900 font-normal overflow-x-hidden -z-0;
   }
 
   .slide-enter-active,

@@ -21,7 +21,7 @@
       <!-- Blog Tags -->
       <ul class="mb-2 p-0">
         <li
-          class="px-2 py-[.1rem] inline-block rounded-full font-medium font-mono text-xs mr-1 border-[.5px] border-gray-300 dark:border-gray-500 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-100"
+          class="px-2 py-[.1rem] inline-block rounded-full font-medium font-mono text-xs mr-1 border-[.5px] border-zinc-300 dark:border-zinc-500 bg-zinc-100 dark:bg-zinc-800 text-zinc-800 dark:text-zinc-100"
           v-for="tag in tags"
           :key="tag"
         >
@@ -31,7 +31,7 @@
       <!-- Blog Title -->
       <h3 class="font-bold">{{ blogTitle }}</h3>
       <!-- Publish Date + Read time -->
-      <p class="text-xs text-gray-400 mt-[2px]">
+      <p class="text-xs text-zinc-400 mt-[2px]">
         Updated {{ lastUpdateTime }}
         {{ readTime ? `&bull; ${readTime}` : "" }}
       </p>

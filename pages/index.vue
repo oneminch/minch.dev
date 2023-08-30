@@ -53,7 +53,7 @@
         <li
           v-for="skill in skills"
           :key="skill"
-          class="px-3 py-1 inline-block dark:border dark:border-green-500 bg-green-300 dark:bg-transparent text-gray-800 dark:text-green-500 font-medium rounded-full text-sm mr-1 mb-1"
+          class="px-3 py-1 inline-block dark:border dark:border-green-500 bg-green-300 dark:bg-transparent text-zinc-800 dark:text-green-500 font-medium rounded-full text-sm mr-1 mb-1"
         >
           {{ skill }}
         </li>

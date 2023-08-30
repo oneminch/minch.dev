@@ -25,7 +25,7 @@
       <template v-if="doc._dir == 'leetcode'">
         <ul class="mb-1 p-0">
           <li
-            class="px-2 py-[.1rem] inline-block rounded-full font-semibold font-mono text-xs mr-1 border-[0.75px] border-gray-300 dark:border-gray-500 bg-gray-200 dark:bg-gray-600 text-gray-800 dark:text-gray-100"
+            class="px-2 py-[.1rem] inline-block rounded-full font-semibold font-mono text-xs mr-1 border-[0.75px] border-zinc-300 dark:border-zinc-500 bg-zinc-200 dark:bg-zinc-600 text-zinc-800 dark:text-zinc-100"
             v-for="tag in doc.tags"
             :key="tag"
           >
@@ -44,9 +44,11 @@
       <template v-if="doc._dir == 'blog' && doc.body.toc.links.length > 0">
         <details
           open
-          class="border border-gray-200 dark:border-gray-700 rounded-lg flex items-center py-3 px-4 mb-2 self-start"
+          class="border border-zinc-200 dark:border-zinc-700 rounded-lg flex items-center py-3 px-4 mb-2 self-start"
         >
-          <summary class="cursor-pointer list-none flex items-center">
+          <summary
+            class="cursor-pointer list-none appearance-none flex items-center"
+          >
             <span class="inline-block text-lg font-bold mr-2">Outline</span>
             <Icon
               class="arrow-right text-green-500"
@@ -79,7 +81,12 @@
 
 <style scoped>
   img {
-    @apply w-full object-cover bg-cover origin-center border-[.75px] border-gray-300 dark:border-gray-600;
+    @apply w-full object-cover bg-cover origin-center border-[.75px] border-zinc-300 dark:border-zinc-600;
+  }
+
+  details > summary::marker,
+  details > summary::-webkit-details-marker {
+    @apply hidden;
   }
 
   /* Collapsed */

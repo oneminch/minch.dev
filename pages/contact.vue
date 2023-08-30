@@ -11,7 +11,7 @@
       <input
         type="text"
         name="input"
-        class="border border-gray-400 rounded-md my-1 py-2 px-2"
+        class="border border-zinc-400 rounded-md my-1 py-2 px-2"
       />
       <div class="max-w-min rounded-lg overflow-hidden">
         <div class="cf-turnstile" :data-sitekey="turnstileSiteKey"></div>
@@ -19,7 +19,7 @@
       <input
         type="submit"
         value="Submit"
-        class="bg-gray-300 rounded-md my-1 py-2 px-4"
+        class="bg-zinc-300 rounded-md my-1 py-2 px-4"
       />
     </form>
 

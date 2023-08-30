@@ -8,16 +8,16 @@
       loading="lazy"
       src="/profile.png"
       alt="Profile Picture"
-      class="md:w-36 w-2/5 max-w-[8rem] min-w-[5rem] rounded-full border-[.05rem] border-gray-300 dark:border-none"
+      class="md:w-36 w-2/5 max-w-[8rem] min-w-[5rem] rounded-full border-[.05rem] border-zinc-300 dark:border-none"
     />
-    <h2 class="text-xl md:text-2xl font-bold text-gray-900 dark:text-gray-100">
+    <h2 class="text-xl md:text-2xl font-bold text-zinc-900 dark:text-zinc-100">
       Dawit U
     </h2>
-    <h2 class="text-lg md:text-xl font-medium text-gray-700 dark:text-gray-400">
+    <h2 class="text-lg md:text-xl font-medium text-zinc-700 dark:text-zinc-400">
       Frontend Developer
     </h2>
     <div
-      class="w-full h-8 flex items-center justify-center text-gray-900 dark:text-gray-200"
+      class="w-full h-8 flex items-center justify-center text-zinc-900 dark:text-zinc-200"
     >
       <NuxtLink
         v-for="(profileUrl, name) in profiles"

@@ -19,7 +19,7 @@
 
       <div class="mb-1" v-for="(skills, category) in skillset" :key="category">
         <h3
-          class="inline-block font-semibold text-lg mr-2 text-gray-700 dark:text-gray-200"
+          class="inline-block font-semibold text-lg mr-2 text-zinc-700 dark:text-zinc-200"
         >
           {{ category }}:
         </h3>
@@ -27,7 +27,7 @@
           <li
             v-for="skill in skills"
             :key="skill"
-            class="px-3 py-[.125rem] inline-block dark:border dark:border-green-500 bg-green-300 dark:bg-transparent text-gray-800 dark:text-green-500 font-medium rounded-full text-sm mr-1 mb-1"
+            class="px-3 py-[.125rem] inline-block dark:border dark:border-green-500 bg-green-300 dark:bg-transparent text-zinc-800 dark:text-green-500 font-medium rounded-full text-sm mr-1 mb-1"
           >
             {{ skill }}
           </li>
@@ -46,14 +46,14 @@
         :key="expIndex"
         class="timeline-item"
       >
-        <h3 class="font-bold text-gray-700 dark:text-gray-200">
+        <h3 class="font-bold text-zinc-700 dark:text-zinc-200">
           {{ experience.role }}
           <br />
           <span class="text-green-600 dark:text-green-500">
             {{ experience.company }}
           </span>
           <br />
-          <span class="text-gray-500 dark:text-gray-400">
+          <span class="text-zinc-500 dark:text-zinc-400">
             ({{ experience.from }} - {{ experience.to }})
           </span>
         </h3>
@@ -62,11 +62,11 @@
           class="list-disc p-0 pl-4 pt-2"
         >
           <li
-            class="text-gray-400 dark:text-gray-500"
+            class="text-zinc-400 dark:text-zinc-500"
             v-for="(responsibility, respIndex) in experience.responsibilities"
             :key="respIndex"
           >
-            <span class="text-gray-800 dark:text-gray-100">{{
+            <span class="text-zinc-800 dark:text-zinc-100">{{
               responsibility
             }}</span>
           </li>
@@ -81,14 +81,14 @@
         <Icon name="heroicons:academic-cap-solid" class="ml-3" />
       </h2>
       <div class="timeline-item">
-        <h3 class="font-bold text-gray-700 dark:text-gray-200">
+        <h3 class="font-bold text-zinc-700 dark:text-zinc-200">
           {{ education.institution }}
           <br />
           <span class="text-green-600 dark:text-green-500">
             {{ education.degree }} - {{ education.major }}
           </span>
           <br />
-          <span class="text-gray-500 dark:text-gray-400">
+          <span class="text-zinc-500 dark:text-zinc-400">
             ({{ education.from }} - {{ education.to }})
           </span>
         </h3>
@@ -193,9 +193,9 @@
 
 <style scoped>
   .timeline-item {
-    @apply border-l-2 border-gray-300 dark:border-gray-600 px-8 py-4 relative text-gray-700 dark:text-gray-300 first-of-type:before:bg-green-500 dark:first-of-type:before:bg-green-500;
+    @apply border-l-2 border-zinc-300 dark:border-zinc-600 px-8 py-4 relative text-zinc-700 dark:text-zinc-300 first-of-type:before:bg-green-500 dark:first-of-type:before:bg-green-500;
   }
   .timeline-item::before {
-    @apply [content:''] absolute left-0 top-1/2 -translate-y-1/2 translate-x-[calc(-50%-1px)] w-3 h-3 rounded-full inline-block bg-gray-300 dark:bg-gray-600 print:hidden;
+    @apply [content:''] absolute left-0 top-1/2 -translate-y-1/2 translate-x-[calc(-50%-1px)] w-3 h-3 rounded-full inline-block bg-zinc-300 dark:bg-zinc-600 print:hidden;
   }
 </style>
