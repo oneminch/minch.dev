@@ -8,15 +8,15 @@
     <!-- Tech Stack -->
     <h2 class="font-bold text-xl mb-2">Tech Stack</h2>
     <section class="w-full h-auto flex justify-between mb-4">
-      <div class="card-style w-[30%] h-28"></div>
-      <div class="card-style w-[30%] h-28"></div>
-      <div class="card-style w-[30%] h-28"></div>
+      <div class="card-style rounded-lg w-[30%] h-28"></div>
+      <div class="card-style rounded-lg w-[30%] h-28"></div>
+      <div class="card-style rounded-lg w-[30%] h-28"></div>
     </section>
 
     <!-- Lighthouse -->
     <h2 class="font-bold text-xl mb-2">Lighthouse</h2>
     <section
-      class="card-style w-full h-auto flex justify-evenly px-2 py-4 mb-4"
+      class="card-style w-full h-auto flex justify-evenly px-2 py-4 mb-4 rounded-lg"
     >
       <div class="bg-zinc-900 rounded-full w-14 h-14"></div>
       <div class="bg-zinc-900 rounded-full w-14 h-14"></div>

@@ -9,10 +9,10 @@
   });
 </script>
 
-<!-- Blog: Card -->
+<!-- Pick: Card -->
 <template>
   <NuxtLink
-    class="focused-link card-style w-full flex justify-start items-center px-2 py-2 relative mb-2 rounded-sm first-of-type:rounded-t-lg last-of-type:rounded-b-lg"
+    class="focused-link card-style w-full flex justify-start items-center px-2 py-2 relative mb-2 rounded first-of-type:rounded-t-lg last-of-type:rounded-b-lg"
     target="_blank"
     :to="pick.url"
   >

@@ -16,7 +16,7 @@
         'h-full flex flex-col items-start w-full flex-shrink-0 p-4 overflow-hidden',
         !hideImage
           ? 'justify-end bg-gradient-to-b from-black/25 via-black/75 to-black/100 text-zinc-100'
-          : 'justify-start bg-zinc-200/75 dark:bg-zinc-700 text-zinc-800 dark:text-zinc-100'
+          : 'justify-start bg-zinc-200/75 dark:bg-zinc-700/50 text-zinc-800 dark:text-zinc-100'
       ]"
     >
       <h3 class="font-bold mb-2">{{ projectTitle }}</h3>

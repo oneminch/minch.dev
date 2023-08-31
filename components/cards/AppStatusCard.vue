@@ -1,6 +1,6 @@
 <template>
   <div
-    class="card-style flex flex-col py-4 px-6 items-start w-full min-h-[6rem] relative mb-4"
+    class="card-style flex flex-col py-4 px-6 items-start w-full min-h-[6rem] relative mb-4 rounded-lg"
   >
     <h3 class="font-bold text-lg mb-2">
       {{ statusType }}
