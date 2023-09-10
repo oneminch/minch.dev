@@ -71,8 +71,8 @@ export default defineNuxtConfig({
     "nuxt-icon"
   ],
   routeRules: {
-    "/projects": { swr: 3600 },
-    "/picks": { swr: 3600 }
+    "/projects": { swr: 60 },
+    "/picks": { swr: 60 }
   },
   runtimeConfig: {
     githubToken: process.env.GITHUB_TOKEN,
