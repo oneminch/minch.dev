@@ -5,6 +5,7 @@
     "dev": "nuxi dev",
     "generate": "nuxi generate",
     "preview": "nuxi preview",
+    "preinstall": "npx only-allow pnpm",
     "postinstall": "nuxi prepare"
   },
   "devDependencies": {

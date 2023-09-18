@@ -15,24 +15,11 @@
     <!-- Desktop Navigation: Links -->
     <AppNav class="hidden md:flex" />
 
-    <!-- Button for toggling theme -->
-    <button
-      class="focused-link w-6 h-6 md:w-8 md:h-8 flex items-center justify-center rounded-full bg-zinc-800 text-zinc-100 dark:bg-zinc-400 dark:text-zinc-900 p-0 mx-0 absolute top-3 right-3"
-      aria-label="Switch Theme"
-      title="Switch Theme"
-      @click="toggleDark()"
-    >
-      <Icon v-if="isDark" name="heroicons:sun-solid" />
-      <Icon v-if="!isDark" name="heroicons:moon-solid" />
-    </button>
+    <AppThemeToggle class="absolute top-3 right-3" />
   </aside>
 </template>
 
 <script setup>
-  // Dark theme attributes
-  const isDark = useDark();
-  const toggleDark = useToggle(isDark);
-
   // Regex pattern for any blog post route
   const routeRegEx = /(\/blog|\/leetcode)\/.*/i;
 </script>
