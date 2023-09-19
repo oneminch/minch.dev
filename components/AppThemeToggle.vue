@@ -1,7 +1,6 @@
 <script setup>
   // Dark theme attributes
   const isDark = useDark();
-  const toggleDark = useToggle(isDark);
 </script>
 
 <!-- Theme Toggle -->
