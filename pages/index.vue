@@ -9,7 +9,7 @@
       <h1 class="font-semibold text-2xl mb-6">Hi, my name is Dawit 👋</h1>
       <p>
         I'm a passionate Software Engineer with a B.Sc. in Computer Science and
-        4 years of experience designing and developing web applications. My
+        2 years of experience designing and developing web applications. My
         problem-solving and communication skills allow me to work in a
         collaborative team environment, continuously learn, and apply my
         expertise to build high quality products.

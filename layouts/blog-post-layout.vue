@@ -2,7 +2,9 @@
   <main class="w-full">
     <header class="w-full max-w-3xl mx-auto">
       <!-- Navigation -->
-      <nav class="not-prose hidden md:flex items-center mb-6 py-2 [&>*]:mr-2">
+      <nav
+        class="not-prose hidden md:flex items-center mb-6 py-2 [&>*]:mr-2 last:[&>*]:mr-0"
+      >
         <NuxtLink
           class="focused-link flex justify-between items-center py-1 px-3 bg-zinc-200 dark:bg-zinc-700 dark:text-zinc-200 duration-150 rounded-md no-underline border-[.5px] border-zinc-300 dark:border-zinc-600"
           to="/"
@@ -26,6 +28,9 @@
 
           LeetCode
         </NuxtLink>
+        <AppThemeToggle
+          class="rounded-md border-[.5px] border-zinc-300 dark:border-zinc-600 ml-auto text-lg [&>.switch]:mx-2"
+        />
       </nav>
     </header>
 

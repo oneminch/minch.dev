@@ -15,7 +15,7 @@
     <!-- Desktop Navigation: Links -->
     <AppNav class="hidden md:flex" />
 
-    <AppThemeToggle class="absolute top-3 right-3" />
+    <AppThemeToggle class="absolute top-1 left-1 rounded-lg" />
   </aside>
 </template>
 
@@ -27,11 +27,11 @@
 <style scoped>
   /* Gradient Border: Content Backdrop */
   #sidebar::before {
-    @apply content-[""] -z-10 absolute inset-0 md:-mb-1 rounded-[.675rem] md:rounded-b-none bg-gradient-to-b from-white to-zinc-50 dark:from-zinc-900 dark:to-zinc-950;
+    @apply content-[""] -z-10 absolute inset-0 rounded-[calc(.75rem-2px)] dark:rounded-[calc(.75rem-1px)] md:rounded-b-none bg-gradient-to-b from-white to-zinc-50 dark:from-zinc-900 dark:to-zinc-950;
   }
 
   /* Gradient Border: Colorful Backdrop */
   #sidebar::after {
-    @apply content-[""] -z-20 absolute inset-0 rounded-xl md:rounded-b-none bg-gradient-to-b from-green-500 via-lime-400 to-lime-400 md:to-transparent m-[-1px] md:mb-0;
+    @apply content-[""] -z-20 absolute inset-[-2px] dark:inset-[-1px] rounded-[.75rem] md:rounded-b-none bg-gradient-to-b from-green-500 via-lime-400 to-lime-400 md:to-transparent;
   }
 </style>
