@@ -4,10 +4,10 @@
     :to="projectUrl"
     target="_blank"
     :class="[
-      'focused-link border-[.75px] rounded-lg relative w-full flex flex-col justify-center items-center bg-cover origin-center bg-center transition-all duration-200 hover:-translate-y-1 overflow-hidden',
+      'focused-link bg-clip-padding bg-no-repeat rounded-lg relative w-full flex flex-col justify-center items-center bg-cover origin-center bg-center transition-all duration-200 hover:-translate-y-1 overflow-hidden',
       !hideImage
-        ? `bg-[url(${imgUrl})] h-56 border-zinc-50 dark:border-green-300`
-        : 'h-44 border-zinc-300 dark:border-zinc-600'
+        ? `bg-[url(${imgUrl})] h-56 dark:border dark:border-zinc-700`
+        : 'h-44 border border-zinc-300 dark:border-zinc-700'
     ]"
     :style="{ backgroundImage: `url(${imgUrl})` }"
   >

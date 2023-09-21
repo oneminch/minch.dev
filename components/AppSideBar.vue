@@ -2,7 +2,7 @@
 <template>
   <aside
     id="sidebar"
-    class="flex flex-col items-center justify-start w-full md:w-1/4 min-w-[16rem] md:min-w-[20rem] h-full max-h-[40rem] rounded-xl md:rounded-b-none p-5 pb-2 md:mr-4 md:mb-0 mb-6 box-border text-zinc-900 bg-white dark:bg-zinc-900 border-[0.75px] border-transparent print:hidden relative md:sticky md:top-4 -z-0"
+    class="flex flex-col items-center justify-start rounded-xl md:rounded-b-none w-full md:w-1/4 min-w-[16rem] md:min-w-[20rem] h-full max-h-[40rem] p-5 pb-2 md:mr-4 md:mb-0 mb-6 box-border text-zinc-900 bg-white dark:bg-zinc-950 border-[0.75px] border-transparent print:hidden relative md:sticky md:top-4 -z-0"
     :class="{ hidden: routeRegEx.test($route.fullPath) }"
   >
     <!-- Profile card: Profile Picture, Name, Title + Social Profiles -->
@@ -15,7 +15,9 @@
     <!-- Desktop Navigation: Links -->
     <AppNav class="hidden md:flex" />
 
-    <AppThemeToggle class="absolute top-1 left-1 rounded-lg" />
+    <AppThemeToggle
+      class="absolute top-1 left-1 rounded-md rounded-tl-lg rounded-br-lg"
+    />
   </aside>
 </template>
 
@@ -27,7 +29,7 @@
 <style scoped>
   /* Gradient Border: Content Backdrop */
   #sidebar::before {
-    @apply content-[""] -z-10 absolute inset-0 rounded-[calc(.75rem-2px)] dark:rounded-[calc(.75rem-1px)] md:rounded-b-none bg-gradient-to-b from-white to-zinc-50 dark:from-zinc-900 dark:to-zinc-950;
+    @apply content-[""] -z-10 absolute inset-0 -bottom-2 rounded-[calc(.75rem-2px)] dark:rounded-[calc(.75rem-1px)] md:rounded-b-none dark:md:rounded-b-none bg-gradient-to-b from-white to-zinc-50 dark:from-zinc-900 dark:to-zinc-950;
   }
 
   /* Gradient Border: Colorful Backdrop */
