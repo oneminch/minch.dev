@@ -29,7 +29,7 @@
 <style scoped>
   /* Gradient Border: Content Backdrop */
   #sidebar::before {
-    @apply content-[""] -z-10 absolute inset-0 -bottom-2 rounded-[calc(.75rem-2px)] dark:rounded-[calc(.75rem-1px)] md:rounded-b-none dark:md:rounded-b-none bg-gradient-to-b from-white to-zinc-50 dark:from-zinc-900 dark:to-zinc-950;
+    @apply content-[""] -z-10 absolute inset-0 md:-bottom-2 rounded-[calc(.75rem-2px)] dark:rounded-[calc(.75rem-1px)] md:rounded-b-none dark:md:rounded-b-none bg-gradient-to-b from-white to-zinc-50 dark:from-zinc-900 dark:to-zinc-950;
   }
 
   /* Gradient Border: Colorful Backdrop */
