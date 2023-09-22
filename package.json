@@ -19,6 +19,7 @@
     "nuxt-icon": "^0.4.1"
   },
   "dependencies": {
+    "@formkit/nuxt": "^1.1.0",
     "@vueuse/components": "^10.2.0",
     "axios": "^1.4.0"
   }

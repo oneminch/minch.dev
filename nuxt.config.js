@@ -63,6 +63,7 @@ export default defineNuxtConfig({
     }
   },
   modules: [
+    "@formkit/nuxt",
     "@nuxt/content",
     "@nuxt/image",
     "@nuxtjs/partytown",
