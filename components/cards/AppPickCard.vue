@@ -20,14 +20,14 @@
       format="webp"
       loading="lazy"
       :src="pick.cover"
-      class="w-8 h-8 md:w-12 md:10 flex-shrink-0 text-xs object-cover rounded-[0.275rem] mr-3 overflow-hidden text-center bg-zinc-200 dark:bg-zinc-700 border-[.03rem] dark:border-none border-zinc-300"
+      class="w-8 h-8 md:w-12 md:10 flex-shrink-0 text-xs object-cover rounded mr-3 overflow-hidden text-center bg-zinc-200 dark:bg-zinc-700"
       alt="Cover Image"
     />
     <span>{{ pick.title }}</span>
     <Icon
       name="heroicons:arrow-up-right-20-solid"
       size="1.25rem"
-      class="ml-auto flex-shrink-0 text-green-500 bg-zinc-100 dark:bg-zinc-700 border-[0.75px] border-zinc-300 dark:border-none rounded-full p-1 w-7 h-7"
+      class="ml-auto flex-shrink-0 text-green-500 bg-zinc-100 dark:bg-zinc-700 border border-zinc-300 dark:border-none rounded-full p-1 w-7 h-7"
     />
   </NuxtLink>
 </template>

@@ -1,4 +1,13 @@
+<script setup></script>
+
 <template>
+  <!-- Skip Navigation Link -->
+  <a
+    href="#main-content"
+    class="flex items-center justify-center bg-green-600 h-8 absolute top-0 left-1/2 -translate-x-1/2 py-2 px-4 rounded-md mx-auto z-50 transform duration-300 -translate-y-[125%] opacity-0 focus:translate-y-2 focus:opacity-100 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-50 text-zinc-100"
+    >Skip to Main Content</a
+  >
+
   <!-- Sidebar -->
   <AppSideBar />
 
@@ -8,9 +17,7 @@
   </NuxtLayout>
 
   <!-- Mobile Navigation -->
-  <AppNav
-    class="md:hidden flex after:shadow-2xl border-[1.5px] border-green-400"
-  />
+  <AppNav class="md:hidden flex after:shadow-2xl border-2 border-green-400" />
 </template>
 
 <style>
@@ -19,11 +26,11 @@
   @layer utilities {
     /* Uniform Card Style */
     .card-style {
-      @apply border-[0.75px] border-zinc-300 dark:border-zinc-700 dark:bg-zinc-700/50 bg-white;
+      @apply border border-zinc-300 dark:border-zinc-700 dark:bg-zinc-700/50 bg-white;
     }
 
     .focused-link {
-      @apply focus:outline-none focus:ring-2 focus:ring-green-400 dark:focus:ring-green-300 focus:ring-opacity-75;
+      @apply focus:outline-none focus:ring-2 focus:ring-offset-0 focus:ring-green-400 focus:ring-opacity-75;
     }
 
     .icon-link {
@@ -47,7 +54,7 @@
   }
 
   main {
-    @apply w-full rounded-lg pt-6 md:px-10 py-4 pb-8 bg-transparent md:bg-zinc-50 md:dark:bg-zinc-900 font-normal overflow-x-hidden -z-0;
+    @apply w-full rounded-xl pt-6 md:px-10 py-4 pb-8 bg-transparent md:bg-zinc-50 md:dark:bg-zinc-900 font-normal overflow-x-hidden -z-0;
   }
 
   .slide-enter-active,

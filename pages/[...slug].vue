@@ -25,7 +25,7 @@
       <template v-if="doc._dir == 'leetcode'">
         <ul class="mb-1 p-0">
           <li
-            class="px-2 py-[.1rem] inline-block rounded-full font-semibold font-mono text-xs mr-1 border-[0.75px] border-zinc-300 dark:border-zinc-500 bg-zinc-200 dark:bg-zinc-600 text-zinc-800 dark:text-zinc-100"
+            class="px-2 py-[.125rem] inline-block rounded-full font-semibold font-mono text-xs mr-1 border border-zinc-300 dark:border-zinc-500 bg-zinc-200 dark:bg-zinc-600 text-zinc-800 dark:text-zinc-100"
             v-for="tag in doc.tags"
             :key="tag"
           >
@@ -81,7 +81,7 @@
 
 <style scoped>
   img {
-    @apply w-full object-cover bg-cover origin-center border-[.75px] border-zinc-300 dark:border-zinc-600;
+    @apply w-full object-cover bg-cover origin-center border border-zinc-300 dark:border-zinc-600;
   }
 
   details > summary::marker,

@@ -1,6 +1,6 @@
 <!-- About Page -->
 <template>
-  <main id="contact">
+  <main id="main-content">
     <Title>{{ seoMeta.title }}</Title>
     <Meta name="description" :content="seoMeta.description" />
 

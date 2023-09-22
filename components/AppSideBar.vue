@@ -2,9 +2,14 @@
 <template>
   <aside
     id="sidebar"
-    class="flex flex-col items-center justify-start rounded-xl md:rounded-b-none w-full md:w-1/4 min-w-[16rem] md:min-w-[20rem] h-full max-h-[40rem] p-5 pb-2 md:mr-4 md:mb-0 mb-6 box-border text-zinc-900 bg-white dark:bg-zinc-950 border-[0.75px] border-transparent print:hidden relative md:sticky md:top-4 -z-0"
+    class="flex flex-col items-center justify-start rounded-xl md:rounded-b-none w-full md:w-1/4 min-w-[16rem] md:min-w-[20rem] h-full max-h-[40rem] p-5 pb-2 md:mr-4 md:mb-0 mb-6 box-border text-zinc-900 bg-white dark:bg-zinc-950 border border-transparent print:hidden relative md:sticky md:top-4 -z-0"
     :class="{ hidden: routeRegEx.test($route.fullPath) }"
   >
+    <!-- Theme Toggle -->
+    <AppThemeToggle
+      class="absolute top-1 left-1 rounded-md rounded-tl-lg rounded-br-lg"
+    />
+
     <!-- Profile card: Profile Picture, Name, Title + Social Profiles -->
     <AppProfileCard />
 
@@ -14,10 +19,6 @@
 
     <!-- Desktop Navigation: Links -->
     <AppNav class="hidden md:flex" />
-
-    <AppThemeToggle
-      class="absolute top-1 left-1 rounded-md rounded-tl-lg rounded-br-lg"
-    />
   </aside>
 </template>
 

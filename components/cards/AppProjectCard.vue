@@ -4,16 +4,16 @@
     :to="projectUrl"
     target="_blank"
     :class="[
-      'focused-link rounded-xl relative w-full flex flex-col justify-center items-center transition-all duration-200 hover:-translate-y-1 overflow-hidden ring-1 ring-zinc-300 dark:ring-zinc-700',
+      'focused-link rounded-xl w-full relative flex flex-col justify-center items-center transition-all duration-200 hover:-translate-y-1 overflow-hidden box-border border border-zinc-300 dark:border-zinc-700',
       !hideImage
-        ? `bg-[url(${imgUrl})] h-auto min-h-[14rem] bg-cover bg-top bg-clip-content bg-origin-content bg-no-repeat`
+        ? `bg-[url(${imgUrl})] h-auto min-h-[14rem] bg-cover bg-top bg-clip-padding bg-no-repeat`
         : 'h-44'
     ]"
     :style="{ backgroundImage: `url(${imgUrl})` }"
   >
     <div
       :class="[
-        'h-full flex flex-col items-start w-full flex-shrink-0 p-4 overflow-hidden',
+        'flex flex-col items-start box-border bg-clip-padding rounded-xl absolute inset-[-.25rem] flex-shrink-0 p-6 overflow-hidden',
         !hideImage
           ? 'justify-end bg-gradient-to-b from-white/30 via-white/90 to-white/100 text-zinc-800 dark:from-black/25 dark:via-black/80 dark:to-black/100 dark:text-zinc-100'
           : 'justify-start bg-zinc-200/75 dark:bg-zinc-700/50 text-zinc-800 dark:text-zinc-100'
@@ -23,7 +23,7 @@
       <p class="mb-3">{{ projectDescription }}</p>
       <ul class="p-0" :class="[{ 'mt-auto': hideImage }]">
         <li
-          class="px-3 py-[.1rem] inline-block rounded-full font-semibold font-mono text-xs mr-1 border-[.5px] border-zinc-500 bg-zinc-600 text-zinc-100"
+          class="px-3 py-[.125rem] inline-block rounded-full font-semibold font-mono text-xs mr-1 border border-zinc-500 bg-zinc-600 text-zinc-100"
           v-for="tag in tags"
           :key="tag"
         >

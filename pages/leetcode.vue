@@ -1,6 +1,6 @@
 <!-- Blog: LeetCode Coding Problems -->
 <template>
-  <main id="leetcode">
+  <main id="main-content">
     <Title>{{ seoMeta.title }}</Title>
     <Meta name="description" :content="seoMeta.description" />
 

@@ -1,7 +1,7 @@
 <!-- Coding Solution Card -->
 <template>
   <NuxtLink
-    class="focused-link card-style w-full flex justify-start items-center px-4 py-2 relative rounded-lg"
+    class="focused-link card-style w-full flex justify-start items-center px-4 py-2 relative rounded-xl"
     :to="url"
     :title="problemTitle"
   >
@@ -23,7 +23,7 @@
       <!-- Tags -->
       <ul class="mb-1 p-0">
         <li
-          class="px-3 py-[.1rem] inline-block rounded-full font-mono text-xs mr-1 border-[0.75px] border-zinc-300 dark:border-zinc-600 bg-zinc-200 dark:bg-zinc-700 text-zinc-800 dark:text-zinc-300"
+          class="px-3 py-[.125rem] inline-block rounded-full font-mono text-xs mr-1 border border-zinc-300 dark:border-zinc-600 bg-zinc-200 dark:bg-zinc-700 text-zinc-800 dark:text-zinc-300"
           v-for="tag in tags"
           :key="tag"
         >

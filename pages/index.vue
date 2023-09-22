@@ -1,6 +1,6 @@
 <!-- Landing Page -->
 <template>
-  <main id="home" class="[&>*]:mb-6 last:[&>*]:mb-0">
+  <main id="main-content" class="[&>*]:mb-6 last:[&>*]:mb-0">
     <Title>{{ seoMeta.title }}</Title>
     <Meta name="description" :content="seoMeta.description" />
 
@@ -8,11 +8,10 @@
     <section>
       <h1 class="font-semibold text-2xl mb-6">Hi, my name is Dawit 👋</h1>
       <p>
-        I'm a passionate Software Engineer with a B.Sc. in Computer Science and
-        2 years of experience designing and developing web applications. My
-        problem-solving and communication skills allow me to work in a
-        collaborative team environment, continuously learn, and apply my
-        expertise to build high quality products.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio iste
+        praesentium sed eum minus repellendus porro. Explicabo earum ex, odio,
+        voluptatem laborum sapiente, aut quo molestiae placeat nobis aliquam
+        minus!
       </p>
     </section>
 

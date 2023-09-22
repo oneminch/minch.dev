@@ -16,14 +16,10 @@
 
 <style>
   .toggle-container {
-    @apply inline-flex items-center justify-between text-sm flex-shrink-0 h-8 bg-zinc-200 dark:bg-zinc-800 text-zinc-700 dark:text-zinc-100 px-2 cursor-pointer;
+    @apply inline-flex items-center justify-between text-sm flex-shrink-0 h-8 bg-zinc-200 dark:bg-zinc-800 text-zinc-700 dark:text-zinc-100 px-2 cursor-pointer [&>*]:flex-shrink-0;
   }
 
-  .toggle-container > * {
-    @apply flex-shrink-0;
-  }
-
-  .toggle-container > input:focus {
+  .toggle-container:focus-within {
     @apply outline-none ring-2 ring-green-500 ring-opacity-50 ring-offset-0;
   }
 

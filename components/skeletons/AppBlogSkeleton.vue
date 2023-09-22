@@ -3,7 +3,7 @@
   <div class="w-full h-auto p-0 overflow-hidden flex flex-col mb-3">
     <!-- Image Skeleton -->
     <div
-      class="w-full h-24 rounded-lg animate-pulse flex-shrink-0 bg-zinc-300 mb-4 dark:bg-zinc-700"
+      class="w-full h-24 rounded-xl animate-pulse flex-shrink-0 bg-zinc-300 mb-4 dark:bg-zinc-700"
     ></div>
     <!-- Title Skeleton -->
     <div class="w-full">

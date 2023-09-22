@@ -1,7 +1,7 @@
 <!-- Navigation: Links -->
 <template>
   <nav
-    class="flex-col justify-center items-center rounded-xl p-[.375rem] md:px-4 text-zinc-900 dark:text-zinc-200 md:w-full w-32 md:max-h-64 max-h-16 md:right-0 md:bottom-0 fixed md:relative bottom-6 right-4 bg-zinc-100/75 dark:bg-zinc-900/75 md:bg-transparent dark:md:bg-transparent z-50 origin-bottom-right backdrop-blur-xl md:backdrop-blur-none print:hidden"
+    class="flex-col justify-center items-center rounded-xl p-2 md:px-4 text-zinc-900 dark:text-zinc-200 md:w-full w-32 md:max-h-64 max-h-16 md:right-0 md:bottom-0 fixed md:relative bottom-6 right-4 bg-zinc-100/75 dark:bg-zinc-900/75 md:bg-transparent dark:md:bg-transparent origin-bottom-right backdrop-blur-xl md:backdrop-blur-none print:hidden"
     :class="{ toggled: menuToggled }"
   >
     <ul
@@ -13,8 +13,8 @@
         class="font-bold h-auto flex items-center relative mb-2 rounded-md overflow-hidden"
       >
         <NuxtLink
-          class="focused-link focus:ring-inset focus:ring-1 w-full h-10 py-1 px-4 flex items-center rounded-md font-semibold hover:bg-transparent md:hover:bg-zinc-100 md:dark:hover:bg-zinc-700 [&>svg]:hover:translate-x-1"
-          activeClass="bg-zinc-600/10 dark:bg-zinc-700/75 md:bg-zinc-200 md:dark:bg-zinc-700/75 border-[0.75px] border-zinc-600/20 dark:border-zinc-600"
+          class="focused-link focus:ring-inset focus:ring-2 w-full h-10 py-1 px-4 flex items-center rounded-md font-semibold hover:bg-transparent md:hover:bg-zinc-200/75 md:dark:hover:bg-zinc-700 [&>svg]:hover:translate-x-1"
+          activeClass="bg-zinc-600/10 dark:bg-zinc-700/75 md:bg-zinc-200 md:dark:bg-zinc-700/75 border border-zinc-600/20 dark:border-zinc-600"
           :to="`/${route}`"
         >
           {{ link }}
