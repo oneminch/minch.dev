@@ -77,10 +77,7 @@ export default defineNuxtConfig({
   runtimeConfig: {
     githubToken: process.env.GITHUB_TOKEN,
     raindropTestToken: process.env.RAINDROP_TEST_TOKEN,
-    raindropCollectionId: process.env.RAINDROP_COLLECTION_ID,
-    turnstile: {
-      secretKey: process.env.TURNSTILE_SECRET_KEY
-    }
+    raindropCollectionId: process.env.RAINDROP_COLLECTION_ID
   },
   telemetry: false
 });
