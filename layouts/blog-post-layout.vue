@@ -28,9 +28,8 @@
 
           LeetCode
         </NuxtLink>
-        <AppThemeToggle
-          class="py-1 px-3 rounded-md border border-zinc-300 dark:border-zinc-600 ml-auto text-lg"
-        />
+
+        <AppThemeToggle class="ml-auto" />
       </nav>
     </header>
 

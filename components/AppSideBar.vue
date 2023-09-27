@@ -6,14 +6,12 @@
     :class="{ hidden: routeRegEx.test($route.fullPath) }"
   >
     <!-- Theme Toggle -->
-    <AppThemeToggle
-      class="absolute top-1 left-1 rounded-md rounded-tl-lg rounded-br-lg"
-    />
+    <AppThemeToggle class="absolute top-2 left-2 z-10" />
 
     <!-- Work In Progress -->
     <abbr
       title="Work In Progress"
-      class="absolute top-1 right-1 bg-green-300 text-zinc-800 rounded-full py-[.125rem] px-3 text-[.5rem]"
+      class="absolute top-1 right-1 bg-green-300 text-zinc-800 rounded-full py-[.125rem] px-3 text-xs"
       >WIP</abbr
     >
 
