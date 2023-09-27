@@ -10,6 +10,13 @@
       class="absolute top-1 left-1 rounded-md rounded-tl-lg rounded-br-lg"
     />
 
+    <!-- Work In Progress -->
+    <abbr
+      title="Work In Progress"
+      class="absolute top-1 right-1 bg-green-300 text-zinc-800 rounded-full py-[.125rem] px-3 text-[.5rem]"
+      >WIP</abbr
+    >
+
     <!-- Profile card: Profile Picture, Name, Title + Social Profiles -->
     <AppProfileCard />
 
