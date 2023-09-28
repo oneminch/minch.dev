@@ -1,5 +1,5 @@
 <template>
-  <main class="picks">
+  <main class="picks" id="main-content">
     <Title>{{ seoMeta.title }}</Title>
     <Meta name="description" :content="seoMeta.description" />
 

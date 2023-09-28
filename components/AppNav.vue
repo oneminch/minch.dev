@@ -56,8 +56,7 @@
     Home: "",
     Blog: "blog",
     Projects: "projects",
-    Resume: "resume",
-    Picks: "picks"
+    Miscellany: "miscellany"
   };
 </script>
 

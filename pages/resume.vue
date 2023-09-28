@@ -139,7 +139,7 @@
       role: "Frontend Developer",
       company: "EncryptedList",
       from: "Aug 2020",
-      to: "Present",
+      to: "Jan 2023",
       responsibilities: [
         "Developed and deployed a mobile-first, component-based and interactive SPA using Vue.js.",
         "Engineered a backend using a REST API and Node.js serverless functions to reduce latency by 19%.",

@@ -33,7 +33,11 @@
           :title="skillName"
           class="inline-block"
         >
-          <Icon :name="skillIcon" size="1.75rem" />
+          <Icon
+            :name="skillIcon"
+            size="2rem"
+            class="rounded-lg ring-1 ring-zinc-200 dark:ring-zinc-800"
+          />
         </li>
       </ul>
     </section>
@@ -146,9 +150,9 @@
       Git: "skill-icons:git"
     },
     {
-      "Vue.js": "skill-icons:vuejs-dark",
-      "Nuxt.js": "skill-icons:nuxtjs-dark",
-      "React.js": "skill-icons:react-dark",
+      "Vue.js": "skill-icons:vuejs-light",
+      "Nuxt.js": "skill-icons:nuxtjs-light",
+      "React.js": "skill-icons:react-light",
       "Next.js": "skill-icons:nextjs-light",
       "Tailwind CSS": "skill-icons:tailwindcss-light"
     },
