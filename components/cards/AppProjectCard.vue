@@ -16,7 +16,7 @@
         'flex flex-col items-start box-border bg-clip-padding rounded-xl absolute inset-[-.25rem] flex-shrink-0 p-6 overflow-hidden',
         !hideImage
           ? 'justify-end bg-gradient-to-b from-white/30 via-white/90 to-white/100 text-zinc-800 dark:from-black/25 dark:via-black/80 dark:to-black/100 dark:text-zinc-100'
-          : 'justify-start bg-zinc-200/75 dark:bg-zinc-700/50 text-zinc-800 dark:text-zinc-100'
+          : 'justify-start bg-zinc-200/75 dark:bg-zinc-800 text-zinc-800 dark:text-zinc-100'
       ]"
     >
       <h3 class="font-bold mb-2">{{ projectTitle }}</h3>

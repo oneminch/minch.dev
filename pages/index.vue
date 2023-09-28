@@ -15,6 +15,62 @@
       </p>
     </section>
 
+    <!-- Skills -->
+    <section>
+      <h2 class="font-semibold text-xl mb-1 py-2">Skills</h2>
+      <p class="text-zinc-500 dark:text-zinc-400 mb-4">
+        The different technologies that I've worked with & experimented with
+        over the years.
+      </p>
+      <ul
+        class="p-0 mb-2 space-x-2"
+        v-for="(skills, index) in skillset"
+        :key="index"
+      >
+        <li
+          v-for="(skillIcon, skillName) in skills"
+          :key="skillName"
+          :title="skillName"
+          class="inline-block"
+        >
+          <Icon :name="skillIcon" size="1.75rem" />
+        </li>
+      </ul>
+    </section>
+
+    <!-- Latest Blog Posts -->
+    <section>
+      <h2 class="font-semibold text-xl mb-2 w-auto">
+        <NuxtLink
+          to="/blog"
+          class="focused-link rounded-lg w-full flex items-center py-2"
+        >
+          Latest Blog Posts
+          <Icon
+            name="heroicons:chevron-right-solid"
+            class="ml-2 text-green-500"
+          />
+        </NuxtLink>
+      </h2>
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+        <template v-if="pending">
+          <AppBlogSkeleton v-for="skeleton in skeletons" :key="skeleton" />
+        </template>
+        <template v-else>
+          <AppBlogCard
+            v-for="blogPost in blogPosts"
+            :key="blogPost._id"
+            :tags="blogPost.tags"
+            :blogTitle="blogPost.longTitle || blogPost.title"
+            :title="blogPost.title"
+            :url="blogPost._path"
+            :pubDate="blogPost.updated"
+            :coverImage="blogPost.image"
+          />
+        </template>
+      </div>
+    </section>
+
     <!-- Projects -->
     <section>
       <h2 class="font-semibold text-xl mb-2 w-auto">
@@ -22,7 +78,7 @@
           to="/projects"
           class="focused-link rounded-lg w-full flex items-center py-2"
         >
-          Projects
+          Featured Projects
           <Icon
             name="heroicons:chevron-right-solid"
             class="ml-2 text-green-500"
@@ -41,33 +97,6 @@
           project-url="https://encryptedlist.xyz/"
           project-description="EncryptedList is a List of Products & Services that Offer Zero-Knowledge or End-to-End Encryption."
           :tags="['Vue.js', 'Tailwind CSS', 'Airtable']"
-        />
-      </div>
-    </section>
-
-    <!-- Skills -->
-    <section>
-      <h2 class="font-semibold text-xl mb-2 py-2">Skills</h2>
-      <ul class="p-0">
-        <li
-          v-for="skill in skills"
-          :key="skill"
-          class="font-bold px-3 py-1 inline-block dark:border-2 dark:border-green-500 bg-green-300 dark:bg-transparent text-zinc-800 dark:text-green-500 rounded-full text-sm mr-1 mb-1"
-        >
-          {{ skill }}
-        </li>
-      </ul>
-    </section>
-
-    <!-- Status -->
-    <section>
-      <h2 class="font-semibold text-xl mb-2 py-2">Currently</h2>
-      <div class="columns-1 lg:columns-2 gap-6">
-        <AppStatusCard
-          v-for="(content, type) in currently"
-          :key="type"
-          :status-type="type"
-          :status-content="content"
         />
       </div>
     </section>
@@ -101,22 +130,33 @@
     twitterCard: "summary_large_image"
   });
 
-  const skills = ref([
-    "Python",
-    "JavaScript",
-    "Vue.js",
-    "Git",
-    "HTML",
-    "CSS",
-    "SQL",
-    "Node.js",
-    "Express.js"
-  ]);
+  // Skeletons
+  const skeletons = [...Array(2).fill(Math.random())];
 
-  const currently = {
-    Learning: "Node.js",
-    Reading: "Pragmatic Thinking",
-    Listening: "The Witch Trials of J.K. Rowling",
-    Playing: "Little Nightmares II"
-  };
+  // Fetch all blog posts sans LeetCode solutions
+  const { pending, data: blogPosts } = await useLazyAsyncData("blog", () =>
+    queryContent("/blog").limit(2).find()
+  );
+
+  const skillset = ref([
+    {
+      JavaScript: "skill-icons:javascript",
+      HTML: "skill-icons:html",
+      CSS: "skill-icons:css",
+      Git: "skill-icons:git"
+    },
+    {
+      "Vue.js": "skill-icons:vuejs-dark",
+      "Nuxt.js": "skill-icons:nuxtjs-dark",
+      "React.js": "skill-icons:react-dark",
+      "Next.js": "skill-icons:nextjs-light",
+      "Tailwind CSS": "skill-icons:tailwindcss-light"
+    },
+    {
+      "Node.js": "skill-icons:nodejs-light",
+      Python: "skill-icons:python-light",
+      PostgreSQL: "skill-icons:postgresql-light",
+      Flask: "skill-icons:flask-light"
+    }
+  ]);
 </script>

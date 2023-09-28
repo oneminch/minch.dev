@@ -178,15 +178,13 @@
   };
 
   const skillset = {
-    Programming: ["JavaScript", "HTML/HTML5", "CSS/CSS3"],
-    "Libraries/Frameworks": ["Vue.js", "React.js", "Nuxt.js"],
-    Familiarity: [
-      "Git",
-      "Python",
-      "Node.js",
-      "Flask",
-      "TypeScript",
-      "PostgreSQL"
+    Programming: ["HTML", "CSS", "JavaScript", "Python", "SQL"],
+    Technologies: ["Vue.js", "Nuxt.js", "React.js", "Next.js", "Tailwind CSS"],
+    "Soft Skills": [
+      "Collaboration",
+      "Problem-solving",
+      "Creativity",
+      "Adaptability"
     ]
   };
 </script>
