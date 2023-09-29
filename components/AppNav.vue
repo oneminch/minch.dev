@@ -14,7 +14,7 @@
       >
         <nuxt-link
           class="focused-link focus:ring-inset focus:ring-2 w-full h-10 py-1 px-4 flex items-center rounded-md font-semibold hover:bg-transparent md:hover:bg-zinc-200/75 md:dark:hover:bg-zinc-700 [&>svg]:hover:translate-x-1"
-          activeClass="bg-zinc-600/10 dark:bg-zinc-700/75 md:bg-zinc-200 md:dark:bg-zinc-700/75 border border-zinc-600/20 dark:border-zinc-600"
+          activeClass="bg-zinc-600/10 dark:bg-zinc-700/75 md:bg-zinc-200 md:dark:bg-zinc-700/75"
           :to="`/${route}`"
         >
           {{ link }}
