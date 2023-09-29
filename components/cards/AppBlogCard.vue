@@ -1,6 +1,6 @@
 <!-- Blog: Card -->
 <template>
-  <NuxtLink
+  <nuxt-link
     class="focused-link rounded-xl w-full p-0 overflow-hidden flex flex-col border-none bg-none bg-transparent dark:bg-transparent mb-5 [&_img]:hover:scale-105"
     :to="url"
   >
@@ -36,7 +36,7 @@
         {{ readTime ? `&bull; ${readTime}` : "" }}
       </p>
     </div>
-  </NuxtLink>
+  </nuxt-link>
 </template>
 
 <script setup>

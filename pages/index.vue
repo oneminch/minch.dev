@@ -45,7 +45,7 @@
     <!-- Latest Blog Posts -->
     <section>
       <h2 class="font-semibold text-xl mb-2 w-auto">
-        <NuxtLink
+        <nuxt-link
           to="/blog"
           class="focused-link rounded-lg w-full flex items-center py-2"
         >
@@ -54,7 +54,7 @@
             name="heroicons:chevron-right-solid"
             class="ml-2 text-green-500"
           />
-        </NuxtLink>
+        </nuxt-link>
       </h2>
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
         <template v-if="pending">
@@ -78,7 +78,7 @@
     <!-- Projects -->
     <section>
       <h2 class="font-semibold text-xl mb-2 w-auto">
-        <NuxtLink
+        <nuxt-link
           to="/projects"
           class="focused-link rounded-lg w-full flex items-center py-2"
         >
@@ -87,7 +87,7 @@
             name="heroicons:chevron-right-solid"
             class="ml-2 text-green-500"
           />
-        </NuxtLink>
+        </nuxt-link>
       </h2>
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
         <AppProjectCard

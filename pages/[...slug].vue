@@ -34,9 +34,9 @@
         </ul>
         <p>
           <b class="mr-2">Problem URL:</b>
-          <NuxtLink v-if="doc.problemUrl" target="_blank" :to="doc.problemUrl">
+          <nuxt-link v-if="doc.problemUrl" target="_blank" :to="doc.problemUrl">
             {{ doc.title }}
-          </NuxtLink>
+          </nuxt-link>
         </p>
       </template>
 

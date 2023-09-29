@@ -11,7 +11,7 @@
 
 <!-- Pick: Card -->
 <template>
-  <NuxtLink
+  <nuxt-link
     class="focused-link card-style w-full flex justify-start items-center px-2 py-2 relative mb-2 rounded first-of-type:rounded-t-lg last-of-type:rounded-b-lg"
     target="_blank"
     :to="pick.url"
@@ -29,5 +29,5 @@
       size="1.25rem"
       class="ml-auto flex-shrink-0 text-green-500 bg-zinc-100 dark:bg-zinc-700 border border-zinc-300 dark:border-none rounded-full p-1 w-7 h-7"
     />
-  </NuxtLink>
+  </nuxt-link>
 </template>

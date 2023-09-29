@@ -1,6 +1,6 @@
 <!-- Project: Card -->
 <template>
-  <NuxtLink
+  <nuxt-link
     :to="projectUrl"
     target="_blank"
     :class="[
@@ -37,7 +37,7 @@
         :class="[{ 'w-6 h-6': hideImage }]"
       />
     </div>
-  </NuxtLink>
+  </nuxt-link>
 </template>
 
 <script setup>

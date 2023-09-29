@@ -10,10 +10,38 @@
     </p>
 
     <!-- Other Links -->
-    <section>
-      <h2 class="font-bold text-xl mb-1 py-2">Links</h2>
+    <section class="space-y-2">
+      <h2 class="font-bold text-xl py-2">Links</h2>
 
-      <!-- Links Grid -->
+      <div class="grid grid-cols-2 lg:grid-cols-5 gap-4 lg:gap-2">
+        <app-link-card
+          label="LeetCode"
+          icon="fluent-emoji:laptop"
+          url="/leetcode"
+        ></app-link-card>
+        <app-link-card
+          label="Picks"
+          icon="fluent-emoji:seedling"
+          url="/picks"
+        ></app-link-card>
+        <app-link-card
+          label="Resume"
+          icon="fluent-emoji:briefcase"
+          url="/resume"
+        ></app-link-card>
+        <app-link-card
+          label="Notes"
+          icon="fluent-emoji:spiral-notepad"
+          is-external="true"
+          url="https://github.com/oneminch/garden"
+        ></app-link-card>
+        <app-link-card
+          label="Photography"
+          icon="fluent-emoji:camera"
+          is-external="true"
+          url="https://unsplash.com/@oneminch"
+        ></app-link-card>
+      </div>
     </section>
 
     <!-- Meta - About the website  -->
@@ -21,6 +49,8 @@
       <h2 class="font-bold text-xl mb-1 py-2">Meta</h2>
 
       <!-- Lighthouse -->
+      <!-- Stack (uses.tech) -->
+      <!-- Credits -->
     </section>
   </main>
 </template>

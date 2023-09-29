@@ -19,7 +19,7 @@
     <div
       class="w-full h-8 flex items-center justify-center text-zinc-900 dark:text-zinc-200"
     >
-      <NuxtLink
+      <nuxt-link
         v-for="(profileUrl, name) in profiles"
         :key="name"
         class="focused-link icon-link"
@@ -28,7 +28,7 @@
         target="_blank"
       >
         <Icon :name="`simple-icons:${name.toLowerCase()}`" />
-      </NuxtLink>
+      </nuxt-link>
     </div>
   </div>
 </template>

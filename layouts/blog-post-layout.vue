@@ -5,29 +5,29 @@
       <nav
         class="not-prose hidden md:flex items-center mb-6 py-2 [&>*]:mr-2 last:[&>*]:mr-0"
       >
-        <NuxtLink
+        <nuxt-link
           class="focused-link flex justify-between items-center py-1 px-3 bg-zinc-200 dark:bg-zinc-700 dark:text-zinc-200 duration-150 rounded-md no-underline border border-zinc-300 dark:border-zinc-600"
           to="/"
         >
           <Icon name="heroicons:home-20-solid" class="mr-2" />
           Home
-        </NuxtLink>
-        <NuxtLink
+        </nuxt-link>
+        <nuxt-link
           class="focused-link flex justify-between items-center py-1 px-3 bg-zinc-200 dark:bg-zinc-700 dark:text-zinc-200 duration-150 rounded-md no-underline border border-zinc-300 dark:border-zinc-600"
           to="/blog"
         >
           <Icon name="heroicons:rss-solid" class="mr-2" />
 
           Blog
-        </NuxtLink>
-        <NuxtLink
+        </nuxt-link>
+        <nuxt-link
           class="focused-link flex justify-between items-center py-1 px-3 bg-zinc-200 dark:bg-zinc-700 dark:text-zinc-200 duration-150 rounded-md no-underline border border-zinc-300 dark:border-zinc-600"
           to="/leetcode"
         >
           <Icon name="simple-icons:leetcode" class="mr-2" />
 
           LeetCode
-        </NuxtLink>
+        </nuxt-link>
 
         <AppThemeToggle class="ml-auto" />
       </nav>

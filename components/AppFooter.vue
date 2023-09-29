@@ -7,7 +7,7 @@
       class="flex items-center text-sm font-medium text-zinc-700 dark:text-zinc-200"
     >
       Joyfully Built with
-      <NuxtLink
+      <nuxt-link
         class="icon-link focused-link"
         to="https://nuxt.com/"
         aria-label="NuxtJS Icon"
@@ -15,9 +15,9 @@
         title="NuxtJS"
       >
         <Icon name="logos:nuxt-icon" size="1.25rem" />
-      </NuxtLink>
+      </nuxt-link>
       +
-      <NuxtLink
+      <nuxt-link
         class="icon-link focused-link mr-0"
         to="https://tailwindcss.com/"
         aria-label="Tailwind CSS Icon"
@@ -25,7 +25,7 @@
         title="Tailwind CSS"
       >
         <Icon name="logos:tailwindcss-icon" />
-      </NuxtLink>
+      </nuxt-link>
     </p>
   </footer>
 </template>
