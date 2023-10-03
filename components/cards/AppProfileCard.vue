@@ -8,7 +8,7 @@
       loading="lazy"
       src="/profile.png"
       alt="Profile Picture"
-      class="w-24 rounded-full border border-zinc-300 dark:border-none"
+      class="w-20 rounded-full border border-zinc-300 dark:border-none"
     />
     <h2 class="text-xl md:text-2xl font-bold text-zinc-900 dark:text-zinc-100">
       Dawit U

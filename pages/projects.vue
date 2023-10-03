@@ -67,4 +67,8 @@
     ogLocale: "en_US",
     twitterCard: "summary_large_image"
   });
+
+  // const { pending, data: projects } = await useLazyFetch("/api/projects");
+
+  // console.log(JSON.parse(JSON.stringify(projects)));
 </script>
