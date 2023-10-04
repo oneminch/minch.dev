@@ -1,49 +1,60 @@
 <!-- Projects Page -->
 <template>
-  <main id="main-content">
+  <main id="main-content" class="space-y-6">
     <Title>{{ seoMeta.title }}</Title>
     <Meta name="description" :content="seoMeta.description" />
 
     <h1 class="text-3xl text-left font-bold mb-6">Projects</h1>
 
+    <!-- Featured Projects -->
     <section
       class="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:grid-rows-[1fr_75px_1fr] lg:grid-flow-col"
     >
-      <AppProjectCard
-        img-url="https://raw.githubusercontent.com/oneminch/deadlines/main/src/assets/screenshot.jpg"
-        project-title="Deadlines"
-        project-description="A simple, offline deadline tracker made with Vue.js and localForage."
-        project-url="https://deadlines.oneminch.dev/"
-        :tags="['Vue.js', 'localForage']"
-        class="lg:row-span-2"
-      />
-      <AppProjectCard
-        img-url="https://raw.githubusercontent.com/oneminch/netflix-ui-clone/main/public/screenshot.png"
-        project-title="Netflix UI Clone"
-        project-description="A UI Clone of the Netflix web app made with React.js and Tailwind CSS."
-        project-url="https://oneminch.github.io/netflix-ui-clone/"
-        :tags="['React.js', 'Tailwind CSS']"
-      />
-      <AppProjectCard
-        img-url="https://raw.githubusercontent.com/oneminch/font-search/main/public/screenshot.png"
-        project-title="Font Search"
-        project-description="A search engine for fonts on Fontsource with shareable search results."
-        project-url="https://oneminch.github.io/font-search/"
-        :tags="['JavaScript', 'Windi CSS']"
-      />
-      <AppProjectCard
-        img-url="https://raw.githubusercontent.com/oneminch/encrypted-list/main/public/screenshot.png"
-        project-title="EncryptedList"
-        project-description="A List of Products & Services that Offer Zero-Knowledge or End-to-End Encryption."
-        project-url="https://encryptedlist.xyz/"
-        :tags="['Vue.js', 'Airtable']"
-        class="lg:row-span-2"
-      />
+      <template v-if="pending">
+        <AppBlogSkeleton
+          v-for="skeleton in featuredProjectSkeletons"
+          :key="skeleton"
+        />
+      </template>
+      <template v-else>
+        <AppProjectCard
+          v-for="featuredProject in projects.featured"
+          :key="featuredProject.name"
+          :img-url="featuredProject.openGraphImageUrl"
+          :project-title="featuredProject.name"
+          :project-description="featuredProject.description"
+          :project-url="featuredProject.homepageUrl"
+          :tags="featuredProject.repositoryTopics"
+          class="lg:first:row-span-2 lg:last:row-span-2"
+        />
+      </template>
+    </section>
+
+    <section class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+      <template v-if="pending">
+        <AppBlogSkeleton
+          v-for="skeleton in featuredProjectSkeletons"
+          :key="skeleton"
+        />
+      </template>
+      <template v-else>
+        <AppProjectCard
+          v-for="project in projects.remaining"
+          :key="project.name"
+          :img-url="project.openGraphImageUrl"
+          :project-title="project.name"
+          :project-description="project.description"
+          :project-url="project.homepageUrl"
+          :tags="project.repositoryTopics"
+        />
+      </template>
     </section>
   </main>
 </template>
 
 <script setup>
+  import { isProxy, toRaw } from "vue";
+
   const seoMeta = {
     title: "Dawit's Projects",
     description:
@@ -68,7 +79,19 @@
     twitterCard: "summary_large_image"
   });
 
-  // const { pending, data: projects } = await useLazyFetch("/api/projects");
+  // Skeletons
+  const featuredProjectSkeletons = [...Array(4).fill(Math.random())];
+
+  const { pending, data: projects } = await useLazyFetch("/api/projects");
+
+  // watch(projects, (newProjects) => {
+  //   const rawProjects = isProxy(newProjects) ? toRaw(newProjects) : newProjects;
+  //   const featuredProjects = rawProjects.filter(
+  //     (project) => project.repositoryTopics.indexOf("featured") > -1
+  //   );
+  //   console.log(toRaw(newProjects));
+  //   console.log(toRaw(featuredProjects));
+  // });
 
   /*
   project = {
@@ -81,5 +104,6 @@
   }
   */
 
-  // console.log(JSON.parse(JSON.stringify(projects)));
+  console.log(await JSON.parse(JSON.stringify(projects)));
+  // console.log(featuredProjects);
 </script>

@@ -63,15 +63,14 @@ export default defineNuxtConfig({
   //   }
   // },
   modules: [
-    "@nuxt/content",
+    // "@nuxt/content",
+    // "@nuxtjs/partytown",
     "@nuxt/image",
-    "@nuxtjs/partytown",
     "@nuxtjs/tailwindcss",
     "@vueuse/nuxt",
     "nuxt-icon"
   ],
   // routeRules: {
-  //   "/projects": { swr: 60 },
   //   "/picks": { swr: 60 }
   // },
   runtimeConfig: {

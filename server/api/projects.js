@@ -50,11 +50,41 @@ export default defineEventHandler(async () => {
       axiosReqConfig
     );
 
-    const projectsList = response.data.data.search.repos.map(
-      (item) => item.repo
+    const allProjects = response.data.data.search.repos.map((item) => {
+      return {
+        name: item.repo.name,
+        description: item.repo.description,
+        homepageUrl: item.repo.homepageUrl,
+        openGraphImageUrl: item.repo.openGraphImageUrl,
+        url: item.repo.url,
+        repositoryTopics: item.repo.repositoryTopics.nodes
+          .reduce((acc, curr) => {
+            if (curr.topic.name.localeCompare("showcase") !== 0) {
+              acc.push(curr.topic.name);
+            }
+            return acc;
+          }, [])
+          .sort((a, b) => a.localeCompare(b))
+      };
+    });
+
+    const remaining = allProjects.filter(
+      (project) => project.repositoryTopics.indexOf("featured") === -1
     );
 
-    return projectsList;
+    const featured = allProjects
+      .filter((project) => project.repositoryTopics.indexOf("featured") > -1)
+      .slice(0, 4);
+
+    featured.forEach((project) => {
+      const featuredTopicIndex = project.repositoryTopics.indexOf("featured");
+      project.repositoryTopics.splice(featuredTopicIndex, 1);
+    });
+
+    return {
+      featured,
+      remaining
+    };
   } catch (error) {
     console.error(error);
     return error;
