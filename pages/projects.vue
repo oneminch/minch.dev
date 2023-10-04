@@ -70,5 +70,16 @@
 
   // const { pending, data: projects } = await useLazyFetch("/api/projects");
 
+  /*
+  project = {
+    name
+    description
+    homepageUrl
+    openGraphImageUrl
+    repositoryTopics
+    url
+  }
+  */
+
   // console.log(JSON.parse(JSON.stringify(projects)));
 </script>

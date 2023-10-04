@@ -10,13 +10,13 @@
     </p>
 
     <!-- Other Links -->
-    <section class="space-y-2">
+    <section class="space-y-2 mb-2">
       <h2 class="font-bold text-xl py-2">Links</h2>
 
       <div class="grid grid-cols-2 lg:grid-cols-5 gap-4 lg:gap-2">
         <app-link-card
           label="LeetCode"
-          icon="fluent-emoji:laptop"
+          icon="fluent-emoji:teacup-without-handle"
           url="/leetcode"
         ></app-link-card>
         <app-link-card
@@ -45,12 +45,30 @@
     </section>
 
     <!-- Meta - About the website  -->
-    <section>
-      <h2 class="font-bold text-xl mb-1 py-2">Meta</h2>
+    <section class="space-y-2 mb-2">
+      <h2 class="font-bold text-xl py-2">Meta</h2>
 
-      <!-- Lighthouse -->
-      <!-- Stack (uses.tech) -->
-      <!-- Credits -->
+      <!-- Stack & Credits -->
+      <div class="grid grid-cols-2 lg:grid-cols-5 gap-4 lg:gap-2">
+        <app-link-card
+          label="Nuxt"
+          icon="logos:nuxt-icon"
+          is-external="true"
+          url="https://nuxt.com"
+        ></app-link-card>
+        <app-link-card
+          label="Tailwind CSS"
+          icon="logos:tailwindcss-icon"
+          is-external="true"
+          url="https://tailwindcss.com"
+        ></app-link-card>
+        <app-link-card
+          label="Vercel"
+          icon="logos:vercel-icon"
+          is-external="true"
+          url="https://vercel.com"
+        ></app-link-card>
+      </div>
     </section>
   </main>
 </template>

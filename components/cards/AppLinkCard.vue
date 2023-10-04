@@ -16,7 +16,7 @@
     :target="isExternal ? '_blank' : '_self'"
     :to="url"
   >
-    <Icon :name="icon" size="3rem" class="mb-2" />
+    <Icon :name="icon" size="2.5rem" class="mb-2" />
 
     <span>{{ label }}</span>
     <Icon
