@@ -44,7 +44,7 @@
 
     <!-- Latest Blog Posts -->
     <section>
-      <h2 class="font-semibold text-xl mb-2 w-auto">
+      <h2 class="font-semibold text-xl mb-2 w-auto group">
         <nuxt-link
           to="/blog"
           class="focused-link rounded-lg w-full flex items-center py-2"
@@ -52,7 +52,7 @@
           Latest Blog Posts
           <Icon
             name="heroicons:chevron-right-solid"
-            class="ml-2 text-green-500"
+            class="ml-2 text-green-500 group-hover:translate-x-1"
           />
         </nuxt-link>
       </h2>
@@ -77,7 +77,7 @@
 
     <!-- Projects -->
     <section>
-      <h2 class="font-semibold text-xl mb-2 w-auto">
+      <h2 class="font-semibold text-xl mb-2 w-auto group">
         <nuxt-link
           to="/projects"
           class="focused-link rounded-lg w-full flex items-center py-2"
@@ -85,7 +85,7 @@
           Featured Projects
           <Icon
             name="heroicons:chevron-right-solid"
-            class="ml-2 text-green-500"
+            class="ml-2 text-green-500 group-hover:translate-x-1"
           />
         </nuxt-link>
       </h2>

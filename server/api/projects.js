@@ -51,8 +51,10 @@ export default defineEventHandler(async () => {
     );
 
     const allProjects = response.data.data.search.repos.map((item) => {
+      const projectName = item.repo.name.split("-").join(" ");
+
       return {
-        name: item.repo.name,
+        name: projectName,
         description: item.repo.description,
         homepageUrl: item.repo.homepageUrl,
         openGraphImageUrl: item.repo.openGraphImageUrl,
@@ -68,9 +70,23 @@ export default defineEventHandler(async () => {
       };
     });
 
-    const remaining = allProjects.filter(
+    // Filter projects by tag & remove non-technical tags
+    const unfeatured = allProjects.filter(
       (project) => project.repositoryTopics.indexOf("featured") === -1
     );
+
+    const nonVisual = unfeatured.filter(
+      (project) => project.repositoryTopics.indexOf("visual") === -1
+    );
+
+    const visual = unfeatured.filter(
+      (project) => project.repositoryTopics.indexOf("visual") > -1
+    );
+
+    visual.forEach((project) => {
+      const visualTopicIndex = project.repositoryTopics.indexOf("visual");
+      project.repositoryTopics.splice(visualTopicIndex, 1);
+    });
 
     const featured = allProjects
       .filter((project) => project.repositoryTopics.indexOf("featured") > -1)
@@ -83,7 +99,8 @@ export default defineEventHandler(async () => {
 
     return {
       featured,
-      remaining
+      visual,
+      nonVisual
     };
   } catch (error) {
     console.error(error);
