@@ -4,7 +4,7 @@
     :to="projectUrl"
     target="_blank"
     :class="[
-      'focused-link rounded-xl w-full relative flex flex-col justify-center items-center transition-all duration-200 hover:-translate-y-1 overflow-hidden box-border border border-zinc-300 dark:border-zinc-700',
+      'focused-link rounded-xl w-full relative flex flex-col justify-center items-center transition-all duration-200 hover:-translate-y-1 overflow-hidden box-border border border-zinc-200 dark:border-zinc-800',
       !hideImage
         ? `bg-[url(${imgUrl})] h-auto min-h-[14rem] bg-cover bg-top bg-clip-padding bg-no-repeat`
         : 'h-44'

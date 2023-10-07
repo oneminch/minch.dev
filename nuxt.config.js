@@ -26,53 +26,50 @@ export default defineNuxtConfig({
       //     "data-website-id": "1e0e9daa-a25b-4943-af4e-68c91b2d3c72"
       //   }
       // ]
-    }
-    // pageTransition: { name: "slide", mode: "out-in" }
+    },
+    pageTransition: { name: "slide", mode: "out-in" }
   },
   components: [
     { path: "~/components/cards", pathPrefix: false },
     { path: "~/components/skeletons", pathPrefix: false },
     { path: "~/components", pathPrefix: false }
   ],
-  // content: {
-  //   documentDriven: false,
-  //   highlight: {
-  //     theme: "github-dark"
-  //   },
-  //   ignores: [
-  //     "root.md",
-  //     "drafts",
-  //     "template.md",
-  //     "/drafts/",
-  //     "/.vscode/",
-  //     "\\.code-workspace$",
-  //     "\\.gitignore$",
-  //     "\\.port$",
-  //     "\\.json$",
-  //     "\\.ws$",
-  //     "\\.yml$"
-  //   ],
-  //   markdown: {
-  //     toc: { depth: 1, searchDepth: 2 }
-  //   },
-  //   sources: {
-  //     content: {
-  //       driver: "fs",
-  //       base: "content/notes"
-  //     }
-  //   }
-  // },
+  content: {
+    documentDriven: false,
+    highlight: {
+      theme: "github-dark"
+    },
+    ignores: [
+      "root.md",
+      "drafts",
+      "template.md",
+      "/drafts/",
+      "/.vscode/",
+      "\\.code-workspace$",
+      "\\.gitignore$",
+      "\\.port$",
+      "\\.json$",
+      "\\.ws$",
+      "\\.yml$"
+    ],
+    markdown: {
+      toc: { depth: 1, searchDepth: 2 }
+    },
+    sources: {
+      content: {
+        driver: "fs",
+        base: "content/notes"
+      }
+    }
+  },
   modules: [
-    // "@nuxt/content",
-    // "@nuxtjs/partytown",
+    "@nuxt/content",
+    "@nuxtjs/partytown",
     "@nuxt/image",
     "@nuxtjs/tailwindcss",
     "@vueuse/nuxt",
     "nuxt-icon"
   ],
-  // routeRules: {
-  //   "/picks": { swr: 60 }
-  // },
   runtimeConfig: {
     githubToken: process.env.GITHUB_TOKEN,
     raindropTestToken: process.env.RAINDROP_TEST_TOKEN,

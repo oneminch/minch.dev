@@ -42,39 +42,6 @@
       </ul>
     </section>
 
-    <!-- Latest Blog Posts -->
-    <section>
-      <h2 class="font-semibold text-xl mb-2 w-auto group">
-        <nuxt-link
-          to="/blog"
-          class="focused-link rounded-lg w-full flex items-center py-2"
-        >
-          Latest Blog Posts
-          <Icon
-            name="heroicons:chevron-right-solid"
-            class="ml-2 text-green-500 group-hover:translate-x-1"
-          />
-        </nuxt-link>
-      </h2>
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
-        <template v-if="pending">
-          <AppBlogSkeleton v-for="skeleton in skeletons" :key="skeleton" />
-        </template>
-        <template v-else>
-          <AppBlogCard
-            v-for="blogPost in blogPosts"
-            :key="blogPost._id"
-            :tags="blogPost.tags"
-            :blogTitle="blogPost.longTitle || blogPost.title"
-            :title="blogPost.title"
-            :url="blogPost._path"
-            :pubDate="blogPost.updated"
-            :coverImage="blogPost.image"
-          />
-        </template>
-      </div>
-    </section>
-
     <!-- Projects -->
     <section>
       <h2 class="font-semibold text-xl mb-2 w-auto group">
@@ -90,18 +57,59 @@
         </nuxt-link>
       </h2>
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
-        <AppProjectCard
-          project-title="Deadlines"
-          project-url="https://deadlines.oneminch.dev/"
-          project-description="Deadlines is a simple, offline deadline tracker made with Vue.js and localForage."
-          :tags="['Vue.js', 'localForage']"
-        />
-        <AppProjectCard
-          project-title="EncryptedList"
-          project-url="https://encryptedlist.xyz/"
-          project-description="EncryptedList is a List of Products & Services that Offer Zero-Knowledge or End-to-End Encryption."
-          :tags="['Vue.js', 'Tailwind CSS', 'Airtable']"
-        />
+        <template v-if="projectsPending">
+          <AppProjectSkeleton
+            v-for="skeletonId in projectSkeletonIds"
+            :key="skeletonId"
+          />
+        </template>
+        <template v-else>
+          <AppProjectCard
+            v-for="featuredProject in projects.featured.slice(0, 2)"
+            :key="featuredProject.name"
+            :img-url="featuredProject.openGraphImageUrl"
+            :project-title="featuredProject.name"
+            :project-description="featuredProject.description"
+            :project-url="featuredProject.homepageUrl"
+            :tags="featuredProject.repositoryTopics"
+          />
+        </template>
+      </div>
+    </section>
+
+    <!-- Latest Blog Posts -->
+    <section>
+      <h2 class="font-semibold text-xl mb-2 w-auto group">
+        <nuxt-link
+          to="/blog"
+          class="focused-link rounded-lg w-full flex items-center py-2"
+        >
+          Latest Blog Posts
+          <Icon
+            name="heroicons:chevron-right-solid"
+            class="ml-2 text-green-500 group-hover:translate-x-1"
+          />
+        </nuxt-link>
+      </h2>
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+        <template v-if="blogsPending">
+          <AppBlogSkeleton
+            v-for="skeletonId in blogSkeletonIds"
+            :key="skeletonId"
+          />
+        </template>
+        <template v-else>
+          <AppBlogCard
+            v-for="blogPost in blogPosts"
+            :key="blogPost._id"
+            :tags="blogPost.tags"
+            :blogTitle="blogPost.longTitle || blogPost.title"
+            :title="blogPost.title"
+            :url="blogPost._path"
+            :pubDate="blogPost.updated"
+            :coverImage="blogPost.image"
+          />
+        </template>
       </div>
     </section>
 
@@ -135,11 +143,18 @@
   });
 
   // Skeletons
-  const skeletons = [...Array(2).fill(Math.random())];
+  const blogSkeletonIds = [...Array(2).fill(Math.random())];
+  const projectSkeletonIds = [...Array(2).fill(Math.random())];
 
-  // Fetch all blog posts sans LeetCode solutions
-  const { pending, data: blogPosts } = await useLazyAsyncData("blog", () =>
-    queryContent("/blog").limit(2).find()
+  // Fetch latest 2 blog posts
+  const { pending: blogsPending, data: blogPosts } = await useLazyAsyncData(
+    "blog",
+    () => queryContent("/blog").limit(2).find()
+  );
+
+  // Fetch 2 featured projects
+  const { pending: projectsPending, data: projects } = await useLazyFetch(
+    "/api/projects"
   );
 
   const skillset = ref([

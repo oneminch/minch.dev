@@ -12,8 +12,8 @@
     >
       <template v-if="pending">
         <AppProjectSkeleton
-          v-for="skeleton in projectSkeletonIds()"
-          :key="skeleton"
+          v-for="skeletonId in projectSkeletonIds()"
+          :key="skeletonId"
           class="lg:first:row-span-2 lg:last:row-span-2"
         />
       </template>
@@ -39,8 +39,8 @@
     <section class="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-6">
       <template v-if="pending">
         <AppProjectSkeleton
-          v-for="skeleton in projectSkeletonIds()"
-          :key="skeleton"
+          v-for="skeletonId in projectSkeletonIds()"
+          :key="skeletonId"
         />
       </template>
       <template v-else>
