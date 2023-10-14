@@ -1,15 +1,19 @@
-<template>
-  <div>
-    
-  </div>
-</template>
+<script setup>
+  const route = useRoute();
 
-<script lang="ts" setup>
+  await navigateTo(`https://oneminch.github.io/${route.params.repo}`, {
+    external: true,
+    open: {
+      target: "_blank"
+    }
+  });
 
+  await navigateTo("/");
 </script>
 
-
-
-<style>
-
-</style>
+<template>
+  <p>
+    Redirecting to project URL -
+    {{ `https://oneminch.github.io/${$route.params.repo}` }}
+  </p>
+</template>

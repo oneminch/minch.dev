@@ -44,6 +44,8 @@ const axiosReqConfig = {
 
 export default defineEventHandler(async () => {
   try {
+    const { origin: reqUrl } = useRequestURL();
+
     const response = await axios.post(
       endpointUrl,
       ghGraphqlQuery,
@@ -58,6 +60,7 @@ export default defineEventHandler(async () => {
         description: item.repo.description,
         homepageUrl: item.repo.homepageUrl,
         openGraphImageUrl: item.repo.openGraphImageUrl,
+        // each gh pages url to the format: reqUrl/r/repo-url
         url: item.repo.url,
         repositoryTopics: item.repo.repositoryTopics.nodes
           .reduce((acc, curr) => {
