@@ -120,8 +120,9 @@
     twitterCard: "summary_large_image"
   });
 
-  const summary =
-    "Passionate Software Engineer with a B.Sc. in Computer Science and 4 years of experience designing and developing web applications. My problem-solving and communication skills allow me to work in a collaborative team environment, continuously learn, and apply my expertise to build high quality products.";
+  const summary = `Highly adaptable and motivated Front-End Developer seeking opportunities at your company.
+    B.S. in Computer Science, 2 years of experience developing web applications. AWS-certified.
+    Recognized by peers for effective problem-solving and collaboration skills.`;
 
   const experiences = [
     {
