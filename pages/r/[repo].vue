@@ -8,7 +8,7 @@
     }
   });
 
-  await navigateTo("/");
+  // await navigateTo("/");
 </script>
 
 <template>

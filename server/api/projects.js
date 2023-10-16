@@ -44,7 +44,7 @@ const axiosReqConfig = {
 
 export default defineEventHandler(async () => {
   try {
-    const { origin: reqUrl } = useRequestURL();
+    // const { origin: reqUrl } = useRequestURL();
 
     const response = await axios.post(
       endpointUrl,
