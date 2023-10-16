@@ -168,8 +168,8 @@
       "Vue.js": "skill-icons:vuejs-light",
       "Nuxt.js": "skill-icons:nuxtjs-light",
       "React.js": "skill-icons:react-light",
-      "Next.js": "skill-icons:nextjs-light",
-      "Tailwind CSS": "skill-icons:tailwindcss-light"
+      "Tailwind CSS": "skill-icons:tailwindcss-light",
+      AWS: "skill-icons:aws-dark"
     },
     {
       "Node.js": "skill-icons:nodejs-light",
