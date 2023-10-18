@@ -6,12 +6,12 @@
     <nuxt-img
       format="webp"
       loading="lazy"
-      src="/profile.png"
+      src="/profile.jpg"
       alt="Profile Picture"
-      class="w-20 rounded-full border border-zinc-300 dark:border-none"
+      class="w-24 rounded-full border border-zinc-300 dark:border-none"
     />
     <h2 class="text-xl md:text-2xl font-bold text-zinc-900 dark:text-zinc-100">
-      Dawit U
+      Dawit
     </h2>
     <h2 class="text-lg md:text-xl font-medium text-zinc-700 dark:text-zinc-400">
       Frontend Developer
