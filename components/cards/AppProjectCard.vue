@@ -32,9 +32,8 @@
       </ul>
       <Icon
         name="heroicons:arrow-up-right-20-solid"
-        size="1.25rem"
-        class="ml-auto absolute right-2 top-2 bg-green-500 text-zinc-600 rounded-full p-1 w-8 h-8"
-        :class="[{ 'w-6 h-6': hideImage }]"
+        size="1rem"
+        class="ml-auto absolute right-2 top-2 bg-green-500 text-zinc-600 rounded-full p-1 w-6 h-6"
       />
     </div>
   </nuxt-link>

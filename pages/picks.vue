@@ -4,8 +4,10 @@
     <Meta name="description" :content="seoMeta.description" />
 
     <h1 class="font-bold text-2xl mb-6">Picks</h1>
-    <blockquote>Content from across the web I found interesting.</blockquote>
-    <br />
+    <p class="text-zinc-500 dark:text-zinc-400 mb-4">
+      Content from across the web I found interesting.
+    </p>
+
     <template v-if="pending">
       <AppPickSkeleton v-for="skeleton in skeletons" :key="skeleton" />
     </template>

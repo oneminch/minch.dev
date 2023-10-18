@@ -13,21 +13,21 @@
     <section class="space-y-2 mb-2">
       <h2 class="font-bold text-xl py-2">Links</h2>
 
-      <div class="grid grid-cols-2 lg:grid-cols-5 gap-4 lg:gap-2">
+      <div class="grid grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-2">
         <app-link-card
           label="LeetCode"
           icon="fluent-emoji:teacup-without-handle"
           url="/leetcode"
         ></app-link-card>
         <app-link-card
-          label="Picks"
-          icon="fluent-emoji:seedling"
-          url="/picks"
-        ></app-link-card>
-        <app-link-card
           label="Resume"
           icon="fluent-emoji:briefcase"
           url="/resume"
+        ></app-link-card>
+        <app-link-card
+          label="Picks"
+          icon="fluent-emoji:leafy-green"
+          url="/picks"
         ></app-link-card>
         <app-link-card
           label="Notes"
@@ -49,7 +49,7 @@
       <h2 class="font-bold text-xl py-2">Meta</h2>
 
       <!-- Stack & Credits -->
-      <div class="grid grid-cols-2 lg:grid-cols-5 gap-4 lg:gap-2">
+      <div class="grid grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-2">
         <app-link-card
           label="Nuxt"
           icon="logos:nuxt-icon"

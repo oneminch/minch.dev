@@ -5,6 +5,9 @@
     <Meta name="description" :content="seoMeta.description" />
 
     <h1 class="text-3xl text-left font-bold mb-6">LeetCode Solutions</h1>
+    <p class="text-zinc-500 dark:text-zinc-400 mb-4">
+      My solutions to some LeetCode-style coding problems.
+    </p>
 
     <section class="grid grid-cols-1 lg:grid-cols-2 gap-4">
       <template v-if="pending">

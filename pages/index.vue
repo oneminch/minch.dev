@@ -7,7 +7,7 @@
     <!-- Introduction -->
     <section>
       <h1 class="font-semibold text-2xl mb-6">Hi, my name is Dawit 👋</h1>
-      <p>
+      <p class="text-zinc-500 dark:text-zinc-400 mb-4">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio iste
         praesentium sed eum minus repellendus porro. Explicabo earum ex, odio,
         voluptatem laborum sapiente, aut quo molestiae placeat nobis aliquam
@@ -22,8 +22,9 @@
         The different technologies that I've worked with & experimented with
         over the years.
       </p>
+      <!-- <div class="grid grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-2"> -->
       <ul
-        class="p-0 mb-2 space-x-2"
+        class="p-0 mb-4 space-x-2"
         v-for="(skills, index) in skillset"
         :key="index"
       >
@@ -40,6 +41,7 @@
           />
         </li>
       </ul>
+      <!-- </div> -->
     </section>
 
     <!-- Projects -->
@@ -49,7 +51,7 @@
           to="/projects"
           class="focused-link rounded-lg w-full flex items-center py-2"
         >
-          Featured Projects
+          My Projects
           <Icon
             name="heroicons:chevron-right-solid"
             class="ml-2 text-green-500 group-hover:translate-x-1"
@@ -84,7 +86,7 @@
           to="/blog"
           class="focused-link rounded-lg w-full flex items-center py-2"
         >
-          Latest Blog Posts
+          My Articles
           <Icon
             name="heroicons:chevron-right-solid"
             class="ml-2 text-green-500 group-hover:translate-x-1"
@@ -162,16 +164,14 @@
       JavaScript: "skill-icons:javascript",
       HTML: "skill-icons:html",
       CSS: "skill-icons:css",
-      Git: "skill-icons:git"
-    },
-    {
       "Vue.js": "skill-icons:vuejs-light",
       "Nuxt.js": "skill-icons:nuxtjs-light",
       "React.js": "skill-icons:react-light",
-      "Tailwind CSS": "skill-icons:tailwindcss-light",
-      AWS: "skill-icons:aws-dark"
+      "Tailwind CSS": "skill-icons:tailwindcss-light"
     },
     {
+      Git: "skill-icons:git",
+      AWS: "skill-icons:aws-dark",
       "Node.js": "skill-icons:nodejs-light",
       Python: "skill-icons:python-light",
       PostgreSQL: "skill-icons:postgresql-light",
