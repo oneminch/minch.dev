@@ -27,7 +27,8 @@ export default defineNuxtConfig({
       //   }
       // ]
     },
-    pageTransition: { name: "slide", mode: "out-in" }
+    pageTransition: { name: "slide", mode: "out-in" },
+    layoutTransition: { name: "slide", mode: "out-in" }
   },
   components: [
     { path: "~/components/cards", pathPrefix: false },
