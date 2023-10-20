@@ -12,7 +12,7 @@ tags:
   - web-apis
   - http-requests
 image: /content/cover/http-requests-in-javascript.png
-cover_image: https://raw.githubusercontent.com/oneminch/portfolio/main/public/content/cover/http-requests-in-javascript.hashnode.png
+cover: https://raw.githubusercontent.com/oneminch/portfolio/main/public/content/cover/http-requests-in-javascript.hashnode.png
 cover_image: https://raw.githubusercontent.com/oneminch/portfolio/main/public/content/cover/http-requests-in-javascript.png
 canonical: https://oneminch.dev/blog/http-requests-in-javascript
 canonical_url: https://oneminch.dev/blog/http-requests-in-javascript
@@ -309,7 +309,7 @@ For real APIs, we can continue to create another GET request to verify that the 
 
 ## 2. Fetch
 
-Fetch is a promise-based web API. It is a modern alternative to XHR. I have explained in detail how the `fetch()` API works [here](/blog/intro-to-fetch-api/). But let's redo the previous requests using fetch and see the difference.
+Fetch is a promise-based web API. It is a modern alternative to XHR. I have explained in detail how the `fetch()` API works [here](https://oneminch.dev/blog/intro-to-fetch-api/). But let's redo the previous requests using fetch and see the difference.
 
 **Method: GET**
 

@@ -10,7 +10,6 @@ created: 1692301356027
 tags:
   - javascript
   - web-apis
-  - fullscreen-api
 image: /content/cover/js-fullscreen-api.png
 cover: https://raw.githubusercontent.com/oneminch/portfolio/main/public/content/cover/js-fullscreen-api.hashnode.png
 cover_image: https://raw.githubusercontent.com/oneminch/portfolio/main/public/content/cover/js-fullscreen-api.png
