@@ -2,7 +2,7 @@
 id: kn3e4dqgo1q4vg71z3ju4kv
 title: Canvas Fingerprinting
 desc: ""
-updated: 1692905604518
+updated: 1697831570337
 created: 1692301487830
 tags:
   - fingerprinting
@@ -127,9 +127,12 @@ const deviceInfo = {
 
 Most everything happens behind the scenes and users aren't aware of the process. Unlike cookies, it's harder to know what each website is doing behind the scenes. And so far there's no effective way against fingerprinting. Browsers like Tor, Firefox and Brave claim to block fingerprinting by default. Other methods of defense are browser extensions which work by either blocking JavaScript or giving a fake value when asked by websites.
 
-### References
+### Read More
 
-[Canvas API](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API)  
-[Web Tracking Methods](https://iq.opengenus.org/methods-to-track-user-on-web/)  
-[canvas.toDataURL()](https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/toDataURL)  
-[Cross-Origin Fingerprinting Unlinkability](https://www.torproject.org/projects/torbrowser/design/#fingerprinting-linkability)
+- [Canvas API](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API)
+
+- [Web Tracking Methods](https://iq.opengenus.org/methods-to-track-user-on-web/)
+
+- [canvas.toDataURL()](https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/toDataURL)
+
+- [Cross-Origin Fingerprinting Unlinkability](https://www.torproject.org/projects/torbrowser/design/#fingerprinting-linkability)

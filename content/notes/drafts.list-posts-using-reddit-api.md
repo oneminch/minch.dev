@@ -2,7 +2,7 @@
 id: 7mv6i3hak2n6nrw8enqxbvy
 title: Get List of Posts in a Subreddit Using the Reddit API
 desc: ""
-updated: 1692301128289
+updated: 1697831642345
 created: 1692301019405
 tags:
   - TAG_1
@@ -287,7 +287,8 @@ That's it! For the sake of simplicity, I have only used the properties that are 
 
 The source code for this example can be found [here](https://jsfiddle.net/2wosubq0/8) or it's embedded above. Modify it to add the number of 'upvotes' and 'downvotes' for each post. Have a look at the output again and add the necessary lines of code (in both HTML and JavaScript) to include these values. _Hint: Add two elements below div.author to the markup, one for upvotes and one for downvotes. Then, use the appropriate syntax to access these values from your data and add them to their respective markup._ You can further this challenge by adding a second dropdown menu that helps the user select a subreddit of their own choice. Enjoy!
 
-### References
+### Read More
 
 - [Reddit API](https://www.reddit.com/dev/api)
-- [A Simple Introduction to Fetch API](https://iq.opengenus.org/intro-to-fetch-api/).
+
+- [A Simple Introduction to Fetch API](/blog/intro-to-fetch-api/).

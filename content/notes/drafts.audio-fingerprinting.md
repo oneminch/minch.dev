@@ -3,7 +3,7 @@ id: 1tz3ihj42jnhw702jz8i56n
 title: Audio Fingerprinting using the AudioContext API
 desc: ""
 description: "How audio fingerprinting works using the AudioContext API"
-updated: 1692905601017
+updated: 1697831579210
 created: 1692300842027
 tags:
   - fingerprinting
@@ -166,10 +166,14 @@ A combination of all these audio data values can be processed through a hash fun
 
 Some possible defenses against this tracking method work by adding a small noise to the actual fingerprint to generate a random fake value and reporting it as such. This is seen in add-ons like [AudioContext Fingerprint Defender](https://addons.mozilla.org/en-US/firefox/addon/audioctx-fingerprint-defender/). The TOR browser is by far the only browser that blocks these types of tracking methods by default.
 
-### References
+### Read More
 
-[Canvas fingerprinting](https://iq.opengenus.org/canvas-fingerprinting/)  
-[Methods to track users on the Web](https://iq.opengenus.org/methods-to-track-user-on-web/)  
-[OpenWPM](https://audiofingerprint.openwpm.com)  
-[AudioContext API](https://developer.mozilla.org/en-US/docs/Web/API/AudioContext)  
-[(Cross-)Browser Fingerprinting via OS and Hardware Level Features](https://yinzhicao.org/TrackingFree/crossbrowsertracking_NDSS17.pdf)
+- [Canvas fingerprinting](https://iq.opengenus.org/canvas-fingerprinting/)
+
+- [Methods to track users on the Web](https://iq.opengenus.org/methods-to-track-user-on-web/)
+
+- [OpenWPM](https://audiofingerprint.openwpm.com)
+
+- [AudioContext API](https://developer.mozilla.org/en-US/docs/Web/API/AudioContext)
+
+- [(Cross-)Browser Fingerprinting via OS and Hardware Level Features](https://yinzhicao.org/TrackingFree/crossbrowsertracking_NDSS17.pdf)

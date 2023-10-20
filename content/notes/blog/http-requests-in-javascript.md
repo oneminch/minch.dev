@@ -1,40 +1,47 @@
 ---
 id: 0nu30msglamrhtkrwtzs2wl
 title: HTTP Requests in JavaScript
-desc: ""
-updated: 1692300719316
+seoTitle: HTTP Requests in JavaScript
+description: How to Make HTTP Requests in JavaScript
+subtitle: How to Make HTTP Requests in JavaScript
+seoDescription: How to Make HTTP Requests in JavaScript
+updated: 1697836566395
 created: 1692300081883
 tags:
-  - http
-  - requests
   - javascript
-image: /content/cover/COVER-IMAGE.png
-cover_image: https://raw.githubusercontent.com/oneminch/portfolio/main/public/content/cover/FILE-SLUG.png
-canonical_url: https://CANONICAL.URL
-description: SHORT BLOG DESCRIPTION
+  - web-apis
+  - http-requests
+image: /content/cover/http-requests-in-javascript.png
+cover_image: https://raw.githubusercontent.com/oneminch/portfolio/main/public/content/cover/http-requests-in-javascript.hashnode.png
+cover_image: https://raw.githubusercontent.com/oneminch/portfolio/main/public/content/cover/http-requests-in-javascript.png
+canonical: https://oneminch.dev/blog/http-requests-in-javascript
+canonical_url: https://oneminch.dev/blog/http-requests-in-javascript
 head:
   meta:
     - name: robots
       content: "index, follow"
     - name: author
-      content: Dawit U (@oneminch)
+      content: Dawit (@oneminch)
     - property: "og:type"
       content: article
     - name: "twitter:card"
       content: summary_large_image
+slug: http-requests-in-javascript
+enableToc: true
+published: true
 ---
 
-Making requests is the heart of the Internet. Whenever you are browsing the internet, all what you are doing is requesting information from servers, which are basically interconnected computers. It's the foundation of how websites work. A simple case is a person typing "www.google.com" and getting the Google search page. A request is made to a web server which then sends back the files for that page which will be rendered in the browser as a web page. This is made possible by a protocol known as HTTP (HyperText Transfer Protocol). On the Mozilla Developer Network website, the HTTP protocol is described as:
+Making requests is the heart of the Internet. Whenever you are browsing the internet, all what you are doing is requesting information from servers, which are basically interconnected computers. It's the foundation of how websites work. A simple case is a person typing "www.duckduckgo.com" and getting the DuckDuckGo search page. A request is made to a web server, which then sends back the files for that page, which will be rendered in the browser as a web page. This is made possible by a protocol known as HTTP (HyperText Transfer Protocol). On MDN web docs, the HTTP protocol is described as:
 
-> HTTP is a protocol which allows the fetching of resources, such as HTML documents. It is the foundation of any data exchange on the Web and it is a client-server protocol, which means requests are initiated by the recipient, usually the Web browser. A complete document is reconstructed from the different sub-documents fetched, for instance text, layout description, images, videos, scripts, and more.
+> HTTP is a protocol which allows the fetching of resources, such as HTML documents. It is the foundation of any data exchange on the Web, and it is a client-server protocol, which means requests are initiated by the recipient, usually the Web browser. A complete document is reconstructed from the different sub-documents fetched, for instance text, layout description, images, videos, scripts, and more.
 
-Requesting a resource from the client side uses this HTTP protocol and these types of requests are known as **HTTP requests**. Whether you are loading a page or updating it, these requests are quite useful.
+Requesting a resource from the client side uses this HTTP protocol, and these types of requests are known as **HTTP requests**. These requests are essential for any type of online activity performed on the web.
 
-JavaScript has a set of great tools and methods that allow us to make HTTP requests whether it is to send or receive data from a certain server or endpoint. A couple of commonly used ways to make requests are **XMLHttpRequest** and **Fetch**.
+JavaScript has a set of great tools and methods that allow us to make HTTP requests to send or receive data from a certain server or endpoint. A couple of commonly used ways to make requests are **XMLHttpRequest** and **Fetch**.
 
 ## 1. XMLHttpRequest (XHR)
 
-**AJAX** stands for **A**synchronous **J**avaScript **A**nd **X**ML. Requests made are _asynchronous_ which means they don't interrupt the execution of other JavaScript code. In other words, JavaScript code besides the AJAX code doesn't have to wait for requests to finish being executed. It can execute simultaneously. The method that makes this possible is the `XMLHttpRequest()`. The prefix _'XML'_ doesn't determine the type of data we can receive from this type of request. We can receive any form of data.
+**AJAX** stands for **A**synchronous **J**avaScript **A**nd **X**ML. Requests made are _asynchronous_, which means they don't interrupt the execution of other JavaScript code. In other words, JavaScript code besides the AJAX code doesn't have to wait for requests to finish being executed. It can execute simultaneously. The method that makes this possible is the `XMLHttpRequest()`. Despite the prefix _'XML'_, we can process any form of data for our requests.
 
 The `XMLHttpRequest()` method works as a constructor for us to create an instance and call our AJAX requests on.
 
@@ -44,11 +51,11 @@ const xhr = new XMLHttpRequest();
 
 Our `xhr` object has a number of methods and properties that allow us to make different types of requests.
 
-## Methods
+### Methods
 
-### xhr.open()
+#### xhr.open()
 
-We can then use the `open()` method on our `xhr` object to initialize or configure a request. This method takes:
+We can then use the `open()` method on our `xhr` object to initialize or configure a request. This method takes the following parameters:
 
 1. Method: GET, POST, PUT or DELETE,
 2. URL: Path to our resource,
@@ -61,17 +68,17 @@ It follows the syntax:
 xhr.open(Method, URL[, Async]);
 ```
 
-### xhr.send()
+#### xhr.send()
 
-This method allows us to open and send the request. It takes an optional parameter that contains our request body which is useful when making POST requests.
+This method allows us to open and send our request. It takes an optional parameter that contains our request body, which is useful when making POST requests.
 
 ```javascript
 xhr.send([body]);
 ```
 
-### xhr.setRequestHeader()
+#### xhr.setRequestHeader()
 
-This method is used to set HTTP headers for our request like `Content-Type` & `Accept`. Similarly, we can use `xhr.getResponseHeader()` to get header values for our response.
+This method is used to set HTTP headers for our request, such as `Content-Type` & `Accept`. Similarly, we can use `xhr.getResponseHeader()` to get header values from our response.
 
 ```javascript
 // Set header for request
@@ -81,7 +88,7 @@ xhr.setRequestHeader("Content-Type", "application/json");
 xhr.getResponseHeader("Content-Type");
 ```
 
-### xhr.abort()
+#### xhr.abort()
 
 This method is useful when we want to cancel a request. Imagine a scenario where a user wants to cancel a request because it's taking too long. `xhr.abort()` can be used to stop the request.
 
@@ -89,17 +96,17 @@ This method is useful when we want to cancel a request. Imagine a scenario where
 xhr.abort();
 ```
 
-## Properties
+### Properties
 
-### xhr.response
+#### xhr.response
 
-This value contains the response body we receive. `xhr.responseText` is also a similar property which is used if our response is in a string format.
+This value contains the response body we receive from our request. `xhr.responseText` is also a similar property, which is used if our response is in a string format.
 
 ```javascript
 const res = xhr.response;
 ```
 
-### xhr.responseType
+#### xhr.responseType
 
 This is used to set the response type for our `xhr` object. It can be in any one of these formats:
 
@@ -112,9 +119,9 @@ This is used to set the response type for our `xhr` object. It can be in any one
 xhr.responseType = "json";
 ```
 
-### xhr.readyState
+#### xhr.readyState
 
-Our request changes states as it progresses and the current state of the request can be accessed by this property. It's values range from 0 (initial state) to 4 (completed state). The event `onreadystatechange` can be used to detect whenever there is a change in state.
+Our request changes states as it progresses, and the current state of our request can be accessed by this property. Its values range from 0 (initial state) to 4 (completed state). The event `onreadystatechange` can be used to detect whenever there is a change in state.
 
 ```javascript
 xhr.onreadystatechange = function () {
@@ -133,9 +140,9 @@ xhr.onreadystatechange = function () {
 };
 ```
 
-## Events
+### Events
 
-### xhr.onload
+#### xhr.onload
 
 This event is fired when our request is successful and the result is sent back. This can also be computed with `xhr.onreadystatechange` when `xhr.readyState` is 4.
 
@@ -145,9 +152,9 @@ xhr.onload = () => {
 };
 ```
 
-### xhr.onerror
+#### xhr.onerror
 
-This event is invoked when there is an error in our request which could be due to network error or invalid configuration of our request.
+This event is invoked when there is an error in our request, which could be due to network error or invalid configuration of our request.
 
 ```javascript
 xhr.onerror = () => {
@@ -155,9 +162,9 @@ xhr.onerror = () => {
 };
 ```
 
-### xhr.onprogress
+#### xhr.onprogress
 
-This event is called repeatedly while our request is processed. It can be used to figure out the loading progress of a download or even a page load to let the user know how far along has their request been processed. An **event** parameter can be passed to `xhr.onprogress` and it has properties `event.loaded` and `event.total`, which can be used to show the actual progress feedback.
+This event is called repeatedly while our request is processed. It can be used to figure out the loading progress of a download or even a page load to let the user know how far along their request has been processed. An **event** parameter can be passed to `xhr.onprogress` and it has properties `event.loaded` and `event.total`, which can be used to show the actual progress feedback.
 
 ```javascript
 xhr.onprogress = (event) => {
@@ -166,15 +173,15 @@ xhr.onprogress = (event) => {
 };
 ```
 
-## Example
+### Example
 
-We are going to use a simple fake online REST API called [JSONPlaceholder](https://jsonplaceholder.typicode.com/) to make our requests. We will use it to request and submit fake [posts](https://jsonplaceholder.typicode.com/posts). According to the documentation for JSONPlaceholder, our path to the resource we want is "[https://jsonplaceholder.typicode.com/[endpoint]](https://jsonplaceholder.typicode.com/%5Bendpoint%5D)", and there are several endpoints to choose from. I chose 'posts' for this demo. For this certain endpoint, we are going to receive and submit to an array of posts which are enclosed in objects. We also want our request to be asynchronous.
+We are going to use a simple fake online REST API called [JSONPlaceholder](https://jsonplaceholder.typicode.com/) to make example requests. We will use it to request and submit fake [posts](https://jsonplaceholder.typicode.com/posts). According to the documentation for JSONPlaceholder, our path to the resource we want is `https://jsonplaceholder.typicode.com/<endpoint>`, and there are several endpoints to choose from. For this demo, we'll use 'posts' as our endpoint. For this certain endpoint, we are going to receive and submit to an array of posts which are enclosed in objects. We also want our request to be asynchronous.
 
 **Method: GET** - is used to retrieve data.
 
 ```javascript
 // Our path to the resource
-let resURL = "https://jsonplaceholder.typicode.com/posts";
+let reqURL = "https://jsonplaceholder.typicode.com/posts";
 
 // 1. CREATE OUR XHR OBJECT
 const xhr = new XMLHttpRequest();
@@ -183,7 +190,7 @@ const xhr = new XMLHttpRequest();
 xhr.responseType = "json";
 
 // 3. CONFIGURE OUR REQUEST
-xhr.open("GET", resURL, true);
+xhr.open("GET", reqURL, true);
 
 // 4. SEND THE REQUEST
 xhr.send();
@@ -219,13 +226,13 @@ As an output, we get a list of objects in the form of an array.
 
 ```javascript
 // Our path to the resource
-let resURL = "https://jsonplaceholder.typicode.com/posts";
+let reqUrl = "https://jsonplaceholder.typicode.com/posts";
 
 // 1. CREATE OUR XHR OBJECT
 const xhr = new XMLHttpRequest();
 
 // 2. Configure a `POST` request
-xhr.open("POST", resURL);
+xhr.open("POST", reqUrl);
 
 // 3. Create a JSON 'post' object
 const json_data = {
@@ -258,17 +265,17 @@ xhr.onerror = () => {
 
 Other than the couple of steps we have added, the general structure and process of making HTTP requests is very similar and perhaps even almost identical.
 
-For this (JSONPlaceholder) API, the object we 'posted' is not actually added to their database of posts. Since it is a fake API, the process is also faked as the purpose of this code and the API is to demonstrate how requests work and to test code.
+For our demo API, the object we 'posted' is not actually added to their database of posts. Since it is a fake API, the process is also faked, as the purpose of this code and the API is to demonstrate how requests work and to test code.
 
 **Method: PUT** - is used to update or modify data at the specified path. This is almost identical to our POST method process. The only things that change are the path, the method name and the object we are updating. Other than these values, the rest is the same.
 
 ```javascript
 // 1. Our path to the object we want to update
 //    Notice the '/1' added to the end
-let resURL = "https://jsonplaceholder.typicode.com/posts/1";
+let reqUrl = "https://jsonplaceholder.typicode.com/posts/1";
 
 // Configure a `PUT` request
-xhr.open('PUT', resURL);
+xhr.open('PUT', reqUrl);
 
 // Create a JSON 'post' object
 // We added 'id' so it can be used to
@@ -286,13 +293,13 @@ const json_data = {
 ```javascript
 // 1. Our path to the object we want to delete
 //    Notice the '/1' added to the end
-let resURL = "https://jsonplaceholder.typicode.com/posts/1";
+let reqUrl = "https://jsonplaceholder.typicode.com/posts/1";
 
 // 2. CREATE OUR XHR OBJECT
 const xhr = new XMLHttpRequest();
 
 // 3. Configure a `DELETE` request
-xhr.open("DELETE", resURL);
+xhr.open("DELETE", reqUrl);
 
 // 4. SEND THE REQUEST
 xhr.send();
@@ -302,14 +309,14 @@ For real APIs, we can continue to create another GET request to verify that the 
 
 ## 2. Fetch
 
-Fetch is a promise-based web API. It is a modern alternative to XHR. I have explained in details how the `fetch()` API works [here](https://iq.opengenus.org/intro-to-fetch-api/). But let's redo the previous requests using fetch and see the difference.
+Fetch is a promise-based web API. It is a modern alternative to XHR. I have explained in detail how the `fetch()` API works [here](/blog/intro-to-fetch-api/). But let's redo the previous requests using fetch and see the difference.
 
 **Method: GET**
 
 ```javascript
-let resURL = "https://jsonplaceholder.typicode.com/posts";
+let reqUrl = "https://jsonplaceholder.typicode.com/posts";
 
-fetch(resURL)
+fetch(reqUrl)
   .then((res) => res.json())
   .then((data) => console.log(data))
   .catch((error) => console.log(error));
@@ -318,7 +325,7 @@ fetch(resURL)
 **Method: POST**
 
 ```javascript
-fetch(resURL, {
+fetch(reqUrl, {
   method: "POST",
   body: JSON.stringify({
     title: "this is title",
@@ -338,9 +345,9 @@ fetch(resURL, {
 
 ```javascript
 // Our path to the object we want to update
-let resURL = "https://jsonplaceholder.typicode.com/posts/1";
+let reqUrl = "https://jsonplaceholder.typicode.com/posts/1";
 
-fetch(resURL, {
+fetch(reqUrl, {
   method: "PUT",
   body: JSON.stringify({
     id: 1,
@@ -361,19 +368,21 @@ fetch(resURL, {
 
 ```javascript
 // 1. Our path to the object we want to delete
-let resURL = "https://jsonplaceholder.typicode.com/posts/1";
+let reqUrl = "https://jsonplaceholder.typicode.com/posts/1";
 
-fetch(resURL, {
+fetch(reqUrl, {
   method: "DELETE"
 });
 ```
 
 Fetch is a much cleaner and simpler way of doing what XHR allows us to do. Tracking progress is not yet supported in fetch. Due to that and many other reasons like browser support, XHR is still an important part of making requests.
 
-There are also some other tools that require the installation of a package (like the `axios()` library) or some that come as part of a language framework (like `$.ajax()` from jQuery). These utilize XHR and/or Fetch API under the hood to provide a much cleaner way of making requests for developers.
+There are also third-party tools such as `axios` and jQuery's `$.ajax()`. These utilize XHR and/or Fetch API under the hood to provide a much cleaner way of making requests for developers.
 
-### References
+## Read More
 
 - [An overview of HTTP by Mozilla](https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview)
+
 - [XMLHttpRequest by JavaScript.info](https://javascript.info/xmlhttprequest)
+
 - [HTTP Request Methods by Mozilla](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods)
