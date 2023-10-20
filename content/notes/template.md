@@ -20,6 +20,7 @@ head:
 published: should article be published? (Dev)
 series: OPTIONAL-SERIES (Dev)
 nav_order: NAV-ORDER
+published_on: YYYY-MM-DD
 # seoTitle: Template (Hashnode)
 # subtitle: SHORT BLOG DESCRIPTION (Hashnode)
 # seoDescription: SHORT BLOG DESCRIPTION (Hashnode)

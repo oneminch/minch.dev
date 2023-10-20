@@ -29,9 +29,10 @@ head:
 slug: intro-to-fetch-api
 enableToc: true
 published: true
+published_on: "2023-10-25"
 ---
 
-One of the ways of making [HTTP requests in JavaScript](https://oneminch.dev/blog/http-requests-in-javascript) is the **fetch()** API. The **fetch()** API is a modern JavaScript API that allows web developers to send/retrieve data across the web.
+One of the ways of making [HTTP requests in JavaScript](https://oneminch.dev/blog/http-requests-in-javascript) is the `fetch()` API. The `fetch()` API is a modern JavaScript API that allows web developers to send/retrieve data across the web.
 
 Imagine a scenario where you enter a coffee shop. You go to your barista, and ask for a cappuccino. The barista enters your order on their computer or passes your order along to the other barista. After making your payment, you then wait for your order to come. If it comes, you can start enjoying your coffee. And if there was a miscommunication between you, and the barista, you might get a drink you didn't intend to order.
 
@@ -45,7 +46,7 @@ In the above analogy:
 
 ![HTTP Requests](/content/http-requests.demo.png)
 
-## Diving deeper into fetch()
+## Diving Deeper into `fetch()`
 
 **Parameter**: a required URL/path to the data you want to fetch, and a set of other options
 

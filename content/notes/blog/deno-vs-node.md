@@ -23,6 +23,7 @@ tags:
   - nodejs
   - shorts
   - javascript
+published_on: "2023-08-24"
 ---
 
 [Deno](https://deno.land) improves upon [Node.js](https://nodejs.org) in some significant ways.
