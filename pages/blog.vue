@@ -15,7 +15,7 @@
           v-for="blogPost in blogPosts"
           :key="blogPost._id"
           :tags="blogPost.tags"
-          :blogTitle="blogPost.longTitle || blogPost.title"
+          :blogTitle="blogPost.title"
           :title="blogPost.title"
           :url="blogPost._path"
           :pubDate="blogPost.updated"
@@ -56,6 +56,6 @@
 
   // Fetch all blog posts sans LeetCode solutions
   const { pending, data: blogPosts } = await useLazyAsyncData("blog", () =>
-    queryContent("/blog").find()
+    queryContent("/blog").sort({ publishedOn: -1 }).find()
   );
 </script>

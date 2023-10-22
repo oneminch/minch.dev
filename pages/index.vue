@@ -105,7 +105,7 @@
             v-for="blogPost in blogPosts"
             :key="blogPost._id"
             :tags="blogPost.tags"
-            :blogTitle="blogPost.longTitle || blogPost.title"
+            :blogTitle="blogPost.title"
             :title="blogPost.title"
             :url="blogPost._path"
             :pubDate="blogPost.updated"
@@ -151,7 +151,7 @@
   // Fetch latest 2 blog posts
   const { pending: blogsPending, data: blogPosts } = await useLazyAsyncData(
     "blog",
-    () => queryContent("/blog").limit(2).find()
+    () => queryContent("/blog").sort({ publishedOn: -1 }).limit(2).find()
   );
 
   // Fetch 2 featured projects

@@ -26,7 +26,7 @@ tags:
   - ssl
 series: Computer Networks
 navOrder: 3
-published_on: "2022-03-28"
+publishedOn: "2022-03-28"
 ---
 
 **HTTPS** is a protocol which is an improvement over HTTP and is the short form of **HyperText Transfer Protocol Secure** (HTTP + SSL). In this article, we will look at the shortcomings of HTTP which lead to the development of HTTPS and some basic ideas behind HTTPS. It'll cover these sub topics:

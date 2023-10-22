@@ -25,7 +25,7 @@ tags:
   - networking
 series: Computer Networks
 navOrder: 1
-published_on: "2022-02-21"
+publishedOn: "2022-02-21"
 ---
 
 ## Introduction

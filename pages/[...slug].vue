@@ -9,7 +9,7 @@
     <template #default="{ doc }">
       <!-- Post title -->
       <h1 class="mb-4">
-        {{ doc.longTitle || doc.title }}
+        {{ doc.title }}
       </h1>
 
       <!-- Post Cover Image -->
