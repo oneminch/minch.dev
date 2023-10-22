@@ -2,7 +2,7 @@
 <template>
   <aside
     id="sidebar"
-    class="flex flex-col items-center justify-start rounded-xl md:rounded-b-none w-full md:w-1/4 min-w-[15rem] md:min-w-[18rem] h-full max-h-[40rem] p-5 pb-2 md:mr-4 md:mb-0 mb-6 box-border text-zinc-900 bg-white dark:bg-zinc-950 border border-transparent print:hidden relative md:sticky md:top-4 -z-0"
+    class="flex flex-col items-center justify-start rounded-xl md:rounded-b-none w-full md:max-w-[18rem] h-full p-5 pb-2 md:mr-4 md:mb-0 mb-6 text-zinc-900 bg-white dark:bg-zinc-950 border border-transparent print:hidden relative md:sticky md:top-4 -z-0"
     :class="{ hidden: routeRegEx.test($route.fullPath) }"
   >
     <!-- Theme Toggle -->

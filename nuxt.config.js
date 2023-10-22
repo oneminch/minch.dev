@@ -71,6 +71,12 @@ export default defineNuxtConfig({
     "@vueuse/nuxt",
     "nuxt-icon"
   ],
+  routeRules: {
+    "/**": { prerender: true },
+    "/api/**": { cors: true },
+    "/picks": { isr: 3600 },
+    "/projects": { isr: 3600 }
+  },
   runtimeConfig: {
     githubToken: process.env.GITHUB_TOKEN,
     raindropTestToken: process.env.RAINDROP_TEST_TOKEN,

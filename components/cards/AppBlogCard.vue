@@ -21,7 +21,7 @@
       <!-- Blog Tags -->
       <ul class="mb-2 p-0">
         <li
-          class="px-2 py-[.125rem] inline-block rounded-full font-medium font-mono text-xs mr-1 border border-zinc-300 dark:border-zinc-500 bg-zinc-100 dark:bg-zinc-800 text-zinc-800 dark:text-zinc-100"
+          class="px-2 py-[.125rem] inline-block rounded-full font-medium font-mono text-xs mr-1 bg-zinc-300/75 dark:bg-zinc-700/75 text-zinc-800 dark:text-zinc-100"
           v-for="tag in tags"
           :key="tag"
         >

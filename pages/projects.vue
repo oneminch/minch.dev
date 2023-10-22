@@ -19,7 +19,7 @@
       </template>
       <template v-else>
         <AppProjectCard
-          v-for="featuredProject in projects.featured"
+          v-for="featuredProject in featuredProjects"
           :key="featuredProject.name"
           :img-url="featuredProject.openGraphImageUrl"
           :project-title="featuredProject.name"
@@ -45,7 +45,7 @@
       </template>
       <template v-else>
         <AppProjectCard
-          v-for="project in projects.visual"
+          v-for="project in visualProjects"
           :key="project.name"
           :img-url="project.openGraphImageUrl"
           :project-title="project.name"
@@ -63,7 +63,7 @@
     <!-- Remaining Projects: Non-visual -->
     <section class="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-6">
       <AppProjectCard
-        v-for="project in projects.nonVisual"
+        v-for="project in nonVisualProjects"
         :key="project.name"
         :img-url="''"
         :project-title="project.name"
@@ -102,5 +102,15 @@
   // Skeletons
   const projectSkeletonIds = () => [...Array(4).fill(Math.random())];
 
-  const { pending, data: projects } = await useLazyFetch("/api/projects");
+  const {
+    pending,
+    // data
+    data: {
+      value: {
+        featured: featuredProjects,
+        visual: visualProjects,
+        nonVisual: nonVisualProjects
+      }
+    }
+  } = await useLazyFetch("/api/projects");
 </script>
