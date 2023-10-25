@@ -69,10 +69,10 @@
     <section>
       <h1 class="font-semibold text-2xl mb-6">Hi, my name is Dawit 👋</h1>
       <p class="text-zinc-500 dark:text-zinc-400 mb-4">
-        Lorem ipsum <em>dolor</em> sit amet consectetur adipisicing elit.
-        Distinctio iste praesentium sed eum minus <em>repellendus</em> porro.
-        Explicabo earum ex, odio, voluptatem laborum sapiente, aut quo
-        <em>molestiae</em> placeat nobis aliquam minus!
+        Curiosity-driven Lorem ipsum <em>dolor</em> sit amet consectetur
+        adipisicing elit. Distinctio iste praesentium sed eum minus
+        <em>repellendus</em> porro. Explicabo earum ex, odio, voluptatem laborum
+        sapiente, aut quo <em>molestiae</em> placeat nobis aliquam minus!
       </p>
     </section>
 
@@ -80,8 +80,8 @@
     <section>
       <h2 class="font-semibold text-xl mb-1 py-2">Skills</h2>
       <p class="text-zinc-500 dark:text-zinc-400 mb-4">
-        The different technologies that I've worked with & experimented with
-        over the years.
+        I am primarily a problem-solver, but here are some tools I've used and
+        some I have experimented with over the years.
       </p>
       <!-- <div class="grid grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-2"> -->
       <ul

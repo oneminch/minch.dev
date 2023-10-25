@@ -1,3 +1,53 @@
+<script setup>
+  const nuxtApp = useNuxtApp();
+
+  const seoMeta = {
+    title: "Dawit's Projects",
+    description:
+      "This page contains projects that I am currently working on and have worked on.",
+    image: "/og-image.png",
+    page: "projects"
+  };
+
+  useServerSeoMeta({
+    title: seoMeta.title,
+    ogTitle: seoMeta.title,
+    twitterTitle: seoMeta.title,
+    description: seoMeta.description,
+    ogDescription: seoMeta.description,
+    twitterDescription: seoMeta.description,
+    ogImage: seoMeta.image,
+    twitterImage: seoMeta.image,
+    ogUrl: `https://oneminch.dev/${seoMeta.page}`,
+    ogType: "website",
+    ogLocale: "en_US",
+    twitterCard: "summary_large_image"
+  });
+
+  // Skeletons
+  const projectSkeletonIds = () => [...Array(4).fill(Math.random())];
+
+  const { pending, data: projects } = await useLazyFetch("/api/projects", {
+    getCachedData(key) {
+      return nuxtApp.payload.data[key] || nuxtApp.static.data[key];
+    }
+  });
+
+  const featuredProjects = ref([]);
+  const visualProjects = ref([]);
+  const nonVisualProjects = ref([]);
+
+  watch(projects, (allProjects) => {
+    const { featured, visual, nonVisual } = JSON.parse(
+      JSON.stringify(allProjects)
+    );
+
+    featuredProjects.value = featured.slice();
+    visualProjects.value = visual.slice();
+    nonVisualProjects.value = nonVisual.slice();
+  });
+</script>
+
 <!-- Projects Page -->
 <template>
   <main id="main-content">
@@ -74,47 +124,3 @@
     </section>
   </main>
 </template>
-
-<script setup>
-  const seoMeta = {
-    title: "Dawit's Projects",
-    description:
-      "This page contains projects that I am currently working on and have worked on.",
-    image: "/og-image.png",
-    page: "projects"
-  };
-
-  useServerSeoMeta({
-    title: seoMeta.title,
-    ogTitle: seoMeta.title,
-    twitterTitle: seoMeta.title,
-    description: seoMeta.description,
-    ogDescription: seoMeta.description,
-    twitterDescription: seoMeta.description,
-    ogImage: seoMeta.image,
-    twitterImage: seoMeta.image,
-    ogUrl: `https://oneminch.dev/${seoMeta.page}`,
-    ogType: "website",
-    ogLocale: "en_US",
-    twitterCard: "summary_large_image"
-  });
-
-  // Skeletons
-  const projectSkeletonIds = () => [...Array(4).fill(Math.random())];
-
-  const { pending, data: projects } = await useLazyFetch("/api/projects");
-
-  const featuredProjects = ref([]);
-  const visualProjects = ref([]);
-  const nonVisualProjects = ref([]);
-
-  watch(projects, (allProjects) => {
-    const { featured, visual, nonVisual } = JSON.parse(
-      JSON.stringify(allProjects)
-    );
-
-    featuredProjects.value = featured.slice();
-    visualProjects.value = visual.slice();
-    nonVisualProjects.value = nonVisual.slice();
-  });
-</script>

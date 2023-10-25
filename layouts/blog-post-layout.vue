@@ -8,6 +8,7 @@
         <nuxt-link
           class="focused-link flex justify-between items-center py-1 px-3 bg-zinc-200 dark:bg-zinc-700 dark:text-zinc-200 duration-150 rounded-md no-underline border border-zinc-300 dark:border-zinc-600"
           to="/"
+          prefetch
         >
           <Icon name="heroicons:home-20-solid" class="mr-2" />
           Home
@@ -15,6 +16,7 @@
         <nuxt-link
           class="focused-link flex justify-between items-center py-1 px-3 bg-zinc-200 dark:bg-zinc-700 dark:text-zinc-200 duration-150 rounded-md no-underline border border-zinc-300 dark:border-zinc-600"
           to="/blog"
+          prefetch
         >
           <Icon name="heroicons:rss-solid" class="mr-2" />
 
@@ -23,6 +25,7 @@
         <nuxt-link
           class="focused-link flex justify-between items-center py-1 px-3 bg-zinc-200 dark:bg-zinc-700 dark:text-zinc-200 duration-150 rounded-md no-underline border border-zinc-300 dark:border-zinc-600"
           to="/leetcode"
+          prefetch
         >
           <Icon name="simple-icons:leetcode" class="mr-2" />
 

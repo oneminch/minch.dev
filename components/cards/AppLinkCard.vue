@@ -15,6 +15,7 @@
     class="focused-link card-style flex flex-col items-center px-2 pt-2 pb-3 relative rounded-lg font-medium overflow-hidden"
     :target="isExternal ? '_blank' : '_self'"
     :to="url"
+    prefetch
   >
     <Icon :name="icon" size="2.5rem" class="mb-2 p-1" />
 
