@@ -1,3 +1,64 @@
+<script setup>
+  const seoMeta = {
+    title: "Dawit - Frontend Developer",
+    description:
+      "I'm a frontend engineer who's passionate about the open web (JavaScript, React.js, Vue.js)",
+    image: "/og-image.png",
+    page: ""
+  };
+
+  useServerSeoMeta({
+    title: seoMeta.title,
+    ogTitle: seoMeta.title,
+    twitterTitle: seoMeta.title,
+    description: seoMeta.description,
+    ogDescription: seoMeta.description,
+    twitterDescription: seoMeta.description,
+    ogImage: seoMeta.image,
+    twitterImage: seoMeta.image,
+    ogUrl: `https://oneminch.dev/${seoMeta.page}`,
+
+    ogType: "website",
+    ogLocale: "en_US",
+    twitterCard: "summary_large_image"
+  });
+
+  // Skeletons
+  const blogSkeletonIds = [...Array(2).fill(Math.random())];
+  const projectSkeletonIds = [...Array(2).fill(Math.random())];
+
+  // Fetch latest 2 blog posts
+  const { pending: blogsPending, data: blogPosts } = await useLazyAsyncData(
+    "blog",
+    () => queryContent("/blog").sort({ publishedOn: -1 }).limit(2).find()
+  );
+
+  // Fetch 2 featured projects
+  const { pending: projectsPending, data: projects } = await useLazyFetch(
+    "/api/projects"
+  );
+
+  const skillset = ref([
+    {
+      JavaScript: "skill-icons:javascript",
+      HTML: "skill-icons:html",
+      CSS: "skill-icons:css",
+      "Vue.js": "skill-icons:vuejs-light",
+      "Nuxt.js": "skill-icons:nuxtjs-light",
+      "React.js": "skill-icons:react-light",
+      "Tailwind CSS": "skill-icons:tailwindcss-light"
+    },
+    {
+      Git: "skill-icons:git",
+      AWS: "skill-icons:aws-dark",
+      "Node.js": "skill-icons:nodejs-light",
+      Python: "skill-icons:python-light",
+      PostgreSQL: "skill-icons:postgresql-light",
+      Flask: "skill-icons:flask-light"
+    }
+  ]);
+</script>
+
 <!-- Landing Page -->
 <template>
   <main id="main-content" class="[&>*]:mb-6 last:[&>*]:mb-0">
@@ -8,10 +69,10 @@
     <section>
       <h1 class="font-semibold text-2xl mb-6">Hi, my name is Dawit 👋</h1>
       <p class="text-zinc-500 dark:text-zinc-400 mb-4">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio iste
-        praesentium sed eum minus repellendus porro. Explicabo earum ex, odio,
-        voluptatem laborum sapiente, aut quo molestiae placeat nobis aliquam
-        minus!
+        Lorem ipsum <em>dolor</em> sit amet consectetur adipisicing elit.
+        Distinctio iste praesentium sed eum minus <em>repellendus</em> porro.
+        Explicabo earum ex, odio, voluptatem laborum sapiente, aut quo
+        <em>molestiae</em> placeat nobis aliquam minus!
       </p>
     </section>
 
@@ -119,63 +180,30 @@
   </main>
 </template>
 
-<script setup>
-  const seoMeta = {
-    title: "Dawit - Frontend Developer",
-    description:
-      "I'm a frontend engineer who's passionate about the open web (JavaScript, React.js, Vue.js)",
-    image: "/og-image.png",
-    page: ""
-  };
+<style scoped>
+  em {
+    position: relative;
+    font-style: normal;
+  }
+  em::after {
+    content: "";
+    position: absolute;
+    bottom: -0.25rem;
+    left: 0rem;
+    right: 0rem;
+    height: 0.75rem;
+    z-index: -1;
+    background-image: url("/squiggly.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 1rem;
+  }
 
-  useServerSeoMeta({
-    title: seoMeta.title,
-    ogTitle: seoMeta.title,
-    twitterTitle: seoMeta.title,
-    description: seoMeta.description,
-    ogDescription: seoMeta.description,
-    twitterDescription: seoMeta.description,
-    ogImage: seoMeta.image,
-    twitterImage: seoMeta.image,
-    ogUrl: `https://oneminch.dev/${seoMeta.page}`,
-
-    ogType: "website",
-    ogLocale: "en_US",
-    twitterCard: "summary_large_image"
-  });
-
-  // Skeletons
-  const blogSkeletonIds = [...Array(2).fill(Math.random())];
-  const projectSkeletonIds = [...Array(2).fill(Math.random())];
-
-  // Fetch latest 2 blog posts
-  const { pending: blogsPending, data: blogPosts } = await useLazyAsyncData(
-    "blog",
-    () => queryContent("/blog").sort({ publishedOn: -1 }).limit(2).find()
-  );
-
-  // Fetch 2 featured projects
-  const { pending: projectsPending, data: projects } = await useLazyFetch(
-    "/api/projects"
-  );
-
-  const skillset = ref([
-    {
-      JavaScript: "skill-icons:javascript",
-      HTML: "skill-icons:html",
-      CSS: "skill-icons:css",
-      "Vue.js": "skill-icons:vuejs-light",
-      "Nuxt.js": "skill-icons:nuxtjs-light",
-      "React.js": "skill-icons:react-light",
-      "Tailwind CSS": "skill-icons:tailwindcss-light"
-    },
-    {
-      Git: "skill-icons:git",
-      AWS: "skill-icons:aws-dark",
-      "Node.js": "skill-icons:nodejs-light",
-      Python: "skill-icons:python-light",
-      PostgreSQL: "skill-icons:postgresql-light",
-      Flask: "skill-icons:flask-light"
-    }
-  ]);
-</script>
+  p > em::after {
+    bottom: -0.3rem;
+    height: 0.5rem;
+    left: 0rem;
+    right: 0rem;
+  }
+</style>

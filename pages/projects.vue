@@ -116,6 +116,5 @@
     featuredProjects.value = featured.slice();
     visualProjects.value = visual.slice();
     nonVisualProjects.value = nonVisual.slice();
-    console.log(featuredProjects, visualProjects, nonVisualProjects);
   });
 </script>
