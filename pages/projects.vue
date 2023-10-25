@@ -1,6 +1,4 @@
 <script setup>
-  const nuxtApp = useNuxtApp();
-
   const seoMeta = {
     title: "Dawit's Projects",
     description:
@@ -27,11 +25,7 @@
   // Skeletons
   const projectSkeletonIds = () => [...Array(4).fill(Math.random())];
 
-  const { pending, data: projects } = await useLazyFetch("/api/projects", {
-    getCachedData(key) {
-      return nuxtApp.payload.data[key] || nuxtApp.static.data[key];
-    }
-  });
+  const { pending, data: projects } = await useLazyFetch("/api/projects");
 
   const featuredProjects = ref([]);
   const visualProjects = ref([]);

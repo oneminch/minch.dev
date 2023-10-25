@@ -74,7 +74,6 @@ export default defineNuxtConfig({
   ],
   routeRules: {
     "/**": { prerender: true },
-    "/api/**": { cors: true },
     "/picks": { isr: 3600 },
     "/projects": { isr: 3600 }
   },
