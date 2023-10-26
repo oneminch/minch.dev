@@ -12,7 +12,7 @@
 
 <template>
   <nuxt-link
-    class="focused-link card-style flex flex-col items-center px-2 pt-2 pb-3 relative rounded-lg font-medium overflow-hidden"
+    class="focused-link card-style flex flex-col justify-center items-center px-2 pt-2 pb-3 relative rounded-lg font-medium overflow-hidden"
     :target="isExternal ? '_blank' : '_self'"
     :to="url"
     prefetch

@@ -61,7 +61,7 @@
 
 <!-- Landing Page -->
 <template>
-  <main id="main-content" class="[&>*]:mb-6 last:[&>*]:mb-0">
+  <main id="main-content" class="space-y-6">
     <Title>{{ seoMeta.title }}</Title>
     <Meta name="description" :content="seoMeta.description" />
 
@@ -83,7 +83,6 @@
         I am primarily a problem-solver, but here are some tools I've used and
         some I have experimented with over the years.
       </p>
-      <!-- <div class="grid grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-2"> -->
       <ul
         class="p-0 mb-4 space-x-2"
         v-for="(skills, index) in skillset"
@@ -102,7 +101,6 @@
           />
         </li>
       </ul>
-      <!-- </div> -->
     </section>
 
     <!-- Projects -->
@@ -173,6 +171,49 @@
             :coverImage="blogPost.image"
           />
         </template>
+      </div>
+    </section>
+
+    <!-- Other Links -->
+    <section class="space-y-2 mb-2">
+      <h2 class="font-bold text-xl py-2">More Stuff</h2>
+
+      <div
+        class="grid grid-cols-2 lg:grid-cols-4 lg:grid-rows-2 lg:grid-flow-col gap-4 lg:gap-2 lg:[&_:first-child]:row-span-2 lg:[&_:last-child]:row-span-2"
+      >
+        <app-link-card
+          label="Resume"
+          icon="fluent-emoji:briefcase"
+          url="/resume"
+        ></app-link-card>
+        <app-link-card
+          label="LeetCode"
+          icon="fluent-emoji:teacup-without-handle"
+          url="/leetcode"
+        ></app-link-card>
+        <app-link-card
+          label="Picks"
+          icon="fluent-emoji:leafy-green"
+          url="/picks"
+        ></app-link-card>
+        <app-link-card
+          label="Notes"
+          icon="fluent-emoji:spiral-notepad"
+          is-external="true"
+          url="https://github.com/oneminch/garden"
+        ></app-link-card>
+        <app-link-card
+          label="Photography"
+          icon="fluent-emoji:camera"
+          is-external="true"
+          url="https://unsplash.com/@oneminch"
+        ></app-link-card>
+        <app-link-card
+          label="TBD"
+          icon="fluent-emoji:red-question-mark"
+          is-external="true"
+          url="https://github.com/oneminch/garden"
+        ></app-link-card>
       </div>
     </section>
 

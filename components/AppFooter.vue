@@ -1,12 +1,10 @@
 <!-- Footer: Tech Stack -->
 <template>
-  <footer
-    class="flex items-center justify-center w-80 h-8 rounded-full mx-auto border border-zinc-200 bg-zinc-100 dark:border-zinc-700 dark:bg-zinc-800"
-  >
+  <footer class="flex items-center justify-start h-8">
     <p
-      class="flex items-center text-sm font-medium text-zinc-700 dark:text-zinc-200"
+      class="flex items-center text-sm font-medium text-zinc-400 dark:text-zinc-600"
     >
-      Built from Scratch with
+      Built from scratch with
       <nuxt-link
         class="icon-link focused-link"
         to="https://nuxt.com/"
@@ -31,6 +29,10 @@
 </template>
 
 <style scoped>
+  footer {
+    @apply mt-10 !important;
+  }
+
   a:last-of-type {
     @apply mr-0 !important;
   }
