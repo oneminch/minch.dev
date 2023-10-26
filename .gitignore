@@ -18,6 +18,8 @@ vercel.json
 *.schema.yml
 content/notes/assets/
 content/notes/.vscode/
+content/notes/drafts.*.md
+content/notes/template.md
 build
 seeds
 .next

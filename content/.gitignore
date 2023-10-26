@@ -1,5 +1,8 @@
 node_modules
 .dendron.*
+*.code-workspace.lnk
+drafts.*
+template.md
 build
 seeds
 .next
