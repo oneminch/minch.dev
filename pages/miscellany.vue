@@ -13,16 +13,18 @@
     <section class="space-y-2 mb-2">
       <h2 class="font-bold text-xl py-2">Links</h2>
 
-      <div class="grid grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-2">
-        <app-link-card
-          label="LeetCode"
-          icon="fluent-emoji:teacup-without-handle"
-          url="/leetcode"
-        ></app-link-card>
+      <div
+        class="grid grid-cols-2 lg:grid-cols-4 lg:grid-rows-2 lg:grid-flow-col gap-4 lg:gap-2 lg:[&_:first-child]:row-span-2 lg:[&_:last-child]:row-span-2"
+      >
         <app-link-card
           label="Resume"
           icon="fluent-emoji:briefcase"
           url="/resume"
+        ></app-link-card>
+        <app-link-card
+          label="LeetCode"
+          icon="fluent-emoji:teacup-without-handle"
+          url="/leetcode"
         ></app-link-card>
         <app-link-card
           label="Picks"
@@ -40,6 +42,12 @@
           icon="fluent-emoji:camera"
           is-external="true"
           url="https://unsplash.com/@oneminch"
+        ></app-link-card>
+        <app-link-card
+          label="TBD"
+          icon="fluent-emoji:red-question-mark"
+          is-external="true"
+          url="https://github.com/oneminch/garden"
         ></app-link-card>
       </div>
     </section>

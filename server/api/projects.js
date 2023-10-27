@@ -42,9 +42,9 @@ const axiosReqConfig = {
   }
 };
 
-export default defineEventHandler(async () => {
+export default defineEventHandler(async (event) => {
   try {
-    // const { origin: reqUrl } = useRequestURL();
+    const { type } = getQuery(event);
 
     const response = await axios.post(
       endpointUrl,
@@ -100,11 +100,13 @@ export default defineEventHandler(async () => {
       project.repositoryTopics.splice(featuredTopicIndex, 1);
     });
 
-    return {
-      featured,
-      visual,
-      nonVisual
-    };
+    return type && type.localeCompare("featured")
+      ? { featured }
+      : {
+          featured,
+          visual,
+          nonVisual
+        };
   } catch (error) {
     console.error(error);
     return error;

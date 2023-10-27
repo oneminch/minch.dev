@@ -23,21 +23,6 @@
     twitterCard: "summary_large_image"
   });
 
-  // Skeletons
-  const blogSkeletonIds = [...Array(2).fill(Math.random())];
-  const projectSkeletonIds = [...Array(2).fill(Math.random())];
-
-  // Fetch latest 2 blog posts
-  const { pending: blogsPending, data: blogPosts } = await useLazyAsyncData(
-    "blog",
-    () => queryContent("/blog").sort({ publishedOn: -1 }).limit(2).find()
-  );
-
-  // Fetch 2 featured projects
-  const { pending: projectsPending, data: projects } = await useLazyFetch(
-    "/api/projects"
-  );
-
   const skillset = ref([
     {
       JavaScript: "skill-icons:javascript",
@@ -57,6 +42,34 @@
       Flask: "skill-icons:flask-light"
     }
   ]);
+
+  // Skeletons
+  const blogSkeletonIds = [...Array(2).fill(Math.random())];
+  const projectSkeletonIds = [...Array(2).fill(Math.random())];
+
+  // Fetch latest 2 blog posts
+  const { pending: blogsPending, data: blogPosts } = await useLazyAsyncData(
+    "featured-posts",
+    () => queryContent("/blog").sort({ publishedOn: -1 }).limit(2).find()
+  );
+
+  // Fetch 2 featured projects
+  const featuredProjects = ref([]);
+
+  const { pending: projectsPending, data: projects } = await useLazyFetch(
+    "/api/projects",
+    {
+      key: "featured-projects",
+      query: {
+        type: "featured"
+      }
+    }
+  );
+  watch(projects, (allProjects) => {
+    const { featured } = JSON.parse(JSON.stringify(allProjects));
+
+    featuredProjects.value = featured.slice(0, 2);
+  });
 </script>
 
 <!-- Landing Page -->
@@ -126,7 +139,7 @@
         </template>
         <template v-else>
           <AppProjectCard
-            v-for="featuredProject in projects.featured.slice(0, 2)"
+            v-for="featuredProject in featuredProjects"
             :key="featuredProject.name"
             :img-url="featuredProject.openGraphImageUrl"
             :project-title="featuredProject.name"

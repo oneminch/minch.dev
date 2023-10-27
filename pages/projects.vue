@@ -25,7 +25,9 @@
   // Skeletons
   const projectSkeletonIds = () => [...Array(4).fill(Math.random())];
 
-  const { pending, data: projects } = await useLazyFetch("/api/projects");
+  const { pending, data: projects } = await useLazyFetch("/api/projects", {
+    key: "all-projects"
+  });
 
   const featuredProjects = ref([]);
   const visualProjects = ref([]);
@@ -52,13 +54,13 @@
 
     <!-- Featured Projects -->
     <section
-      class="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:grid-rows-[1fr_75px_1fr] lg:grid-flow-col mb-6"
+      class="grid grid-cols-1 grid-rows-2 gap-4 lg:grid-cols-[1fr_75px_1fr] lg:grid-flow-row mb-6"
     >
       <template v-if="pending">
         <AppProjectSkeleton
           v-for="skeletonId in projectSkeletonIds()"
           :key="skeletonId"
-          class="lg:first:row-span-2 lg:last:row-span-2"
+          class="lg:first:col-span-2 lg:last:col-span-2"
         />
       </template>
       <template v-else>
@@ -70,7 +72,7 @@
           :project-description="featuredProject.description"
           :project-url="featuredProject.homepageUrl"
           :tags="featuredProject.repositoryTopics"
-          class="lg:first:row-span-2 lg:last:row-span-2"
+          class="lg:first:col-span-2 lg:last:col-span-2"
         />
       </template>
     </section>
