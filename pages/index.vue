@@ -23,25 +23,18 @@
     twitterCard: "summary_large_image"
   });
 
-  const skillset = ref([
-    {
-      JavaScript: "skill-icons:javascript",
-      HTML: "skill-icons:html",
-      CSS: "skill-icons:css",
-      "Vue.js": "skill-icons:vuejs-light",
-      "Nuxt.js": "skill-icons:nuxtjs-light",
-      "React.js": "skill-icons:react-light",
-      "Tailwind CSS": "skill-icons:tailwindcss-light"
-    },
-    {
-      Git: "skill-icons:git",
-      AWS: "skill-icons:aws-dark",
-      "Node.js": "skill-icons:nodejs-light",
-      Python: "skill-icons:python-light",
-      PostgreSQL: "skill-icons:postgresql-light",
-      Flask: "skill-icons:flask-light"
-    }
-  ]);
+  const skillset = ref({
+    essentials: [
+      "JavaScript",
+      "HTML",
+      "CSS",
+      "Vue",
+      "Nuxt",
+      "React",
+      "Tailwind"
+    ],
+    tinker: ["Git", "AWS", "Node", "Python", "PostgreSQL", "Flask"]
+  });
 
   // Skeletons
   const blogSkeletonIds = [...Array(2).fill(Math.random())];
@@ -80,38 +73,44 @@
 
     <!-- Introduction -->
     <section>
-      <h1 class="font-semibold text-2xl mb-6">Hi, my name is Dawit 👋</h1>
-      <p class="text-zinc-500 dark:text-zinc-400 mb-4">
-        Curiosity-driven Lorem ipsum <em>dolor</em> sit amet consectetur
-        adipisicing elit. Distinctio iste praesentium sed eum minus
-        <em>repellendus</em> porro. Explicabo earum ex, odio, voluptatem laborum
-        sapiente, aut quo <em>molestiae</em> placeat nobis aliquam minus!
+      <h1 class="font-semibold text-2xl mb-6">Hi, I'm Dawit 👋</h1>
+      <p class="text-zinc-500 dark:text-zinc-300 mb-6 text-xl font-medium">
+        I craft <em>captivating</em> and <em>accessible</em> web interfaces.
+      </p>
+      <p class="text-zinc-500 dark:text-zinc-300 mb-8">
+        <!-- <br /> -->
+        My design-oriented approach ensures that every project I touch is as
+        aesthetically pleasing as it is accessible and functional.
       </p>
     </section>
 
     <!-- Skills -->
     <section>
       <h2 class="font-semibold text-xl mb-1 py-2">Skills</h2>
-      <p class="text-zinc-500 dark:text-zinc-400 mb-4">
-        I am primarily a problem-solver, but here are some tools I've used and
-        some I have experimented with over the years.
+      <p class="text-zinc-500 dark:text-zinc-300 mb-6">
+        My specialty is solving problems, and here is my toolbox:
       </p>
-      <ul
-        class="p-0 mb-4 space-x-2"
-        v-for="(skills, index) in skillset"
-        :key="index"
-      >
+      <ul class="p-0 mb-4 space-x-2">
         <li
-          v-for="(skillIcon, skillName) in skills"
+          v-for="skillName in skillset.essentials"
           :key="skillName"
-          :title="skillName"
           class="inline-block"
         >
-          <Icon
-            :name="skillIcon"
-            size="2rem"
-            class="rounded-lg ring-1 ring-zinc-200 dark:ring-zinc-800"
-          />
+          {{ skillName }}
+        </li>
+      </ul>
+      <p class="text-zinc-500 dark:text-zinc-300 mb-6">
+        I'm infinitely curious. Always learning and experimenting.
+        <br />
+        I've dabbled with:
+      </p>
+      <ul class="p-0 mb-4 space-x-2">
+        <li
+          v-for="skillName in skillset.tinker"
+          :key="skillName"
+          class="inline-block"
+        >
+          {{ skillName }}
         </li>
       </ul>
     </section>
@@ -130,6 +129,10 @@
           />
         </nuxt-link>
       </h2>
+      <p class="text-zinc-500 dark:text-zinc-300 mb-6">
+        I'm always building things from scratch either to sharpen my skills or
+        to solve a very specific real-world problem.
+      </p>
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
         <template v-if="projectsPending">
           <AppProjectSkeleton
@@ -165,6 +168,11 @@
           />
         </nuxt-link>
       </h2>
+      <p class="text-zinc-500 dark:text-zinc-300 mb-6">
+        I use writing as a tool for thought. In the form of articles, I
+        sometimes share some of the things I've learned or the process behind
+        some of my projects.
+      </p>
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
         <template v-if="blogsPending">
           <AppBlogSkeleton
@@ -248,6 +256,7 @@
     height: 0.75rem;
     z-index: -1;
     background-image: url("/squiggly.svg");
+    opacity: 0.85;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;

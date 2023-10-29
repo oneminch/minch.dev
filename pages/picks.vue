@@ -42,7 +42,7 @@
     <Meta name="description" :content="seoMeta.description" />
 
     <h1 class="font-bold text-2xl mb-6">Picks</h1>
-    <p class="text-zinc-500 dark:text-zinc-400 mb-4">
+    <p class="text-zinc-500 dark:text-zinc-300 mb-8">
       Content from across the web I found interesting.
     </p>
 

@@ -5,7 +5,7 @@
     <Meta name="description" :content="seoMeta.description" />
 
     <h1 class="text-3xl text-left font-bold mb-6">LeetCode Solutions</h1>
-    <p class="text-zinc-500 dark:text-zinc-400 mb-4">
+    <p class="text-zinc-500 dark:text-zinc-300 mb-8">
       My solutions to some LeetCode-style coding problems.
     </p>
 

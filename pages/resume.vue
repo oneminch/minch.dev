@@ -53,7 +53,7 @@
             {{ experience.company }}
           </span>
           <br />
-          <span class="text-zinc-500 dark:text-zinc-400">
+          <span class="text-zinc-500 dark:text-zinc-300">
             ({{ experience.from }} - {{ experience.to }})
           </span>
         </h3>
@@ -88,7 +88,7 @@
             {{ education.degree }} - {{ education.major }}
           </span>
           <br />
-          <span class="text-zinc-500 dark:text-zinc-400">
+          <span class="text-zinc-500 dark:text-zinc-300">
             ({{ education.from }} - {{ education.to }})
           </span>
         </h3>
