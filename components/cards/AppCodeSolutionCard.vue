@@ -1,7 +1,7 @@
 <!-- Coding Solution Card -->
 <template>
   <nuxt-link
-    class="focused-link card-style w-full flex justify-start items-center px-4 py-2 relative rounded-xl"
+    class="focused-link card-style w-full flex justify-start items-center px-4 py-2 relative rounded-xl transition-colors duration-150 hover:bg-green-50/25 dark:hover:bg-zinc-700/75"
     :to="url"
     :title="problemTitle"
   >

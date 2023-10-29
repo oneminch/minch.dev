@@ -25,15 +25,14 @@
 
   const skillset = ref({
     essentials: [
+      "HTML + CSS",
       "JavaScript",
-      "HTML",
-      "CSS",
-      "Vue",
-      "Nuxt",
+      "Vue.js / Nuxt.js",
       "React",
-      "Tailwind"
+      "Tailwind CSS",
+      "Git"
     ],
-    tinker: ["Git", "AWS", "Node", "Python", "PostgreSQL", "Flask"]
+    tinker: ["Next.js", "Node.js", "Python / Flask", "SQL", "..."]
   });
 
   // Skeletons
@@ -74,10 +73,10 @@
     <!-- Introduction -->
     <section>
       <h1 class="font-semibold text-2xl mb-6">Hi, I'm Dawit 👋</h1>
-      <p class="text-zinc-500 dark:text-zinc-300 mb-6 text-xl font-medium">
+      <p class="text-zinc-600 dark:text-zinc-300 mb-6 text-xl font-medium">
         I craft <em>captivating</em> and <em>accessible</em> web interfaces.
       </p>
-      <p class="text-zinc-500 dark:text-zinc-300 mb-8">
+      <p class="text-zinc-600 dark:text-zinc-300 mb-6">
         <!-- <br /> -->
         My design-oriented approach ensures that every project I touch is as
         aesthetically pleasing as it is accessible and functional.
@@ -87,30 +86,37 @@
     <!-- Skills -->
     <section>
       <h2 class="font-semibold text-xl mb-1 py-2">Skills</h2>
-      <p class="text-zinc-500 dark:text-zinc-300 mb-6">
+      <p class="text-zinc-600 dark:text-zinc-300 mb-6">
         My specialty is solving problems, and here is my toolbox:
       </p>
-      <ul class="p-0 mb-4 space-x-2">
+      <ul
+        class="w-full lg:w-3/4 p-0 pl-4 mb-4 list-disc grid grid-rows-3 grid-flow-col-dense"
+      >
         <li
           v-for="skillName in skillset.essentials"
           :key="skillName"
-          class="inline-block"
+          class="text-green-400"
         >
-          {{ skillName }}
+          <span class="text-zinc-600 dark:text-zinc-300 font-medium">{{
+            skillName
+          }}</span>
         </li>
       </ul>
-      <p class="text-zinc-500 dark:text-zinc-300 mb-6">
-        I'm infinitely curious. Always learning and experimenting.
-        <br />
-        I've dabbled with:
+      <p class="text-zinc-600 dark:text-zinc-300 mb-6">
+        I'm infinitely curious. Always learning and experimenting with other
+        tools:
       </p>
-      <ul class="p-0 mb-4 space-x-2">
+      <ul
+        class="w-full lg:w-3/4 p-0 pl-4 mb-4 list-disc grid grid-rows-3 grid-flow-col-dense"
+      >
         <li
           v-for="skillName in skillset.tinker"
           :key="skillName"
-          class="inline-block"
+          class="text-green-400 [&_span]:last:text-green-400"
         >
-          {{ skillName }}
+          <span class="text-zinc-600 dark:text-zinc-300 font-medium">{{
+            skillName
+          }}</span>
         </li>
       </ul>
     </section>
@@ -129,7 +135,7 @@
           />
         </nuxt-link>
       </h2>
-      <p class="text-zinc-500 dark:text-zinc-300 mb-6">
+      <p class="text-zinc-600 dark:text-zinc-300 mb-6">
         I'm always building things from scratch either to sharpen my skills or
         to solve a very specific real-world problem.
       </p>
@@ -168,7 +174,7 @@
           />
         </nuxt-link>
       </h2>
-      <p class="text-zinc-500 dark:text-zinc-300 mb-6">
+      <p class="text-zinc-600 dark:text-zinc-300 mb-6">
         I use writing as a tool for thought. In the form of articles, I
         sometimes share some of the things I've learned or the process behind
         some of my projects.

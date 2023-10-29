@@ -51,7 +51,7 @@
     <Meta name="description" :content="seoMeta.description" />
 
     <h1 class="text-3xl text-left font-bold mb-6">Projects</h1>
-    <p class="text-zinc-500 dark:text-zinc-300 mb-8">
+    <p class="text-zinc-600 dark:text-zinc-300 mb-8">
       I'm always building things from scratch either to sharpen my skills or to
       solve a very specific real-world problem.
     </p>

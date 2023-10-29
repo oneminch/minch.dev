@@ -73,9 +73,9 @@ export default defineNuxtConfig({
     "nuxt-icon"
   ],
   routeRules: {
-    "/**": { prerender: true },
-    "/picks": { isr: 3600 },
-    "/projects": { isr: 3600 }
+    // "/**": { prerender: true },
+    // "/picks": { isr: 3600 },
+    // "/projects": { isr: 3600 }
   },
   runtimeConfig: {
     githubToken: process.env.GITHUB_TOKEN,
