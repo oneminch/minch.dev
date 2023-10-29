@@ -45,10 +45,10 @@
     () => queryContent("/blog").sort({ publishedOn: -1 }).limit(2).find()
   );
 
-  // Fetch 2 featured projects
+  // Fetch featured projects
   const featuredProjects = ref([]);
 
-  const { pending: projectsPending, data: projects } = await useLazyFetch(
+  const { pending: projectsPending, data: projects } = await useFetch(
     "/api/projects",
     {
       key: "featured-projects",
