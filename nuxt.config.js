@@ -74,7 +74,8 @@ export default defineNuxtConfig({
   ],
   routeRules: {
     "/**": { prerender: true },
-    "/picks": { isr: 3600 }
+    "/picks": { isr: 3600 },
+    "/projects": { isr: 86400 }
   },
   runtimeConfig: {
     githubToken: process.env.GITHUB_TOKEN,
