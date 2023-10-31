@@ -55,6 +55,34 @@
     @apply w-full rounded-xl pt-6 md:px-10 py-4 pb-8 bg-transparent md:bg-zinc-50 md:dark:bg-zinc-900/40 font-normal overflow-x-hidden -z-0;
   }
 
+  em {
+    position: relative;
+    font-style: normal;
+  }
+
+  em::after {
+    content: "";
+    position: absolute;
+    bottom: -0.25rem;
+    left: 0rem;
+    right: 0rem;
+    height: 0.75rem;
+    z-index: -1;
+    background-image: url("/squiggly.svg");
+    opacity: 0.85;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 1rem;
+  }
+
+  p > em::after {
+    bottom: -0.3rem;
+    height: 0.5rem;
+    left: 0rem;
+    right: 0rem;
+  }
+
   .slide-enter-active,
   .slide-leave-active {
     transition: all 150ms;

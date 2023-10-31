@@ -3,6 +3,7 @@ node_modules
 *.code-workspace.lnk
 drafts.*
 template.md
+project-template.md
 build
 seeds
 .next

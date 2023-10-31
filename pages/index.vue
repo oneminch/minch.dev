@@ -28,11 +28,11 @@
       "HTML + CSS",
       "JavaScript",
       "Vue.js / Nuxt.js",
-      "React",
+      "React / Next.js",
       "Tailwind CSS",
       "Git"
     ],
-    tinker: ["Next.js", "Node.js", "Python / Flask", "SQL", "..."]
+    tinker: ["Node.js", "Astro", "Svelte", "Python / Flask", "SQL", "..."]
   });
 
   // Skeletons
@@ -65,27 +65,25 @@
 
 <!-- Landing Page -->
 <template>
-  <main id="main-content" class="space-y-6">
+  <main id="main-content" class="space-y-5">
     <Title>{{ seoMeta.title }}</Title>
     <Meta name="description" :content="seoMeta.description" />
 
     <!-- Introduction -->
     <section>
       <h1 class="font-semibold text-2xl mb-6">Hi, I'm Dawit 👋</h1>
-      <p class="text-zinc-600 dark:text-zinc-300 mb-6 text-xl font-medium">
-        I craft <em>captivating</em> and <em>accessible</em> web interfaces.
+      <p class="text-zinc-600 dark:text-zinc-400 mb-4 text-xl font-medium">
+        I craft <em>delightful</em> and <em>accessible</em> web interfaces.
       </p>
-      <p class="text-zinc-600 dark:text-zinc-300 mb-6">
-        <!-- <br /> -->
-        My design-oriented approach ensures that every project I touch is as
-        aesthetically pleasing as it is accessible and functional.
+      <p class="text-zinc-600 dark:text-zinc-400">
+        I am currently seeking opportunities to share my passion and expertise.
       </p>
     </section>
 
     <!-- Skills -->
     <section>
       <h2 class="font-semibold text-xl mb-1 py-2">Skills</h2>
-      <p class="text-zinc-600 dark:text-zinc-300 mb-6">
+      <p class="text-zinc-600 dark:text-zinc-400 mb-6">
         My specialty is solving problems, and here is my toolbox:
       </p>
       <ul
@@ -96,12 +94,12 @@
           :key="skillName"
           class="text-green-400"
         >
-          <span class="text-zinc-600 dark:text-zinc-300 font-medium">{{
+          <span class="text-zinc-600 dark:text-zinc-400 font-medium">{{
             skillName
           }}</span>
         </li>
       </ul>
-      <p class="text-zinc-600 dark:text-zinc-300 mb-6">
+      <p class="text-zinc-600 dark:text-zinc-400 mb-6">
         I'm infinitely curious. Always learning and experimenting with other
         tools:
       </p>
@@ -113,7 +111,7 @@
           :key="skillName"
           class="text-green-400 [&_span]:last:text-green-400"
         >
-          <span class="text-zinc-600 dark:text-zinc-300 font-medium">{{
+          <span class="text-zinc-600 dark:text-zinc-400 font-medium">{{
             skillName
           }}</span>
         </li>
@@ -134,9 +132,11 @@
           />
         </nuxt-link>
       </h2>
-      <p class="text-zinc-600 dark:text-zinc-300 mb-6">
-        I'm always building things from scratch either to sharpen my skills or
-        to solve a very specific real-world problem.
+      <p class="text-zinc-600 dark:text-zinc-400 mb-6">
+        Each project is a manifestation of my passion for creating digital
+        magic.
+        <br />
+        These are some of the fruits of my creative labor:
       </p>
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
         <template v-if="projectsPending">
@@ -173,10 +173,9 @@
           />
         </nuxt-link>
       </h2>
-      <p class="text-zinc-600 dark:text-zinc-300 mb-6">
-        I use writing as a tool for thought. In the form of articles, I
-        sometimes share some of the things I've learned or the process behind
-        some of my projects.
+      <p class="text-zinc-600 dark:text-zinc-400 mb-6">
+        I use writing as a tool for thinking. I like to share some of the things
+        I've learned or the process behind some of my projects.
       </p>
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
         <template v-if="blogsPending">
@@ -209,7 +208,7 @@
       >
         <app-link-card
           label="Resume"
-          icon="fluent-emoji:briefcase"
+          icon="fluent-emoji:\"
           url="/resume"
         ></app-link-card>
         <app-link-card
@@ -246,32 +245,3 @@
     <AppFooter />
   </main>
 </template>
-
-<style scoped>
-  em {
-    position: relative;
-    font-style: normal;
-  }
-  em::after {
-    content: "";
-    position: absolute;
-    bottom: -0.25rem;
-    left: 0rem;
-    right: 0rem;
-    height: 0.75rem;
-    z-index: -1;
-    background-image: url("/squiggly.svg");
-    opacity: 0.85;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    border-radius: 1rem;
-  }
-
-  p > em::after {
-    bottom: -0.3rem;
-    height: 0.5rem;
-    left: 0rem;
-    right: 0rem;
-  }
-</style>

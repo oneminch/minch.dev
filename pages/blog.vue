@@ -39,10 +39,9 @@
     <Meta name="description" :content="seoMeta.description" />
 
     <h1 class="text-3xl text-left font-bold mb-6">Blog</h1>
-    <p class="text-zinc-600 dark:text-zinc-300 mb-8">
-      I use writing as a tool for thought. In the form of articles, I sometimes
-      share some of the things I've learned or the process behind some of my
-      projects.
+    <p class="text-zinc-600 dark:text-zinc-400 mb-8">
+      I use writing as a tool for thinking. I like to share some of the things
+      I've learned or the process behind some of my projects.
     </p>
 
     <section class="grid grid-cols-1 lg:grid-cols-2 gap-4">
