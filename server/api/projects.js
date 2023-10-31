@@ -60,7 +60,6 @@ export default defineEventHandler(async (event) => {
         description: item.repo.description,
         homepageUrl: item.repo.homepageUrl,
         openGraphImageUrl: item.repo.openGraphImageUrl,
-        // each gh pages url to the format: reqUrl/r/repo-url
         url: item.repo.url,
         repositoryTopics: item.repo.repositoryTopics.nodes
           .reduce((acc, curr) => {
@@ -100,7 +99,7 @@ export default defineEventHandler(async (event) => {
       project.repositoryTopics.splice(featuredTopicIndex, 1);
     });
 
-    return type && type.localeCompare("featured")
+    return type === "featured"
       ? { featured }
       : {
           featured,

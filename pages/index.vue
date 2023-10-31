@@ -46,22 +46,21 @@
   );
 
   // Fetch featured projects
-  const featuredProjects = ref([]);
+  const featuredProjects = ref(null);
 
-  const { pending: projectsPending, data: projects } = await useFetch(
+  const { pending: projectsPending, data } = await useLazyFetch(
     "/api/projects",
     {
-      key: "featured-projects",
+      key: "featuredprojects",
       query: {
         type: "featured"
+      },
+      onResponse({ response }) {
+        const { featured } = response._data;
+        featuredProjects.value = featured.slice(0, 2);
       }
     }
   );
-  watch(projects, (allProjects) => {
-    const { featured } = JSON.parse(JSON.stringify(allProjects));
-
-    featuredProjects.value = featured.slice(0, 2);
-  });
 </script>
 
 <!-- Landing Page -->
@@ -226,19 +225,19 @@
         <app-link-card
           label="Notes"
           icon="fluent-emoji:spiral-notepad"
-          is-external="true"
+          :is-external="true"
           url="https://github.com/oneminch/garden"
         ></app-link-card>
         <app-link-card
           label="Photography"
           icon="fluent-emoji:camera"
-          is-external="true"
+          :is-external="true"
           url="https://unsplash.com/@oneminch"
         ></app-link-card>
         <app-link-card
           label="TBD"
           icon="fluent-emoji:red-question-mark"
-          is-external="true"
+          :is-external="true"
           url="https://github.com/oneminch/garden"
         ></app-link-card>
       </div>

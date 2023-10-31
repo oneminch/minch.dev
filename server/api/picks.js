@@ -21,7 +21,6 @@ export default defineEventHandler(async () => {
         title: item.title,
         url: item.link
       };
-      // date: item.created
     });
 
     return picks;

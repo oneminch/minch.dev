@@ -34,19 +34,19 @@
         <app-link-card
           label="Notes"
           icon="fluent-emoji:spiral-notepad"
-          is-external="true"
+          :is-external="true"
           url="https://github.com/oneminch/garden"
         ></app-link-card>
         <app-link-card
           label="Photography"
           icon="fluent-emoji:camera"
-          is-external="true"
+          :is-external="true"
           url="https://unsplash.com/@oneminch"
         ></app-link-card>
         <app-link-card
           label="TBD"
           icon="fluent-emoji:red-question-mark"
-          is-external="true"
+          :is-external="true"
           url="https://github.com/oneminch/garden"
         ></app-link-card>
       </div>
@@ -61,19 +61,19 @@
         <app-link-card
           label="Nuxt"
           icon="logos:nuxt-icon"
-          is-external="true"
+          :is-external="true"
           url="https://nuxt.com"
         ></app-link-card>
         <app-link-card
           label="Tailwind CSS"
           icon="logos:tailwindcss-icon"
-          is-external="true"
+          :is-external="true"
           url="https://tailwindcss.com"
         ></app-link-card>
         <app-link-card
           label="Vercel"
           icon="logos:vercel-icon"
-          is-external="true"
+          :is-external="true"
           url="https://vercel.com"
         ></app-link-card>
       </div>

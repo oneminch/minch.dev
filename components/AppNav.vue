@@ -55,8 +55,8 @@
 
   const navLinks = {
     Home: "",
-    Blog: "blog",
     Projects: "projects",
+    Blog: "blog",
     Miscellany: "miscellany"
   };
 </script>

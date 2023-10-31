@@ -25,22 +25,19 @@
   // Skeletons
   const projectSkeletonIds = () => [...Array(4).fill(Math.random())];
 
-  const { pending, data: projects } = await useFetch("/api/projects", {
-    key: "all-projects"
-  });
+  const featuredProjects = ref(null);
+  const visualProjects = ref(null);
+  const nonVisualProjects = ref(null);
 
-  const featuredProjects = ref([]);
-  const visualProjects = ref([]);
-  const nonVisualProjects = ref([]);
+  const { pending } = await useLazyFetch("/api/projects", {
+    key: "allprojects",
+    onResponse({ response }) {
+      const { featured, visual, nonVisual } = response._data;
 
-  watch(projects, (allProjects) => {
-    const { featured, visual, nonVisual } = JSON.parse(
-      JSON.stringify(allProjects)
-    );
-
-    featuredProjects.value = featured.slice();
-    visualProjects.value = visual.slice();
-    nonVisualProjects.value = nonVisual.slice();
+      featuredProjects.value = featured.slice();
+      visualProjects.value = visual.slice();
+      nonVisualProjects.value = nonVisual.slice();
+    }
   });
 </script>
 
