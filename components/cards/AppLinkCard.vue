@@ -15,7 +15,6 @@
     class="focused-link card-style flex flex-col justify-center items-center px-2 pt-2 pb-3 relative rounded-xl font-medium overflow-hidden transition-colors duration-150 hover:bg-green-50/25 dark:hover:bg-zinc-700/75"
     :target="isExternal ? '_blank' : '_self'"
     :to="url"
-    prefetch
   >
     <Icon :name="icon" size="2.5rem" class="mb-2 p-1" />
 

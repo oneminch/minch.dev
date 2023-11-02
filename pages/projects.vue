@@ -31,6 +31,9 @@
 
   const { pending } = await useLazyFetch("/api/projects", {
     key: "allprojects",
+    query: {
+      type: "all"
+    },
     onResponse({ response }) {
       const { featured, visual, nonVisual } = response._data;
 

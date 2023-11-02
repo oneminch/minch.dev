@@ -34,20 +34,33 @@
     <!-- Short Bio Summary -->
     <p>
       Hello! My name is Dawit 👋. I craft web interfaces that are
-      <em>delightful</em> and <em>accessible</em>.
+      <span class="highlight">delightful</span> and
+      <span class="highlight">accessible</span>.
     </p>
+    <p>
+      I am currently seeking opportunities to share my passion and expertise.
+    </p>
+    <hr
+      class="block w-2/3 mx-auto md:my-4 border-none bg-gradient-to-r from-transparent via-zinc-300 dark:via-zinc-700 to-transparent h-[1px] rounded-full"
+    />
     <p>
       My interest in web development started back in 2016 when I came across the
       web development community on Instagram. I developed a keen interest and
       started to learn more about it from sources like Codecademy and W3Schools.
     </p>
-    <nuxt-img
-      format="webp"
-      loading="lazy"
-      src="/google-search.png"
-      alt="A screenshot of searching on google 'where to write code'"
-      class="w-full object-cover rounded-lg my-4"
-    />
+    <figure class="my-4">
+      <nuxt-img
+        format="webp"
+        loading="lazy"
+        src="/google-search.png"
+        alt="A screenshot of searching on google 'where to write code'"
+        class="w-full object-cover rounded-lg border border-zinc-200 dark:border-transparent mb-1"
+      />
+      <figcaption class="text-sm text-center text-zinc-500">
+        One of my first ever dev-related lookups: Googling 'where do you write
+        code'
+      </figcaption>
+    </figure>
     <p>
       This ultimately influenced my decision to pursue a Computer Science
       degree.
@@ -56,19 +69,53 @@
       While building a strong technical foundation in college, I dedicated a lot
       of my free time teaching myself web development and building things out.
     </p>
+    <hr
+      class="block w-2/3 mx-auto md:my-4 border-none bg-gradient-to-r from-transparent via-zinc-300 dark:via-zinc-700 to-transparent h-[1px] rounded-full"
+    />
     <p>
-      My <em>design-oriented</em> approach ensures that every project I touch is
-      as aesthetically pleasing as it is accessible and functional. Some of my
-      projects receive hundreds of monthly visits.
+      I enjoy playing story-driven games (Current Favorite - 'A Plague Tale'
+      Series).
     </p>
     <p>
-      I am currently seeking opportunities to share my passion and expertise.
+      I'm also a hobbyist photographer.
+      <a
+        href="https://unsplash.com/@oneminch"
+        class="focused-link focus:rounded no-underline border-b-[.1rem] border-b-green-400"
+        target="_blank"
+        >My photos on Unsplash</a
+      >
+      have been viewed over 6.5 million times 🤯.
     </p>
+    <div
+      class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 my-4 [&>img]:ring [&>img]:ring-zinc-300 [&>img]:dark:ring-zinc-800"
+    >
+      <nuxt-img
+        format="webp"
+        loading="lazy"
+        src="https://images.unsplash.com/photo-1547847041-a626718b4017"
+        alt="A long exposure shot of City Lake Falls in Cookeville, TN"
+        class="w-full object-cover rounded-lg"
+      />
+      <nuxt-img
+        format="webp"
+        loading="lazy"
+        src="https://images.unsplash.com/photo-1635372708431-64774de60e20"
+        alt="An Xbox controller"
+        class="w-full object-cover rounded-lg"
+      />
+      <nuxt-img
+        format="webp"
+        loading="lazy"
+        src="https://images.unsplash.com/photo-1580408485028-225972105876"
+        alt="My laptop in a dark environment with a colorful display"
+        class="w-full object-cover rounded-lg"
+      />
+    </div>
   </main>
 </template>
 
 <style scoped>
   p {
-    @apply text-zinc-600 dark:text-zinc-400 my-4 text-lg leading-relaxed;
+    @apply text-zinc-600 dark:text-zinc-400 my-4 text-base leading-relaxed;
   }
 </style>

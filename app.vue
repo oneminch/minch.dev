@@ -55,32 +55,12 @@
     @apply w-full rounded-xl pt-6 md:px-10 py-4 pb-8 bg-transparent md:bg-zinc-50 md:dark:bg-zinc-900/40 font-normal overflow-x-hidden -z-0;
   }
 
-  em {
-    position: relative;
-    font-style: normal;
+  span.highlight {
+    @apply relative text-zinc-800 dark:text-zinc-200;
   }
 
-  em::after {
-    content: "";
-    position: absolute;
-    bottom: -0.25rem;
-    left: 0rem;
-    right: 0rem;
-    height: 0.75rem;
-    z-index: -1;
-    background-image: url("/squiggly.svg");
-    opacity: 0.85;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    border-radius: 1rem;
-  }
-
-  p > em::after {
-    bottom: -0.3rem;
-    height: 0.5rem;
-    left: 0rem;
-    right: 0rem;
+  span.highlight::after {
+    @apply w-full h-0.5 content-[''] rounded absolute -bottom-1 -left-0 -right-0 bg-gradient-to-r from-green-400 to-lime-400 -z-10 transition-all duration-150;
   }
 
   .slide-enter-active,
