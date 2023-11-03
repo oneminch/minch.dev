@@ -8,7 +8,7 @@
       <nuxt-link
         class="icon-link focused-link"
         to="https://nuxt.com/"
-        aria-label="NuxtJS Icon"
+        aria-label="NuxtJS Website"
         target="_blank"
         title="NuxtJS"
       >
@@ -18,7 +18,7 @@
       <nuxt-link
         class="icon-link focused-link mr-0"
         to="https://tailwindcss.com/"
-        aria-label="Tailwind CSS Icon"
+        aria-label="Tailwind CSS Website"
         target="_blank"
         title="Tailwind CSS"
       >
@@ -30,7 +30,7 @@
 
 <style scoped>
   footer {
-    @apply mt-10 !important;
+    @apply mt-10 mb-8 !important;
   }
 
   a:last-of-type {

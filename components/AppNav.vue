@@ -1,7 +1,7 @@
 <!-- Navigation: Links -->
 <template>
   <nav
-    class="flex-col justify-center items-center rounded-xl p-2 md:px-4 text-zinc-900 dark:text-zinc-200 md:w-full w-32 md:max-h-64 max-h-16 md:right-0 md:bottom-0 fixed md:relative bottom-6 right-4 bg-zinc-100/75 dark:bg-zinc-900/75 md:bg-transparent dark:md:bg-transparent origin-bottom-right backdrop-blur-xl md:backdrop-blur-none print:hidden"
+    class="flex-col justify-center items-center rounded-xl p-1 md:px-4 text-zinc-900 dark:text-zinc-200 md:w-full w-32 md:max-h-64 max-h-16 md:right-0 md:bottom-0 fixed md:relative bottom-6 right-4 bg-zinc-100/75 dark:bg-zinc-900/75 md:bg-transparent dark:md:bg-transparent origin-bottom-right backdrop-blur-xl md:backdrop-blur-none print:hidden"
     :class="{ toggled: menuToggled }"
   >
     <ul
@@ -40,7 +40,7 @@
         aria-label="Menu"
         title="Menu"
       >
-        Pages
+        Menu
         <Icon name="octicon:project-roadmap-16" size="1.15rem" class="ml-2" />
       </button>
     </OnClickOutside>
@@ -62,7 +62,7 @@
 
 <style scoped>
   nav {
-    transition-property: width, max-height;
+    transition-property: width, max-height, padding;
     transition-duration: 150ms;
   }
 

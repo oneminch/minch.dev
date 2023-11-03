@@ -1,8 +1,7 @@
 <script setup>
   const seoMeta = {
     title: "Dawit - Frontend Developer",
-    description:
-      "I'm a frontend engineer who's passionate about the open web (JavaScript, React.js, Vue.js)",
+    description: "I craft delightful and accessible web interfaces.",
     image: "/og-image.png",
     page: ""
   };

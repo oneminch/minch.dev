@@ -23,7 +23,7 @@
       v-show="isExternal"
       name="heroicons:arrow-up-right-20-solid"
       size="1.5rem"
-      aria-label="An icon showing the link is external"
+      aria-label="Opens in a new tab"
       class="absolute top-1 right-1 flex-shrink-0 text-green-500 bg-zinc-100 dark:bg-zinc-700 border border-zinc-300 dark:border-none rounded-full p-1"
     />
   </nuxt-link>

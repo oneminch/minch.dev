@@ -25,6 +25,7 @@
         class="focused-link icon-link"
         :to="profileUrl"
         :title="name"
+        :aria-label="`Link to My ${name} Profile`"
         target="_blank"
       >
         <Icon :name="`simple-icons:${name.toLowerCase()}`" />

@@ -6,16 +6,16 @@
     :class="[
       'focused-link rounded-xl w-full relative flex flex-col justify-center items-center transition-all duration-200 overflow-hidden border border-zinc-200 dark:border-zinc-800',
       !hideImage
-        ? `min-h-[14rem] bg-no-repeat bg-clip-content bg-cover bg-center hover:ring-2 hover:ring-offset-0 hover:ring-green-400 hover:ring-opacity-75`
+        ? `min-h-[14rem] bg-no-repeat bg-clip-content bg-cover bg-center group/hover-effect`
         : 'min-h-[12rem] md:min-h-[13rem]'
     ]"
     :style="{ backgroundImage: `url(${imgUrl})` }"
   >
     <div
       :class="[
-        'flex flex-col items-start rounded-xl absolute inset-[-.25rem] flex-shrink-0 p-6 overflow-hidden transition-colors duration-150 [&>*]:flex-shrink-0',
+        'flex flex-col items-start rounded-2xl absolute inset-[-.25rem] flex-shrink-0 p-6 overflow-hidden transition-colors duration-150 [&>*]:flex-shrink-0',
         !hideImage
-          ? 'justify-end bg-gradient-to-b from-white/30 via-white/90 to-white/100 text-zinc-800 dark:from-black/40 dark:via-black/80 dark:to-black/100 dark:text-zinc-100'
+          ? 'justify-end bg-gradient-to-b from-white/30 via-white/90 to-white/100 text-zinc-800 dark:from-black/40 dark:via-black/80 dark:to-black/100 dark:text-zinc-100 group-hover/hover-effect:ring-inset group-hover/hover-effect:ring-1 group-hover/hover-effect:ring-offset-4 group-hover/hover-effect:ring-green-400 group-hover/hover-effect:ring-opacity-75 group-hover/hover-effect:ring-offset-transparent'
           : 'justify-start bg-zinc-200/75 dark:bg-zinc-800 hover:bg-zinc-300/75 dark:hover:bg-zinc-700 text-zinc-800 dark:text-zinc-100 group'
       ]"
     >
@@ -33,6 +33,7 @@
       <Icon
         name="heroicons:arrow-up-right-20-solid"
         size="1rem"
+        aria-label="Opens in a new tab"
         class="ml-auto absolute right-2 top-2 bg-green-500 text-zinc-600 rounded-full p-1 w-6 h-6"
       />
     </div>
