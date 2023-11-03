@@ -7,14 +7,15 @@
     <!-- Blog Image -->
     <div
       v-if="coverImage"
-      class="card-style flex items-center justify-center w-full max-h-32 flex-shrink-0 overflow-hidden mr-1 rounded-xl"
+      class="card-style flex items-center justify-center w-full h-32 flex-shrink-0 overflow-hidden mr-1 rounded-xl"
     >
       <nuxt-img
         format="webp"
+        height="325"
         loading="lazy"
         :src="coverImage"
         alt="Cover Image"
-        class="h-auto object-cover bg-cover origin-center bg-center"
+        class="w-full h-auto object-cover bg-cover origin-center bg-center"
       />
     </div>
     <div class="flex flex-col justify-between p-2 flex-shrink-0 w-full">

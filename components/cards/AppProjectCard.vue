@@ -6,7 +6,7 @@
     :class="[
       'focused-link rounded-xl w-full relative flex flex-col justify-center items-center transition-all duration-200 overflow-hidden border border-zinc-200 dark:border-zinc-800',
       !hideImage
-        ? `min-h-[14rem] bg-no-repeat bg-clip-content bg-cover bg-center group/hover-effect`
+        ? `min-h-[14rem] bg-zinc-200 dark:bg-zinc-600 bg-no-repeat bg-clip-content bg-cover bg-center group/hover-effect`
         : 'min-h-[12rem] md:min-h-[13rem]'
     ]"
     :style="{ backgroundImage: `url(${imgUrl})` }"

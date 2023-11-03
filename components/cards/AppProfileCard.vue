@@ -6,6 +6,8 @@
     <nuxt-img
       format="webp"
       loading="lazy"
+      width="112"
+      height="112"
       src="/profile.jpg"
       alt="Profile Picture"
       class="w-28 rounded-full border border-zinc-200 dark:border-zinc-800"

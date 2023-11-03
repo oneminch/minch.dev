@@ -81,7 +81,7 @@
 
 <style scoped>
   img {
-    @apply w-full object-cover bg-cover origin-center border border-zinc-300 dark:border-zinc-600;
+    @apply w-full h-auto object-cover bg-cover origin-center border border-zinc-300 dark:border-zinc-600;
   }
 
   details > summary::marker,

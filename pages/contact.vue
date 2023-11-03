@@ -42,5 +42,32 @@
         Under Construction
       </h1>
     </div>
+    <!-- <form action="/api/submit.post.js" class="w-full">
+      <label class="block w-1/2 mb-4 space-y-2">
+        <p>Name:</p>
+        <input
+          type="text"
+          name="name"
+          class="w-full py-2 px-3 rounded-lg bg-zinc-100 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-600"
+          placeholder="Your name..."
+        />
+      </label>
+      <label class="block w-1/2 mb-4 space-y-2">
+        <p>Email:</p>
+        <input
+          type="text"
+          name="email"
+          class="w-full py-2 px-3 rounded-lg bg-zinc-100 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-600"
+          placeholder="Your email address..."
+        />
+      </label>
+      <label class="block w-1/2 mb-4 space-y-2">
+        <p>Message:</p>
+        <textarea
+          name="message"
+          class="w-full py-2 px-3 rounded-lg bg-zinc-100 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-600"
+        ></textarea>
+      </label>
+    </form> -->
   </main>
 </template>

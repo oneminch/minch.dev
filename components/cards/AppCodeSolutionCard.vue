@@ -11,6 +11,8 @@
       <nuxt-img
         format="webp"
         loading="lazy"
+        width="40"
+        height="40"
         :src="`/icons/${platform}.png`"
         :alt="`${platform}`"
         :title="`${platform}`"
