@@ -74,13 +74,7 @@ export default defineNuxtConfig({
   ],
   routeRules: {
     "/**": { prerender: true },
-    // "/": { prerender: true },
-    // "/about": { prerender: true },
-    // "/blog": { prerender: true },
-    // "/blog/**": { prerender: true },
-    // "/leetcode": { prerender: true },
-    // "/leetcode/**": { prerender: true },
-    "/picks": { isr: 3600 },
+    "/picks": { swr: 3600 },
     "/projects": { isr: 86400 }
   },
   runtimeConfig: {

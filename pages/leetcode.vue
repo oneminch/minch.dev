@@ -33,10 +33,6 @@
 <script setup>
   import AppCodeSolutionSkeleton from "../components/skeletons/AppCodeSolutionSkeleton.vue";
 
-  definePageMeta({
-    layout: "blog-list-layout"
-  });
-
   const seoMeta = {
     title: "Dawit's LeetCode Solutions",
     description:

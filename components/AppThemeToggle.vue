@@ -13,16 +13,17 @@
     <input
       type="checkbox"
       class="peer sr-only"
-      aria-labelledby="theme-icon"
+      aria-label="Change Website Theme"
       v-model="isDark"
     />
     <span
-      id="theme-icon"
       class="h-5 w-5 p-1 flex items-center justify-center rounded-full text-center bg-zinc-50 dark:bg-zinc-900 text-zinc-900 dark:text-zinc-100 peer-checked:translate-x-3/4 text-xs shadow cursor-pointer"
       @click="toggle()"
     >
-      <Icon v-if="isDark" name="heroicons:moon-20-solid" />
-      <Icon v-else name="heroicons:sun-20-solid" />
+      <Icon
+        name="heroicons:moon-20-solid"
+        class="text-zinc-500 dark:text-zinc-100"
+      />
     </span>
   </label>
 </template>

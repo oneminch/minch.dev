@@ -25,22 +25,8 @@
   // Skeletons
   const projectSkeletonIds = () => [...Array(4).fill(Math.random())];
 
-  const featuredProjects = ref(null);
-  const visualProjects = ref(null);
-  const nonVisualProjects = ref(null);
-
-  const { pending } = await useLazyFetch("/api/projects", {
-    key: "allprojects",
-    query: {
-      type: "all"
-    },
-    onResponse({ response }) {
-      const { featured, visual, nonVisual } = response._data;
-
-      featuredProjects.value = featured.slice();
-      visualProjects.value = visual.slice();
-      nonVisualProjects.value = nonVisual.slice();
-    }
+  const { pending, data: projects } = await useLazyFetch("/api/projects", {
+    key: "allprojects"
   });
 </script>
 
@@ -70,7 +56,7 @@
       </template>
       <template v-else>
         <AppProjectCard
-          v-for="featuredProject in featuredProjects"
+          v-for="featuredProject in projects.featured"
           :key="featuredProject.name"
           :img-url="featuredProject.openGraphImageUrl"
           :project-title="featuredProject.name"
@@ -96,7 +82,7 @@
       </template>
       <template v-else>
         <AppProjectCard
-          v-for="project in visualProjects"
+          v-for="project in projects.visual"
           :key="project.name"
           :img-url="project.openGraphImageUrl"
           :project-title="project.name"
@@ -113,15 +99,17 @@
 
     <!-- Remaining Projects: Non-visual -->
     <section class="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-6">
-      <AppProjectCard
-        v-for="project in nonVisualProjects"
-        :key="project.name"
-        :img-url="''"
-        :project-title="project.name"
-        :project-description="project.description"
-        :project-url="project.homepageUrl"
-        :tags="project.repositoryTopics"
-      />
+      <template v-if="!pending">
+        <AppProjectCard
+          v-for="project in projects.nonVisual"
+          :key="project.name"
+          :img-url="''"
+          :project-title="project.name"
+          :project-description="project.description"
+          :project-url="project.homepageUrl"
+          :tags="project.repositoryTopics"
+        />
+      </template>
     </section>
   </main>
 </template>

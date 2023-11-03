@@ -44,7 +44,7 @@ const axiosReqConfig = {
 
 export default defineEventHandler(async (event) => {
   try {
-    const { type } = getQuery(event);
+    const { type, limit } = getQuery(event);
 
     const response = await axios.post(
       endpointUrl,
@@ -100,7 +100,7 @@ export default defineEventHandler(async (event) => {
     });
 
     return type === "featured"
-      ? { featured }
+      ? { featured: featured.slice(0, limit) }
       : {
           featured,
           visual,

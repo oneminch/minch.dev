@@ -46,18 +46,16 @@
   );
 
   // Fetch featured projects
-  const featuredProjects = ref(null);
-
-  const { pending: projectsPending } = await useLazyFetch("/api/projects", {
-    key: "featuredprojects",
-    query: {
-      type: "featured"
-    },
-    onResponse({ response }) {
-      const { featured } = response._data;
-      featuredProjects.value = featured.slice(0, 2);
+  const { pending: projectsPending, data: projects } = await useLazyFetch(
+    "/api/projects",
+    {
+      key: "featuredprojects",
+      query: {
+        type: "featured",
+        limit: 2
+      }
     }
-  });
+  );
 </script>
 
 <!-- Landing Page -->
@@ -152,7 +150,7 @@
         </template>
         <template v-else>
           <AppProjectCard
-            v-for="featuredProject in featuredProjects"
+            v-for="featuredProject in projects.featured"
             :key="featuredProject.name"
             :img-url="featuredProject.openGraphImageUrl"
             :project-title="featuredProject.name"
