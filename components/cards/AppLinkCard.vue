@@ -22,9 +22,9 @@
     <Icon
       v-show="isExternal"
       name="heroicons:arrow-up-right-20-solid"
-      size="1.5rem"
+      size="1.25rem"
       aria-label="Opens in a new tab"
-      class="absolute top-1 right-1 flex-shrink-0 text-green-500 bg-zinc-100 dark:bg-zinc-700 border border-zinc-300 dark:border-none rounded-full p-1"
+      class="absolute top-2 right-2 flex-shrink-0 text-green-500"
     />
   </nuxt-link>
 </template>

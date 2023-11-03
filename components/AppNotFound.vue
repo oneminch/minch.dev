@@ -2,8 +2,7 @@
   const seoMeta = {
     title: "Page Not Found",
     description: "This is a non-existent page",
-    image: "/og-image.png",
-    page: ""
+    image: "/og-image.png"
   };
 
   useServerSeoMeta({
@@ -15,8 +14,6 @@
     twitterDescription: seoMeta.description,
     ogImage: seoMeta.image,
     twitterImage: seoMeta.image,
-    ogUrl: `https://oneminch.dev/${seoMeta.page}`,
-
     ogType: "website",
     ogLocale: "en_US",
     twitterCard: "summary_large_image"
@@ -34,7 +31,7 @@
     />
     <h1
       id="not-found"
-      class="font-semibold text-center text-xl sm:text-2xl text-zinc-600 dark:text-zinc-400 mb-6"
+      class="font-semibold text-center text-xl sm:text-2xl text-zinc-700 dark:text-zinc-300 mb-6"
     >
       This page doesn't exist.
     </h1>

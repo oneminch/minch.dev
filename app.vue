@@ -55,12 +55,13 @@
     @apply w-full rounded-xl pt-6 md:px-10 py-4 pb-8 bg-transparent md:bg-zinc-50 md:dark:bg-zinc-900/40 font-normal overflow-x-hidden -z-0;
   }
 
-  span.highlight {
-    @apply relative text-zinc-800 dark:text-zinc-200;
+  span.highlight,
+  span.subtle-highlight {
+    @apply relative text-zinc-700 dark:text-zinc-200 font-medium;
   }
 
   span.highlight::after {
-    @apply w-full h-0.5 content-[''] rounded absolute -bottom-1 -left-0 -right-0 bg-gradient-to-r from-green-400 to-lime-400 -z-10 transition-all duration-150;
+    @apply w-full h-0.5 content-[''] rounded absolute -bottom-[1.5px] -left-0 -right-0 bg-gradient-to-r from-green-400 to-lime-400 -z-10 transition-all duration-150 opacity-75 hover:opacity-100;
   }
 
   .slide-enter-active,
