@@ -75,7 +75,7 @@
     <Icon
       name="mdi:format-quote-open"
       size="3rem"
-      class="text-zinc-200 dark:text-zinc-800 absolute -top-4 left-2 -z-10"
+      class="hidden md:inline-block text-zinc-200 dark:text-zinc-800 absolute -top-4 left-2 -z-10"
     />
 
     <!-- Introduction -->
