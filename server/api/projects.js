@@ -42,7 +42,7 @@ export default defineEventHandler(async (event) => {
 
     const ghGraphqlQuery = {
       operationName: "Projects",
-      query: ghGraphqlQueryString(type, limit),
+      query: ghGraphqlQueryString(type, 50),
       variables: {}
     };
 
@@ -72,42 +72,42 @@ export default defineEventHandler(async (event) => {
       };
     });
 
-    if (type === "featured") return allProjects;
+    // if (type === "featured") return allProjects;
 
-    // // Filter projects by tag & remove non-technical tags
-    // const unfeatured = allProjects.filter(
-    //   (project) => project.repositoryTopics.indexOf("featured") === -1
-    // );
+    // Filter projects by tag & remove non-technical tags
+    const unfeatured = allProjects.filter(
+      (project) => project.repositoryTopics.indexOf("featured") === -1
+    );
 
-    // const nonVisual = unfeatured.filter(
-    //   (project) => project.repositoryTopics.indexOf("visual") === -1
-    // );
+    const nonVisual = unfeatured.filter(
+      (project) => project.repositoryTopics.indexOf("visual") === -1
+    );
 
-    // const visual = unfeatured.filter(
-    //   (project) => project.repositoryTopics.indexOf("visual") > -1
-    // );
+    const visual = unfeatured.filter(
+      (project) => project.repositoryTopics.indexOf("visual") > -1
+    );
 
-    // visual.forEach((project) => {
-    //   const visualTopicIndex = project.repositoryTopics.indexOf("visual");
-    //   project.repositoryTopics.splice(visualTopicIndex, 1);
-    // });
+    visual.forEach((project) => {
+      const visualTopicIndex = project.repositoryTopics.indexOf("visual");
+      project.repositoryTopics.splice(visualTopicIndex, 1);
+    });
 
-    // const featured = allProjects
-    //   .filter((project) => project.repositoryTopics.indexOf("featured") > -1)
-    //   .slice(0, 4);
+    const featured = allProjects
+      .filter((project) => project.repositoryTopics.indexOf("featured") > -1)
+      .slice(0, 4);
 
-    // featured.forEach((project) => {
-    //   const featuredTopicIndex = project.repositoryTopics.indexOf("featured");
-    //   project.repositoryTopics.splice(featuredTopicIndex, 1);
-    // });
+    featured.forEach((project) => {
+      const featuredTopicIndex = project.repositoryTopics.indexOf("featured");
+      project.repositoryTopics.splice(featuredTopicIndex, 1);
+    });
 
-    // return type === "featured"
-    //   ? { featured: featured.slice(0, limit) }
-    //   : {
-    //       featured,
-    //       visual,
-    //       nonVisual
-    //     };
+    return type === "featured"
+      ? { featured: featured.slice(0, limit) }
+      : {
+          featured,
+          visual,
+          nonVisual
+        };
   } catch (error) {
     console.error(error);
     return error;
