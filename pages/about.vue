@@ -50,12 +50,16 @@
     </p>
     <figure class="my-4">
       <picture>
-        <source media="(max-width: 1023px)" srcset="google-search-mobile.png" />
-        <source media="(min-width: 1024px)" srcset="google-search-wide.png" />
-        <img
+        <source
+          media="(max-width: 1023px)"
+          srcset="/google-search-mobile.png"
+        />
+        <source media="(min-width: 1024px)" srcset="/google-search-wide.png" />
+        <nuxt-img
           loading="lazy"
-          src="google-search-wide.png"
-          alt="A screenshot of searching on google 'where to write code'"
+          format="webp"
+          src="/google-search-wide.png"
+          alt="A screenshot of searching on google 'where do you write code'"
           class="w-full object-cover rounded-lg border border-zinc-200 dark:border-transparent mb-1"
         />
       </picture>
