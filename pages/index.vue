@@ -64,22 +64,19 @@
     <Meta name="description" :content="seoMeta.description" />
 
     <!-- contact button -->
-    <nuxt-link
+    <!-- <nuxt-link
       class="absolute top-4 right-4 rounded-lg py-2 px-4 bg-green-500 text-zinc-800"
       to="/contact"
       id="contact-btn"
       >Contact</nuxt-link
-    >
-
-    <!-- Opening quote mark (decorative) -->
-    <Icon
-      name="mdi:format-quote-open"
-      size="3rem"
-      class="hidden md:inline-block text-zinc-200 dark:text-zinc-800 absolute -top-4 left-2 -z-10"
-    />
+    > -->
 
     <!-- Introduction -->
-    <section>
+    <section class="relative">
+      <Icon
+        name="mdi:format-quote-close"
+        class="text-5xl md:text-7xl text-zinc-200 dark:text-zinc-800 absolute -top-3 md:-top-6 right-0 -z-10"
+      />
       <h1 class="font-semibold text-2xl mb-6">Hi, I'm Dawit 👋</h1>
       <p class="text-zinc-700 dark:text-zinc-300 mb-4 text-xl font-medium">
         I craft

@@ -49,13 +49,18 @@
       started to learn more about it from sources like Codecademy and W3Schools.
     </p>
     <figure class="my-4">
-      <nuxt-img
-        format="webp"
-        loading="lazy"
-        src="/google-search.png"
-        alt="A screenshot of searching on google 'where to write code'"
-        class="w-full object-cover rounded-lg border border-zinc-200 dark:border-transparent mb-1"
-      />
+      <picture>
+        <source media="(max-width: 1023px)" srcset="google-search-mobile.png" />
+        <source media="(min-width: 1024px)" srcset="google-search-wide.png" />
+        <nuxt-img
+          format="webp"
+          loading="lazy"
+          src="google-search-wide.png"
+          alt="A screenshot of searching on google 'where to write code'"
+          class="w-full object-cover rounded-lg border border-zinc-200 dark:border-transparent mb-1"
+        />
+      </picture>
+
       <figcaption class="text-sm text-center text-zinc-500">
         One of my first ever dev-related lookups: Googling 'where do you write
         code'
