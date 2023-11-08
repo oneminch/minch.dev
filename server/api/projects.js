@@ -4,9 +4,9 @@ const { githubToken } = useRuntimeConfig();
 
 const endpointUrl = "https://api.github.com/graphql";
 
-const ghGraphqlQueryString = `
+const ghGraphqlQueryString = (type, limit) => `
   query Projects {
-    search(type: REPOSITORY, query: "user:oneminch topic:showcase", last: 50) {
+    search(type: REPOSITORY, query: "user:oneminch topic:${type}", last: ${limit}) {
       repos: edges {
         repo: node {
           ... on Repository {
@@ -29,12 +29,6 @@ const ghGraphqlQueryString = `
   }
 `;
 
-const ghGraphqlQuery = {
-  operationName: "Projects",
-  query: ghGraphqlQueryString,
-  variables: {}
-};
-
 const axiosReqConfig = {
   headers: {
     Accept: "application/json",
@@ -45,6 +39,12 @@ const axiosReqConfig = {
 export default defineEventHandler(async (event) => {
   try {
     const { type, limit } = getQuery(event);
+
+    const ghGraphqlQuery = {
+      operationName: "Projects",
+      query: ghGraphqlQueryString(type, limit),
+      variables: {}
+    };
 
     const response = await axios.post(
       endpointUrl,
@@ -72,40 +72,42 @@ export default defineEventHandler(async (event) => {
       };
     });
 
-    // Filter projects by tag & remove non-technical tags
-    const unfeatured = allProjects.filter(
-      (project) => project.repositoryTopics.indexOf("featured") === -1
-    );
+    if (type === "featured") return allProjects;
 
-    const nonVisual = unfeatured.filter(
-      (project) => project.repositoryTopics.indexOf("visual") === -1
-    );
+    // // Filter projects by tag & remove non-technical tags
+    // const unfeatured = allProjects.filter(
+    //   (project) => project.repositoryTopics.indexOf("featured") === -1
+    // );
 
-    const visual = unfeatured.filter(
-      (project) => project.repositoryTopics.indexOf("visual") > -1
-    );
+    // const nonVisual = unfeatured.filter(
+    //   (project) => project.repositoryTopics.indexOf("visual") === -1
+    // );
 
-    visual.forEach((project) => {
-      const visualTopicIndex = project.repositoryTopics.indexOf("visual");
-      project.repositoryTopics.splice(visualTopicIndex, 1);
-    });
+    // const visual = unfeatured.filter(
+    //   (project) => project.repositoryTopics.indexOf("visual") > -1
+    // );
 
-    const featured = allProjects
-      .filter((project) => project.repositoryTopics.indexOf("featured") > -1)
-      .slice(0, 4);
+    // visual.forEach((project) => {
+    //   const visualTopicIndex = project.repositoryTopics.indexOf("visual");
+    //   project.repositoryTopics.splice(visualTopicIndex, 1);
+    // });
 
-    featured.forEach((project) => {
-      const featuredTopicIndex = project.repositoryTopics.indexOf("featured");
-      project.repositoryTopics.splice(featuredTopicIndex, 1);
-    });
+    // const featured = allProjects
+    //   .filter((project) => project.repositoryTopics.indexOf("featured") > -1)
+    //   .slice(0, 4);
 
-    return type === "featured"
-      ? { featured: featured.slice(0, limit) }
-      : {
-          featured,
-          visual,
-          nonVisual
-        };
+    // featured.forEach((project) => {
+    //   const featuredTopicIndex = project.repositoryTopics.indexOf("featured");
+    //   project.repositoryTopics.splice(featuredTopicIndex, 1);
+    // });
+
+    // return type === "featured"
+    //   ? { featured: featured.slice(0, limit) }
+    //   : {
+    //       featured,
+    //       visual,
+    //       nonVisual
+    //     };
   } catch (error) {
     console.error(error);
     return error;

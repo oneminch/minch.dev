@@ -52,8 +52,7 @@
       <picture>
         <source media="(max-width: 1023px)" srcset="google-search-mobile.png" />
         <source media="(min-width: 1024px)" srcset="google-search-wide.png" />
-        <nuxt-img
-          format="webp"
+        <img
           loading="lazy"
           src="google-search-wide.png"
           alt="A screenshot of searching on google 'where to write code'"

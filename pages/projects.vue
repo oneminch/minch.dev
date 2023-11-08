@@ -26,7 +26,11 @@
   const projectSkeletonIds = () => [...Array(4).fill(Math.random())];
 
   const { pending, data: projects } = await useLazyFetch("/api/projects", {
-    key: "allprojects"
+    key: "allprojects",
+    query: {
+      type: "showcase",
+      limit: 25
+    }
   });
 </script>
 
