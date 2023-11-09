@@ -41,7 +41,8 @@
     LinkedIn: "https://linkedin.com/in/oneminch",
     GitHub: "https://github.com/oneminch",
     Hashnode: "https://hashnode.com/@oneminch",
-    DevDotTo: "https://dev.to/oneminch"
+    DevDotTo: "https://dev.to/oneminch",
+    X: "https://twitter.com/oneminch"
     // , LeetCode: "https://leetcode.com/oneminch"
   };
 </script>
