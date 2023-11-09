@@ -40,9 +40,6 @@ devDependencies:
   nuxt-icon:
     specifier: ^0.4.1
     version: 0.4.2(vue@3.3.6)
-  vue-rough-notation:
-    specifier: ^1.0.4
-    version: 1.0.4(vue@3.3.6)
 
 packages:
 
@@ -6168,10 +6165,6 @@ packages:
       yallist: 4.0.0
     dev: true
 
-  /mitt@3.0.1:
-    resolution: {integrity: sha512-vKivATfr97l2/QBCYAkXYDbrIWPM2IIKEl7YPhjCvKlG3kE2gm+uBo6nEXK3M5/Ffh/FLpKExzOQ3JJoJGFKBw==}
-    dev: true
-
   /mkdirp-classic@0.5.3:
     resolution: {integrity: sha512-gKLcREMhtuZRwRAfqP3RFW+TK4JqApVBtOIftVgjuABpAtpxhPGaDcfvbhNvD0B8iD1oUr/txX35NjcaY6Ns/A==}
     requiresBuild: true
@@ -7844,10 +7837,6 @@ packages:
       fsevents: 2.3.3
     dev: true
 
-  /rough-notation@0.4.0:
-    resolution: {integrity: sha512-hDgn9qMIxWnfY+WWjt30aLMtDHR13H8r/NI3EQNdJiEFAzpklH5nKg4eH/thpxCWTYzyg8ueMsKIfz9MzOBQ4Q==}
-    dev: true
-
   /run-applescript@5.0.0:
     resolution: {integrity: sha512-XcT5rBksx1QdIhlFOCtgZkB99ZEouFZ1E2Kc2LHqNW13U3/74YGdkQRmThTwxy4QIyookibDKYZOPqX//6BlAg==}
     engines: {node: '>=12'}
@@ -9261,21 +9250,6 @@ packages:
 
   /vue-devtools-stub@0.1.0:
     resolution: {integrity: sha512-RutnB7X8c5hjq39NceArgXg28WZtZpGc3+J16ljMiYnFhKvd8hITxSWQSQ5bvldxMDU6gG5mkxl1MTQLXckVSQ==}
-    dev: true
-
-  /vue-rough-notation@1.0.4(vue@3.3.6):
-    resolution: {integrity: sha512-dGKSpqvYhB061SBx1Rcz/azZ3nDBjdOv1rXuzGbUdF0K8y7+PW+8Di0DTY886HNg/D1ix+qSDUuyumjEi5g4ZA==}
-    peerDependencies:
-      '@vue/composition-api': ^1.0.0-rc.1
-      vue: ^2.0.0 || >=3.0.0
-    peerDependenciesMeta:
-      '@vue/composition-api':
-        optional: true
-    dependencies:
-      mitt: 3.0.1
-      rough-notation: 0.4.0
-      vue: 3.3.6
-      vue-demi: 0.14.6(vue@3.3.6)
     dev: true
 
   /vue-router@4.2.5(vue@3.3.6):
