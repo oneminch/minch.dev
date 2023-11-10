@@ -17,6 +17,7 @@
         v-if="doc.image"
         format="webp"
         loading="lazy"
+        height="300"
         :src="doc.image"
         :alt="doc.title"
       />
@@ -72,6 +73,39 @@
 
       <!-- Main post content -->
       <ContentRenderer :value="doc" />
+
+      <!-- Let's connect -->
+      <hr
+        class="block w-1/2 md:w-1/4 mx-auto my-6 border-none bg-gradient-to-r from-transparent via-zinc-300 dark:via-zinc-700 to-transparent h-[1px] rounded-full"
+      />
+      <section
+        class="flex items-center justify-center [&>p]:my-0 [&>p]:text-zinc-300 [&>p]:dark:text-zinc-700 space-x-3 text-zinc-300"
+      >
+        <nuxt-link
+          class="focused-link"
+          to="https://twitter.com/oneminch"
+          target="_blank"
+          >Twitter
+        </nuxt-link>
+
+        <p>•</p>
+
+        <nuxt-link
+          class="focused-link"
+          to="https://github.com/oneminch"
+          target="_blank"
+          >GitHub
+        </nuxt-link>
+
+        <p>•</p>
+
+        <nuxt-link
+          class="focused-link"
+          to="https://linkedin.com/in/oneminch"
+          target="_blank"
+          >LinkedIn
+        </nuxt-link>
+      </section>
     </template>
     <template #not-found>
       <AppNotFound />

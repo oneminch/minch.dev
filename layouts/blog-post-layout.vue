@@ -1,3 +1,13 @@
+<script setup>
+  const profiles = {
+    LinkedIn: "https://linkedin.com/in/oneminch",
+    GitHub: "https://github.com/oneminch",
+    Hashnode: "https://hashnode.com/@oneminch",
+    DevDotTo: "https://dev.to/oneminch",
+    X: "https://twitter.com/oneminch"
+  };
+</script>
+
 <template>
   <main class="w-full" id="main-content">
     <header class="w-full max-w-3xl mx-auto">
@@ -35,7 +45,7 @@
 
     <!-- Blog Content -->
     <article
-      class="w-full max-w-3xl prose lg:prose-base dark:prose-invert prose-img:rounded-xl prose-slate prose-a:no-underline prose-a:border-b-[.125rem] prose-a:border-b-green-400 prose-pre:bg-zinc-700 prose-code:leading-snug prose-code:font-normal prose-code:bg-zinc-700 prose-code:text-zinc-100 prose-code:px-2 prose-code:py-0 prose-code:inline-block prose-code:rounded-md prose-code:before:content-none prose-code:after:content-none mx-auto text-zinc-800 dark:text-zinc-100"
+      class="w-full max-w-3xl prose lg:prose-base dark:prose-invert prose-img:rounded-xl prose-slate prose-a:no-underline prose-a:border-b prose-a:border-b-green-400/75 prose-a:focused-link prose-pre:bg-zinc-700 prose-code:leading-snug prose-code:font-normal prose-code:bg-zinc-700 prose-code:text-zinc-100 prose-code:px-2 prose-code:py-0 prose-code:inline-block prose-code:rounded-md prose-code:before:content-none prose-code:after:content-none mx-auto text-zinc-800 dark:text-zinc-100 pb-8"
     >
       <slot />
     </article>
