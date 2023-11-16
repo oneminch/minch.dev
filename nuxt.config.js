@@ -15,7 +15,7 @@ export default defineNuxtConfig({
         },
         {
           rel: "stylesheet",
-          href: "https://fonts.bunny.net/css?family=roboto-mono:400,400i,500,600,700|inter:300,400,500,600,700,800"
+          href: "https://fonts.bunny.net/css?family=space-grotesk:400,400i,500,600,700|inter:300,400,500,600,700,800"
         },
         {
           rel: "apple-touch-icon",

@@ -41,8 +41,8 @@
     <Title>{{ seoMeta.title }}</Title>
     <Meta name="description" :content="seoMeta.description" />
 
-    <h1 class="font-bold text-2xl mb-6">Picks</h1>
-    <p class="text-zinc-700 dark:text-zinc-300 mb-8">
+    <h1 class="font-bold text-2xl mb-4">Picks</h1>
+    <p class="text-zinc-700 dark:text-zinc-300 mb-6">
       Content from across the web I found interesting.
     </p>
 

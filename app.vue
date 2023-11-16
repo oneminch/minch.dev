@@ -44,7 +44,7 @@
 
   html {
     @apply m-0 p-0;
-    font-family: "Inter", sans-serif;
+    font-family: "Space Grotesk", sans-serif;
   }
 
   body {

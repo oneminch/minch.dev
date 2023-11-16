@@ -40,8 +40,8 @@
     <Title>{{ seoMeta.title }}</Title>
     <Meta name="description" :content="seoMeta.description" />
 
-    <h1 class="text-3xl text-left font-bold mb-6">Projects</h1>
-    <p class="text-zinc-700 dark:text-zinc-300 mb-8">
+    <h1 class="text-3xl text-left font-bold mb-4">Projects</h1>
+    <p class="text-zinc-700 dark:text-zinc-300 mb-6">
       Each project is a story waiting to be told.
     </p>
 

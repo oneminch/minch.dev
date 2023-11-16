@@ -16,7 +16,6 @@
     ogImage: seoMeta.image,
     twitterImage: seoMeta.image,
     ogUrl: `https://oneminch.dev/${seoMeta.page}`,
-
     ogType: "website",
     ogLocale: "en_US",
     twitterCard: "summary_large_image"
@@ -26,12 +25,12 @@
     essentials: [
       "HTML + CSS",
       "JavaScript",
-      "React / Next.js",
-      "Vue.js / Nuxt.js",
+      "React",
+      "Vue",
       "Tailwind CSS",
       "Git"
     ],
-    tinker: ["Node.js", "Astro", "Jest", "Python / Flask", "SQL", "..."]
+    tinker: ["Node.js", "Vitest", "Python", "SQL"]
   });
 
   // Skeletons
@@ -77,7 +76,7 @@
         name="mdi:format-quote-close"
         class="text-5xl md:text-7xl text-zinc-200 dark:text-zinc-800 absolute -top-3 md:-top-6 right-0 -z-10"
       />
-      <h1 class="font-semibold text-2xl mb-6">Hi, I'm Dawit 👋</h1>
+      <h1 class="font-semibold text-2xl mb-4">Hi, I'm Dawit 👋</h1>
       <p class="text-zinc-700 dark:text-zinc-300 mb-4 text-xl font-medium">
         I craft
         <span class="highlight">delightful</span>
@@ -97,35 +96,37 @@
     <!-- Skills -->
     <section>
       <h2 class="font-semibold text-xl mb-1 py-2">Skills</h2>
+      <!-- Primary Tools -->
       <p class="text-zinc-700 dark:text-zinc-300 mb-3">
         My specialty is <span class="subtle-highlight">solving problems</span>,
         and here is my toolbox:
       </p>
       <ul
-        class="w-full lg:w-3/4 p-0 pl-4 mb-3 list-disc grid grid-rows-3 grid-flow-col-dense"
+        class="w-full lg:w-3/4 p-0 pl-2 mb-3 list-disc grid grid-rows-3 sm:grid-rows-2 grid-flow-col-dense"
       >
         <li
           v-for="skillName in skillset.essentials"
           :key="skillName"
-          class="text-green-400"
+          class="text-green-400 list-inside"
         >
           <span class="text-zinc-700 dark:text-zinc-300 font-medium">{{
             skillName
           }}</span>
         </li>
       </ul>
+      <!-- Secondary Tools -->
       <p class="text-zinc-700 dark:text-zinc-300 mb-3">
         I'm infinitely curious.
         <span class="subtle-highlight">Always learning</span> and experimenting
         with other tools:
       </p>
       <ul
-        class="w-full lg:w-3/4 p-0 pl-4 mb-3 list-disc grid grid-rows-3 grid-flow-col-dense"
+        class="w-full lg:w-3/4 p-0 pl-2 mb-3 list-disc grid grid-cols-2 sm:grid-cols-3 grid-rows-2 grid-flow-col-dense"
       >
         <li
           v-for="skillName in skillset.tinker"
           :key="skillName"
-          class="text-green-400 [&_span]:last:text-green-400"
+          class="text-green-400 list-inside"
         >
           <span class="text-zinc-700 dark:text-zinc-300 font-medium">{{
             skillName

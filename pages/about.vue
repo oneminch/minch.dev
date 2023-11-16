@@ -29,7 +29,7 @@
     <Meta name="description" :content="seoMeta.description" />
 
     <!-- Name  -->
-    <h1 class="font-semibold text-2xl mb-6">About Me</h1>
+    <h1 class="font-semibold text-2xl mb-4">About Me</h1>
 
     <!-- Short Bio Summary -->
     <p>

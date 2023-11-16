@@ -17,7 +17,6 @@
     ogImage: seoMeta.image,
     twitterImage: seoMeta.image,
     ogUrl: `https://oneminch.dev/${seoMeta.page}`,
-
     ogType: "website",
     ogLocale: "en_US",
     twitterCard: "summary_large_image"
@@ -38,8 +37,8 @@
     <Title>{{ seoMeta.title }}</Title>
     <Meta name="description" :content="seoMeta.description" />
 
-    <h1 class="text-3xl text-left font-bold mb-6">Blog</h1>
-    <p class="text-zinc-700 dark:text-zinc-300 mb-8">
+    <h1 class="text-3xl text-left font-bold mb-4">Blog</h1>
+    <p class="text-zinc-700 dark:text-zinc-300 mb-6">
       Writing is a tool for thinking.
     </p>
 

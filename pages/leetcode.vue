@@ -4,8 +4,8 @@
     <Title>{{ seoMeta.title }}</Title>
     <Meta name="description" :content="seoMeta.description" />
 
-    <h1 class="text-3xl text-left font-bold mb-6">LeetCode Solutions</h1>
-    <p class="text-zinc-700 dark:text-zinc-300 mb-8">
+    <h1 class="text-3xl text-left font-bold mb-4">LeetCode Solutions</h1>
+    <p class="text-zinc-700 dark:text-zinc-300 mb-6">
       My solutions to some LeetCode-style coding problems.
     </p>
 
@@ -51,7 +51,6 @@
     ogImage: seoMeta.image,
     twitterImage: seoMeta.image,
     ogUrl: `https://oneminch.dev/${seoMeta.page}`,
-
     ogType: "website",
     ogLocale: "en_US",
     twitterCard: "summary_large_image"

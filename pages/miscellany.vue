@@ -3,8 +3,8 @@
     <Title>{{ seoMeta.title }}</Title>
     <Meta name="description" :content="seoMeta.description" />
 
-    <h1 class="font-bold text-2xl mb-6">Miscellany</h1>
-    <p class="text-zinc-700 dark:text-zinc-300 mb-8">
+    <h1 class="font-bold text-2xl mb-4">Miscellany</h1>
+    <p class="text-zinc-700 dark:text-zinc-300 mb-6">
       A mix of related links about me (or this website), my interests and my
       work.
     </p>
@@ -100,7 +100,6 @@
     ogImage: seoMeta.image,
     twitterImage: seoMeta.image,
     ogUrl: `https://oneminch.dev/${seoMeta.page}`,
-
     ogType: "website",
     ogLocale: "en_US",
     twitterCard: "summary_large_image"
