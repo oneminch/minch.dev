@@ -12,7 +12,7 @@
         target="_blank"
         title="NuxtJS"
       >
-        <Icon name="simple-icons:nuxtdotjs" size="1.25rem" />
+        <Icon name="simple-icons:nuxtdotjs" />
       </nuxt-link>
       <span>&bull;</span>
       <nuxt-link

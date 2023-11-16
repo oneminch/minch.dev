@@ -9,14 +9,14 @@ export default defineNuxtConfig({
       },
       meta: [{ "http-equiv": "X-UA-Compatible", content: "IE=edge" }],
       link: [
-        {
-          rel: "preconnect",
-          href: "https://fonts.bunny.net"
-        },
-        {
-          rel: "stylesheet",
-          href: "https://fonts.bunny.net/css?family=roboto-mono:400,400i,500,600,700|space-grotesk:400,500,600,700"
-        },
+        // {
+        //   rel: "preconnect",
+        //   href: "https://fonts.bunny.net"
+        // },
+        // {
+        //   rel: "stylesheet",
+        //   href: "https://fonts.bunny.net/css?family=roboto-mono:400,400i,500,600,700|space-grotesk:400,500,600,700"
+        // },
         {
           rel: "apple-touch-icon",
           sizes: "180x180",

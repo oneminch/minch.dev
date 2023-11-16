@@ -1,3 +1,14 @@
+<script setup>
+  import "@fontsource/roboto-mono/400.css";
+  import "@fontsource/roboto-mono/500.css";
+  import "@fontsource/roboto-mono/600.css";
+  import "@fontsource/roboto-mono/700.css";
+  import "@fontsource/space-grotesk/400.css";
+  import "@fontsource/space-grotesk/500.css";
+  import "@fontsource/space-grotesk/600.css";
+  import "@fontsource/space-grotesk/700.css";
+</script>
+
 <template>
   <!-- Skip Navigation Link -->
   <a

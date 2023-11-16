@@ -5,6 +5,12 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  '@fontsource/roboto-mono':
+    specifier: ^5.0.15
+    version: 5.0.15
+  '@fontsource/space-grotesk':
+    specifier: ^5.0.15
+    version: 5.0.15
   '@vueuse/components':
     specifier: ^10.2.0
     version: 10.5.0(vue@3.3.6)
@@ -843,6 +849,14 @@ packages:
     resolution: {integrity: sha512-JUFJad5lv7jxj926GPgymrWQxxjPYuJNiNjNMzqT+HiuP6Vl3dk5xzG+8sTX96np0ZAluvaMzPsjhHZ5rNuNQQ==}
     engines: {node: '>=14'}
     dev: true
+
+  /@fontsource/roboto-mono@5.0.15:
+    resolution: {integrity: sha512-2YeXokbjzPUFicaw3L2dH8xnfVPxDF1gjYRtpZpdQr4DDOtRcJBJ6ys5fVc9o+kAmG5yp8UXHwDbjHrxigSM0g==}
+    dev: false
+
+  /@fontsource/space-grotesk@5.0.15:
+    resolution: {integrity: sha512-9LaRK2f2B7X0Mx9F8UTuKuqW4w+Iv0RByoC5WyT7l3VSyepd2aJm+/s14tj8QJY+0gwfUG9P/6Gc8oDWy8+aeA==}
+    dev: false
 
   /@iconify/types@2.0.0:
     resolution: {integrity: sha512-+wluvCrRhXrhyOmRDJ3q8mux9JkKy5SJ/v8ol2tu4FVjyYvtEzkc/3pK15ET6RKg4b4w4BmTk1+gsCUhf21Ykg==}
