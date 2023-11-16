@@ -219,22 +219,6 @@
       <div
         class="grid grid-cols-2 lg:grid-cols-4 lg:grid-rows-2 lg:grid-flow-col gap-2 lg:[&_:first-child]:row-span-2 lg:[&_:last-child]:row-span-2"
       >
-        <!-- <a
-        download="Dawit_Urgessa_Resume.pdf"
-        href="/resume.pdf"
-          class="focused-link card-style flex flex-col justify-center items-center px-2 pt-2 pb-3 relative rounded-xl font-medium overflow-hidden transition-colors duration-150 hover:bg-green-50/25 dark:hover:bg-zinc-700/75"
-        >
-          <Icon name="fluent-emoji:briefcase" size="2.5rem" class="mb-2 p-1" />
-
-          <span>Resume</span>
-
-          <Icon
-            name="heroicons:arrow-down-tray-20-solid"
-            aria-label="Download resume file"
-            size="1.25rem"
-            class="absolute top-2 right-2 flex-shrink-0 text-green-500"
-            />
-          </a> -->
         <app-link-card
           label="Contact"
           icon="fluent-emoji:e-mail"
@@ -263,10 +247,11 @@
           url="https://unsplash.com/@oneminch"
         ></app-link-card>
         <app-link-card
-          label="TBD"
-          icon="fluent-emoji:red-question-mark"
-          :is-external="true"
-          url="https://github.com/oneminch/garden"
+          label="Resume"
+          icon="fluent-emoji:briefcase"
+          url="/resume.pdf"
+          download-label="Dawit_Urgessa_Resume.pdf"
+          :is-download-link="true"
         ></app-link-card>
       </div>
     </section>

@@ -6,6 +6,11 @@
     isExternal: {
       type: Boolean,
       default: false
+    },
+    downloadLabel: String,
+    isDownloadLink: {
+      type: Boolean,
+      default: false
     }
   });
 </script>
@@ -13,8 +18,9 @@
 <template>
   <nuxt-link
     class="focused-link card-style flex flex-col justify-center items-center px-2 pt-2 pb-3 relative rounded-sm font-medium overflow-hidden transition-colors duration-150 hover:bg-green-50/25 dark:hover:bg-zinc-700/75"
-    :target="isExternal ? '_blank' : '_self'"
+    :target="isExternal || isDownloadLink ? '_blank' : '_self'"
     :to="url"
+    :download="downloadLabel"
   >
     <Icon :name="icon" size="2.5rem" class="mb-2 p-1" />
 
@@ -24,6 +30,13 @@
       name="heroicons:arrow-up-right-20-solid"
       size="1.25rem"
       aria-label="Opens in a new tab"
+      class="absolute top-2 right-2 flex-shrink-0 text-green-500"
+    />
+    <Icon
+      v-show="isDownloadLink"
+      name="heroicons:arrow-down-tray-20-solid"
+      size="1.25rem"
+      aria-label="Opens Download Modal For File"
       class="absolute top-2 right-2 flex-shrink-0 text-green-500"
     />
   </nuxt-link>
