@@ -52,7 +52,7 @@
   }
 
   main {
-    @apply w-full rounded-xl pt-6 md:px-10 py-4 pb-8 bg-transparent md:bg-zinc-50 md:dark:bg-zinc-900/40 font-normal overflow-x-hidden -z-0;
+    @apply w-full rounded-xl pt-6 md:px-10 py-4 pb-10 bg-transparent md:bg-zinc-50 md:dark:bg-zinc-900/40 font-normal overflow-x-visible -z-0;
   }
 
   span.highlight,

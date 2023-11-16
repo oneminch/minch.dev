@@ -83,21 +83,21 @@
       >
         <nuxt-link
           class="focused-link"
-          to="https://twitter.com/oneminch"
-          target="_blank"
-          >Twitter
-        </nuxt-link>
-
-        <p>•</p>
-
-        <nuxt-link
-          class="focused-link"
           to="https://github.com/oneminch"
           target="_blank"
           >GitHub
         </nuxt-link>
 
-        <p>•</p>
+        <p>&bull;</p>
+
+        <nuxt-link
+          class="focused-link"
+          to="https://twitter.com/oneminch"
+          target="_blank"
+          >Twitter
+        </nuxt-link>
+
+        <p>&bull;</p>
 
         <nuxt-link
           class="focused-link"

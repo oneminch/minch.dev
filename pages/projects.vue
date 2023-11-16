@@ -47,35 +47,35 @@
 
     <!-- Featured Projects -->
     <section
-      class="grid grid-cols-1 grid-rows-2 gap-x-4 gap-y-2 lg:grid-cols-[1fr_75px_1fr] lg:grid-flow-row mb-6"
+      class="grid grid-cols-1 grid-rows-2 gap-4 lg:grid-cols-2 lg:grid-flow-row mb-4"
     >
       <template v-if="pending">
         <app-project-skeleton
           v-for="skeletonId in projectSkeletonIds()"
           :key="skeletonId"
-          class="lg:first:col-span-2 lg:last:col-span-2"
         />
+        <!-- class="lg:first:col-span-2 lg:last:col-span-2" -->
       </template>
       <template v-else>
-        <app-project-card-old
+        <app-project-card
           v-for="featuredProject in projects.featured"
           :key="featuredProject.name"
           :img-url="featuredProject.openGraphImageUrl"
           :project-title="featuredProject.name"
           :project-description="featuredProject.description"
           :project-url="featuredProject.homepageUrl"
-          :tags="featuredProject.repositoryTopics"
-          class="lg:first:col-span-2 lg:last:col-span-2"
         />
+        <!-- class="lg:first:col-span-2 lg:last:col-span-2" -->
+        <!-- :tags="featuredProject.repositoryTopics" -->
       </template>
     </section>
 
     <hr
-      class="w-3/4 h-[1px] my-6 md:my-12 mx-auto border-none bg-gradient-to-r from-transparent via-zinc-300 dark:via-zinc-700 to-transparent rounded-full"
+      class="w-3/4 h-[1px] my-6 md:my-8 mx-auto border-none bg-gradient-to-r from-transparent via-zinc-300 dark:via-zinc-700 to-transparent rounded-full"
     />
 
     <!-- Remaining Projects: Visual -->
-    <section class="grid grid-cols-1 lg:grid-cols-2 gap-x-4 gap-y-2 mb-6">
+    <section class="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-4">
       <template v-if="pending">
         <app-project-skeleton
           v-for="skeletonId in projectSkeletonIds()"
@@ -83,34 +83,34 @@
         />
       </template>
       <template v-else>
-        <app-project-card-old
+        <app-project-card
           v-for="project in projects.visual"
           :key="project.name"
           :img-url="project.openGraphImageUrl"
           :project-title="project.name"
           :project-description="project.description"
           :project-url="project.homepageUrl"
-          :tags="project.repositoryTopics"
         />
+        <!-- :tags="project.repositoryTopics" -->
       </template>
     </section>
 
     <hr
-      class="w-3/4 h-[1px] my-6 md:my-12 mx-auto border-none bg-gradient-to-r from-transparent via-zinc-300 dark:via-zinc-700 to-transparent rounded-full"
+      class="w-3/4 h-[1px] my-6 md:my-8 mx-auto border-none bg-gradient-to-r from-transparent via-zinc-300 dark:via-zinc-700 to-transparent rounded-full"
     />
 
     <!-- Remaining Projects: Non-visual -->
-    <section class="grid grid-cols-1 lg:grid-cols-2 gap-x-4 gap-y-2 mb-6">
+    <section class="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-4">
       <template v-if="!pending">
-        <app-project-card-old
+        <app-project-card
           v-for="project in projects.nonVisual"
           :key="project.name"
           :img-url="''"
           :project-title="project.name"
           :project-description="project.description"
           :project-url="project.homepageUrl"
-          :tags="project.repositoryTopics"
         />
+        <!-- :tags="project.repositoryTopics" -->
       </template>
     </section>
   </main>

@@ -1,7 +1,7 @@
 <!-- Navigation: Links -->
 <template>
   <nav
-    class="flex-col justify-center items-center rounded-xl p-1 md:px-4 text-zinc-900 dark:text-zinc-200 md:w-full w-32 md:max-h-64 max-h-16 md:right-0 md:bottom-0 fixed md:relative bottom-6 right-4 bg-zinc-100/75 dark:bg-zinc-900/75 md:bg-transparent dark:md:bg-transparent origin-bottom-right backdrop-blur-xl md:backdrop-blur-none print:hidden"
+    class="flex-col justify-center items-center rounded-xl p-1 md:px-4 text-zinc-900 dark:text-zinc-200 md:w-full w-32 md:max-h-64 max-h-16 md:right-0 md:bottom-0 fixed md:relative bottom-4 right-4 bg-zinc-100/75 dark:bg-zinc-900/75 md:bg-transparent dark:md:bg-transparent origin-bottom-right backdrop-blur-xl md:backdrop-blur-none print:hidden"
     :class="{ toggled: menuToggled }"
   >
     <ul
@@ -36,7 +36,7 @@
     >
       <button
         @click="toggleMenu()"
-        class="md:hidden w-full h-10 py-1 px-4 flex items-center justify-center rounded-md font-semibold hover:bg-green-400 bg-green-400 text-zinc-800"
+        class="focused-link md:hidden w-full h-10 py-1 px-4 flex items-center justify-center rounded-md font-semibold hover:bg-green-400 bg-green-400 text-zinc-800"
         aria-label="Menu"
         title="Menu"
       >
