@@ -11,13 +11,13 @@
 
     <section class="grid grid-cols-1 lg:grid-cols-2 gap-4">
       <template v-if="pending">
-        <AppCodeSolutionSkeleton
+        <app-code-solution-skeleton
           v-for="skeleton in skeletons"
           :key="skeleton"
         />
       </template>
       <template v-else>
-        <AppCodeSolutionCard
+        <app-code-solution-card
           v-for="solution in codeSolutions"
           :key="solution._path"
           :problemTitle="solution.title"

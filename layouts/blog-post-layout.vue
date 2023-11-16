@@ -39,7 +39,7 @@
           LeetCode
         </nuxt-link>
 
-        <AppThemeToggle class="ml-auto" />
+        <app-theme-toggle class="ml-auto" />
       </nav>
     </header>
 

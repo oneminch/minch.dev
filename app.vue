@@ -7,7 +7,7 @@
   >
 
   <!-- Sidebar -->
-  <AppSideBar />
+  <app-side-bar />
 
   <!-- Main Content -->
   <NuxtLayout>
@@ -15,7 +15,7 @@
   </NuxtLayout>
 
   <!-- Mobile Navigation -->
-  <AppNav class="md:hidden flex after:shadow-2xl border-2 border-green-400" />
+  <app-nav class="md:hidden flex after:shadow-2xl border-2 border-green-400" />
 </template>
 
 <style>

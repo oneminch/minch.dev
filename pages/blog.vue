@@ -44,10 +44,10 @@
 
     <section class="grid grid-cols-1 lg:grid-cols-2 gap-4">
       <template v-if="pending">
-        <AppBlogSkeleton v-for="skeleton in skeletons" :key="skeleton" />
+        <app-blog-skeleton v-for="skeleton in skeletons" :key="skeleton" />
       </template>
       <template v-else>
-        <AppBlogCard
+        <app-blog-card
           v-for="blogPost in blogPosts"
           :key="blogPost._id"
           :tags="blogPost.tags"

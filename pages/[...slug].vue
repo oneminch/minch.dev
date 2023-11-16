@@ -108,7 +108,7 @@
       </section>
     </template>
     <template #not-found>
-      <AppNotFound />
+      <app-not-found />
     </template>
   </ContentDoc>
 </template>

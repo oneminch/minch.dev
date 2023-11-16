@@ -50,14 +50,14 @@
       class="grid grid-cols-1 grid-rows-2 gap-4 lg:grid-cols-[1fr_75px_1fr] lg:grid-flow-row mb-6"
     >
       <template v-if="pending">
-        <AppProjectSkeleton
+        <app-project-skeleton
           v-for="skeletonId in projectSkeletonIds()"
           :key="skeletonId"
           class="lg:first:col-span-2 lg:last:col-span-2"
         />
       </template>
       <template v-else>
-        <AppProjectCard
+        <app-project-card
           v-for="featuredProject in projects.featured"
           :key="featuredProject.name"
           :img-url="featuredProject.openGraphImageUrl"
@@ -77,13 +77,13 @@
     <!-- Remaining Projects: Visual -->
     <section class="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-6">
       <template v-if="pending">
-        <AppProjectSkeleton
+        <app-project-skeleton
           v-for="skeletonId in projectSkeletonIds()"
           :key="skeletonId"
         />
       </template>
       <template v-else>
-        <AppProjectCard
+        <app-project-card
           v-for="project in projects.visual"
           :key="project.name"
           :img-url="project.openGraphImageUrl"
@@ -102,7 +102,7 @@
     <!-- Remaining Projects: Non-visual -->
     <section class="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-6">
       <template v-if="!pending">
-        <AppProjectCard
+        <app-project-card
           v-for="project in projects.nonVisual"
           :key="project.name"
           :img-url="''"

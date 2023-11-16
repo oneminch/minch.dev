@@ -6,7 +6,7 @@
     :class="{ hidden: routeRegEx.test($route.fullPath) }"
   >
     <!-- Theme Toggle -->
-    <AppThemeToggle class="absolute top-2 left-2 z-10" />
+    <app-theme-toggle class="absolute top-2 left-2 z-10" />
 
     <!-- Work In Progress -->
     <abbr
@@ -16,14 +16,14 @@
     >
 
     <!-- Profile card: Profile Picture, Name, Title + Social Profiles -->
-    <AppProfileCard />
+    <app-profile-card />
 
     <hr
       class="hidden md:inline-block w-3/4 md:my-4 border-none bg-gradient-to-r from-transparent via-zinc-300 dark:via-zinc-700 to-transparent h-[1px] rounded-full"
     />
 
     <!-- Desktop Navigation: Links -->
-    <AppNav class="hidden md:flex" />
+    <app-nav class="hidden md:flex" />
   </aside>
 </template>
 

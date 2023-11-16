@@ -47,10 +47,10 @@
     </p>
 
     <template v-if="pending">
-      <AppPickSkeleton v-for="skeleton in skeletons" :key="skeleton" />
+      <app-pick-skeleton v-for="skeleton in skeletons" :key="skeleton" />
     </template>
     <template v-else>
-      <AppPickCard v-for="pick in picks" :key="pick.link" :pick="pick" />
+      <app-pick-card v-for="pick in picks" :key="pick.link" :pick="pick" />
     </template>
   </main>
 </template>

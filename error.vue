@@ -1,17 +1,17 @@
 <template>
   <!-- Sidebar -->
-  <AppSideBar />
+  <app-side-bar />
 
   <!-- Main Content -->
   <main
     id="main-content"
     class="main-error flex flex-col items-center justify-center"
   >
-    <AppNotFound />
+    <app-not-found />
   </main>
 
   <!-- Mobile Navigation -->
-  <AppNav class="md:hidden flex after:shadow-2xl border border-green-400" />
+  <app-nav class="md:hidden flex after:shadow-2xl border border-green-400" />
 </template>
 
 <style scoped>

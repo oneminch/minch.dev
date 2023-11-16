@@ -154,13 +154,13 @@
       </p>
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
         <template v-if="projectsPending">
-          <AppProjectSkeleton
+          <app-project-skeleton
             v-for="skeletonId in projectSkeletonIds"
             :key="skeletonId"
           />
         </template>
         <template v-else>
-          <AppProjectCard
+          <app-project-card
             v-for="featuredProject in projects.featured"
             :key="featuredProject.name"
             :img-url="featuredProject.openGraphImageUrl"
@@ -192,13 +192,13 @@
       </p>
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
         <template v-if="blogsPending">
-          <AppBlogSkeleton
+          <app-blog-skeleton
             v-for="skeletonId in blogSkeletonIds"
             :key="skeletonId"
           />
         </template>
         <template v-else>
-          <AppBlogCard
+          <app-blog-card
             v-for="blogPost in blogPosts"
             :key="blogPost._id"
             :tags="blogPost.tags"
@@ -271,7 +271,7 @@
       </div>
     </section>
 
-    <AppFooter />
+    <app-footer />
   </main>
 </template>
 
