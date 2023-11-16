@@ -24,7 +24,7 @@
   @layer utilities {
     /* Uniform Card Style */
     .card-style {
-      @apply border border-zinc-300 dark:border-zinc-700 dark:bg-zinc-700/50 bg-white;
+      @apply border border-zinc-200 dark:border-zinc-700 dark:bg-zinc-700/50 bg-white;
     }
 
     .focused-link {

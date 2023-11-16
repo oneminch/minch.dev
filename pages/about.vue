@@ -58,9 +58,10 @@
         <nuxt-img
           loading="lazy"
           format="webp"
+          height="100"
           src="/google-search-wide.png"
           alt="A screenshot of searching on google 'where do you write code'"
-          class="w-full object-cover rounded-lg border border-zinc-200 dark:border-transparent mb-1"
+          class="w-full text-center object-cover rounded-lg border border-zinc-200 dark:border-transparent mb-1"
         />
       </picture>
 

@@ -149,7 +149,7 @@
           />
         </nuxt-link>
       </h2>
-      <p class="text-zinc-700 dark:text-zinc-300 mb-6">
+      <p class="text-zinc-700 dark:text-zinc-300 mb-4">
         Passion turned into pixels.
       </p>
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
@@ -187,7 +187,7 @@
           />
         </nuxt-link>
       </h2>
-      <p class="text-zinc-700 dark:text-zinc-300 mb-6">
+      <p class="text-zinc-700 dark:text-zinc-300 mb-4">
         Writing is a tool for thinking.
       </p>
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
@@ -217,16 +217,11 @@
       <h2 class="font-bold text-xl py-2">More Stuff</h2>
 
       <div
-        class="grid grid-cols-2 lg:grid-cols-4 lg:grid-rows-2 lg:grid-flow-col gap-4 lg:gap-2 lg:[&_:first-child]:row-span-2 lg:[&_:last-child]:row-span-2"
+        class="grid grid-cols-2 lg:grid-cols-4 lg:grid-rows-2 lg:grid-flow-col gap-2 lg:[&_:first-child]:row-span-2 lg:[&_:last-child]:row-span-2"
       >
-        <app-link-card
-          label="Contact"
-          url="/contact"
-          icon="fluent-emoji:e-mail"
-        ></app-link-card>
         <!-- <a
-          download="Dawit_Urgessa_Resume.pdf"
-          href="/resume.pdf"
+        download="Dawit_Urgessa_Resume.pdf"
+        href="/resume.pdf"
           class="focused-link card-style flex flex-col justify-center items-center px-2 pt-2 pb-3 relative rounded-xl font-medium overflow-hidden transition-colors duration-150 hover:bg-green-50/25 dark:hover:bg-zinc-700/75"
         >
           <Icon name="fluent-emoji:briefcase" size="2.5rem" class="mb-2 p-1" />
@@ -238,8 +233,13 @@
             aria-label="Download resume file"
             size="1.25rem"
             class="absolute top-2 right-2 flex-shrink-0 text-green-500"
-          />
-        </a> -->
+            />
+          </a> -->
+        <app-link-card
+          label="Contact"
+          icon="fluent-emoji:e-mail"
+          url="/contact"
+        ></app-link-card>
         <app-link-card
           label="LeetCode"
           icon="fluent-emoji:teacup-without-handle"

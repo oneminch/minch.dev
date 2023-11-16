@@ -57,7 +57,7 @@
         />
       </template>
       <template v-else>
-        <app-project-card
+        <app-project-card-old
           v-for="featuredProject in projects.featured"
           :key="featuredProject.name"
           :img-url="featuredProject.openGraphImageUrl"
@@ -83,7 +83,7 @@
         />
       </template>
       <template v-else>
-        <app-project-card
+        <app-project-card-old
           v-for="project in projects.visual"
           :key="project.name"
           :img-url="project.openGraphImageUrl"
@@ -102,7 +102,7 @@
     <!-- Remaining Projects: Non-visual -->
     <section class="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-6">
       <template v-if="!pending">
-        <app-project-card
+        <app-project-card-old
           v-for="project in projects.nonVisual"
           :key="project.name"
           :img-url="''"

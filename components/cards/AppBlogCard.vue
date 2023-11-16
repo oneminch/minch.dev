@@ -11,11 +11,11 @@
     >
       <nuxt-img
         format="webp"
-        height="325"
         loading="lazy"
+        height="325"
         :src="coverImage"
         alt="Cover Image"
-        class="w-full h-auto object-cover bg-cover origin-center bg-center"
+        class="w-full h-auto object-cover text-center"
       />
     </div>
     <div class="flex flex-col justify-between p-2 flex-shrink-0 w-full">
