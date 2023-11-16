@@ -47,7 +47,7 @@
 
     <!-- Featured Projects -->
     <section
-      class="grid grid-cols-1 grid-rows-2 gap-4 lg:grid-cols-[1fr_75px_1fr] lg:grid-flow-row mb-6"
+      class="grid grid-cols-1 grid-rows-2 gap-x-4 gap-y-2 lg:grid-cols-[1fr_75px_1fr] lg:grid-flow-row mb-6"
     >
       <template v-if="pending">
         <app-project-skeleton
@@ -75,7 +75,7 @@
     />
 
     <!-- Remaining Projects: Visual -->
-    <section class="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-6">
+    <section class="grid grid-cols-1 lg:grid-cols-2 gap-x-4 gap-y-2 mb-6">
       <template v-if="pending">
         <app-project-skeleton
           v-for="skeletonId in projectSkeletonIds()"
@@ -100,7 +100,7 @@
     />
 
     <!-- Remaining Projects: Non-visual -->
-    <section class="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-6">
+    <section class="grid grid-cols-1 lg:grid-cols-2 gap-x-4 gap-y-2 mb-6">
       <template v-if="!pending">
         <app-project-card-old
           v-for="project in projects.nonVisual"

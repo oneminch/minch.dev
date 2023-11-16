@@ -9,7 +9,7 @@
       My solutions to some LeetCode-style coding problems.
     </p>
 
-    <section class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+    <section class="grid grid-cols-1 lg:grid-cols-2 gap-x-4 gap-y-2">
       <template v-if="pending">
         <app-code-solution-skeleton
           v-for="skeleton in skeletons"
