@@ -42,7 +42,7 @@
       Writing is a tool for thinking.
     </p>
 
-    <section class="grid grid-cols-1 lg:grid-cols-2 gap-x-4 gap-y-2">
+    <section class="grid grid-cols-1 lg:grid-cols-2 gap-4">
       <template v-if="pending">
         <app-blog-skeleton v-for="skeleton in skeletons" :key="skeleton" />
       </template>

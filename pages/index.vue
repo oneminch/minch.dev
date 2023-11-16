@@ -190,7 +190,7 @@
       <p class="text-zinc-700 dark:text-zinc-300 mb-4">
         Writing is a tool for thinking.
       </p>
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-x-4 gap-y-2">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
         <template v-if="blogsPending">
           <app-blog-skeleton
             v-for="skeletonId in blogSkeletonIds"

@@ -23,7 +23,7 @@
 <template>
   <nuxt-link
     :to="projectUrl"
-    class="focused-link rounded-xl h-24 px-4 py-4 w-full relative flex items-center transition- duration-200 overflow-hidden border border-zinc-200 dark:border-zinc-700 bg-white dark:bg-zinc-800/50 hover:ring-inset hover:ring-2 hover:ring-lime-500"
+    class="focused-link rounded-xl h-24 px-4 py-4 w-full relative flex items-center transition- duration-200 overflow-hidden border border-zinc-200 dark:border-zinc-700 bg-white dark:bg-zinc-800/50 hover:ring-inset hover:ring-2 hover:ring-green-500"
   >
     <div
       class="w-12 h-12 rounded-2xl shrink-0 relative -z-0 before:content-[''] before:absolute before:-inset-[1px] before:-z-10 before:rounded-[calc(.75rem+1px)] before:bg-gradient-to-b before:from-green-500 before:to-lime-400"
