@@ -30,16 +30,19 @@
     <div
       class="w-12 h-12 rounded-2xl shrink-0 relative -z-0 before:content-[''] before:absolute before:-inset-[1px] before:-z-10 before:rounded-[calc(.75rem+1px)] before:bg-gradient-to-b before:from-green-500 before:to-lime-400"
     >
-      <nuxt-img
+      <Icon
+        name="heroicons:command-line-20-solid"
+        class="w-full h-full p-2 bg-zinc-200 dark:bg-zinc-700 opacity-90 rounded-xl"
+      />
+      <!-- <nuxt-img
         format="webp"
         loading="lazy"
-        src="https://enclist.sirv.com/logo.png"
+        :src="imgUrl.length ? imgUrl : 'https://enclist.sirv.com/logo.png'"
         :alt="`Project Logo for ${projectTitle}`"
         class="w-full h-full bg-zinc-200 dark:bg-zinc-700 opacity-90 rounded-xl object-cover"
         width="48"
         height="48"
-      />
-      <!-- :src="imgUrl.length ? imgUrl : 'https://enclist.sirv.com/logo.png'" -->
+      /> -->
     </div>
     <div class="flex flex-col items-start justify-center pl-4">
       <h3 class="font-bold">{{ projectTitle }}</h3>
