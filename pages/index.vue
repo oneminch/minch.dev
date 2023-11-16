@@ -76,10 +76,7 @@
         name="mdi:format-quote-close"
         class="text-5xl md:text-7xl text-zinc-200 dark:text-zinc-800 absolute -top-3 md:-top-6 right-0 -z-10"
       />
-      <h1 class="font-semibold text-2xl mb-4">
-        Hi, I'm Dawit
-        <span id="wave">👋</span>
-      </h1>
+      <h1 class="font-semibold text-2xl mb-4">Hi, I'm Dawit 👋</h1>
       <p class="text-zinc-700 dark:text-zinc-300 mb-4 text-xl font-medium">
         I craft
         <span class="highlight">delightful</span>
@@ -264,46 +261,16 @@
 </template>
 
 <style scoped>
-  #wave {
-    @apply inline-block ml-1 origin-[70%_70%];
-    animation: 2.5s ease 5s infinite wave;
-  }
   #contact-btn {
     animation: 1500ms linear 1500ms infinite pulse;
   }
+
   @keyframes pulse {
     0% {
       box-shadow: #4ade80 0 0 0 0;
     }
     50% {
       box-shadow: #4ade8000 0 0 0 0.5rem;
-    }
-  }
-
-  @keyframes wave {
-    0% {
-      transform: rotate(0deg);
-    }
-    10% {
-      transform: rotate(14deg);
-    }
-    20% {
-      transform: rotate(-8deg);
-    }
-    30% {
-      transform: rotate(14deg);
-    }
-    40% {
-      transform: rotate(-4deg);
-    }
-    50% {
-      transform: rotate(10deg);
-    }
-    60% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(0deg);
     }
   }
 </style>
