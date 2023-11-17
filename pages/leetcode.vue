@@ -20,10 +20,10 @@
         <app-code-solution-card
           v-for="solution in codeSolutions"
           :key="solution._path"
-          :problemTitle="solution.title"
+          :problem-title="solution.title"
           :url="solution._path"
           :tags="solution.tags"
-          :problemUrl="solution.problemUrl"
+          :problem-url="solution.problemUrl"
         />
       </template>
     </section>

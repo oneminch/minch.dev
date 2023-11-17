@@ -25,7 +25,7 @@
       height="48"
       :src="pick.cover"
       class="w-8 h-8 md:w-12 md:10 flex-shrink-0 text-xs object-cover rounded mr-3 overflow-hidden text-center bg-zinc-200 dark:bg-zinc-700"
-      alt="Cover Image"
+      :alt="`Cover Image for External Article Titled ${pick.title}`"
     />
     <span>{{ pick.title }}</span>
     <Icon

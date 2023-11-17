@@ -51,11 +51,11 @@
           v-for="blogPost in blogPosts"
           :key="blogPost._id"
           :tags="blogPost.tags"
-          :blogTitle="blogPost.title"
+          :blog-title="blogPost.title"
           :title="blogPost.title"
           :url="blogPost._path"
-          :pubDate="blogPost.updated"
-          :coverImage="blogPost.image"
+          :pub-date="blogPost.updated"
+          :cover-image="blogPost.image"
         />
       </template>
     </section>

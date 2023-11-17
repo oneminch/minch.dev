@@ -13,10 +13,9 @@
         preload
         placeholder
         format="webp"
-        loading="lazy"
         height="325"
         :src="coverImage"
-        alt="Cover Image"
+        :alt="`Cover Image for an Article Titled ${blogTitle}`"
         class="w-full h-auto object-cover text-center"
       />
     </div>
