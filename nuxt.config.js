@@ -84,6 +84,7 @@ export default defineNuxtConfig({
     "nuxt-icon"
   ],
   routeRules: {
+    "/": { prerender: true },
     "/**": { prerender: true },
     "/picks": { swr: 3600 },
     "/projects": { isr: 86400 }
