@@ -17,6 +17,8 @@
     :to="pick.url"
   >
     <nuxt-img
+      preload
+      placeholder
       format="webp"
       loading="lazy"
       width="48"

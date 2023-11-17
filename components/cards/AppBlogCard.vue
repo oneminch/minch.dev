@@ -10,6 +10,8 @@
       class="card-style flex items-center justify-center w-full h-32 flex-shrink-0 overflow-hidden mr-1 rounded-xl"
     >
       <nuxt-img
+        preload
+        placeholder
         format="webp"
         loading="lazy"
         height="325"

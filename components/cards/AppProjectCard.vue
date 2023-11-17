@@ -35,7 +35,9 @@
         class="w-full h-full p-2 bg-zinc-200 dark:bg-zinc-700 opacity-90 rounded-xl"
       />
       <!-- <nuxt-img
-        format="webp"
+        preload
+placeholder
+format="webp"
         loading="lazy"
         :src="imgUrl.length ? imgUrl : 'https://enclist.sirv.com/logo.png'"
         :alt="`Project Logo for ${projectTitle}`"

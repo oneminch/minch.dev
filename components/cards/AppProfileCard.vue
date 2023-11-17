@@ -4,6 +4,8 @@
     class="w-full flex flex-col items-center bg-transparent relative [&>*]:mb-1 md:[&>*]:mb-3 last:[&>*]:mb-0 p-1 pb-2 md:pb-1"
   >
     <nuxt-img
+      preload
+      placeholder
       format="webp"
       loading="lazy"
       width="112"

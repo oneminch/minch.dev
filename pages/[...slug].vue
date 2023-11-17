@@ -15,6 +15,8 @@
       <!-- Post Cover Image -->
       <nuxt-img
         v-if="doc.image"
+        preload
+        placeholder
         format="webp"
         loading="lazy"
         height="300"

@@ -9,6 +9,8 @@
       class="w-10 h-10 flex-shrink-0 flex items-center justify-center bg-zinc-200 dark:bg-zinc-900 rounded-full p-1 mr-2 overflow-hidden"
     >
       <nuxt-img
+        preload
+        placeholder
         format="webp"
         loading="lazy"
         width="40"

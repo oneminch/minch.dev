@@ -57,6 +57,8 @@
         <source media="(min-width: 1024px)" srcset="/google-search-wide.png" />
         <nuxt-img
           loading="lazy"
+          preload
+          placeholder
           format="webp"
           height="100"
           src="/google-search-wide.png"
@@ -99,6 +101,8 @@
       class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-2 my-4 [&>img]:ring [&>img]:ring-zinc-300 [&>img]:dark:ring-zinc-800"
     >
       <nuxt-img
+        preload
+        placeholder
         format="webp"
         loading="lazy"
         height="200"
@@ -107,6 +111,8 @@
         class="w-full object-cover text-center rounded-lg"
       />
       <nuxt-img
+        preload
+        placeholder
         format="webp"
         loading="lazy"
         height="200"
@@ -115,6 +121,8 @@
         class="w-full object-cover text-center rounded-lg"
       />
       <nuxt-img
+        preload
+        placeholder
         format="webp"
         loading="lazy"
         height="200"
