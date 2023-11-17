@@ -278,29 +278,27 @@
   }
 
   #wave {
-    @apply inline-block ml-1 origin-[70%_70%] animate-[2.5s_ease_3s_2_wave] hover:animate-[1.5s_ease_hoverwave];
+    @apply inline-block ml-1 origin-[70%_70%] animate-[10s_ease_2s_infinite_wave] hover:animate-[1.5s_ease_hoverwave];
   }
 
   @keyframes wave {
     0% {
       transform: rotate(0deg);
     }
-    10% {
+    2.5%,
+    7.5% {
       transform: rotate(14deg);
     }
-    20% {
+    5% {
       transform: rotate(-8deg);
     }
-    30% {
-      transform: rotate(14deg);
-    }
-    40% {
+    10% {
       transform: rotate(-4deg);
     }
-    50% {
+    12.5% {
       transform: rotate(10deg);
     }
-    60% {
+    15% {
       transform: rotate(0deg);
     }
     100% {
