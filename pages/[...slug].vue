@@ -20,6 +20,7 @@
         height="300"
         :src="doc.image"
         :alt="doc.title"
+        class="text-center"
       />
 
       <!-- Additional info for leetcode solution posts -->

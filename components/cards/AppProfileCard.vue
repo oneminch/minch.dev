@@ -10,7 +10,7 @@
       height="112"
       src="/profile.jpg"
       alt="Profile Picture"
-      class="w-28 rounded-full border border-zinc-200 dark:border-zinc-800"
+      class="w-28 rounded-full text-center border border-zinc-200 dark:border-zinc-800"
     />
     <h2 class="text-xl md:text-2xl font-bold text-zinc-900 dark:text-zinc-100">
       Dawit

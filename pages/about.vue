@@ -104,7 +104,7 @@
         height="200"
         src="https://images.unsplash.com/photo-1547847041-a626718b4017"
         alt="A long exposure shot of City Lake Falls in Cookeville, TN"
-        class="w-full object-cover rounded-lg"
+        class="w-full object-cover text-center rounded-lg"
       />
       <nuxt-img
         format="webp"
@@ -112,7 +112,7 @@
         height="200"
         src="https://images.unsplash.com/photo-1635372708431-64774de60e20"
         alt="An Xbox controller"
-        class="w-full object-cover rounded-lg"
+        class="w-full object-cover text-center rounded-lg"
       />
       <nuxt-img
         format="webp"
@@ -120,7 +120,7 @@
         height="200"
         src="https://images.unsplash.com/photo-1580408485028-225972105876"
         alt="My laptop in a dark environment with a colorful display"
-        class="w-full object-cover rounded-lg"
+        class="w-full object-cover text-center rounded-lg"
       />
     </div>
   </main>

@@ -16,7 +16,7 @@
         :src="`/icons/${platform}.png`"
         :alt="`${platform}`"
         :title="`${platform}`"
-        class="object-cover rounded-full"
+        class="object-cover rounded-full text-center"
       />
     </div>
     <div class="px-2 py-1">
