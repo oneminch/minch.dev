@@ -28,15 +28,15 @@ export default defineNuxtConfig({
           rel: "manifest",
           href: "/site.webmanifest"
         }
+      ],
+      script: [
+        {
+          type: "text/partytown",
+          src: "https://measure.oneminch.dev/minch-measure",
+          async: true,
+          "data-website-id": "1e0e9daa-a25b-4943-af4e-68c91b2d3c72"
+        }
       ]
-      // ,script: [
-      //   {
-      //     type: "text/partytown",
-      //     src: "https://measure.oneminch.dev/minch-measure",
-      //     async: true,
-      //     "data-website-id": "1e0e9daa-a25b-4943-af4e-68c91b2d3c72"
-      //   }
-      // ]
     },
     pageTransition: { name: "slide", mode: "out-in" },
     layoutTransition: { name: "slide", mode: "out-in" }
