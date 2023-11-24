@@ -9,7 +9,7 @@ The current & third iteration of my portfolio rebuilt from scratch using [Nuxt 3
 
 ![Blog Post Screenshot](/public/blog-post-screenshot.png)
 
-## Credit
+## Stack
 
-- NuxtJS
-- TailwindCSS
+- [Nuxt](https://nuxt.com/)
+- [TailwindCSS](https://tailwindcss.com/)
