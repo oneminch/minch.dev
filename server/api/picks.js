@@ -1,11 +1,11 @@
 import axios from "axios";
 
-const { raindropTestToken, raindropCollectionId } = useRuntimeConfig();
+const { raindropToken, raindropCollectionId } = useRuntimeConfig();
 
 const axiosConfig = {
   headers: {
     Accept: "application/json",
-    Authorization: `Bearer ${raindropTestToken}`
+    Authorization: `Bearer ${raindropToken}`
   }
 };
 
