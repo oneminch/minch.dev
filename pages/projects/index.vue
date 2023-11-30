@@ -66,7 +66,6 @@
           v-for="skeletonId in projectSkeletonIds()"
           :key="skeletonId"
         />
-        <!-- class="lg:first:col-span-2 lg:last:col-span-2" -->
       </template>
       <template v-else>
         <app-project-card
@@ -77,8 +76,6 @@
           :project-description="featuredProject.description"
           :project-url="featuredProject.homepageUrl"
         />
-        <!-- class="lg:first:col-span-2 lg:last:col-span-2" -->
-        <!-- :tags="featuredProject.repositoryTopics" -->
       </template>
     </section>
 
@@ -103,7 +100,6 @@
           :project-description="project.description"
           :project-url="project.homepageUrl"
         />
-        <!-- :tags="project.repositoryTopics" -->
       </template>
     </section>
 
@@ -122,7 +118,6 @@
           :project-description="project.description"
           :project-url="project.homepageUrl"
         />
-        <!-- :tags="project.repositoryTopics" -->
       </template>
     </section>
   </main>
