@@ -27,7 +27,7 @@
 
   // Fetch all blog posts sans LeetCode solutions
   const { pending, data: blogPosts } = await useLazyAsyncData("all-posts", () =>
-    queryContent("/blog").sort({ publishedOn: -1 }).find()
+    queryContent("/blog").sort({ published_on: -1 }).find()
   );
 </script>
 

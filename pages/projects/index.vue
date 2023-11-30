@@ -23,19 +23,11 @@
   });
 
   // Skeletons
-  const projectSkeletonIds = () => [...Array(4).fill(Math.random())];
+  const projectSkeletonIds = (n) => [...Array(n).fill(Math.random())];
 
-  const { pending, data: projects } = await useLazyFetch("/api/projects", {
-    key: "allprojects",
-    query: {
-      type: "showcase",
-      limit: 25
-    }
-  });
-
-  // Fetch all blog posts sans LeetCode solutions
+  // Fetch all featured projects
   const { data: allProjects } = await useLazyAsyncData("projects", () =>
-    queryContent("/projects").sort({ navOrder: 1 }).find()
+    queryContent("/projects").sort({ nav_order: 1 }).find()
   );
 </script>
 
@@ -50,75 +42,36 @@
       Each project is a story waiting to be told.
     </p>
 
-    <nuxt-link
-      v-for="project in allProjects"
-      :to="project._path"
-      :key="project._path"
-      >{{ project.title }}</nuxt-link
-    >
-
     <!-- Featured Projects -->
     <section
-      class="grid grid-cols-1 grid-rows-2 gap-4 mb-4 lg:grid-cols-2 lg:grid-flow-row"
+      class="grid grid-cols-1 grid-rows-2 gap-4 mb-10 lg:grid-cols-2 lg:grid-flow-row"
     >
       <template v-if="pending">
         <app-project-skeleton
-          v-for="skeletonId in projectSkeletonIds()"
+          v-for="skeletonId in projectSkeletonIds(6)"
           :key="skeletonId"
         />
       </template>
       <template v-else>
         <app-project-card
-          v-for="featuredProject in projects.featured"
-          :key="featuredProject.name"
-          :img-url="featuredProject.openGraphImageUrl"
-          :project-title="featuredProject.name"
-          :project-description="featuredProject.description"
-          :project-url="featuredProject.homepageUrl"
-        />
-      </template>
-    </section>
-
-    <hr
-      class="w-3/4 h-[1px] my-6 md:my-8 mx-auto border-none bg-gradient-to-r from-transparent via-zinc-300 dark:via-zinc-700 to-transparent rounded-full"
-    />
-
-    <!-- Remaining Projects: Visual -->
-    <section class="grid grid-cols-1 gap-4 mb-4 lg:grid-cols-2">
-      <template v-if="pending">
-        <app-project-skeleton
-          v-for="skeletonId in projectSkeletonIds()"
-          :key="skeletonId"
-        />
-      </template>
-      <template v-else>
-        <app-project-card
-          v-for="project in projects.visual"
-          :key="project.name"
-          :img-url="project.openGraphImageUrl"
-          :project-title="project.name"
+          v-for="project in allProjects"
+          :key="project.title"
+          :img-url="project.logo_url"
+          :project-title="project.title"
           :project-description="project.description"
-          :project-url="project.homepageUrl"
+          :project-url="project._path"
         />
       </template>
     </section>
 
-    <hr
-      class="w-3/4 h-[1px] my-6 md:my-8 mx-auto border-none bg-gradient-to-r from-transparent via-zinc-300 dark:via-zinc-700 to-transparent rounded-full"
-    />
-
-    <!-- Remaining Projects: Non-visual -->
-    <section class="grid grid-cols-1 gap-4 mb-4 lg:grid-cols-2">
-      <template v-if="!pending">
-        <app-project-card
-          v-for="project in projects.nonVisual"
-          :key="project.name"
-          :img-url="''"
-          :project-title="project.name"
-          :project-description="project.description"
-          :project-url="project.homepageUrl"
-        />
-      </template>
-    </section>
+    <nuxt-link
+      to="/projects/more"
+      class="flex items-center justify-center w-24 py-2 no-underline duration-150 bg-green-500 rounded-md focused-link text-zinc-800 group/hover-effect"
+      >More
+      <Icon
+        name="heroicons:chevron-right-20-solid"
+        class="ml-1 group-hover/hover-effect:translate-x-1"
+      />
+    </nuxt-link>
   </main>
 </template>

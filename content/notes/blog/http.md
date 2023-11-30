@@ -24,7 +24,7 @@ tags:
   - networking
 series: Computer Networks
 navOrder: 2
-publishedOn: "2022-03-20"
+published_on: "2022-03-20"
 ---
 
 In this article, I will discuss how HTTP requests work behind the scenes.

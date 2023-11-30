@@ -29,7 +29,7 @@ head:
 slug: intro-to-fetch-api
 enableToc: true
 published: true
-publishedOn: "2023-10-25"
+published_on: "2023-10-25"
 ---
 
 One of the ways of making [HTTP requests in JavaScript](https://oneminch.dev/blog/http-requests-in-javascript) is the `fetch()` API. The `fetch()` API is a modern JavaScript API that allows web developers to send/retrieve data across the web.

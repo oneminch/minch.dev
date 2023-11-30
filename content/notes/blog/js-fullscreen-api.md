@@ -28,7 +28,7 @@ head:
 slug: js-fullscreen-api
 enableToc: true
 published: true
-publishedOn: "2023-10-23"
+published_on: "2023-10-23"
 ---
 
 Whenever you want to watch a YouTube video, play a video game or just want to do a focused work in your browser, the fullscreen feature makes the experience even more immersive. This article explains how this particular API works in JavaScript and how you can easily implement one in your projects.

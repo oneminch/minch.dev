@@ -40,31 +40,24 @@
   // Fetch latest 2 blog posts
   const { pending: blogsPending, data: blogPosts } = await useLazyAsyncData(
     "featured-posts",
-    () => queryContent("/blog").sort({ publishedOn: -1 }).limit(2).find()
+    () => queryContent("/blog").sort({ published_on: -1 }).limit(2).find()
   );
 
-  // Fetch featured projects
-  const { pending: projectsPending, data: projects } = await useLazyFetch(
-    "/api/projects",
-    {
-      key: "featuredprojects",
-      query: {
-        type: "featured",
-        limit: 2
-      }
-    }
+  // Fetch 2 featured projects
+  const { data: projects } = await useLazyAsyncData("featured-projects", () =>
+    queryContent("/projects").sort({ nav_order: 1 }).limit(2).find()
   );
 </script>
 
 <!-- Landing Page -->
 <template>
-  <main id="main-content" class="space-y-4 relative">
+  <main id="main-content" class="relative space-y-4">
     <Title>{{ seoMeta.title }}</Title>
     <Meta name="description" :content="seoMeta.description" />
 
     <!-- contact button -->
     <!-- <nuxt-link
-      class="absolute top-4 right-4 rounded-lg py-2 px-4 bg-green-500 text-zinc-800"
+      class="absolute px-4 py-2 bg-green-500 rounded-lg top-4 right-4 text-zinc-800"
       to="/contact"
       id="contact-btn"
       >Contact</nuxt-link
@@ -74,23 +67,23 @@
     <section class="relative">
       <Icon
         name="mdi:format-quote-close"
-        class="text-5xl md:text-7xl text-zinc-200 dark:text-zinc-800 absolute -top-3 md:-top-6 right-0 -z-10"
+        class="absolute right-0 text-5xl md:text-7xl text-zinc-200 dark:text-zinc-800 -top-3 md:-top-6 -z-10"
       />
-      <h1 class="font-semibold text-2xl mb-4">
+      <h1 class="mb-4 text-2xl font-semibold">
         Hi, I'm Dawit
         <span id="wave">👋</span>
       </h1>
-      <p class="text-zinc-700 dark:text-zinc-300 mb-4 text-xl font-medium">
+      <p class="mb-4 text-xl font-medium text-zinc-700 dark:text-zinc-300">
         I craft
         <span class="highlight">delightful</span>
         and <span class="highlight">accessible</span>
         web interfaces...
       </p>
-      <p class="text-zinc-700 dark:text-zinc-300 my-2">
+      <p class="my-2 text-zinc-700 dark:text-zinc-300">
         My design-oriented approach ensures that every project I touch is as
         aesthetically pleasing as it is functional.
       </p>
-      <p class="text-zinc-700 dark:text-zinc-300 my-2">
+      <p class="my-2 text-zinc-700 dark:text-zinc-300">
         I am <span class="highlight">currently seeking opportunities</span> to
         share my passion and expertise.
       </p>
@@ -98,40 +91,40 @@
 
     <!-- Skills -->
     <section>
-      <h2 class="font-semibold text-xl mb-1 py-2">Skills</h2>
+      <h2 class="py-2 mb-1 text-xl font-semibold">Skills</h2>
       <!-- Primary Tools -->
-      <p class="text-zinc-700 dark:text-zinc-300 mb-3">
+      <p class="mb-3 text-zinc-700 dark:text-zinc-300">
         My specialty is <span class="subtle-highlight">solving problems</span>,
         and here is my toolbox:
       </p>
       <ul
-        class="w-full lg:w-3/4 p-0 pl-2 mb-3 list-disc grid grid-rows-3 sm:grid-rows-2 grid-flow-col-dense"
+        class="grid w-full grid-flow-col-dense grid-rows-3 p-0 pl-2 mb-3 list-disc lg:w-3/4 sm:grid-rows-2"
       >
         <li
           v-for="skillName in skillset.essentials"
           :key="skillName"
           class="text-green-400 list-inside"
         >
-          <span class="text-zinc-700 dark:text-zinc-300 font-medium">{{
+          <span class="font-medium text-zinc-700 dark:text-zinc-300">{{
             skillName
           }}</span>
         </li>
       </ul>
       <!-- Secondary Tools -->
-      <p class="text-zinc-700 dark:text-zinc-300 mb-3">
+      <p class="mb-3 text-zinc-700 dark:text-zinc-300">
         I'm infinitely curious.
         <span class="subtle-highlight">Always learning</span> and experimenting
         with other tools:
       </p>
       <ul
-        class="w-full lg:w-3/4 p-0 pl-2 mb-3 list-disc grid grid-cols-2 sm:grid-cols-3 grid-rows-2 grid-flow-col-dense"
+        class="grid w-full grid-flow-col-dense grid-cols-2 grid-rows-2 p-0 pl-2 mb-3 list-disc lg:w-3/4 sm:grid-cols-3"
       >
         <li
           v-for="skillName in skillset.tinker"
           :key="skillName"
           class="text-green-400 list-inside"
         >
-          <span class="text-zinc-700 dark:text-zinc-300 font-medium">{{
+          <span class="font-medium text-zinc-700 dark:text-zinc-300">{{
             skillName
           }}</span>
         </li>
@@ -140,10 +133,10 @@
 
     <!-- Projects -->
     <section>
-      <h2 class="font-semibold text-xl mb-2 w-auto group">
+      <h2 class="w-auto mb-2 text-xl font-semibold group">
         <nuxt-link
           to="/projects"
-          class="focused-link rounded-lg w-full flex items-center py-2"
+          class="flex items-center w-full py-2 rounded-lg focused-link"
         >
           My Projects
           <Icon
@@ -152,7 +145,7 @@
           />
         </nuxt-link>
       </h2>
-      <p class="text-zinc-700 dark:text-zinc-300 mb-4">
+      <p class="mb-4 text-zinc-700 dark:text-zinc-300">
         Passion turned into pixels.
       </p>
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-x-4 gap-y-2">
@@ -164,13 +157,12 @@
         </template>
         <template v-else>
           <app-project-card
-            v-for="featuredProject in projects.featured"
-            :key="featuredProject.name"
-            :img-url="featuredProject.openGraphImageUrl"
-            :project-title="featuredProject.name"
-            :project-description="featuredProject.description"
-            :project-url="featuredProject.homepageUrl"
-            :tags="featuredProject.repositoryTopics"
+            v-for="project in projects"
+            :key="project.title"
+            :img-url="project.logo_url"
+            :project-title="project.title"
+            :project-description="project.description"
+            :project-url="`/projects/${project.title}`"
           />
         </template>
       </div>
@@ -178,10 +170,10 @@
 
     <!-- Latest Blog Posts -->
     <section>
-      <h2 class="font-semibold text-xl mb-2 w-auto group">
+      <h2 class="w-auto mb-2 text-xl font-semibold group">
         <nuxt-link
           to="/blog"
-          class="focused-link rounded-lg w-full flex items-center py-2"
+          class="flex items-center w-full py-2 rounded-lg focused-link"
         >
           My Articles
           <Icon
@@ -190,10 +182,10 @@
           />
         </nuxt-link>
       </h2>
-      <p class="text-zinc-700 dark:text-zinc-300 mb-4">
+      <p class="mb-4 text-zinc-700 dark:text-zinc-300">
         Writing is a tool for thinking.
       </p>
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+      <div class="grid grid-cols-1 gap-4 lg:grid-cols-2">
         <template v-if="blogsPending">
           <app-blog-skeleton
             v-for="skeletonId in blogSkeletonIds"
@@ -216,8 +208,8 @@
     </section>
 
     <!-- Other Links -->
-    <section class="space-y-2 mb-2">
-      <h2 class="font-bold text-xl py-2">More Stuff</h2>
+    <section class="mb-2 space-y-2">
+      <h2 class="py-2 text-xl font-bold">More Stuff</h2>
 
       <div
         class="grid grid-cols-2 lg:grid-cols-4 lg:grid-rows-2 lg:grid-flow-col gap-2 lg:[&_:first-child]:row-span-2 lg:[&_:last-child]:row-span-2"
