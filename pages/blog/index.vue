@@ -22,9 +22,6 @@
     twitterCard: "summary_large_image"
   });
 
-  // Skeletons
-  const skeletons = [...Array(5).fill(Math.random())];
-
   // Fetch all blog posts sans LeetCode solutions
   const { pending, data: blogPosts } = await useLazyAsyncData("all-posts", () =>
     queryContent("/blog").sort({ published_on: -1 }).find()
@@ -37,14 +34,17 @@
     <Title>{{ seoMeta.title }}</Title>
     <Meta name="description" :content="seoMeta.description" />
 
-    <h1 class="text-3xl text-left font-bold mb-4">Blog</h1>
-    <p class="text-zinc-700 dark:text-zinc-300 mb-6">
+    <h1 class="mb-4 text-3xl font-bold text-left">Blog</h1>
+    <p class="mb-6 text-zinc-700 dark:text-zinc-300">
       Writing is a tool for thinking.
     </p>
 
-    <section class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+    <section class="grid grid-cols-1 gap-4 lg:grid-cols-2">
       <template v-if="pending">
-        <app-blog-skeleton v-for="skeleton in skeletons" :key="skeleton" />
+        <app-blog-skeleton
+          v-for="skeleton in generateKeys(5)"
+          :key="skeleton"
+        />
       </template>
       <template v-else>
         <app-blog-card

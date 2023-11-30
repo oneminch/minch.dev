@@ -61,7 +61,7 @@ export default defineNuxtConfig({
       "\\.code-workspace$",
       "\\.gitignore$",
       "\\.port$",
-      "\\.json$",
+      "\\.cache.json$",
       "\\.ws$",
       "\\.yml$"
     ],
@@ -87,8 +87,7 @@ export default defineNuxtConfig({
   routeRules: {
     "/": { prerender: true },
     "/**": { prerender: true },
-    "/picks": { swr: 3600 },
-    "/projects/more": { isr: 86400 }
+    "/picks": { swr: 3600 }
   },
   runtimeConfig: {
     githubToken: process.env.GITHUB_TOKEN,

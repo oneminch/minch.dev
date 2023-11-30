@@ -33,10 +33,6 @@
     tinker: ["Node.js", "Vitest", "Python", "SQL"]
   });
 
-  // Skeletons
-  const blogSkeletonIds = [...Array(2).fill(Math.random())];
-  const projectSkeletonIds = [...Array(2).fill(Math.random())];
-
   // Fetch latest 2 blog posts
   const { pending: blogsPending, data: blogPosts } = await useLazyAsyncData(
     "featured-posts",
@@ -44,8 +40,9 @@
   );
 
   // Fetch 2 featured projects
-  const { data: projects } = await useLazyAsyncData("featured-projects", () =>
-    queryContent("/projects").sort({ nav_order: 1 }).limit(2).find()
+  const { pending: projectsPending, data: projects } = await useLazyAsyncData(
+    "featured-projects",
+    () => queryContent("/projects").sort({ nav_order: 1 }).limit(2).find()
   );
 </script>
 
@@ -103,7 +100,7 @@
         <li
           v-for="skillName in skillset.essentials"
           :key="skillName"
-          class="text-green-400 list-inside"
+          class="text-green-500 list-inside"
         >
           <span class="font-medium text-zinc-700 dark:text-zinc-300">{{
             skillName
@@ -122,7 +119,7 @@
         <li
           v-for="skillName in skillset.tinker"
           :key="skillName"
-          class="text-green-400 list-inside"
+          class="text-green-500 list-inside"
         >
           <span class="font-medium text-zinc-700 dark:text-zinc-300">{{
             skillName
@@ -151,7 +148,7 @@
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-x-4 gap-y-2">
         <template v-if="projectsPending">
           <app-project-skeleton
-            v-for="skeletonId in projectSkeletonIds"
+            v-for="skeletonId in generateKeys(2)"
             :key="skeletonId"
           />
         </template>
@@ -162,7 +159,7 @@
             :img-url="project.logo_url"
             :project-title="project.title"
             :project-description="project.description"
-            :project-url="`/projects/${project.title}`"
+            :project-url="project._path"
           />
         </template>
       </div>
@@ -188,7 +185,7 @@
       <div class="grid grid-cols-1 gap-4 lg:grid-cols-2">
         <template v-if="blogsPending">
           <app-blog-skeleton
-            v-for="skeletonId in blogSkeletonIds"
+            v-for="skeletonId in generateKeys(2)"
             :key="skeletonId"
           />
         </template>

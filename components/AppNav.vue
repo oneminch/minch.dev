@@ -49,6 +49,7 @@
 
 <script setup>
   import { OnClickOutside } from "@vueuse/components";
+
   const menuToggled = ref(false);
   const toggleMenu = useToggle(menuToggled);
 

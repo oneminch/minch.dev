@@ -29,7 +29,7 @@
     <Meta name="description" :content="seoMeta.description" />
 
     <!-- Name  -->
-    <h1 class="font-semibold text-2xl mb-4">About Me</h1>
+    <h1 class="mb-4 text-2xl font-semibold">About Me</h1>
 
     <!-- Short Bio Summary -->
     <p>
@@ -63,7 +63,7 @@
           height="100"
           src="/google-search-wide.png"
           alt="A screenshot of searching on google 'where do you write code'"
-          class="w-full text-center object-cover rounded-lg border border-zinc-200 dark:border-transparent mb-1"
+          class="object-cover w-full mb-1 text-center border rounded-lg border-zinc-200 dark:border-transparent"
         />
       </picture>
 
@@ -91,7 +91,7 @@
       I'm also a hobbyist photographer.
       <a
         href="https://unsplash.com/@oneminch"
-        class="focused-link focus:rounded no-underline border-b-[.1rem] border-b-green-400"
+        class="focused-link focus:rounded no-underline border-b-[.1rem] border-b-green-500/75"
         target="_blank"
         >My photos on Unsplash</a
       >
@@ -108,7 +108,7 @@
         height="200"
         src="https://images.unsplash.com/photo-1547847041-a626718b4017"
         alt="A long exposure shot of City Lake Falls in Cookeville, TN"
-        class="w-full object-cover text-center rounded-lg"
+        class="object-cover w-full text-center rounded-lg"
       />
       <nuxt-img
         preload
@@ -118,7 +118,7 @@
         height="200"
         src="https://images.unsplash.com/photo-1635372708431-64774de60e20"
         alt="An Xbox controller"
-        class="w-full object-cover text-center rounded-lg"
+        class="object-cover w-full text-center rounded-lg"
       />
       <nuxt-img
         preload
@@ -128,7 +128,7 @@
         height="200"
         src="https://images.unsplash.com/photo-1580408485028-225972105876"
         alt="My laptop in a dark environment with a colorful display"
-        class="w-full object-cover text-center rounded-lg"
+        class="object-cover w-full text-center rounded-lg"
       />
     </div>
   </main>

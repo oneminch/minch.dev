@@ -1,6 +1,4 @@
 <script setup>
-  import AppPickCard from "../components/cards/AppPickCard.vue";
-
   const nuxtApp = useNuxtApp();
 
   const seoMeta = {
@@ -26,9 +24,6 @@
     twitterCard: "summary_large_image"
   });
 
-  // Skeletons
-  const skeletons = [...Array(5).fill(Math.random())];
-
   const { pending, data: picks } = await useLazyFetch("/api/picks", {
     getCachedData(key) {
       return nuxtApp.payload.data[key] || nuxtApp.static.data[key];
@@ -41,13 +36,13 @@
     <Title>{{ seoMeta.title }}</Title>
     <Meta name="description" :content="seoMeta.description" />
 
-    <h1 class="font-bold text-2xl mb-4">Picks</h1>
-    <p class="text-zinc-700 dark:text-zinc-300 mb-6">
+    <h1 class="mb-4 text-2xl font-bold">Picks</h1>
+    <p class="mb-6 text-zinc-700 dark:text-zinc-300">
       Content from across the web I found interesting.
     </p>
 
     <template v-if="pending">
-      <app-pick-skeleton v-for="skeleton in skeletons" :key="skeleton" />
+      <app-pick-skeleton v-for="skeleton in generateKeys(5)" :key="skeleton" />
     </template>
     <template v-else>
       <app-pick-card v-for="pick in picks" :key="pick.link" :pick="pick" />

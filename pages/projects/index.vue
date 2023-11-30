@@ -22,12 +22,14 @@
     twitterCard: "summary_large_image"
   });
 
-  // Skeletons
-  const projectSkeletonIds = (n) => [...Array(n).fill(Math.random())];
-
   // Fetch all featured projects
-  const { data: allProjects } = await useLazyAsyncData("projects", () =>
-    queryContent("/projects").sort({ nav_order: 1 }).find()
+  const { pending, data: allProjects } = await useLazyAsyncData(
+    "projects",
+    () =>
+      queryContent("/projects")
+        .where({ title: { $ne: "More" } })
+        .sort({ nav_order: 1 })
+        .find()
   );
 </script>
 
@@ -48,7 +50,7 @@
     >
       <template v-if="pending">
         <app-project-skeleton
-          v-for="skeletonId in projectSkeletonIds(6)"
+          v-for="skeletonId in generateKeys(5)"
           :key="skeletonId"
         />
       </template>

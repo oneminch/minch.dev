@@ -22,16 +22,24 @@
     twitterCard: "summary_large_image"
   });
 
-  // Skeletons
-  const projectSkeletonIds = (n) => [...Array(n).fill(Math.random())];
-
-  const { pending, data: projects } = await useLazyFetch("/api/projects", {
-    key: "allprojects",
-    query: {
-      type: "showcase",
-      limit: 25
+  // Fetch all featured projects
+  const { pending, data: projects } = await useLazyAsyncData(
+    "all-projects",
+    () => queryContent("/projects/more").findOne(),
+    {
+      transform: (projects) => {
+        return {
+          visual: projects.body.filter((project) => project.visual),
+          nonVisual: projects.body.filter((project) => !project.visual)
+        };
+      }
     }
-  });
+  );
+
+  console.log(JSON.parse(JSON.stringify(projects)));
+  // watch(projects, (newProjects) => {
+  //   console.log(newProjects);
+  // });
 </script>
 
 <!-- Projects Page -->
@@ -47,9 +55,9 @@
       I build things in the open. Check out
       <nuxt-link
         to="https://github.com/oneminch"
-        class="border-b border-b-green-400/75"
+        class="border-b-[.1rem] border-b-green-500/75"
         external
-        >my GitHub</nuxt-link
+        >my GitHub profile</nuxt-link
       >.
     </p>
 
@@ -57,7 +65,7 @@
     <section class="grid grid-cols-1 gap-4 mb-4 lg:grid-cols-2">
       <template v-if="pending">
         <app-project-skeleton
-          v-for="skeletonId in projectSkeletonIds(4)"
+          v-for="skeletonId in generateKeys(4)"
           :key="skeletonId"
         />
       </template>
@@ -65,10 +73,9 @@
         <app-project-card
           v-for="project in projects.visual"
           :key="project.name"
-          :img-url="project.openGraphImageUrl"
           :project-title="project.name"
           :project-description="project.description"
-          :project-url="project.homepageUrl"
+          :project-url="project.liveUrl"
         />
       </template>
     </section>
@@ -81,7 +88,7 @@
     <section class="grid grid-cols-1 gap-4 mb-4 lg:grid-cols-2">
       <template v-if="pending">
         <app-project-skeleton
-          v-for="skeletonId in projectSkeletonIds(2)"
+          v-for="skeletonId in generateKeys(2)"
           :key="skeletonId"
         />
       </template>
@@ -89,10 +96,9 @@
         <app-project-card
           v-for="project in projects.nonVisual"
           :key="project.name"
-          :img-url="''"
           :project-title="project.name"
           :project-description="project.description"
-          :project-url="project.homepageUrl"
+          :project-url="project.liveUrl"
         />
       </template>
     </section>

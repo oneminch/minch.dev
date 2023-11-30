@@ -1,17 +1,15 @@
 <!-- Blog: Skeleton -->
 <template>
-  <div class="w-full h-auto p-0 overflow-hidden flex flex-col mb-3">
-    <!-- Image Skeleton -->
+  <div class="flex flex-col w-full h-auto p-0 mb-3 overflow-hidden">
     <div
-      class="w-full h-24 rounded-xl animate-pulse flex-shrink-0 bg-zinc-200 mb-4 dark:bg-zinc-700"
+      class="flex-shrink-0 w-full h-24 mb-4 rounded-xl animate-pulse bg-zinc-200 dark:bg-zinc-700"
     ></div>
-    <!-- Title Skeleton -->
     <div class="w-full">
       <div
-        class="h-4 w-5/6 mb-4 rounded-full animate-pulse bg-zinc-200 dark:bg-zinc-700"
+        class="w-5/6 h-4 mb-4 rounded-full animate-pulse bg-zinc-200 dark:bg-zinc-700"
       ></div>
       <div
-        class="h-4 w-7/12 mb-4 rounded-full animate-pulse bg-zinc-200 dark:bg-zinc-700"
+        class="w-7/12 h-4 mb-4 rounded-full animate-pulse bg-zinc-200 dark:bg-zinc-700"
       ></div>
     </div>
   </div>

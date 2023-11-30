@@ -1,0 +1,38 @@
+[
+  {
+    "name": "Thematic",
+    "description": "A product landing page for a hypothetical SaaS product",
+    "liveUrl": "https://oneminch.github.io/Thematic/",
+    "visual": true
+  },
+  {
+    "name": "Product Hunt Clone",
+    "description": "A full-stack Product Hunt clone: Bootstrap + Node + Postgres",
+    "liveUrl": "https://replit.com/@oneminch/discover-n-share",
+    "visual": true
+  },
+  {
+    "name": "Newsfeed",
+    "description": "A news app that aggregates the top 20 headlines in a category",
+    "liveUrl": "https://oneminch.github.io/Newsfeed/",
+    "visual": true
+  },
+  {
+    "name": "Draw",
+    "description": "A minimal canvas whiteboard",
+    "liveUrl": "https://oneminch.github.io/Draw/",
+    "visual": true
+  },
+  {
+    "name": "Memory Manager",
+    "description": "A memory manager implemented in C++ (malloc & free)",
+    "liveUrl": "https://replit.com/@oneminch/os-memory-manager",
+    "visual": false
+  },
+  {
+    "name": "Producer Consumer",
+    "description": "A program to concurrently check if a tree is both a BST and complete (C++)",
+    "liveUrl": "https://replit.com/@oneminch/producer-consumer",
+    "visual": false
+  }
+]
