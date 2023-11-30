@@ -13,13 +13,6 @@
     <!-- Theme Toggle -->
     <app-theme-toggle class="absolute z-10 top-2 left-2" />
 
-    <!-- Work In Progress -->
-    <abbr
-      title="Work In Progress"
-      class="absolute top-1 right-1 bg-green-300 text-zinc-800 rounded-full py-[.125rem] px-3 text-xs"
-      >WIP</abbr
-    >
-
     <!-- Profile Card -->
     <app-profile-card />
 
@@ -40,6 +33,6 @@
 
   /* Gradient Border: Colorful Backdrop */
   #sidebar::after {
-    @apply content-[""] -z-20 absolute inset-[-2px] dark:inset-[-1px] rounded-[.75rem] md:rounded-b-none bg-gradient-to-b from-green-500 via-lime-400 to-lime-400 md:to-transparent;
+    @apply content-[""] -z-20 absolute inset-[-2px] dark:inset-[-1px] rounded-[.75rem] md:rounded-b-none bg-gradient-to-b from-green-500 via-lime-400 to-lime-400 md:to-transparent opacity-75 dark:opacity-60;
   }
 </style>

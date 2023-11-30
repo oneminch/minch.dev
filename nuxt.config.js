@@ -82,11 +82,10 @@ export default defineNuxtConfig({
   routeRules: {
     "/": { prerender: true },
     "/**": { prerender: true },
-    "/picks": { swr: 3600 }
+    "/picks": { isr: 3600 }
   },
   runtimeConfig: {
-    githubToken: process.env.GITHUB_TOKEN,
-    raindropTestToken: process.env.RAINDROP_TEST_TOKEN,
+    raindropTestToken: process.env.RAINDROP_TOKEN,
     raindropCollectionId: process.env.RAINDROP_COLLECTION_ID
   },
   telemetry: false
