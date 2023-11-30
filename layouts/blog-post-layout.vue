@@ -1,3 +1,4 @@
+<!-- Blog Post Layout -->
 <template>
   <main class="w-full" id="main-content">
     <header class="w-full max-w-3xl mx-auto">

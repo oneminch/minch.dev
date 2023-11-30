@@ -1,14 +1,14 @@
 ---
-id: bmYRMchdQ79b4wetoTzAV
 title: "Netflix UI Clone"
-description: UI Clone of Netflix
+description: A frontend clone of Netflix made with React
 tags:
   - React
-  - React-Router
-  - GitHub Pages
-logo: "https://raw.githubusercontent.com/oneminch/Netflix-UI-Clone/main/public/logo.png"
-screenshot: "https://raw.githubusercontent.com/oneminch/Netflix-UI-Clone/main/public/screenshot.png"
-nav_order: 3
+  - React Router
+  - Tailwind CSS
+live_url: "https://oneminch.github.io/Netflix-UI-Clone/"
+source_url: "https://github.com/oneminch/Netflix-UI-Clone"
+icon: ""
+nav_order: 4
 head:
   meta:
     - name: "robots"
@@ -21,12 +21,4 @@ head:
       content: "summary_large_image"
 ---
 
-<!--
-Title
-Short Desc
-Logo
-Long Desc / Overview
-Screenshot
-navOrder
-Tags
- -->
+This is Netflix UI Clone

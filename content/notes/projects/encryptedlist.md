@@ -1,13 +1,14 @@
 ---
-id: bmYRMchdQ79b4wetoTzAV
 title: "EncryptedList"
-description: List of Encrypted Tools
+description: A passion project I built to catalog software tools that are secure by default
 tags:
-  - Vue.js
+  - Vue
   - Airtable
-  - Vercel
-logo: https://raw.githubusercontent.com/oneminch/EncryptedList/main/public/logo.png
-screenshot: https://raw.githubusercontent.com/oneminch/EncryptedList/main/public/screenshot.png
+  - VueX
+  - Vue Router
+live_url: "https://encryptedlist.xyz"
+source_url: "https://github.com/oneminch/EncryptedList"
+icon: ""
 nav_order: 1
 head:
   meta:
@@ -20,15 +21,5 @@ head:
     - name: "twitter:card"
       content: "summary_large_image"
 ---
-
-<!--
-Title
-Short Desc
-Logo
-Long Desc / Overview
-Screenshot
-navOrder
-Tags
- -->
 
 This is EncryptedList

@@ -2,7 +2,7 @@
   const seoMeta = {
     title: "Dawit's LeetCode Solutions",
     description:
-      "This page contains my (imperfect) solutions to some LeetCode problems.",
+      "My (imperfect) solutions to some LeetCode problems.",
     image: "/og-image.png",
     page: "leetcode"
   };

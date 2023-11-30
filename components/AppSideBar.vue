@@ -1,3 +1,8 @@
+<script setup>
+  // Regex pattern for any blog post route
+  const routeRegEx = /(\/blog|\/leetcode)\/.*/i;
+</script>
+
 <!-- Sidebar -->
 <template>
   <aside
@@ -6,7 +11,7 @@
     :class="{ hidden: routeRegEx.test($route.fullPath) }"
   >
     <!-- Theme Toggle -->
-    <app-theme-toggle class="absolute top-2 left-2 z-10" />
+    <app-theme-toggle class="absolute z-10 top-2 left-2" />
 
     <!-- Work In Progress -->
     <abbr
@@ -15,7 +20,7 @@
       >WIP</abbr
     >
 
-    <!-- Profile card: Profile Picture, Name, Title + Social Profiles -->
+    <!-- Profile Card -->
     <app-profile-card />
 
     <hr
@@ -26,11 +31,6 @@
     <app-nav class="hidden md:flex" />
   </aside>
 </template>
-
-<script setup>
-  // Regex pattern for any blog post route
-  const routeRegEx = /(\/blog|\/leetcode)\/.*/i;
-</script>
 
 <style scoped>
   /* Gradient Border: Content Backdrop */

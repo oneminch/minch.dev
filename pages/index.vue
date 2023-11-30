@@ -156,7 +156,7 @@
           <app-project-card
             v-for="project in projects"
             :key="project.title"
-            :img-url="project.logo_url"
+            :icon="project.icon"
             :project-title="project.title"
             :project-description="project.description"
             :project-url="project._path"

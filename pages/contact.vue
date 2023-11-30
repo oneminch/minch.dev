@@ -1,7 +1,7 @@
 <script setup>
   const seoMeta = {
     title: "Dawit's Contact Form",
-    description: "Let's converse. Send me a message using the form.",
+    description: "Wanna chat? Send me a message using the form.",
     image: "/og-image.png",
     page: "contact"
   };
@@ -25,7 +25,7 @@
 <template>
   <main
     id="main-content"
-    class="h-full flex flex-col items-center justify-center"
+    class="flex flex-col items-center justify-center h-full"
   >
     <div class="flex flex-col items-center justify-center h-96">
       <Icon
@@ -36,7 +36,7 @@
       />
       <h1
         id="not-found"
-        class="font-semibold text-center text-xl sm:text-2xl text-zinc-700 dark:text-zinc-300 mb-6"
+        class="mb-6 text-xl font-semibold text-center sm:text-2xl text-zinc-700 dark:text-zinc-300"
       >
         Under Construction
       </h1>
@@ -47,7 +47,7 @@
         <input
           type="text"
           name="name"
-          class="w-full py-2 px-3 rounded-lg bg-zinc-100 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-600"
+          class="w-full px-3 py-2 border rounded-lg bg-zinc-100 dark:bg-zinc-900 border-zinc-200 dark:border-zinc-600"
           placeholder="Your name..."
         />
       </label>
@@ -56,7 +56,7 @@
         <input
           type="text"
           name="email"
-          class="w-full py-2 px-3 rounded-lg bg-zinc-100 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-600"
+          class="w-full px-3 py-2 border rounded-lg bg-zinc-100 dark:bg-zinc-900 border-zinc-200 dark:border-zinc-600"
           placeholder="Your email address..."
         />
       </label>
@@ -64,7 +64,7 @@
         <p>Message:</p>
         <textarea
           name="message"
-          class="w-full py-2 px-3 rounded-lg bg-zinc-100 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-600"
+          class="w-full px-3 py-2 border rounded-lg bg-zinc-100 dark:bg-zinc-900 border-zinc-200 dark:border-zinc-600"
         ></textarea>
       </label>
     </form> -->

@@ -3,8 +3,7 @@
 
   const seoMeta = {
     title: "Dawit's Picks",
-    description:
-      "This page contains content from across the web that I found interesting.",
+    description: "Content from across the web that I found interesting.",
     image: "/og-image.png",
     page: "picks"
   };

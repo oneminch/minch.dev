@@ -1,3 +1,17 @@
+<script setup>
+  import { OnClickOutside } from "@vueuse/components";
+
+  const menuToggled = ref(false);
+  const toggleMenu = useToggle(menuToggled);
+
+  const navLinks = {
+    Home: "",
+    About: "about",
+    Projects: "projects",
+    Blog: "blog"
+  };
+</script>
+
 <!-- Navigation: Links -->
 <template>
   <nav
@@ -46,20 +60,6 @@
     </OnClickOutside>
   </nav>
 </template>
-
-<script setup>
-  import { OnClickOutside } from "@vueuse/components";
-
-  const menuToggled = ref(false);
-  const toggleMenu = useToggle(menuToggled);
-
-  const navLinks = {
-    Home: "",
-    About: "about",
-    Projects: "projects",
-    Blog: "blog"
-  };
-</script>
 
 <style scoped>
   nav {

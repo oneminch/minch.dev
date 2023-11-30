@@ -1,7 +1,7 @@
 <script setup>
   const seoMeta = {
     title: "Dawit's Bio",
-    description: "This page contains my short bio.",
+    description: "Things About Me.",
     image: "/og-image.png",
     page: "about"
   };

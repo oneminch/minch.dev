@@ -1,3 +1,11 @@
+<script setup>
+  const profiles = {
+    GitHub: "https://github.com/oneminch",
+    X: "https://twitter.com/oneminch",
+    LinkedIn: "https://linkedin.com/in/oneminch"
+  };
+</script>
+
 <!-- Profile card: Profile Picture, Name, Title + Social Profiles -->
 <template>
   <div
@@ -12,16 +20,16 @@
       height="112"
       src="/profile.jpg"
       alt="Profile Picture"
-      class="w-28 rounded-full text-center border border-zinc-200 dark:border-zinc-800"
+      class="text-center border rounded-full w-28 border-zinc-200 dark:border-zinc-800"
     />
-    <h2 class="text-xl md:text-2xl font-bold text-zinc-900 dark:text-zinc-100">
+    <h2 class="text-xl font-bold md:text-2xl text-zinc-900 dark:text-zinc-100">
       Dawit
     </h2>
-    <h2 class="text-lg md:text-xl font-medium text-zinc-700 dark:text-zinc-400">
+    <h2 class="text-lg font-medium md:text-xl text-zinc-700 dark:text-zinc-400">
       Frontend Developer
     </h2>
     <div
-      class="w-full h-8 flex items-center justify-center text-zinc-900 dark:text-zinc-200"
+      class="flex items-center justify-center w-full h-8 text-zinc-900 dark:text-zinc-200"
     >
       <nuxt-link
         v-for="(profileUrl, name) in profiles"
@@ -37,11 +45,3 @@
     </div>
   </div>
 </template>
-
-<script setup>
-  const profiles = {
-    GitHub: "https://github.com/oneminch",
-    X: "https://twitter.com/oneminch",
-    LinkedIn: "https://linkedin.com/in/oneminch"
-  };
-</script>

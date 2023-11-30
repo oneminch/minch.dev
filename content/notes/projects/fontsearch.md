@@ -1,13 +1,13 @@
 ---
-id: bmYRMchdQ79b4wetoTzAV
 title: FontSearch
-description: Font search engine
+description: A simple search engine for fonts available on Fontsource
 tags:
-  - React
-  - React-Router
-  - GitHub Pages
-logo: "https://raw.githubusercontent.com/oneminch/Netflix-UI-Clone/main/public/logo.png"
-screenshot: "https://raw.githubusercontent.com/oneminch/Netflix-UI-Clone/main/public/screenshot.png"
+  - JavaScript
+  - WindiCSS
+  - Fuse.js
+live_url: "https://oneminch.github.io/FontSearch/"
+source_url: "https://github.com/oneminch/FontSearch"
+icon: ""
 nav_order: 5
 head:
   meta:
@@ -21,12 +21,4 @@ head:
       content: "summary_large_image"
 ---
 
-<!--
-Title
-Short Desc
-Logo
-Long Desc / Overview
-Screenshot
-navOrder
-Tags
- -->
+This is FontSearch

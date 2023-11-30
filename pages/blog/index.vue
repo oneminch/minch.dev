@@ -1,8 +1,7 @@
 <script setup>
   const seoMeta = {
     title: "Dawit's Blog",
-    description:
-      "This page contains my articles on various software and web development topics.",
+    description: "My articles on various software and web development topics.",
     image: "/og-image.png",
     page: "blog"
   };
@@ -22,8 +21,8 @@
     twitterCard: "summary_large_image"
   });
 
-  // Fetch all blog posts sans LeetCode solutions
-  const { pending, data: blogPosts } = await useLazyAsyncData("all-posts", () =>
+  // Fetch all blog posts
+  const { pending, data: posts } = await useLazyAsyncData("all-posts", () =>
     queryContent("/blog").sort({ published_on: -1 }).find()
   );
 </script>
@@ -48,14 +47,14 @@
       </template>
       <template v-else>
         <app-blog-card
-          v-for="blogPost in blogPosts"
-          :key="blogPost._id"
-          :tags="blogPost.tags"
-          :blog-title="blogPost.title"
-          :title="blogPost.title"
-          :url="blogPost._path"
-          :pub-date="blogPost.updated"
-          :cover-image="blogPost.image"
+          v-for="post in posts"
+          :key="post._id"
+          :tags="post.tags"
+          :blog-title="post.title"
+          :title="post.title"
+          :url="post._path"
+          :pub-date="post.updated"
+          :cover-image="post.image"
         />
       </template>
     </section>

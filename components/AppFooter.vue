@@ -26,7 +26,7 @@
       </nuxt-link>
       <span>&bull;</span>
       <nuxt-link
-        class="icon-link focused-link text-black dark:text-white"
+        class="text-black icon-link focused-link dark:text-white"
         to="https://vercel.com"
         aria-label="Vercel Website"
         target="_blank"

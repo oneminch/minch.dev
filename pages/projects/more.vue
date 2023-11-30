@@ -1,10 +1,10 @@
 <script setup>
   const seoMeta = {
-    title: "Dawit's Projects",
+    title: "More Projects",
     description:
-      "This page contains projects that I am currently working on and have worked on.",
+      "More projects that I am currently working on and have worked on.",
     image: "/og-image.png",
-    page: "projects"
+    page: "projects/more"
   };
 
   useServerSeoMeta({
@@ -22,7 +22,7 @@
     twitterCard: "summary_large_image"
   });
 
-  // Fetch all featured projects
+  // Fetch all other projects
   const { pending, data: projects } = await useLazyAsyncData(
     "all-projects",
     () => queryContent("/projects/more").findOne(),
@@ -35,14 +35,9 @@
       }
     }
   );
-
-  console.log(JSON.parse(JSON.stringify(projects)));
-  // watch(projects, (newProjects) => {
-  //   console.log(newProjects);
-  // });
 </script>
 
-<!-- Projects Page -->
+<!-- Projects.more() Page -->
 <template>
   <main id="main-content">
     <Title>{{ seoMeta.title }}</Title>
@@ -61,7 +56,7 @@
       >.
     </p>
 
-    <!-- Remaining Projects: Visual -->
+    <!-- Visual Projects -->
     <section class="grid grid-cols-1 gap-4 mb-4 lg:grid-cols-2">
       <template v-if="pending">
         <app-project-skeleton
@@ -76,6 +71,7 @@
           :project-title="project.name"
           :project-description="project.description"
           :project-url="project.liveUrl"
+          :icon="project.icon"
         />
       </template>
     </section>
@@ -84,7 +80,7 @@
       class="w-3/4 h-[1px] my-6 md:my-8 mx-auto border-none bg-gradient-to-r from-transparent via-zinc-200 dark:via-zinc-800 to-transparent rounded-full"
     />
 
-    <!-- Remaining Projects: Non-visual -->
+    <!-- Non-visual Projects -->
     <section class="grid grid-cols-1 gap-4 mb-4 lg:grid-cols-2">
       <template v-if="pending">
         <app-project-skeleton
@@ -99,6 +95,7 @@
           :project-title="project.name"
           :project-description="project.description"
           :project-url="project.liveUrl"
+          :icon="project.icon"
         />
       </template>
     </section>

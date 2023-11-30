@@ -7,7 +7,7 @@
 <template>
   <ContentDoc>
     <template #default="{ doc }">
-      <!-- Post title -->
+      <!-- Post Title -->
       <h1 class="mb-4">
         {{ doc.title }}
       </h1>
@@ -25,7 +25,7 @@
         class="text-center"
       />
 
-      <!-- Table of Contents for Articles -->
+      <!-- Table of Contents -->
       <template v-if="doc.body.toc.links.length > 0">
         <details
           open
@@ -55,13 +55,14 @@
         </details>
       </template>
 
-      <!-- Main post content -->
+      <!-- Main Content -->
       <ContentRenderer :value="doc" />
 
-      <!-- Let's connect -->
       <hr
         class="block w-1/2 md:w-1/4 mx-auto my-6 border-none bg-gradient-to-r from-transparent via-zinc-300 dark:via-zinc-700 to-transparent h-[1px] rounded-full"
       />
+
+      <!-- Let's Connect -->
       <section
         class="flex items-center [&>span]:text-zinc-300 [&>span]:dark:text-zinc-700 space-x-3 text-zinc-300"
       >

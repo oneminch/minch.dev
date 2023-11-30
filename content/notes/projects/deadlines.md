@@ -1,13 +1,12 @@
 ---
-id: bmYRMchdQ79b4wetoTzAV
 title: Deadlines
-description: Deadline Tracker
+description: A simple, offline deadline tracker I built to help me track school deadlines
 tags:
   - Vue.js
   - localForage
-  - Cloudflare
-logo: "https://raw.githubusercontent.com/oneminch/Deadlines/main/public/logo.png"
-screenshot: "https://raw.githubusercontent.com/oneminch/Deadlines/main/public/screenshot.png"
+live_url: "https://deadlines.oneminch.dev"
+source_url: "https://github.com/oneminch/Deadlines"
+icon: ""
 nav_order: 2
 head:
   meta:
@@ -21,12 +20,4 @@ head:
       content: "summary_large_image"
 ---
 
-<!--
-Title
-Short Desc
-Logo
-Long Desc / Overview
-Screenshot
-navOrder
-Tags
- -->
+This is Deadlines

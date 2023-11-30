@@ -1,10 +1,33 @@
+<script setup>
+  const props = defineProps({
+    description: String,
+    blogTitle: String,
+    url: String,
+    title: String,
+    tags: Array,
+    readTime: String,
+    pubDate: Number,
+    coverImage: String
+  });
+
+  const lastUpdateTime = computed(() => {
+    const dateObj = new Date(props.pubDate);
+
+    return dateObj.toLocaleDateString("en-US", {
+      year: "numeric",
+      month: "short",
+      day: "numeric"
+    });
+  });
+</script>
+
 <!-- Blog: Card -->
 <template>
   <nuxt-link
     class="focused-link rounded-xl w-full p-0 overflow-hidden flex flex-col border-none bg-none bg-transparent dark:bg-transparent [&_img]:hover:scale-105"
     :to="url"
   >
-    <!-- Blog Image -->
+    <!-- Blog Cover Image -->
     <div
       v-if="coverImage"
       class="flex items-center justify-center flex-shrink-0 w-full h-32 mr-1 overflow-hidden card-style rounded-xl"
@@ -32,34 +55,10 @@
       </ul>
       <!-- Blog Title -->
       <h3 class="font-bold">{{ blogTitle }}</h3>
-      <!-- Publish Date + Read time -->
+      <!-- Publish Date -->
       <p class="text-xs text-zinc-400 mt-[.125rem]">
         Updated {{ lastUpdateTime }}
-        {{ readTime ? `&bull; ${readTime}` : "" }}
       </p>
     </div>
   </nuxt-link>
 </template>
-
-<script setup>
-  const props = defineProps({
-    description: String,
-    blogTitle: String,
-    url: String,
-    title: String,
-    tags: Array,
-    readTime: String,
-    pubDate: Number,
-    coverImage: String
-  });
-
-  const lastUpdateTime = computed(() => {
-    const dateObj = new Date(props.pubDate);
-
-    return dateObj.toLocaleDateString("en-US", {
-      year: "numeric",
-      month: "short",
-      day: "numeric"
-    });
-  });
-</script>

@@ -1,8 +1,7 @@
 <script setup>
   const seoMeta = {
     title: "Dawit's Projects",
-    description:
-      "This page contains projects that I am currently working on and have worked on.",
+    description: "Projects that I am currently working on and have worked on.",
     image: "/og-image.png",
     page: "projects"
   };
@@ -58,7 +57,7 @@
         <app-project-card
           v-for="project in allProjects"
           :key="project.title"
-          :img-url="project.logo_url"
+          :icon="project.icon"
           :project-title="project.title"
           :project-description="project.description"
           :project-url="project._path"
@@ -66,9 +65,10 @@
       </template>
     </section>
 
+    <!-- Link to More Projects -->
     <nuxt-link
       to="/projects/more"
-      class="flex items-center justify-center w-24 py-2 no-underline duration-150 bg-green-500 rounded-md focused-link text-zinc-800 group/hover-effect"
+      class="flex items-center justify-center w-24 py-2 font-semibold no-underline duration-150 bg-green-500 rounded-md focused-link text-zinc-800 group/hover-effect"
       >More
       <Icon
         name="heroicons:chevron-right-20-solid"

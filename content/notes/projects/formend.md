@@ -1,14 +1,14 @@
 ---
-id: bmYRMchdQ79b4wetoTzAV
 title: Formend
-description: Form Backend
+description: A backend I built to help me process form submissions across my projects
 tags:
-  - Vue.js
-  - localForage
-  - Cloudflare
-logo: "https://raw.githubusercontent.com/oneminch/Deadlines/main/public/logo.png"
-screenshot: "https://raw.githubusercontent.com/oneminch/Deadlines/main/public/screenshot.png"
-nav_order: 4
+  - Flask
+  - Python
+  - Postgres
+live_url: "https://formend.oneminch.dev"
+source_url: "https://github.com/oneminch/Formend"
+icon: ""
+nav_order: 3
 head:
   meta:
     - name: "robots"
@@ -21,12 +21,4 @@ head:
       content: "summary_large_image"
 ---
 
-<!--
-Title
-Short Desc
-Logo
-Long Desc / Overview
-Screenshot
-navOrder
-Tags
- -->
+This is Formend

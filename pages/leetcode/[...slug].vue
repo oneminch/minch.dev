@@ -7,12 +7,12 @@
 <template>
   <ContentDoc>
     <template #default="{ doc }">
-      <!-- Post title -->
+      <!-- Problem Title -->
       <h1 class="mb-4">
         {{ doc.title }}
       </h1>
 
-      <!-- Additional info for leetcode solution posts -->
+      <!-- Solution Tags -->
       <ul class="p-0 mb-1">
         <li
           class="px-2 py-[.125rem] inline-block rounded-full font-semibold font-mono text-xs mr-1 border border-zinc-300 dark:border-zinc-500 bg-zinc-200 dark:bg-zinc-600 text-zinc-800 dark:text-zinc-100"
@@ -22,6 +22,8 @@
           {{ tag }}
         </li>
       </ul>
+
+      <!-- Problem URL -->
       <p>
         <b class="mr-2">Problem URL:</b>
         <nuxt-link v-if="doc.problemUrl" target="_blank" :to="doc.problemUrl">
@@ -29,13 +31,14 @@
         </nuxt-link>
       </p>
 
-      <!-- Main post content -->
+      <!-- Main Content -->
       <ContentRenderer :value="doc" />
 
-      <!-- Let's connect -->
       <hr
         class="block w-1/2 md:w-1/4 mx-auto my-6 border-none bg-gradient-to-r from-transparent via-zinc-300 dark:via-zinc-700 to-transparent h-[1px] rounded-full"
       />
+
+      <!-- Let's Connect -->
       <section
         class="flex items-center justify-center [&>p]:my-0 [&>p]:text-zinc-300 [&>p]:dark:text-zinc-700 space-x-3 text-zinc-300"
       >
@@ -70,9 +73,3 @@
     </template>
   </ContentDoc>
 </template>
-
-<style scoped>
-  img {
-    @apply w-full h-auto object-cover bg-cover origin-center border border-zinc-300 dark:border-zinc-600;
-  }
-</style>

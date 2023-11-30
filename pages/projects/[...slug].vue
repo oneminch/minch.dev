@@ -7,9 +7,13 @@
 <template>
   <ContentDoc>
     <template #default="{ doc }">
-      <!-- Project title -->
+      <!-- Project Name -->
       <h1 class="flex items-center mb-4 text-xl font-bold sm:text-2xl">
-        <nuxt-link to="/projects">Projects</nuxt-link>
+        <nuxt-link
+          to="/projects"
+          class="no-underline border-b-[.1rem] border-b-green-500/75"
+          >Projects</nuxt-link
+        >
         <Icon
           name="heroicons:chevron-right-20-solid"
           class="mx-1 text-green-500"
@@ -17,39 +21,24 @@
         <span>{{ doc.title }}</span>
       </h1>
 
-      <!-- Project Cover Image -->
-      <section class="relative overflow-hidden rounded-xl max-h-64 card-style">
+      <!-- Project Screenshot -->
+      <section class="overflow-hidden rounded-xl max-h-72 card-style">
         <nuxt-img
           preload
           placeholder
           height="250"
           format="webp"
           loading="lazy"
-          :src="doc.screenshot"
+          :src="`https://raw.githubusercontent.com/oneminch/${doc.title
+            .split(' ')
+            .join('-')}/main/public/screenshot.png`"
           :alt="`Project Screenshot for My ${doc.title} Project`"
           class="object-cover object-top w-full h-full m-0 text-center"
         />
-        <div
-          class="absolute inset-0 h-full bg-clip-content bg-gradient-to-b from-white/0 to-white/50 dark:from-black/0 dark:to-black/50 text-zinc-800 dark:text-zinc-200"
-        ></div>
       </section>
 
-      <!-- Project Tags -->
       <section class="flex items-center justify-between mt-2 mb-4">
-        <div class="flex items-center text-xl">
-          <nuxt-link
-            :to="doc.source_url"
-            class="flex items-center justify-center border-none"
-          >
-            <Icon name="simple-icons:github" />
-          </nuxt-link>
-          <nuxt-link
-            :to="doc.source_url"
-            class="flex items-center justify-center border-none"
-          >
-            <Icon name="heroicons:arrow-up-right-20-solid" />
-          </nuxt-link>
-        </div>
+        <!-- Project Tags -->
         <ul class="p-0 m-0 space-x-1">
           <li
             class="px-2 py-[.125rem] inline-block rounded-full font-medium font-mono text-xs bg-zinc-300/75 dark:bg-zinc-700/75 text-zinc-800 dark:text-zinc-100"
@@ -59,6 +48,26 @@
             {{ tag }}
           </li>
         </ul>
+
+        <!-- Relevant Links -->
+        <div class="flex items-center space-x-2 text-xl">
+          <nuxt-link
+            :to="doc.source_url"
+            title="Source Code"
+            aria-label="Source Code"
+            class="flex items-center justify-center w-8 h-8 p-1 border-none rounded-full bg-zinc-800 text-zinc-50"
+          >
+            <Icon name="simple-icons:github" />
+          </nuxt-link>
+          <nuxt-link
+            :to="doc.live_url"
+            title="Live Preview"
+            aria-label="Live Preview"
+            class="flex items-center justify-center w-8 h-8 p-1 bg-green-500 border-none rounded-full"
+          >
+            <Icon name="heroicons:arrow-up-right-20-solid" />
+          </nuxt-link>
+        </div>
       </section>
 
       <!-- Main Project content -->
@@ -69,9 +78,3 @@
     </template>
   </ContentDoc>
 </template>
-
-<style scoped>
-  img {
-    /* @apply w-full h-auto object-cover border border-zinc-300 dark:border-zinc-600; */
-  }
-</style>

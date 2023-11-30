@@ -1,4 +1,3 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   app: {
     rootId: "app",
@@ -41,11 +40,7 @@ export default defineNuxtConfig({
     pageTransition: { name: "slide", mode: "out-in" },
     layoutTransition: { name: "slide", mode: "out-in" }
   },
-  components: [
-    { path: "~/components/cards", pathPrefix: false },
-    { path: "~/components/skeletons", pathPrefix: false },
-    { path: "~/components", pathPrefix: false }
-  ],
+  components: [{ path: "~/components", pathPrefix: false }],
   content: {
     documentDriven: false,
     highlight: {
