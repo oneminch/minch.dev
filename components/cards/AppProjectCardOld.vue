@@ -19,7 +19,7 @@
           : 'justify-start bg-zinc-200/75 dark:bg-zinc-800 hover:bg-zinc-300/75 dark:hover:bg-zinc-700 text-zinc-800 dark:text-zinc-100 group'
       ]"
     >
-      <h3 class="font-bold mb-2">{{ projectTitle }}</h3>
+      <h3 class="mb-2 font-bold">{{ projectTitle }}</h3>
       <p class="mb-3">{{ projectDescription }}</p>
       <ul class="p-0" :class="[{ 'mt-auto': hideImage }]">
         <li
@@ -34,7 +34,7 @@
         name="heroicons:arrow-up-right-20-solid"
         size="1rem"
         aria-label="Opens in a new tab"
-        class="ml-auto absolute right-2 top-2 bg-green-500 text-zinc-600 rounded-full p-1 w-6 h-6"
+        class="absolute w-6 h-6 p-1 ml-auto bg-green-500 rounded-full right-2 top-2 text-zinc-600"
       />
     </div>
   </nuxt-link>

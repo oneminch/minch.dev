@@ -7,7 +7,7 @@
     <!-- Blog Image -->
     <div
       v-if="coverImage"
-      class="card-style flex items-center justify-center w-full h-32 flex-shrink-0 overflow-hidden mr-1 rounded-xl"
+      class="flex items-center justify-center flex-shrink-0 w-full h-32 mr-1 overflow-hidden card-style rounded-xl"
     >
       <nuxt-img
         preload
@@ -16,12 +16,12 @@
         height="325"
         :src="coverImage"
         :alt="`Cover Image for an Article Titled ${blogTitle}`"
-        class="w-full h-auto object-cover text-center"
+        class="object-cover w-full h-auto text-center"
       />
     </div>
-    <div class="flex flex-col justify-between p-2 flex-shrink-0 w-full">
+    <div class="flex flex-col justify-between flex-shrink-0 w-full p-2">
       <!-- Blog Tags -->
-      <ul class="mb-2 p-0">
+      <ul class="p-0 mb-2">
         <li
           class="px-2 py-[.125rem] inline-block rounded-full font-medium font-mono text-xs mr-1 bg-zinc-300/75 dark:bg-zinc-700/75 text-zinc-800 dark:text-zinc-100"
           v-for="tag in tags"

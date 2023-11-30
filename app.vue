@@ -26,7 +26,7 @@
   </NuxtLayout>
 
   <!-- Mobile Navigation -->
-  <app-nav class="md:hidden flex after:shadow-2xl border-2 border-green-400" />
+  <app-nav class="flex border-2 border-green-400 md:hidden after:shadow-2xl" />
 </template>
 
 <style>

@@ -32,6 +32,11 @@
       limit: 25
     }
   });
+
+  // Fetch all blog posts sans LeetCode solutions
+  const { data: allProjects } = await useLazyAsyncData("projects", () =>
+    queryContent("/projects").sort({ navOrder: 1 }).find()
+  );
 </script>
 
 <!-- Projects Page -->
@@ -40,14 +45,20 @@
     <Title>{{ seoMeta.title }}</Title>
     <Meta name="description" :content="seoMeta.description" />
 
-    <h1 class="text-3xl text-left font-bold mb-4">Projects</h1>
-    <p class="text-zinc-700 dark:text-zinc-300 mb-6">
+    <h1 class="mb-4 text-3xl font-bold text-left">Projects</h1>
+    <p class="mb-6 text-zinc-700 dark:text-zinc-300">
       Each project is a story waiting to be told.
     </p>
+    <nuxt-link
+      v-for="project in allProjects"
+      :to="project._path"
+      :key="project._path"
+      >{{ project.title }}</nuxt-link
+    >
 
     <!-- Featured Projects -->
     <section
-      class="grid grid-cols-1 grid-rows-2 gap-4 lg:grid-cols-2 lg:grid-flow-row mb-4"
+      class="grid grid-cols-1 grid-rows-2 gap-4 mb-4 lg:grid-cols-2 lg:grid-flow-row"
     >
       <template v-if="pending">
         <app-project-skeleton
@@ -75,7 +86,7 @@
     />
 
     <!-- Remaining Projects: Visual -->
-    <section class="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-4">
+    <section class="grid grid-cols-1 gap-4 mb-4 lg:grid-cols-2">
       <template v-if="pending">
         <app-project-skeleton
           v-for="skeletonId in projectSkeletonIds()"
@@ -100,7 +111,7 @@
     />
 
     <!-- Remaining Projects: Non-visual -->
-    <section class="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-4">
+    <section class="grid grid-cols-1 gap-4 mb-4 lg:grid-cols-2">
       <template v-if="!pending">
         <app-project-card
           v-for="project in projects.nonVisual"

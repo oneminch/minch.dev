@@ -49,7 +49,8 @@ export default defineNuxtConfig({
   content: {
     documentDriven: false,
     highlight: {
-      theme: "github-dark"
+      theme: "github-dark",
+      preload: ["py"]
     },
     ignores: [
       "root.md",

@@ -25,42 +25,23 @@
         class="text-center"
       />
 
-      <!-- Additional info for leetcode solution posts -->
-      <template v-if="doc._dir == 'leetcode'">
-        <ul class="mb-1 p-0">
-          <li
-            class="px-2 py-[.125rem] inline-block rounded-full font-semibold font-mono text-xs mr-1 border border-zinc-300 dark:border-zinc-500 bg-zinc-200 dark:bg-zinc-600 text-zinc-800 dark:text-zinc-100"
-            v-for="tag in doc.tags"
-            :key="tag"
-          >
-            {{ tag }}
-          </li>
-        </ul>
-        <p>
-          <b class="mr-2">Problem URL:</b>
-          <nuxt-link v-if="doc.problemUrl" target="_blank" :to="doc.problemUrl">
-            {{ doc.title }}
-          </nuxt-link>
-        </p>
-      </template>
-
       <!-- Table of Contents for Articles -->
-      <template v-if="doc._dir == 'blog' && doc.body.toc.links.length > 0">
+      <template v-if="doc.body.toc.links.length > 0">
         <details
           open
-          class="border border-zinc-200 dark:border-zinc-700 rounded-lg flex items-center py-3 px-4 mb-2 self-start"
+          class="flex items-center self-start px-4 py-3 mb-2 border rounded-lg border-zinc-200 dark:border-zinc-700"
         >
           <summary
-            class="cursor-pointer list-none appearance-none flex items-center"
+            class="flex items-center list-none appearance-none cursor-pointer"
           >
-            <span class="inline-block text-lg font-bold mr-2">Outline</span>
+            <span class="inline-block mr-2 text-lg font-bold">Outline</span>
             <Icon
-              class="arrow-right text-green-500"
+              class="text-green-500 arrow-right"
               name="material-symbols:chevron-right-rounded"
               size="1.5rem"
             />
             <Icon
-              class="arrow-down text-green-500"
+              class="text-green-500 arrow-down"
               name="material-symbols:expand-more-rounded"
               size="1.5rem"
             />
