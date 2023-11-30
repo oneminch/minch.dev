@@ -1,6 +1,6 @@
 ---
 title: Formend
-description: A backend I built to help me process form submissions across my projects
+description: A backend I built to help me handle form submissions
 tags:
   - Flask
   - Python

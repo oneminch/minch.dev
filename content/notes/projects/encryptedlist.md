@@ -1,6 +1,6 @@
 ---
 title: "EncryptedList"
-description: A passion project I built to catalog software tools that are secure by default
+description: A passion project I built to catalog secure-by-default tools
 tags:
   - Vue
   - Airtable

@@ -37,11 +37,13 @@
         />
       </section>
 
-      <section class="flex items-center justify-between mt-2 mb-4">
+      <section
+        class="flex items-start justify-between gap-4 mt-2 mb-4 sm:items-center"
+      >
         <!-- Project Tags -->
         <ul class="p-0 m-0 space-x-1">
           <li
-            class="px-2 py-[.125rem] inline-block rounded-full font-medium font-mono text-xs bg-zinc-300/75 dark:bg-zinc-700/75 text-zinc-800 dark:text-zinc-100"
+            class="my-0 px-2 py-[.125rem] inline-block rounded-full font-medium font-mono text-xs bg-zinc-300/75 dark:bg-zinc-700/75 text-zinc-800 dark:text-zinc-100"
             v-for="tag in doc.tags"
             :key="tag"
           >

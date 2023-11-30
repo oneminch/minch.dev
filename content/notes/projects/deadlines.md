@@ -1,6 +1,6 @@
 ---
 title: Deadlines
-description: A simple, offline deadline tracker I built to help me track school deadlines
+description: An offline deadline tracker I built to track school deadlines
 tags:
   - Vue.js
   - localForage
