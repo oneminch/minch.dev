@@ -88,7 +88,7 @@ export default defineNuxtConfig({
     "/": { prerender: true },
     "/**": { prerender: true },
     "/picks": { swr: 3600 },
-    "/projects": { isr: 86400 }
+    "/projects/all": { isr: 86400 }
   },
   runtimeConfig: {
     githubToken: process.env.GITHUB_TOKEN,

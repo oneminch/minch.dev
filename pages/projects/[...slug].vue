@@ -25,8 +25,8 @@
           height="250"
           format="webp"
           loading="lazy"
-          :src="doc.image"
-          :alt="doc.title"
+          :src="doc.screenshot"
+          :alt="`Project Screenshot for My ${doc.title} Project`"
           class="object-cover object-top w-full h-full m-0 text-center"
         />
         <div

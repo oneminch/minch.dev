@@ -53,14 +53,14 @@ For example, consider the following HTML code:
 We can then simply call the method `requestFullscreen()` on the video element. The method is applied to an `Element` interface (and its child elements) to present it in fullscreen. This method can also be used to check whether fullscreen is available on this particular element. To exit fullscreen mode, the `exitFullscreen()` method is called on the `Document` interface. As in the case of the previous method, this method can also be used to check if it's supported on the document or in the browser.
 
 ```javascript
-    const el = document.querySelector("#intro");
-    if (el.requestFullscreen) {
-        el.requestFullscreen();
-    }
-    ...
-    if (document.exitFullscreen) {
-        document.exitFullscreen();
-    }
+const el = document.querySelector("#intro");
+if (el.requestFullscreen) {
+    el.requestFullscreen();
+}
+...
+if (document.exitFullscreen) {
+    document.exitFullscreen();
+}
 ```
 
 The `Document` interface has built-in properties that can help us determine:
@@ -76,9 +76,9 @@ Two events are defined by the API:
 - `document.onfullscreenchange` - fired whenever there is a change in fullscreen status on the entire `Document`, whether it's entering or exiting fullscreen, or switching tabs while in fullscreen mode.
 
 ```javascript
-    document.addEventListener("fullscreenerror", () => { ... });
-    ...
-    document.addEventListener("fullscreenchange", () => { ... });
+document.addEventListener("fullscreenerror", () => { ... });
+...
+document.addEventListener("fullscreenchange", () => { ... });
 ```
 
 ## CSS

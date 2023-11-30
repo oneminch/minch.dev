@@ -63,17 +63,9 @@
         class="block w-1/2 md:w-1/4 mx-auto my-6 border-none bg-gradient-to-r from-transparent via-zinc-300 dark:via-zinc-700 to-transparent h-[1px] rounded-full"
       />
       <section
-        class="flex items-center justify-center [&>p]:my-0 [&>p]:text-zinc-300 [&>p]:dark:text-zinc-700 space-x-3 text-zinc-300"
+        class="flex items-center [&>span]:text-zinc-300 [&>span]:dark:text-zinc-700 space-x-3 text-zinc-300"
       >
-        <nuxt-link
-          class="focused-link"
-          to="https://github.com/oneminch"
-          target="_blank"
-          >GitHub
-        </nuxt-link>
-
-        <p>&bull;</p>
-
+        <p class="my-0 font-bold">Let's Connect:</p>
         <nuxt-link
           class="focused-link"
           to="https://twitter.com/oneminch"
@@ -81,7 +73,16 @@
           >Twitter
         </nuxt-link>
 
-        <p>&bull;</p>
+        <span>&bull;</span>
+
+        <nuxt-link
+          class="focused-link"
+          to="https://github.com/oneminch"
+          target="_blank"
+          >GitHub
+        </nuxt-link>
+
+        <span>&bull;</span>
 
         <nuxt-link
           class="focused-link"

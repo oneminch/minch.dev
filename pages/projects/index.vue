@@ -50,12 +50,12 @@
       Each project is a story waiting to be told.
     </p>
 
-    <!-- <nuxt-link
+    <nuxt-link
       v-for="project in allProjects"
       :to="project._path"
       :key="project._path"
       >{{ project.title }}</nuxt-link
-    > -->
+    >
 
     <!-- Featured Projects -->
     <section

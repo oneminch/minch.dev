@@ -135,26 +135,26 @@ fetch("https://jsonplaceholder.typicode.com/users/2")
 **Output**:
 
 ```javascript
-    {
-        "id":2,
-        "name":"Ervin Howell",
-        "username":"Antonette",
-        "email":"Shanna@melissa.tv",
-        "address":{
-            "street":"Victor Plains",
-            "suite":"Suite 879",
-            "city":"Wisokyburgh",
-            "zipcode":"90566-7771",
-            "geo":{"lat":"-43.9509","lng":"-34.4618"}
-        },
-        "phone":"010-692-6593 x09125",
-        "website":"anastasia.net",
-        "company":{
-            "name":"Deckow-Crist",
-            "catchPhrase":"Proactive didactic contingency",
-            "bs":"synergize scalable supply-chains"
-        }
+{
+    "id":2,
+    "name":"Ervin Howell",
+    "username":"Antonette",
+    "email":"Shanna@melissa.tv",
+    "address":{
+        "street":"Victor Plains",
+        "suite":"Suite 879",
+        "city":"Wisokyburgh",
+        "zipcode":"90566-7771",
+        "geo":{"lat":"-43.9509","lng":"-34.4618"}
+    },
+    "phone":"010-692-6593 x09125",
+    "website":"anastasia.net",
+    "company":{
+        "name":"Deckow-Crist",
+        "catchPhrase":"Proactive didactic contingency",
+        "bs":"synergize scalable supply-chains"
     }
+}
 ```
 
 From the output, it's clear that a user is an object with a set of properties. We can continue to chain other `then()` blocks to perform more tasks on the data we want.
@@ -162,18 +162,18 @@ From the output, it's clear that a user is an object with a set of properties. W
 **Code**:
 
 ```javascript
-    // JavaScript Code
+// JavaScript Code
 
-    ...
-    .then(function(data) {
-        const { name, company: { name: companyName }, website } = data
+...
+.then(function(data) {
+    const { name, company: { name: companyName }, website } = data
 
-        console.log(
-            `My name is ${name}. I work at ${companyName}.
-            For more info, you can visit my blog @ ${website}`
-        );
-    })
-    ...
+    console.log(
+        `My name is ${name}. I work at ${companyName}.
+        For more info, you can visit my blog @ ${website}`
+    );
+})
+...
 ```
 
 **Output**:
