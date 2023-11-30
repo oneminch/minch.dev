@@ -85,7 +85,7 @@ export default defineNuxtConfig({
     "/picks": { isr: 3600 }
   },
   runtimeConfig: {
-    raindropTestToken: process.env.RAINDROP_TOKEN,
+    raindropToken: process.env.RAINDROP_TOKEN,
     raindropCollectionId: process.env.RAINDROP_COLLECTION_ID
   },
   telemetry: false
