@@ -207,7 +207,7 @@
         class="grid grid-cols-2 lg:grid-cols-4 lg:grid-rows-2 lg:grid-flow-col gap-2 lg:[&_:first-child]:row-span-2 lg:[&_:last-child]:row-span-2 [&_:first-child]:col-span-2 [&_:last-child]:col-span-2 md:[&_:first-child]:col-span-1 md:[&_:last-child]:col-span-1"
       >
         <div
-          class="flex items-center justify-center p-[1.5px] overflow-hidden font-medium shrink-0 relative -z-0 before:content-[''] before:absolute before:-inset-[1px] before:-z-10 before:bg-gradient-to-b before:from-green-500 before:to-lime-400 rounded-[calc(.375rem+1.5px)] dark:before:opacity-60"
+          class="flex items-center justify-center p-[1px] overflow-hidden font-medium shrink-0 relative -z-0 before:content-[''] before:absolute before:-inset-[1px] before:-z-10 before:bg-gradient-to-b before:from-green-500 before:to-lime-400 rounded-[calc(.375rem+1px)] dark:before:opacity-60"
         >
           <div
             class="flex flex-col items-center justify-center w-full h-full gap-6 p-4 bg-white rounded-md dark:bg-zinc-800"

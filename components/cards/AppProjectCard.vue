@@ -25,6 +25,10 @@
       return `https://raw.githubusercontent.com/oneminch/${projectSlug}/main/public/logo.svg`;
     }
   });
+
+  const isExternalUrl = computed(() => {
+    return props.projectUrl.startsWith("https://");
+  });
 </script>
 
 <!-- Project: Card -->
@@ -60,5 +64,12 @@
         {{ projectDescription }}
       </p>
     </div>
+    <Icon
+      v-show="isExternalUrl"
+      name="heroicons:arrow-up-right-20-solid"
+      size="1.25rem"
+      aria-label="Opens in a new tab"
+      class="absolute flex-shrink-0 text-green-500 top-1 right-1"
+    />
   </nuxt-link>
 </template>
