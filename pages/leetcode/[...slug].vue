@@ -34,39 +34,10 @@
       <!-- Main Content -->
       <ContentRenderer :value="doc" />
 
-      <hr
-        class="block w-1/2 md:w-1/4 mx-auto my-6 border-none bg-gradient-to-r from-transparent via-zinc-300 dark:via-zinc-700 to-transparent h-[1px] rounded-full"
-      />
+      <app-divider class="w-1/2 my-8 md:w-2/3" />
 
       <!-- Let's Connect -->
-      <section
-        class="flex items-center justify-center [&>p]:my-0 [&>p]:text-zinc-300 [&>p]:dark:text-zinc-700 space-x-3 text-zinc-300"
-      >
-        <nuxt-link
-          class="focused-link"
-          to="https://github.com/oneminch"
-          target="_blank"
-          >GitHub
-        </nuxt-link>
-
-        <p>&bull;</p>
-
-        <nuxt-link
-          class="focused-link"
-          to="https://twitter.com/oneminch"
-          target="_blank"
-          >Twitter
-        </nuxt-link>
-
-        <p>&bull;</p>
-
-        <nuxt-link
-          class="focused-link"
-          to="https://linkedin.com/in/oneminch"
-          target="_blank"
-          >LinkedIn
-        </nuxt-link>
-      </section>
+      <app-post-footer />
     </template>
     <template #not-found>
       <app-not-found />

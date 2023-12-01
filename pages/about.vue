@@ -40,9 +40,9 @@
     <p>
       I am currently seeking opportunities to share my passion and expertise.
     </p>
-    <hr
-      class="block w-2/3 mx-auto md:my-4 border-none bg-gradient-to-r from-transparent via-zinc-300 dark:via-zinc-700 to-transparent h-[1px] rounded-full"
-    />
+
+    <app-divider class="md:my-6" />
+
     <p>
       My interest in web development started back in 2016 when I came across the
       web development community on Instagram. I developed a keen interest and
@@ -80,9 +80,9 @@
       While building a strong technical foundation in college, I dedicated a lot
       of my free time teaching myself web development and building things out.
     </p>
-    <hr
-      class="block w-2/3 mx-auto md:my-4 border-none bg-gradient-to-r from-transparent via-zinc-300 dark:via-zinc-700 to-transparent h-[1px] rounded-full"
-    />
+
+    <app-divider class="md:my-6" />
+
     <p>
       I enjoy playing story-driven games (Current Favorite - 'A Plague Tale'
       Series).

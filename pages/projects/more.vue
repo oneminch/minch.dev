@@ -76,9 +76,7 @@
       </template>
     </section>
 
-    <hr
-      class="w-3/4 h-[1px] my-6 md:my-8 mx-auto border-none bg-gradient-to-r from-transparent via-zinc-200 dark:via-zinc-800 to-transparent rounded-full"
-    />
+    <app-divider class="my-6 md:my-8" />
 
     <!-- Non-visual Projects -->
     <section class="grid grid-cols-1 gap-4 mb-4 lg:grid-cols-2">

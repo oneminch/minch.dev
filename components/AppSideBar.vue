@@ -16,9 +16,7 @@
     <!-- Profile Card -->
     <app-profile-card />
 
-    <hr
-      class="hidden md:inline-block w-3/4 md:my-4 border-none bg-gradient-to-r from-transparent via-zinc-300 dark:via-zinc-700 to-transparent h-[1px] rounded-full"
-    />
+    <app-divider class="hidden md:block" />
 
     <!-- Desktop Navigation: Links -->
     <app-nav class="hidden md:flex" />
