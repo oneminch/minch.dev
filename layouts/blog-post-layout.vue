@@ -27,7 +27,7 @@
           activeClass="bg-zinc-600/10 dark:bg-zinc-700/75 md:bg-zinc-200 md:dark:bg-zinc-700/75 focus:ring-transparent"
           to="/leetcode"
         >
-          <Icon name="simple-icons:leetcode" class="mr-2" />
+          <Icon name="heroicons:code-bracket-square-20-solid" class="mr-2" />
 
           LeetCode
         </nuxt-link>

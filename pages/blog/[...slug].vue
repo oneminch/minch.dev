@@ -29,7 +29,7 @@
       <template v-if="doc.body.toc.links.length > 0">
         <details
           open
-          class="flex items-center self-start px-4 py-3 mb-2 border rounded-lg border-zinc-200 dark:border-zinc-700"
+          class="flex items-center self-start px-4 py-3 mb-2 bg-white border rounded-lg dark:bg-zinc-800 border-zinc-200 dark:border-zinc-700"
         >
           <summary
             class="flex items-center list-none appearance-none cursor-pointer"
@@ -37,12 +37,12 @@
             <span class="inline-block mr-2 text-lg font-bold">Outline</span>
             <Icon
               class="text-green-500 arrow-right"
-              name="material-symbols:chevron-right-rounded"
+              name="heroicons:chevron-right-20-solid"
               size="1.5rem"
             />
             <Icon
               class="text-green-500 arrow-down"
-              name="material-symbols:expand-more-rounded"
+              name="heroicons:chevron-down-20-solid"
               size="1.5rem"
             />
           </summary>

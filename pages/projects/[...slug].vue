@@ -65,7 +65,7 @@
             :to="doc.live_url"
             title="Live Preview"
             aria-label="Live Preview"
-            class="flex items-center justify-center w-8 h-8 p-1 bg-green-500 border-none rounded-full"
+            class="flex items-center justify-center w-8 h-8 p-1 bg-green-500 border-none rounded-full text-zinc-800"
           >
             <Icon name="heroicons:arrow-up-right-20-solid" />
           </nuxt-link>

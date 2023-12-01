@@ -55,7 +55,11 @@
         title="Menu"
       >
         Menu
-        <Icon name="octicon:project-roadmap-16" size="1.15rem" class="ml-2" />
+        <Icon
+          name="heroicons:bars-3-center-left-20-solid"
+          size="1.15rem"
+          class="ml-2"
+        />
       </button>
     </OnClickOutside>
   </nav>

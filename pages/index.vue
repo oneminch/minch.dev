@@ -56,11 +56,7 @@
     <Meta name="description" :content="seoMeta.description" />
 
     <!-- Introduction -->
-    <section class="relative">
-      <Icon
-        name="mdi:format-quote-close"
-        class="absolute right-0 text-5xl md:text-7xl text-zinc-200 dark:text-zinc-800 -top-3 md:-top-6 -z-10"
-      />
+    <section>
       <h1 class="mb-4 text-2xl font-semibold">
         Hi, I'm Dawit
         <span id="wave">👋</span>
