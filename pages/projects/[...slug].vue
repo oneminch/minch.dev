@@ -9,7 +9,7 @@
     <template #default="{ doc }">
       <!-- Project Name -->
       <h1
-        class="flex items-center mb-4 text-xl font-bold text-left sm:text-3xl"
+        class="flex items-center mb-4 text-xl font-bold text-left not-prose sm:text-3xl"
       >
         <nuxt-link
           to="/projects"
