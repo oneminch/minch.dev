@@ -171,7 +171,7 @@
         </nuxt-link>
       </h2>
       <p class="mb-4 text-zinc-700 dark:text-zinc-300">
-        Writing is a tool for thinking.
+        Writing as a tool for thinking.
       </p>
       <div class="grid grid-cols-1 gap-4 lg:grid-cols-2">
         <template v-if="blogsPending">

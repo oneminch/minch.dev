@@ -8,7 +8,9 @@
   <ContentDoc>
     <template #default="{ doc }">
       <!-- Project Name -->
-      <h1 class="flex items-center mb-4 text-xl font-bold sm:text-2xl">
+      <h1
+        class="flex items-center mb-4 text-xl font-bold text-left sm:text-3xl"
+      >
         <nuxt-link
           to="/projects"
           class="no-underline border-b-[.1rem] border-b-green-500/75"
@@ -22,7 +24,7 @@
       </h1>
 
       <!-- Project Screenshot -->
-      <section class="overflow-hidden rounded-xl max-h-72 card-style">
+      <section class="my-4 overflow-hidden rounded-xl max-h-72 card-style">
         <nuxt-img
           preload
           placeholder

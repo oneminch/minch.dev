@@ -35,7 +35,7 @@
 
     <h1 class="mb-4 text-3xl font-bold text-left">Blog</h1>
     <p class="mb-6 text-zinc-700 dark:text-zinc-300">
-      Writing is a tool for thinking.
+      Writing as a tool for thinking.
     </p>
 
     <section class="grid grid-cols-1 gap-4 lg:grid-cols-2">
