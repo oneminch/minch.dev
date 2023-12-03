@@ -26,7 +26,7 @@
       Dawit
     </h2>
     <h2 class="text-lg font-medium md:text-xl text-zinc-700 dark:text-zinc-400">
-      Frontend Developer
+      Frontend Engineer
     </h2>
     <div
       class="flex items-center justify-center w-full h-8 text-zinc-900 dark:text-zinc-200"

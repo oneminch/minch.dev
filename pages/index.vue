@@ -1,6 +1,6 @@
 <script setup>
   const seoMeta = {
-    title: "Dawit - Frontend Developer",
+    title: "Dawit - Frontend Engineer",
     description: "I craft delightful and accessible web interfaces.",
     image: "/og-image.png",
     page: ""
