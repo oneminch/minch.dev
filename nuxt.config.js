@@ -86,7 +86,10 @@ export default defineNuxtConfig({
   },
   runtimeConfig: {
     raindropToken: process.env.RAINDROP_TOKEN,
-    raindropCollectionId: process.env.RAINDROP_COLLECTION_ID
+    raindropCollectionId: process.env.RAINDROP_COLLECTION_ID,
+    resendApiKey: process.env.RESEND_API_KEY,
+    resendFrom: process.env.RESEND_FROM,
+    resendTo: process.env.RESEND_TO
   },
   telemetry: false
 });

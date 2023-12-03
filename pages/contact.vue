@@ -139,10 +139,11 @@
       ></app-feedback-card>
 
       <button
-        class="px-4 py-2 font-medium bg-green-500 rounded-lg text-zinc-800 global-focus focus:ring-offset-zinc-50 dark:focus:ring-offset-zinc-800 focus:ring-offset-1 disabled:cursor-not-allowed disabled:bg-zinc-400"
+        class="px-4 py-2 font-medium bg-green-500 rounded-lg w-36 text-zinc-800 global-focus focus:ring-offset-zinc-50 dark:focus:ring-offset-zinc-800 focus:ring-offset-1 disabled:cursor-not-allowed disabled:bg-zinc-400"
         :disabled="isSubmitting"
       >
-        Send Message
+        <Icon v-if="isSubmitting" name="svg-spinners:3-dots-fade" />
+        <span v-else>Send Message</span>
       </button>
     </form>
   </main>

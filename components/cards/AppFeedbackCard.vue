@@ -22,7 +22,9 @@
 <template>
   <section
     :class="`flex items-center px-4 py-2 my-4 rounded-lg text-zinc-800 ring-1 ${
-      isSuccess ? 'bg-green-200 ring-green-400' : 'bg-red-200 ring-red-400'
+      isSuccess
+        ? 'bg-green-200 dark:bg-green-300 ring-green-400'
+        : 'bg-red-200 dark:bg-red-300 ring-red-400'
     } ${
       visible
         ? 'visible translate-y-0 opacity-100'
