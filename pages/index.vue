@@ -124,7 +124,7 @@
       <h2 class="w-auto mb-2 text-xl font-semibold group">
         <nuxt-link
           to="/projects"
-          class="flex items-center w-full py-2 rounded-lg focused-link"
+          class="flex items-center w-full py-2 rounded-lg global-focus"
         >
           My Projects
           <Icon
@@ -161,7 +161,7 @@
       <h2 class="w-auto mb-2 text-xl font-semibold group">
         <nuxt-link
           to="/blog"
-          class="flex items-center w-full py-2 rounded-lg focused-link"
+          class="flex items-center w-full py-2 rounded-lg global-focus"
         >
           My Articles
           <Icon
@@ -213,7 +213,7 @@
               class="px-4 py-2 bg-green-500 rounded-lg text-zinc-800"
               to="/contact"
               id="contact-btn"
-              >Contact</nuxt-link
+              >Message</nuxt-link
             >
           </div>
         </div>
@@ -230,13 +230,13 @@
         <app-link-card
           label="Notes"
           icon="fluent-emoji:spiral-notepad"
-          :is-external="true"
+          :is-external-url="true"
           url="https://github.com/oneminch/garden"
         ></app-link-card>
         <app-link-card
           label="Photography"
           icon="fluent-emoji:camera"
-          :is-external="true"
+          :is-external-url="true"
           url="https://unsplash.com/@oneminch"
         ></app-link-card>
         <app-link-card
@@ -255,7 +255,7 @@
 
 <style scoped>
   #contact-btn {
-    animation: 1500ms linear 3000ms infinite pulse;
+    animation: 1500ms linear 2000ms infinite pulse;
   }
 
   @keyframes pulse {

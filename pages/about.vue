@@ -91,7 +91,7 @@
       I'm also a hobbyist photographer.
       <a
         href="https://unsplash.com/@oneminch"
-        class="focused-link focus:rounded no-underline border-b-[.1rem] border-b-green-500/75"
+        class="global-focus focus:rounded no-underline border-b-[.1rem] border-b-green-500/75"
         target="_blank"
         >My photos on Unsplash</a
       >

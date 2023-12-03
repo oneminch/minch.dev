@@ -68,7 +68,7 @@
     <!-- Link to More Projects -->
     <nuxt-link
       to="/projects/more"
-      class="flex items-center justify-center w-24 py-2 font-semibold no-underline duration-150 bg-green-500 rounded-md focused-link text-zinc-800 group/hover-effect"
+      class="flex items-center justify-center w-24 py-2 font-semibold no-underline duration-150 bg-green-500 rounded-md global-focus text-zinc-800 group/hover-effect"
       >More
       <Icon
         name="heroicons:chevron-right-20-solid"

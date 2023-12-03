@@ -12,7 +12,7 @@
 <!-- Pick: Card -->
 <template>
   <nuxt-link
-    class="focused-link card-style w-full flex justify-start items-center px-2 py-2 relative mb-2 rounded first-of-type:rounded-t-lg last-of-type:rounded-b-lg transition-colors duration-150 hover:bg-green-50/25 dark:hover:bg-zinc-700/75"
+    class="global-focus card-style w-full flex justify-start items-center px-2 py-2 relative mb-2 rounded first-of-type:rounded-t-lg last-of-type:rounded-b-lg transition-colors duration-150 hover:bg-green-50/25 dark:hover:bg-zinc-700/75"
     target="_blank"
     :to="pick.url"
   >

@@ -20,53 +20,130 @@
     ogLocale: "en_US",
     twitterCard: "summary_large_image"
   });
+
+  // Feedback card props
+  const feedbackVisible = ref(false);
+  const feedbackMessage = ref("");
+
+  const onCloseFeedback = () => {
+    feedbackVisible.value = false;
+  };
+
+  // Form control states
+  const senderName = ref("");
+  const senderEmail = ref("");
+  const senderMessage = ref("");
+  const isSubmitting = ref(false);
+  const isSuccessful = ref(true);
+
+  async function submit(e) {
+    // Reset state
+    isSubmitting.value = true;
+    feedbackVisible.value = false;
+    feedbackMessage.value = "";
+    isSuccessful.value = true;
+
+    // Validate required input fields
+    if (!senderName.value.trim() || !senderMessage.value.trim()) {
+      isSubmitting.value = false;
+      isSuccessful.value = false;
+      feedbackMessage.value = "A Required Field is Empty";
+      feedbackVisible.value = true;
+      return;
+    }
+
+    // Attempt submission
+    $fetch("/api/submit", {
+      method: "post",
+      body: {
+        senderName: senderName.value.trim(),
+        senderEmail: senderEmail.value.trim(),
+        senderMessage: senderMessage.value.trim()
+      }
+    })
+      .then((res) => {
+        isSubmitting.value = false;
+        isSuccessful.value = true;
+        feedbackMessage.value = "Successfully Sent";
+        feedbackVisible.value = true;
+      })
+      .catch((err) => {
+        isSubmitting.value = false;
+        isSuccessful.value = false;
+        feedbackMessage.value = "Error Sending Message";
+        feedbackVisible.value = true;
+      });
+  }
 </script>
 
 <template>
-  <main
-    id="main-content"
-    class="flex flex-col items-center justify-center h-full"
-  >
-    <div class="flex flex-col items-center justify-center h-96">
-      <Icon
-        aria-labelledby="not-found"
-        name="fluent-emoji:building-construction"
-        size="10rem"
-        class="mb-8"
-      />
-      <h1
-        id="not-found"
-        class="mb-6 text-xl font-semibold text-center sm:text-2xl text-zinc-700 dark:text-zinc-300"
-      >
-        Under Construction
-      </h1>
-    </div>
-    <!-- <form action="/api/submit.post.js" class="w-full">
-      <label class="block w-1/2 mb-4 space-y-2">
-        <p>Name:</p>
+  <main id="main-content" class="h-full">
+    <section class="mb-8">
+      <h1 class="mb-4 text-2xl font-semibold">Contact 📧</h1>
+      <p class="my-2 text-zinc-700 dark:text-zinc-300">
+        You can message me directly using this form.
+      </p>
+    </section>
+
+    <form
+      @submit.prevent="submit"
+      class="w-full md:max-w-md md:w-11/12 lg:w-2/3"
+    >
+      <label class="block w-full mb-4 space-y-2">
+        <p
+          class="font-medium cursor-pointer after:content-['*'] after:text-red-500"
+        >
+          Name
+        </p>
         <input
           type="text"
           name="name"
-          class="w-full px-3 py-2 border rounded-lg bg-zinc-100 dark:bg-zinc-900 border-zinc-200 dark:border-zinc-600"
+          v-model="senderName"
+          class="w-full px-3 py-2 border rounded-lg bg-zinc-100 dark:bg-zinc-900 border-zinc-200 dark:border-zinc-600 global-focus"
           placeholder="Your name..."
+          aria-required="true"
         />
       </label>
-      <label class="block w-1/2 mb-4 space-y-2">
-        <p>Email:</p>
+      <label class="block w-full mb-4 space-y-2">
+        <p class="font-medium cursor-pointer">
+          Email <span class="text-zinc-400 dark:text-zinc-500">(Optional)</span>
+        </p>
         <input
-          type="text"
+          type="email"
           name="email"
-          class="w-full px-3 py-2 border rounded-lg bg-zinc-100 dark:bg-zinc-900 border-zinc-200 dark:border-zinc-600"
-          placeholder="Your email address..."
+          v-model="senderEmail"
+          class="w-full px-3 py-2 border rounded-lg bg-zinc-100 dark:bg-zinc-900 border-zinc-200 dark:border-zinc-600 global-focus"
+          placeholder="email@example.com"
         />
       </label>
-      <label class="block w-1/2 mb-4 space-y-2">
-        <p>Message:</p>
+      <label class="block w-full mb-4 space-y-2">
+        <p
+          class="font-medium cursor-pointer after:content-['*'] after:text-red-500"
+        >
+          Message
+        </p>
         <textarea
           name="message"
-          class="w-full px-3 py-2 border rounded-lg bg-zinc-100 dark:bg-zinc-900 border-zinc-200 dark:border-zinc-600"
+          v-model="senderMessage"
+          class="w-full min-h-[8rem] h-40 px-3 py-2 border rounded-lg resize-y max-h-80 bg-zinc-100 dark:bg-zinc-900 border-zinc-200 dark:border-zinc-600 global-focus"
+          placeholder="Your message..."
+          aria-required="true"
         ></textarea>
       </label>
-    </form> -->
+
+      <app-feedback-card
+        :label="feedbackMessage"
+        :visible="feedbackVisible"
+        :is-success="isSuccessful"
+        @close-feedback="onCloseFeedback"
+      ></app-feedback-card>
+
+      <button
+        class="px-4 py-2 font-medium bg-green-500 rounded-lg text-zinc-800 global-focus focus:ring-offset-zinc-50 dark:focus:ring-offset-zinc-800 focus:ring-offset-1 disabled:cursor-not-allowed disabled:bg-zinc-400"
+        :disabled="isSubmitting"
+      >
+        Send Message
+      </button>
+    </form>
   </main>
 </template>

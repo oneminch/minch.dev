@@ -23,6 +23,7 @@
     "@fontsource/roboto-mono": "^5.0.15",
     "@fontsource/space-grotesk": "^5.0.15",
     "@vueuse/components": "^10.2.0",
-    "axios": "^1.6.0"
+    "axios": "^1.6.0",
+    "resend": "^2.0.0"
   }
 }

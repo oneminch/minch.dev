@@ -15,7 +15,7 @@
 <!-- Coding Solution: Card -->
 <template>
   <nuxt-link
-    class="relative flex items-center justify-start w-full px-4 py-2 transition-colors duration-150 focused-link card-style rounded-xl hover:bg-green-50/25 dark:hover:bg-zinc-700/75"
+    class="relative flex items-center justify-start w-full px-4 py-2 transition-colors duration-150 global-focus card-style rounded-xl hover:bg-green-50/25 dark:hover:bg-zinc-700/75"
     :to="url"
     :title="problemTitle"
   >

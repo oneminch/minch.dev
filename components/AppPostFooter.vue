@@ -7,7 +7,7 @@
     <Icon name="heroicons:chevron-right-20-solid" class="text-green-500" />
 
     <nuxt-link
-      class="focused-link"
+      class="global-focus"
       to="https://twitter.com/oneminch"
       target="_blank"
       >Twitter
@@ -16,7 +16,7 @@
     <span>&bull;</span>
 
     <nuxt-link
-      class="focused-link"
+      class="global-focus"
       to="https://github.com/oneminch"
       target="_blank"
       >GitHub
@@ -25,7 +25,7 @@
     <span>&bull;</span>
 
     <nuxt-link
-      class="focused-link"
+      class="global-focus"
       to="https://linkedin.com/in/oneminch"
       target="_blank"
       >LinkedIn

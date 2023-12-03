@@ -38,8 +38,8 @@
       @apply border border-zinc-200 dark:border-zinc-700 dark:bg-zinc-700/50 bg-white;
     }
 
-    .focused-link {
-      @apply focus:outline-none focus:ring-2 focus:ring-offset-0 focus:ring-green-400 focus:ring-opacity-75;
+    .global-focus {
+      @apply focus:outline-none focus:ring-2 ring-offset-0 focus:ring-green-400 focus:ring-opacity-75;
     }
 
     .icon-link {
@@ -63,7 +63,7 @@
   }
 
   main {
-    @apply w-full rounded-xl pt-6 md:px-10 py-4 pb-10 bg-transparent md:bg-zinc-50 md:dark:bg-zinc-900/40 font-normal overflow-x-visible -z-0;
+    @apply w-full rounded-xl pt-6 md:px-10 py-4 pb-12 bg-transparent md:bg-zinc-50 md:dark:bg-zinc-900/40 font-normal overflow-x-visible -z-0;
   }
 
   span.highlight,

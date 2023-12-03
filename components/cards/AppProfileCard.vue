@@ -34,7 +34,7 @@
       <nuxt-link
         v-for="(profileUrl, name) in profiles"
         :key="name"
-        class="focused-link icon-link"
+        class="global-focus icon-link"
         :to="profileUrl"
         :title="name"
         :aria-label="`Link to My ${name} Profile`"

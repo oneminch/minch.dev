@@ -27,7 +27,7 @@
         class="relative flex items-center h-auto mb-2 overflow-hidden font-bold rounded-md"
       >
         <nuxt-link
-          class="focused-link focus:ring-inset focus:ring-2 w-full h-10 py-1 px-4 flex items-center rounded-md font-semibold transition-all duration-150 hover:bg-transparent md:hover:bg-zinc-200/75 md:dark:hover:bg-zinc-700 [&>svg]:hover:translate-x-1"
+          class="global-focus focus:ring-inset focus:ring-2 w-full h-10 py-1 px-4 flex items-center rounded-md font-semibold transition-all duration-150 hover:bg-transparent md:hover:bg-zinc-200/75 md:dark:hover:bg-zinc-700 [&>svg]:hover:translate-x-1"
           activeClass="bg-zinc-600/10 dark:bg-zinc-700/75 md:bg-zinc-200 md:dark:bg-zinc-700/75 focus:ring-transparent"
           :to="`/${route}`"
         >
@@ -50,7 +50,7 @@
     >
       <button
         @click="toggleMenu()"
-        class="flex items-center justify-center w-full h-10 px-4 py-1 font-semibold bg-green-400 rounded-md focused-link md:hidden hover:bg-green-400 text-zinc-800"
+        class="flex items-center justify-center w-full h-10 px-4 py-1 font-semibold bg-green-400 rounded-md global-focus md:hidden hover:bg-green-400 text-zinc-800"
         aria-label="Menu"
         title="Menu"
       >
