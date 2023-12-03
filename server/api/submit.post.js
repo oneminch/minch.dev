@@ -1,5 +1,9 @@
 import { Resend } from "resend";
 
+const { resendApiKey, resendFrom, resendTo } = useRuntimeConfig();
+
+const resend = new Resend(resendApiKey);
+
 export default defineEventHandler(async (event) => {
   try {
     const { senderName, senderEmail, senderMessage } = await readBody(event);
@@ -8,10 +12,6 @@ export default defineEventHandler(async (event) => {
     if (!senderName.trim() || !senderMessage.trim()) {
       throw new Error("Missing Field");
     }
-
-    const { resendApiKey, resendFrom, resendTo } = useRuntimeConfig();
-
-    const resend = new Resend(resendApiKey);
 
     const messageBody = `
     ${

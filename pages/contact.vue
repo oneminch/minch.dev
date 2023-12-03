@@ -52,27 +52,33 @@
       return;
     }
 
+    // Temporary
+    isSubmitting.value = false;
+    isSuccessful.value = false;
+    feedbackMessage.value = "Nothing Happens Yet ;)";
+    feedbackVisible.value = true;
+
     // Attempt submission
-    $fetch("/api/submit", {
-      method: "post",
-      body: {
-        senderName: senderName.value.trim(),
-        senderEmail: senderEmail.value.trim(),
-        senderMessage: senderMessage.value.trim()
-      }
-    })
-      .then((res) => {
-        isSubmitting.value = false;
-        isSuccessful.value = true;
-        feedbackMessage.value = "Successfully Sent";
-        feedbackVisible.value = true;
-      })
-      .catch((err) => {
-        isSubmitting.value = false;
-        isSuccessful.value = false;
-        feedbackMessage.value = "Error Sending Message";
-        feedbackVisible.value = true;
-      });
+    // $fetch("/api/submit", {
+    //   method: "post",
+    //   body: {
+    //     senderName: senderName.value.trim(),
+    //     senderEmail: senderEmail.value.trim(),
+    //     senderMessage: senderMessage.value.trim()
+    //   }
+    // })
+    //   .then((res) => {
+    //     isSubmitting.value = false;
+    //     isSuccessful.value = true;
+    //     feedbackMessage.value = "Successfully Sent";
+    //     feedbackVisible.value = true;
+    //   })
+    //   .catch((err) => {
+    //     isSubmitting.value = false;
+    //     isSuccessful.value = false;
+    //     feedbackMessage.value = "Error Sending Message";
+    //     feedbackVisible.value = true;
+    //   });
   }
 </script>
 
