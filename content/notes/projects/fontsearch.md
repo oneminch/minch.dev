@@ -21,4 +21,4 @@ head:
       content: "summary_large_image"
 ---
 
-This is FontSearch
+Detailed description of FontSearch project coming soon.

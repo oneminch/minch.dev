@@ -21,4 +21,4 @@ head:
       content: "summary_large_image"
 ---
 
-This is Netflix UI Clone
+Detailed description of Netflix UI Clone project coming soon.

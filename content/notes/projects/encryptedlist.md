@@ -22,4 +22,4 @@ head:
       content: "summary_large_image"
 ---
 
-This is EncryptedList
+Detailed description of EncryptedList project coming soon.

@@ -21,4 +21,4 @@ head:
       content: "summary_large_image"
 ---
 
-This is Formend
+Detailed description of Formend project coming soon.
