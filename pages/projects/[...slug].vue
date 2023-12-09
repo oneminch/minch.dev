@@ -13,27 +13,33 @@
     queryContent(route.path).only(["title", "description", "image"]).findOne()
   );
 
-  const { projectTitle, projectDescription, projectImage } = data.value;
+  const {
+    title: projectTitle,
+    description: projectDescription,
+    image: projectImage
+  } = data.value;
+
+  const serverMeta = {
+    ogType: "article",
+    ogLocale: "en_US",
+    twitterCard: "summary",
+    twitterCreator: "@oneminch"
+  };
 
   useSeoMeta({
     title: () => projectTitle,
+    description: () => projectDescription
+  });
+
+  useServerSeoMeta({
     ogTitle: () => projectTitle,
     twitterTitle: () => projectTitle,
-    description: () => projectDescription,
     ogDescription: () => projectDescription,
     twitterDescription: () => projectDescription,
     ogImage: () => projectImage,
     twitterImage: () => projectImage,
-    ogUrl: () => `https://oneminch.dev${route.path}`
-  });
-
-  useServerSeoMeta({
-    ogType: "article",
-    ogLocale: "en_US",
-    twitterCard: "summary",
-    twitterCreator: "@oneminch",
-    author: "Dawit (@oneminch)",
-    robots: "index, follow"
+    ogUrl: () => `https://oneminch.dev${route.path}`,
+    ...serverMeta
   });
 </script>
 

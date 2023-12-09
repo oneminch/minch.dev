@@ -4,7 +4,7 @@
   });
 
   useHead({
-    titleTemplate: "%s · Dawit"
+    titleTemplate: "%s | Blog · Dawit"
   });
 
   const route = useRoute();
@@ -19,25 +19,27 @@
     image: postCover
   } = data.value;
 
+  const serverMeta = {
+    ogType: "article",
+    ogLocale: "en_US",
+    twitterCard: "summary",
+    twitterCreator: "@oneminch"
+  };
+
   useSeoMeta({
     title: () => postTitle,
+    description: () => postDescription
+  });
+
+  useServerSeoMeta({
     ogTitle: () => postTitle,
     twitterTitle: () => postTitle,
-    description: () => postDescription,
     ogDescription: () => postDescription,
     twitterDescription: () => postDescription,
     ogImage: () => postCover,
     twitterImage: () => postCover,
-    ogUrl: () => `https://oneminch.dev${route.path}`
-  });
-
-  useServerSeoMeta({
-    ogType: "article",
-    ogLocale: "en_US",
-    twitterCard: "summary",
-    twitterCreator: "@oneminch",
-    author: "Dawit (@oneminch)",
-    robots: "index, follow"
+    ogUrl: () => `https://oneminch.dev${route.path}`,
+    ...serverMeta
   });
 </script>
 

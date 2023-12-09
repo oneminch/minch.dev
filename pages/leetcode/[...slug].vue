@@ -15,22 +15,27 @@
 
   const { title: postTitle, description: postDescription } = data.value;
 
-  useSeoMeta({
-    title: () => postTitle,
-    ogTitle: () => postTitle,
-    twitterTitle: () => postTitle,
-    description: () => postDescription,
-    ogDescription: () => postDescription,
-    twitterDescription: () => postDescription
-  });
-
-  useServerSeoMeta({
+  const serverMeta = {
+    ogImage: "/og-image.png",
+    twitterImage: "/og-image.png",
     ogType: "article",
     ogLocale: "en_US",
     twitterCard: "summary",
-    twitterCreator: "@oneminch",
-    author: "Dawit (@oneminch)",
-    robots: "index, follow"
+    twitterCreator: "@oneminch"
+  };
+
+  useSeoMeta({
+    title: () => postTitle,
+    description: () => postDescription
+  });
+
+  useServerSeoMeta({
+    ogTitle: () => postTitle,
+    twitterTitle: () => postTitle,
+    ogDescription: () => postDescription,
+    twitterDescription: () => postDescription,
+    ogUrl: () => `https://oneminch.dev${route.path}`,
+    ...serverMeta
   });
 </script>
 

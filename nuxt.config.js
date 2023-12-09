@@ -6,7 +6,11 @@ export default defineNuxtConfig({
       htmlAttrs: {
         lang: "en"
       },
-      meta: [{ "http-equiv": "X-UA-Compatible", content: "IE=edge" }],
+      meta: [
+        { "http-equiv": "X-UA-Compatible", content: "IE=edge" },
+        { name: "author", content: "Dawit (@oneminch)" },
+        { name: "robots", content: "index, follow" }
+      ],
       link: [
         {
           rel: "apple-touch-icon",

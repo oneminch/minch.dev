@@ -5,25 +5,27 @@
 
   const route = useRoute();
 
-  useSeoMeta({
-    title: () => route.meta.title,
-    ogTitle: () => route.meta.title,
-    twitterTitle: () => route.meta.title,
-    description: () => route.meta.description,
-    ogDescription: () => route.meta.description,
-    twitterDescription: () => route.meta.description,
+  const serverMeta = {
     ogImage: "/og-image.png",
     twitterImage: "/og-image.png",
-    ogUrl: () => `https://oneminch.dev${route.path}`
-  });
-
-  useServerSeoMeta({
     ogType: "website",
     ogLocale: "en_US",
     twitterCard: "summary",
-    twitterCreator: "@oneminch",
-    author: "Dawit (@oneminch)",
-    robots: "index, follow"
+    twitterCreator: "@oneminch"
+  };
+
+  useSeoMeta({
+    title: () => route.meta.title,
+    description: () => route.meta.description
+  });
+
+  useServerSeoMeta({
+    ogTitle: () => route.meta.title,
+    twitterTitle: () => route.meta.title,
+    ogDescription: () => route.meta.description,
+    twitterDescription: () => route.meta.description,
+    ogUrl: () => `https://oneminch.dev${route.path}`,
+    ...serverMeta
   });
 </script>
 

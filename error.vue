@@ -4,24 +4,26 @@
     description: "This page doesn't exist."
   };
 
-  useSeoMeta({
-    title: () => pageMeta.title,
-    ogTitle: () => pageMeta.title,
-    twitterTitle: () => pageMeta.title,
-    description: () => pageMeta.description,
-    ogDescription: () => pageMeta.description,
-    twitterDescription: () => pageMeta.description
-  });
-
-  useServerSeoMeta({
+  const serverMeta = {
     ogImage: "/og-image.png",
     twitterImage: "/og-image.png",
     ogType: "website",
     ogLocale: "en_US",
     twitterCard: "summary",
-    twitterCreator: "@oneminch",
-    author: "Dawit (@oneminch)",
-    robots: "index, follow"
+    twitterCreator: "@oneminch"
+  };
+
+  useSeoMeta({
+    title: () => pageMeta.title,
+    description: () => pageMeta.description
+  });
+
+  useServerSeoMeta({
+    ogTitle: () => pageMeta.title,
+    twitterTitle: () => pageMeta.title,
+    ogDescription: () => pageMeta.description,
+    twitterDescription: () => pageMeta.description,
+    ...serverMeta
   });
 </script>
 
