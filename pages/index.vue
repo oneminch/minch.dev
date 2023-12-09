@@ -1,11 +1,18 @@
 <script setup>
+  definePageMeta({
+    title: "Dawit · Frontend Engineer",
+    description: "I craft delightful and accessible web interfaces."
+  });
+
   useHead({
     titleTemplate: ""
   });
 
-  definePageMeta({
-    title: "Dawit · Frontend Engineer",
-    description: "I craft delightful and accessible web interfaces."
+  const route = useRoute();
+
+  useServerSeoMeta({
+    ogTitle: () => route.meta.title,
+    twitterTitle: () => route.meta.title
   });
 
   const skillset = ref({

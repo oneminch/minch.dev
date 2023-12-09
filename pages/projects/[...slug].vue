@@ -32,8 +32,8 @@
   });
 
   useServerSeoMeta({
-    ogTitle: () => projectTitle,
-    twitterTitle: () => projectTitle,
+    ogTitle: () => `${projectTitle} (Project) · Dawit`,
+    twitterTitle: () => `${projectTitle} (Project) · Dawit`,
     ogDescription: () => projectDescription,
     twitterDescription: () => projectDescription,
     ogImage: () => projectImage,

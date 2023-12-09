@@ -32,8 +32,8 @@
   });
 
   useServerSeoMeta({
-    ogTitle: () => postTitle,
-    twitterTitle: () => postTitle,
+    ogTitle: () => `${postTitle} | Blog · Dawit`,
+    twitterTitle: () => `${postTitle} | Blog · Dawit`,
     ogDescription: () => postDescription,
     twitterDescription: () => postDescription,
     ogImage: () => postCover,

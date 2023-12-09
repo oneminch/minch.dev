@@ -20,8 +20,8 @@
   });
 
   useServerSeoMeta({
-    ogTitle: () => route.meta.title,
-    twitterTitle: () => route.meta.title,
+    ogTitle: () => `${route.meta.title} · Dawit`,
+    twitterTitle: () => `${route.meta.title} · Dawit`,
     ogDescription: () => route.meta.description,
     twitterDescription: () => route.meta.description,
     ogUrl: () => `https://oneminch.dev${route.path}`,

@@ -30,8 +30,8 @@
   });
 
   useServerSeoMeta({
-    ogTitle: () => postTitle,
-    twitterTitle: () => postTitle,
+    ogTitle: () => `${postTitle} (LeetCode Solution) · Dawit`,
+    twitterTitle: () => `${postTitle} (LeetCode Solution) · Dawit`,
     ogDescription: () => postDescription,
     twitterDescription: () => postDescription,
     ogUrl: () => `https://oneminch.dev${route.path}`,
