@@ -4,25 +4,14 @@ title: "Computer Networks: DNS Basics"
 description: "What is the Domain Name System?"
 updated: 1688877769861
 created: 1645422712314
-image: "/content/cover/dns.png"
-cover_image: https://raw.githubusercontent.com/oneminch/portfolio/main/public/content/cover/dns.png
-head:
-  meta:
-    - name: "keywords"
-      content: "dns, http, https, networking"
-    - name: "robots"
-      content: "index, follow"
-    - name: "author"
-      content: "Dawit (@oneminch)"
-    - property: "og:type"
-      content: "article"
-    - name: "twitter:card"
-      content: "summary_large_image"
 tags:
   - dns
   - http
   - https
   - networking
+image: "/content/cover/dns.png"
+cover_image: https://raw.githubusercontent.com/oneminch/portfolio/main/public/content/cover/dns.png
+canonical_url: https://oneminch.dev/blog/dns
 series: Computer Networks
 navOrder: 1
 published_on: "2022-02-21"

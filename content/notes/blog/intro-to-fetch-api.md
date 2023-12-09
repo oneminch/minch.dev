@@ -1,10 +1,7 @@
 ---
 id: 596qr6314ds3ofacam7d2y8
 title: The JavaScript Fetch API
-seoTitle: The JavaScript Fetch API
 description: A Simple Introduction to the JavaScript Fetch API
-subtitle: A Simple Introduction to the JavaScript Fetch API
-seoDescription: A Simple Introduction to the JavaScript Fetch API
 updated: 1697836571522
 created: 1692301222983
 tags:
@@ -12,23 +9,8 @@ tags:
   - web-apis
   - fetch-api
 image: /content/cover/intro-to-fetch-api.png
-cover: https://raw.githubusercontent.com/oneminch/portfolio/main/public/content/cover/intro-to-fetch-api.hashnode.png
 cover_image: https://raw.githubusercontent.com/oneminch/portfolio/main/public/content/cover/intro-to-fetch-api.png
-canonical: https://oneminch.dev/blog/intro-to-fetch-api
 canonical_url: https://oneminch.dev/blog/intro-to-fetch-api
-head:
-  meta:
-    - name: robots
-      content: "index, follow"
-    - name: author
-      content: Dawit (@oneminch)
-    - property: "og:type"
-      content: article
-    - name: "twitter:card"
-      content: summary_large_image
-slug: intro-to-fetch-api
-enableToc: true
-published: true
 published_on: "2023-10-25"
 ---
 

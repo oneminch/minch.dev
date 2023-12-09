@@ -1,36 +1,15 @@
 <script setup>
-  const seoMeta = {
-    title: "Dawit's Bio",
-    description: "Things About Me.",
-    image: "/og-image.png",
-    page: "about"
-  };
-
-  useServerSeoMeta({
-    title: seoMeta.title,
-    ogTitle: seoMeta.title,
-    twitterTitle: seoMeta.title,
-    description: seoMeta.description,
-    ogDescription: seoMeta.description,
-    twitterDescription: seoMeta.description,
-    ogImage: seoMeta.image,
-    twitterImage: seoMeta.image,
-    ogUrl: `https://oneminch.dev/${seoMeta.page}`,
-    ogType: "website",
-    ogLocale: "en_US",
-    twitterCard: "summary_large_image"
+  definePageMeta({
+    title: "About",
+    description: "Things About Me."
   });
 </script>
 
 <!-- About Page -->
 <template>
-  <main id="main-content">
-    <Title>{{ seoMeta.title }}</Title>
-    <Meta name="description" :content="seoMeta.description" />
-
+  <article>
     <!-- Name  -->
     <h1 class="mb-4 text-2xl font-semibold">About Me</h1>
-
     <!-- Short Bio Summary -->
     <p>
       Hello! My name is Dawit 👋. I craft web interfaces that are
@@ -40,9 +19,7 @@
     <p>
       I am currently seeking opportunities to share my passion and expertise.
     </p>
-
     <app-divider class="md:my-6" />
-
     <p>
       My interest in web development started back in 2016 when I came across the
       web development community on Instagram. I developed a keen interest and
@@ -66,7 +43,6 @@
           class="object-cover w-full mb-1 text-center border rounded-lg border-zinc-200 dark:border-transparent"
         />
       </picture>
-
       <figcaption class="text-sm text-center text-zinc-500">
         One of my first ever dev-related lookups: Googling 'where do you write
         code'
@@ -80,9 +56,7 @@
       While building a strong technical foundation in college, I dedicated a lot
       of my free time teaching myself web development and building things out.
     </p>
-
     <app-divider class="md:my-6" />
-
     <p>
       I enjoy playing story-driven games (Current Favorite - 'A Plague Tale'
       Series).
@@ -131,7 +105,7 @@
         class="object-cover w-full text-center rounded-lg"
       />
     </div>
-  </main>
+  </article>
 </template>
 
 <style scoped>

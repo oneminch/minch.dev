@@ -1,33 +1,15 @@
 ---
 id: n8ygdrjmm6e7h54n3nxtqyi
 title: The JavaScript Fullscreen API
-seoTitle: The JavaScript Fullscreen API
 description: A Simple Introduction to the JavaScript Fullscreen API
-subtitle: A Simple Introduction to the JavaScript Fullscreen API
-seoDescription: A Simple Introduction to the JavaScript Fullscreen API
 updated: 1697836586301
 created: 1692301356027
 tags:
   - javascript
   - web-apis
 image: /content/cover/js-fullscreen-api.png
-cover: https://raw.githubusercontent.com/oneminch/portfolio/main/public/content/cover/js-fullscreen-api.hashnode.png
 cover_image: https://raw.githubusercontent.com/oneminch/portfolio/main/public/content/cover/js-fullscreen-api.png
-canonical: https://oneminch.dev/blog/js-fullscreen-api
 canonical_url: https://oneminch.dev/blog/js-fullscreen-api
-head:
-  meta:
-    - name: robots
-      content: "index, follow"
-    - name: author
-      content: Dawit (@oneminch)
-    - property: "og:type"
-      content: article
-    - name: "twitter:card"
-      content: summary_large_image
-slug: js-fullscreen-api
-enableToc: true
-published: true
 published_on: "2023-10-23"
 ---
 

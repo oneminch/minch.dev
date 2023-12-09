@@ -4,24 +4,13 @@ title: "Computer Networks: HTTP Basics"
 description: "What is the HyperText Transfer Protocol?"
 updated: 1688877769852
 created: 1645422279906
-image: "/content/cover/http.png"
-cover_image: https://raw.githubusercontent.com/oneminch/portfolio/main/public/content/cover/http.png
-head:
-  meta:
-    - name: "keywords"
-      content: "http, https, networking"
-    - name: "robots"
-      content: "index, follow"
-    - name: "author"
-      content: "Dawit (@oneminch)"
-    - property: "og:type"
-      content: "article"
-    - name: "twitter:card"
-      content: "summary_large_image"
 tags:
   - http
   - https
   - networking
+image: "/content/cover/http.png"
+cover_image: https://raw.githubusercontent.com/oneminch/portfolio/main/public/content/cover/http.png
+canonical_url: https://oneminch.dev/blog/http
 series: Computer Networks
 navOrder: 2
 published_on: "2022-03-20"

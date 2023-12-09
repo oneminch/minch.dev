@@ -7,18 +7,9 @@ tags:
   - Tailwind CSS
 live_url: "https://oneminch.github.io/Netflix-UI-Clone/"
 source_url: "https://github.com/oneminch/Netflix-UI-Clone"
-icon: ""
+image: "https://raw.githubusercontent.com/oneminch/Netflix-UI-Clone/main/public/screenshot.png"
+icon: "https://raw.githubusercontent.com/oneminch/Netflix-UI-Clone/main/public/logo.svg"
 nav_order: 4
-head:
-  meta:
-    - name: "robots"
-      content: "index, follow"
-    - name: "author"
-      content: "Dawit (@oneminch)"
-    - property: "og:type"
-      content: "article"
-    - name: "twitter:card"
-      content: "summary_large_image"
 ---
 
 Detailed description of Netflix UI Clone project coming soon.

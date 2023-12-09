@@ -25,7 +25,7 @@ export default defineEventHandler(async (event) => {
       text: messageBody
     });
 
-    return data;
+    return { data };
   } catch (error) {
     return { error };
   }

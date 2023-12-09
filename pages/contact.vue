@@ -1,24 +1,7 @@
 <script setup>
-  const seoMeta = {
-    title: "Dawit's Contact Form",
-    description: "Wanna chat? Send me a message using the form.",
-    image: "/og-image.png",
-    page: "contact"
-  };
-
-  useServerSeoMeta({
-    title: seoMeta.title,
-    ogTitle: seoMeta.title,
-    twitterTitle: seoMeta.title,
-    description: seoMeta.description,
-    ogDescription: seoMeta.description,
-    twitterDescription: seoMeta.description,
-    ogImage: seoMeta.image,
-    twitterImage: seoMeta.image,
-    ogUrl: `https://oneminch.dev/${seoMeta.page}`,
-    ogType: "website",
-    ogLocale: "en_US",
-    twitterCard: "summary_large_image"
+  definePageMeta({
+    title: "Contact",
+    description: "Let's talk. Send me a message using the form."
   });
 
   // Feedback card props
@@ -83,18 +66,14 @@
 </script>
 
 <template>
-  <main id="main-content" class="h-full">
+  <article>
     <section class="mb-8">
       <h1 class="mb-4 text-2xl font-semibold">Contact 📧</h1>
       <p class="my-2 text-zinc-700 dark:text-zinc-300">
         You can message me directly using this form.
       </p>
     </section>
-
-    <form
-      @submit.prevent="submit"
-      class="w-full md:max-w-md md:w-11/12 lg:w-2/3"
-    >
+    <form @submit.prevent="submit" class="w-full md:max-w-md md:w-11/12 lg:w-2/3">
       <label class="block w-full mb-4 space-y-2">
         <p
           class="font-medium cursor-pointer after:content-['*'] after:text-red-500"
@@ -136,14 +115,12 @@
           aria-required="true"
         ></textarea>
       </label>
-
       <app-feedback-card
         :label="feedbackMessage"
         :visible="feedbackVisible"
         :is-success="isSuccessful"
         @close-feedback="onCloseFeedback"
       ></app-feedback-card>
-
       <button
         class="px-4 py-2 font-medium bg-green-500 rounded-lg w-36 text-zinc-800 global-focus focus:ring-offset-zinc-50 dark:focus:ring-offset-zinc-800 focus:ring-offset-1 disabled:cursor-not-allowed disabled:bg-zinc-400"
         :disabled="isSubmitting"
@@ -152,5 +129,5 @@
         <span v-else>Send Message</span>
       </button>
     </form>
-  </main>
+  </article>
 </template>

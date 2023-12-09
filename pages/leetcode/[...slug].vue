@@ -1,6 +1,36 @@
 <script setup>
   definePageMeta({
-    layout: "blog-post-layout"
+    layout: "blog-layout"
+  });
+
+  useHead({
+    titleTemplate: "%s (LeetCode Solution) · Dawit"
+  });
+
+  const route = useRoute();
+
+  const { data } = await useAsyncData("get-leetcode-post", () =>
+    queryContent(route.path).only(["title", "description"]).findOne()
+  );
+
+  const { title: postTitle, description: postDescription } = data.value;
+
+  useSeoMeta({
+    title: () => postTitle,
+    ogTitle: () => postTitle,
+    twitterTitle: () => postTitle,
+    description: () => postDescription,
+    ogDescription: () => postDescription,
+    twitterDescription: () => postDescription
+  });
+
+  useServerSeoMeta({
+    ogType: "article",
+    ogLocale: "en_US",
+    twitterCard: "summary",
+    twitterCreator: "@oneminch",
+    author: "Dawit (@oneminch)",
+    robots: "index, follow"
   });
 </script>
 

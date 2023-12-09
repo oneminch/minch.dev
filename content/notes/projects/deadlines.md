@@ -6,18 +6,9 @@ tags:
   - localForage
 live_url: "https://deadlines.oneminch.dev"
 source_url: "https://github.com/oneminch/Deadlines"
-icon: ""
+image: "https://raw.githubusercontent.com/oneminch/Deadlines/main/public/screenshot.png"
+icon: "https://raw.githubusercontent.com/oneminch/Deadlines/main/public/logo.svg"
 nav_order: 2
-head:
-  meta:
-    - name: "robots"
-      content: "index, follow"
-    - name: "author"
-      content: "Dawit (@oneminch)"
-    - property: "og:type"
-      content: "article"
-    - name: "twitter:card"
-      content: "summary_large_image"
 ---
 
 Detailed description of Formend project coming soon.

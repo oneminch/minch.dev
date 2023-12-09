@@ -1,6 +1,43 @@
 <script setup>
   definePageMeta({
-    layout: "blog-post-layout"
+    layout: "blog-layout"
+  });
+
+  useHead({
+    titleTemplate: "%s · Dawit"
+  });
+
+  const route = useRoute();
+
+  const { data } = await useAsyncData("get-blog-post", () =>
+    queryContent(route.path).only(["title", "description", "image"]).findOne()
+  );
+
+  const {
+    title: postTitle,
+    description: postDescription,
+    image: postCover
+  } = data.value;
+
+  useSeoMeta({
+    title: () => postTitle,
+    ogTitle: () => postTitle,
+    twitterTitle: () => postTitle,
+    description: () => postDescription,
+    ogDescription: () => postDescription,
+    twitterDescription: () => postDescription,
+    ogImage: () => postCover,
+    twitterImage: () => postCover,
+    ogUrl: () => `https://oneminch.dev${route.path}`
+  });
+
+  useServerSeoMeta({
+    ogType: "article",
+    ogLocale: "en_US",
+    twitterCard: "summary",
+    twitterCreator: "@oneminch",
+    author: "Dawit (@oneminch)",
+    robots: "index, follow"
   });
 </script>
 

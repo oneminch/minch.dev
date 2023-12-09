@@ -1,24 +1,11 @@
 <script setup>
-  const seoMeta = {
-    title: "Dawit - Frontend Engineer",
-    description: "I craft delightful and accessible web interfaces.",
-    image: "/og-image.png",
-    page: ""
-  };
+  useHead({
+    titleTemplate: ""
+  });
 
-  useServerSeoMeta({
-    title: seoMeta.title,
-    ogTitle: seoMeta.title,
-    twitterTitle: seoMeta.title,
-    description: seoMeta.description,
-    ogDescription: seoMeta.description,
-    twitterDescription: seoMeta.description,
-    ogImage: seoMeta.image,
-    twitterImage: seoMeta.image,
-    ogUrl: `https://oneminch.dev/${seoMeta.page}`,
-    ogType: "website",
-    ogLocale: "en_US",
-    twitterCard: "summary_large_image"
+  definePageMeta({
+    title: "Dawit · Frontend Engineer",
+    description: "I craft delightful and accessible web interfaces."
   });
 
   const skillset = ref({
@@ -48,13 +35,7 @@
 
 <!-- Landing Page -->
 <template>
-  <main
-    id="main-content"
-    class="relative [&>*]:my-4 first:[&>*]:mt-0 [&>hr]:my-6 md:[&>hr]:my-10"
-  >
-    <Title>{{ seoMeta.title }}</Title>
-    <Meta name="description" :content="seoMeta.description" />
-
+  <article>
     <!-- Introduction -->
     <section>
       <h1 class="mb-4 text-2xl font-semibold">
@@ -76,7 +57,6 @@
         share my passion and expertise.
       </p>
     </section>
-
     <!-- Skills -->
     <section>
       <h2 class="py-2 mb-1 text-xl font-semibold">Skills</h2>
@@ -118,7 +98,6 @@
         </li>
       </ul>
     </section>
-
     <!-- Projects -->
     <section>
       <h2 class="w-auto mb-2 text-xl font-semibold group">
@@ -155,7 +134,6 @@
         </template>
       </div>
     </section>
-
     <!-- Latest Blog Posts -->
     <section>
       <h2 class="w-auto mb-2 text-xl font-semibold group">
@@ -194,9 +172,7 @@
         </template>
       </div>
     </section>
-
     <app-divider />
-
     <!-- Other Links -->
     <section class="mb-2 space-y-2">
       <div
@@ -248,12 +224,15 @@
         ></app-link-card>
       </div>
     </section>
-
     <app-footer />
-  </main>
+  </article>
 </template>
 
 <style scoped>
+  main {
+    @apply [&>*]:my-4 first:[&>*]:mt-0 [&>hr]:my-6 md:[&>hr]:my-10;
+  }
+
   #contact-btn {
     animation: 1500ms linear 2000ms infinite pulse;
   }

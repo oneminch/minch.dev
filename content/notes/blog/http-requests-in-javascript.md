@@ -1,10 +1,7 @@
 ---
 id: 0nu30msglamrhtkrwtzs2wl
 title: HTTP Requests in JavaScript
-seoTitle: HTTP Requests in JavaScript
 description: How to Make HTTP Requests in JavaScript
-subtitle: How to Make HTTP Requests in JavaScript
-seoDescription: How to Make HTTP Requests in JavaScript
 updated: 1697836566395
 created: 1692300081883
 tags:
@@ -12,23 +9,8 @@ tags:
   - web-apis
   - http-requests
 image: /content/cover/http-requests-in-javascript.png
-cover: https://raw.githubusercontent.com/oneminch/portfolio/main/public/content/cover/http-requests-in-javascript.hashnode.png
 cover_image: https://raw.githubusercontent.com/oneminch/portfolio/main/public/content/cover/http-requests-in-javascript.png
-canonical: https://oneminch.dev/blog/http-requests-in-javascript
 canonical_url: https://oneminch.dev/blog/http-requests-in-javascript
-head:
-  meta:
-    - name: robots
-      content: "index, follow"
-    - name: author
-      content: Dawit (@oneminch)
-    - property: "og:type"
-      content: article
-    - name: "twitter:card"
-      content: summary_large_image
-slug: http-requests-in-javascript
-enableToc: true
-published: true
 published_on: "2023-10-24"
 ---
 

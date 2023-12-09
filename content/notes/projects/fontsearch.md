@@ -7,18 +7,9 @@ tags:
   - Fuse.js
 live_url: "https://oneminch.github.io/FontSearch/"
 source_url: "https://github.com/oneminch/FontSearch"
-icon: ""
+image: "https://raw.githubusercontent.com/oneminch/FontSearch/main/public/screenshot.png"
+icon: "https://raw.githubusercontent.com/oneminch/FontSearch/main/public/logo.svg"
 nav_order: 5
-head:
-  meta:
-    - name: "robots"
-      content: "index, follow"
-    - name: "author"
-      content: "Dawit (@oneminch)"
-    - property: "og:type"
-      content: "article"
-    - name: "twitter:card"
-      content: "summary_large_image"
 ---
 
 Detailed description of FontSearch project coming soon.

@@ -1,6 +1,39 @@
 <script setup>
   definePageMeta({
-    layout: "project-page-layout"
+    layout: "project-layout"
+  });
+
+  useHead({
+    titleTemplate: "%s (Project) · Dawit"
+  });
+
+  const route = useRoute();
+
+  const { data } = await useAsyncData("get-project", () =>
+    queryContent(route.path).only(["title", "description", "image"]).findOne()
+  );
+
+  const { projectTitle, projectDescription, projectImage } = data.value;
+
+  useSeoMeta({
+    title: () => projectTitle,
+    ogTitle: () => projectTitle,
+    twitterTitle: () => projectTitle,
+    description: () => projectDescription,
+    ogDescription: () => projectDescription,
+    twitterDescription: () => projectDescription,
+    ogImage: () => projectImage,
+    twitterImage: () => projectImage,
+    ogUrl: () => `https://oneminch.dev${route.path}`
+  });
+
+  useServerSeoMeta({
+    ogType: "article",
+    ogLocale: "en_US",
+    twitterCard: "summary",
+    twitterCreator: "@oneminch",
+    author: "Dawit (@oneminch)",
+    robots: "index, follow"
   });
 </script>
 
@@ -31,9 +64,7 @@
           height="250"
           format="webp"
           loading="lazy"
-          :src="`https://raw.githubusercontent.com/oneminch/${doc.title
-            .split(' ')
-            .join('-')}/main/public/screenshot.png`"
+          :src="doc.image"
           :alt="`Project Screenshot for My ${doc.title} Project`"
           class="object-cover object-top w-full h-full m-0 text-center"
         />

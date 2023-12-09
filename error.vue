@@ -1,22 +1,27 @@
 <script setup>
-  const seoMeta = {
-    title: "Page Not Found",
-    description: "Non-existent Page",
-    image: "/og-image.png"
+  const pageMeta = {
+    title: "Page Not Found · Dawit",
+    description: "This page doesn't exist."
   };
 
+  useSeoMeta({
+    title: () => pageMeta.title,
+    ogTitle: () => pageMeta.title,
+    twitterTitle: () => pageMeta.title,
+    description: () => pageMeta.description,
+    ogDescription: () => pageMeta.description,
+    twitterDescription: () => pageMeta.description
+  });
+
   useServerSeoMeta({
-    title: seoMeta.title,
-    ogTitle: seoMeta.title,
-    twitterTitle: seoMeta.title,
-    description: seoMeta.description,
-    ogDescription: seoMeta.description,
-    twitterDescription: seoMeta.description,
-    ogImage: seoMeta.image,
-    twitterImage: seoMeta.image,
+    ogImage: "/og-image.png",
+    twitterImage: "/og-image.png",
     ogType: "website",
     ogLocale: "en_US",
-    twitterCard: "summary_large_image"
+    twitterCard: "summary",
+    twitterCreator: "@oneminch",
+    author: "Dawit (@oneminch)",
+    robots: "index, follow"
   });
 </script>
 
@@ -25,10 +30,7 @@
   <app-side-bar />
 
   <!-- Main Content -->
-  <main
-    id="main-content"
-    class="flex flex-col items-center justify-center main-error"
-  >
+  <main id="main-content" class="main-error">
     <app-not-found />
   </main>
 
@@ -38,6 +40,6 @@
 
 <style scoped>
   #main-content.main-error {
-    @apply h-full;
+    @apply h-full flex flex-col items-center justify-center;
   }
 </style>

@@ -4,25 +4,14 @@ title: How Deno differs from Node.js
 description: "This article goes over the core differences between Deno and Node.js."
 updated: 1688877769873
 created: 1686355733170
-image: "/content/cover/deno-vs-node.png"
-cover_image: https://raw.githubusercontent.com/oneminch/portfolio/main/public/content/cover/deno-vs-node.png
-head:
-  meta:
-    - name: "keywords"
-      content: "deno, nodejs, shorts"
-    - name: "robots"
-      content: "index, follow"
-    - name: "author"
-      content: "Dawit (@oneminch)"
-    - property: "og:type"
-      content: "article"
-    - name: "twitter:card"
-      content: "summary_large_image"
 tags:
   - deno
   - nodejs
   - shorts
   - javascript
+image: "/content/cover/deno-vs-node.png"
+cover_image: https://raw.githubusercontent.com/oneminch/portfolio/main/public/content/cover/deno-vs-node.png
+canonical_url: https://oneminch.dev/blog/deno-vs-node
 published_on: "2023-08-24"
 ---
 

@@ -18,14 +18,6 @@
     }
   });
 
-  const remoteIcon = computed(() => {
-    if (props.icon.length === 0) {
-      const projectSlug = props.projectTitle.split(" ").join("-");
-
-      return `https://raw.githubusercontent.com/oneminch/${projectSlug}/main/public/logo.svg`;
-    }
-  });
-
   const isExternalUrl = computed(() => {
     return props.projectUrl.startsWith("https://");
   });
@@ -40,21 +32,21 @@
     <div
       class="w-12 h-12 flex items-center justify-center rounded-2xl shrink-0 relative -z-0 before:content-[''] before:absolute before:-inset-[1px] before:-z-10 before:rounded-[calc(.75rem+1px)] before:bg-gradient-to-b before:from-green-500 before:to-lime-400"
     >
-      <template v-if="icon.length > 0">
-        <Icon
-          :name="`simple-icons:${icon}`"
-          class="w-full h-full p-3 bg-zinc-100 dark:bg-zinc-600 opacity-95 dark:opacity-90 rounded-xl"
-        />
-      </template>
-      <template v-else>
+      <template v-if="icon.startsWith('https://')">
         <nuxt-img
           preload
           placeholder
           width="40"
           height="40"
-          :src="remoteIcon"
+          :src="icon"
           :alt="`Project Logo for ${projectTitle}`"
           class="w-full h-full p-2 bg-zinc-100 dark:bg-zinc-600 opacity-95 dark:opacity-90 rounded-xl"
+        />
+      </template>
+      <template v-else>
+        <Icon
+          :name="`simple-icons:${icon}`"
+          class="w-full h-full p-3 bg-zinc-100 dark:bg-zinc-600 opacity-95 dark:opacity-90 rounded-xl"
         />
       </template>
     </div>

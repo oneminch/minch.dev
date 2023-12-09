@@ -8,18 +8,9 @@ tags:
   - Vue Router
 live_url: "https://encryptedlist.xyz"
 source_url: "https://github.com/oneminch/EncryptedList"
-icon: ""
+image: "https://raw.githubusercontent.com/oneminch/EncryptedList/main/public/screenshot.png"
+icon: "https://raw.githubusercontent.com/oneminch/EncryptedList/main/public/logo.svg"
 nav_order: 1
-head:
-  meta:
-    - name: "robots"
-      content: "index, follow"
-    - name: "author"
-      content: "Dawit (@oneminch)"
-    - property: "og:type"
-      content: "article"
-    - name: "twitter:card"
-      content: "summary_large_image"
 ---
 
 Detailed description of EncryptedList project coming soon.

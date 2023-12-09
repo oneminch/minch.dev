@@ -4,26 +4,14 @@ title: "Computer Networks: HTTPS Basics"
 description: "What is HTTPS?"
 updated: 1688877769837
 created: 1645422195673
-image: "/content/cover/https.png"
-cover_image: https://raw.githubusercontent.com/oneminch/portfolio/main/public/content/cover/https.png
-canonical_url: https://iq.opengenus.org/idea-behind-https/
-head:
-  meta:
-    - name: "keywords"
-      content: "http, https, networking, ssl"
-    - name: "robots"
-      content: "index, follow"
-    - name: "author"
-      content: "Dawit (@oneminch)"
-    - property: "og:type"
-      content: "article"
-    - name: "twitter:card"
-      content: "summary_large_image"
 tags:
   - http
   - https
   - networking
   - ssl
+image: "/content/cover/https.png"
+cover_image: https://raw.githubusercontent.com/oneminch/portfolio/main/public/content/cover/https.png
+canonical_url: https://oneminch.dev/blog/https
 series: Computer Networks
 navOrder: 3
 published_on: "2022-03-28"

@@ -1,25 +1,8 @@
 <script setup>
-  const seoMeta = {
+  definePageMeta({
     title: "More Projects",
     description:
-      "More projects that I am currently working on and have worked on.",
-    image: "/og-image.png",
-    page: "projects/more"
-  };
-
-  useServerSeoMeta({
-    title: seoMeta.title,
-    ogTitle: seoMeta.title,
-    twitterTitle: seoMeta.title,
-    description: seoMeta.description,
-    ogDescription: seoMeta.description,
-    twitterDescription: seoMeta.description,
-    ogImage: seoMeta.image,
-    twitterImage: seoMeta.image,
-    ogUrl: `https://oneminch.dev/${seoMeta.page}`,
-    ogType: "website",
-    ogLocale: "en_US",
-    twitterCard: "summary_large_image"
+      "More projects that I am currently working on and have worked on."
   });
 
   // Fetch all other projects
@@ -39,10 +22,7 @@
 
 <!-- Projects.more() Page -->
 <template>
-  <main id="main-content">
-    <Title>{{ seoMeta.title }}</Title>
-    <Meta name="description" :content="seoMeta.description" />
-
+  <article>
     <h1 class="mb-4 text-3xl font-bold text-left">
       Projects<span class="font-mono text-green-500">.more()</span>
     </h1>
@@ -55,7 +35,6 @@
         >my GitHub profile</nuxt-link
       >.
     </p>
-
     <!-- Visual Projects -->
     <section class="grid grid-cols-1 gap-4 mb-4 lg:grid-cols-2">
       <template v-if="pending">
@@ -75,9 +54,7 @@
         />
       </template>
     </section>
-
     <app-divider class="my-6 md:my-8" />
-
     <!-- Non-visual Projects -->
     <section class="grid grid-cols-1 gap-4 mb-4 lg:grid-cols-2">
       <template v-if="pending">
@@ -97,5 +74,5 @@
         />
       </template>
     </section>
-  </main>
+  </article>
 </template>
