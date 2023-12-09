@@ -35,7 +35,7 @@
 
 <!-- Landing Page -->
 <template>
-  <article>
+  <article class="[&>*]:my-4 first:[&>*]:mt-0 [&>hr]:my-6 md:[&>hr]:my-10">
     <!-- Introduction -->
     <section>
       <h1 class="mb-4 text-2xl font-semibold">
@@ -229,10 +229,6 @@
 </template>
 
 <style scoped>
-  main {
-    @apply [&>*]:my-4 first:[&>*]:mt-0 [&>hr]:my-6 md:[&>hr]:my-10;
-  }
-
   #contact-btn {
     animation: 1500ms linear 2000ms infinite pulse;
   }
