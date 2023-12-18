@@ -14,6 +14,7 @@
     "@nuxt/image": "^1.1.0",
     "@nuxtjs/partytown": "^1.4.0",
     "@nuxtjs/tailwindcss": "^6.10.1",
+    "@nuxtjs/turnstile": "^0.6.3",
     "@tailwindcss/typography": "^0.5.10",
     "@vueuse/nuxt": "^10.7.0",
     "nuxt": "^3.8.2",

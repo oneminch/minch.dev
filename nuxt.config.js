@@ -78,6 +78,7 @@ export default defineNuxtConfig({
   modules: [
     "@nuxt/content",
     "@nuxtjs/partytown",
+    "@nuxtjs/turnstile",
     "@nuxt/image",
     "@nuxtjs/tailwindcss",
     "@vueuse/nuxt",
@@ -93,7 +94,11 @@ export default defineNuxtConfig({
     raindropCollectionId: process.env.RAINDROP_COLLECTION_ID,
     resendApiKey: process.env.RESEND_API_KEY,
     resendFrom: process.env.RESEND_FROM,
-    resendTo: process.env.RESEND_TO
+    resendTo: process.env.RESEND_TO,
+    turnstile: { secretKey: process.env.TURNSTILE_SECRET_KEY }
   },
-  telemetry: false
+  telemetry: false,
+  turnstile: {
+    siteKey: "0x4AAAAAAABlDwSHN3HVmFWH"
+  }
 });
