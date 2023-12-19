@@ -46,6 +46,7 @@ export default defineNuxtConfig({
   },
   components: [{ path: "~/components", pathPrefix: false }],
   content: {
+    contentHead: false,
     documentDriven: false,
     highlight: {
       theme: "github-dark",
