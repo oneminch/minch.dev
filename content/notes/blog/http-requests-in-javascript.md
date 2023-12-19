@@ -22,7 +22,7 @@ Requesting a resource from the client side uses this HTTP protocol, and these ty
 
 JavaScript has a set of great tools and methods that allow us to make HTTP requests to send or receive data from a certain server or endpoint. A couple of commonly used ways to make requests are **XMLHttpRequest** and **Fetch**.
 
-## 1. XMLHttpRequest (XHR)
+## XMLHttpRequest (XHR)
 
 **AJAX** stands for **A**synchronous **J**avaScript **A**nd **X**ML. Requests made are _asynchronous_, which means they don't interrupt the execution of other JavaScript code. In other words, JavaScript code besides the AJAX code doesn't have to wait for requests to finish being executed. It can execute simultaneously. The method that makes this possible is the `XMLHttpRequest()`. Despite the prefix _'XML'_, we can process any form of data for our requests.
 
@@ -290,7 +290,7 @@ xhr.send();
 
 For real APIs, we can continue to create another GET request to verify that the data we wanted to delete is actually deleted. We can retrieve all the data and see if the object we sent a DELETE request on is in the database. If it's not, then the data is deleted.
 
-## 2. Fetch
+## Fetch
 
 Fetch is a promise-based web API. It is a modern alternative to XHR. I have explained in detail how the `fetch()` API works [here](https://oneminch.dev/blog/intro-to-fetch-api/). But let's redo the previous requests using fetch and see the difference.
 
