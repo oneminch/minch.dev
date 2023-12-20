@@ -6,26 +6,28 @@ tags:
   - array
 ---
 
-**My Solution**:
+## My Solution
 
-```js
+### JavaScript
+
+```javascript
 /**
  * @param {number[]} digits
  * @return {number[]}
  */
 var plusOne = function (digits) {
-	for (let i = digits.length - 1; i >= 0; i--) {
-		if (digits[i] + 1 >= 10) {
-			digits[i] = digits[i] + 1 - 10;
-			if (i == 0) {
-				digits.unshift(1);
-			}
-		} else {
-			digits[i] += 1;
-			break;
-		}
-	}
+  for (let i = digits.length - 1; i >= 0; i--) {
+    if (digits[i] + 1 >= 10) {
+      digits[i] = digits[i] + 1 - 10;
+      if (i == 0) {
+        digits.unshift(1);
+      }
+    } else {
+      digits[i] += 1;
+      break;
+    }
+  }
 
-	return digits;
+  return digits;
 };
 ```

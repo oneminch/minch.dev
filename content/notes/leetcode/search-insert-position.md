@@ -6,7 +6,9 @@ tags:
   - arrays
 ---
 
-**My Solution**:
+## My Solution
+
+### JavaScript
 
 ```javascript
 /**
@@ -14,15 +16,15 @@ tags:
  * @param {number} target
  * @return {number}
  */
-var searchInsert = function(nums, target) {
-    let pos = nums.indexOf(target);
-    
-    if (pos < 0) { 
-        nums.push(target);
-        nums.sort((a,b) => a-b);
-        pos = nums.indexOf(target);
-    }  
-    
-    return pos;
+var searchInsert = function (nums, target) {
+  let pos = nums.indexOf(target);
+
+  if (pos < 0) {
+    nums.push(target);
+    nums.sort((a, b) => a - b);
+    pos = nums.indexOf(target);
+  }
+
+  return pos;
 };
 ```

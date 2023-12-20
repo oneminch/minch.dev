@@ -5,7 +5,9 @@ tags:
   - python
 ---
 
-**My Solution**:
+## My Solution
+
+### Python
 
 ```py
 def isHappy(n: int) -> bool:
@@ -21,7 +23,7 @@ def isHappy(n: int) -> bool:
         if digit_sum not in digit_sums:
             digit_sums.append(digit_sum)
             digits = [int(digit) for digit in list(str(digit_sum))]
-        else: 
+        else:
             return False
 
     return True

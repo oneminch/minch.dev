@@ -5,9 +5,11 @@ tags:
   - python
 ---
 
-**My Solution**:
+## My Solution
 
-> Input is modified in-place.
+### Python
+
+**Modified In-Place.**
 
 ```py
 def reverseString(s: List[str]) -> None:

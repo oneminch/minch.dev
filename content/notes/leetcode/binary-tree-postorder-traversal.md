@@ -8,17 +8,20 @@ tags:
   - dfs
 ---
 
-**My Solution**:
+## My Solution
+
+### Python
+
+**Recursive Approach**
 
 ```py
-# Recursive Approach
-
 # Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, val=0, left=None, right=None):
-#         self.val = val
-#         self.left = left
-#         self.right = right
+class TreeNode:
+    def __init__(self, val=0, left=None, right=None):
+        self.val = val
+        self.left = left
+        self.right = right
+
 
 def postorderTraversal(root: Optional[TreeNode]) -> List[int]:
     if not root:

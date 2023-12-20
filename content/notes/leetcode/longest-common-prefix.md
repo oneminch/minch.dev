@@ -6,7 +6,9 @@ tags:
   - strings
 ---
 
-**My Solution**:
+## My Solution
+
+### Python
 
 ```py
 def longestCommonPrefix(strs: List[str]) -> str:

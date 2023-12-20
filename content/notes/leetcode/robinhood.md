@@ -5,7 +5,9 @@ tags:
   - python
 ---
 
-**My Solution**:
+## My Solution
+
+### Python
 
 ```py
 from __future__ import division

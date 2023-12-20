@@ -7,7 +7,9 @@ tags:
   - prefix sum
 ---
 
-**My Solution**:
+## My Solution
+
+### Python
 
 ```py
 def pivotIndex(nums: List[int]) -> int:

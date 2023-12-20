@@ -5,7 +5,9 @@ tags:
   - python
 ---
 
-**My Solution**:
+## My Solution
+
+### Python
 
 ```py
 def fizzBuzz(n: int) -> List[str]:

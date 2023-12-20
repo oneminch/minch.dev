@@ -6,7 +6,9 @@ tags:
   - lists
 ---
 
-**My Solution**:
+## My Solution
+
+### Python
 
 ```py
 def findMiddleIndex(nums: List[int]) -> int:

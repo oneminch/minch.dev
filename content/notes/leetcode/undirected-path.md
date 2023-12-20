@@ -7,14 +7,16 @@ tags:
   - traversal
 ---
 
-**My Solution**:
+## My Solution
+
+### Python
 
 ```py
 def undirected_path(edges, node_A, node_B):
     adj_list = {}
 
     # Convert edge list into adjacency list
-    for e in edges:   
+    for e in edges:
         if e[0] not in adj_list:
             adj_list[e[0]] = []
         if e[1] not in adj_list:

@@ -7,10 +7,12 @@ tags:
   - median
 ---
 
-**My Solution**:
+## My Solution
 
-```js
-function MovingMedian(arr) { 
+### JavaScript
+
+```javascript
+function MovingMedian(arr) {
   let subArr = [],
     midpoint = 0,
     predecessors = arr[0] - 1;
@@ -21,21 +23,21 @@ function MovingMedian(arr) {
 
     // get the range of arr elements for moving window
     if (i <= predecessors) {
-      subArr = nums.slice(0, i+1).sort((a,b) => a - b);
+      subArr = nums.slice(0, i + 1).sort((a, b) => a - b);
     } else {
-      subArr = nums.slice(i - predecessors, i+1).sort((a,b) => a - b);
+      subArr = nums.slice(i - predecessors, i + 1).sort((a, b) => a - b);
     }
 
     // get midpoint
     midpoint = Math.floor(subArr.length / 2);
-    
+
     // calculate the median for each range / subarray
-    return subArr.length % 2 ?
-      subArr[midpoint] :
-      (subArr[midpoint] + subArr[midpoint - 1]) / 2;
+    return subArr.length % 2
+      ? subArr[midpoint]
+      : (subArr[midpoint] + subArr[midpoint - 1]) / 2;
   });
 
   // return median list as string
-  return nums.join(","); 
+  return nums.join(",");
 }
 ```

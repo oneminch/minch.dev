@@ -7,9 +7,11 @@ tags:
   - recursion
 ---
 
-**My Solution**:
+## My Solution
 
-```js
+### JavaScript
+
+```javascript
 /**
  * @param {Array<*|Array>} arr
  * @return {Array}
@@ -19,12 +21,12 @@ function flatten(arr) {
 
   for (let x of arr) {
     if (!Array.isArray(x)) {
-      flattenedArray.push(x)
+      flattenedArray.push(x);
     } else {
-      flattenedArray.push(...flatten(x))
+      flattenedArray.push(...flatten(x));
     }
   }
 
-  return flattenedArray
+  return flattenedArray;
 }
 ```

@@ -6,7 +6,9 @@ tags:
   - strings
 ---
 
-**My Solution**:
+## My Solution
+
+### JavaScript
 
 ```javascript
 /**
@@ -14,11 +16,11 @@ tags:
  * @param {string} needle
  * @return {number}
  */
-var strStr = function(haystack, needle) {
-    if (needle.length === 0) {
-        return 0;
-    }
+var strStr = function (haystack, needle) {
+  if (needle.length === 0) {
+    return 0;
+  }
 
-    return haystack.indexOf(needle);
+  return haystack.indexOf(needle);
 };
 ```

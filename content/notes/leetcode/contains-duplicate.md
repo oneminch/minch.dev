@@ -6,7 +6,9 @@ tags:
   - hash table
 ---
 
-**My Solution**:
+## My Solution
+
+### Python
 
 ```py
 def containsDuplicate(self, nums: List[int]) -> bool:

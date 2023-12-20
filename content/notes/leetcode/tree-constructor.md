@@ -6,9 +6,11 @@ tags:
   - binary tree
 ---
 
-**My Solution**:
+## My Solution
 
-```js
+### JavaScript
+
+```javascript
 function Node(v) {
   this.value = v;
   this.childCount = 0;
@@ -18,18 +20,19 @@ function TreeConstructor(strArr) {
   const nodeList = [];
 
   // convert string pairs to array pairs
-  const numArr = strArr.map(item => {
-    let strPairs = item.substring(1,item.length - 1).split(",");
-    return strPairs.map(item => {
+  const numArr = strArr.map((item) => {
+    let strPairs = item.substring(1, item.length - 1).split(",");
+    return strPairs.map((item) => {
       return parseInt(item);
     });
   });
 
-  for (pair of numArr) {    
-    let firstNode = nodeList.find(node => node.value === pair[0]);
-    let secondNode = nodeList.find(node => node.value === pair[1]);
+  for (pair of numArr) {
+    let firstNode = nodeList.find((node) => node.value === pair[0]);
+    let secondNode = nodeList.find((node) => node.value === pair[1]);
 
-    let node1 = null, node2 = null;
+    let node1 = null,
+      node2 = null;
 
     // create a node if it doesn't exist
     if (!firstNode) {
@@ -52,6 +55,6 @@ function TreeConstructor(strArr) {
     }
   }
 
-  return true; 
+  return true;
 }
 ```

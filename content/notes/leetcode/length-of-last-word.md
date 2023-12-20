@@ -6,14 +6,19 @@ tags:
   - strings
 ---
 
-**My Solution**:
+## My Solution
+
+### JavaScript
 
 ```javascript
 /**
  * @param {string} s
  * @return {number}
  */
-var lengthOfLastWord = function(s) {
-    return s.split(" ").filter(str => str.length > 0).pop().length;
+var lengthOfLastWord = function (s) {
+  return s
+    .split(" ")
+    .filter((str) => str.length > 0)
+    .pop().length;
 };
 ```

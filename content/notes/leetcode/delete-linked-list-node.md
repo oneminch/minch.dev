@@ -7,21 +7,24 @@ tags:
   - in-place
 ---
 
-**My Solution**:
+## My Solution
 
-> Modified In-Place
+### Python
+
+**Modified In-Place.**
 
 ```py
 # Definition for singly-linked list.
-# class ListNode:
-#     def __init__(self, x):
-#         self.val = x
-#         self.next = None
+class ListNode:
+    def __init__(self, x):
+        self.val = x
+        self.next = None
+
 
 def deleteNode(node):
     while node.next is not None:
         node.val = node.next.val
-        
+
         if node.next.next is None:
             node.next = None
         else:

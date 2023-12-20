@@ -7,7 +7,9 @@ tags:
   - array
 ---
 
-**My Solution**:
+## My Solution
+
+### Python
 
 ```py
 def solve(nums):

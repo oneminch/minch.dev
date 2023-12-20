@@ -7,7 +7,9 @@ tags:
   - numbers
 ---
 
-**My Solution**:
+## My Solution
+
+### Python
 
 ```py
 def romanToInt(s: str) -> int:

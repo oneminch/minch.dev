@@ -6,14 +6,16 @@ tags:
   - in-place
 ---
 
-**My Solution**:
+## My Solution
 
-> Modified in-place
+### Python
+
+**Modified In-Place.**
 
 ```py
 def moveZeroes(nums: List[int]) -> None:
     zero_count = 0
-    
+
     while 0 in nums:
         nums.pop(nums.index(0))
         zero_count+=1

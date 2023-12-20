@@ -6,7 +6,9 @@ tags:
   - stack
 ---
 
-**My Solution**:
+## My Solution
+
+### Python
 
 ```py
 def isValid(s: str) -> bool:
@@ -21,13 +23,12 @@ def isValid(s: str) -> bool:
         if parenthesis in mappings:
             stack.append(parenthesis)
             continue
-        
+
         if len(stack) > 0 and mappings[stack[-1]] == parenthesis:
             stack.pop()
         else:
             return False
-            
+
 
     return False if (len(stack) > 0 or len(s) <= 1) else True
-
 ```

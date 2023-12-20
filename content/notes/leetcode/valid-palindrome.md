@@ -7,25 +7,25 @@ tags:
   - palindrome
 ---
 
-**My Solution**:
+## My Solution
 
-## JavaScript
+### JavaScript
 
-```js
+```javascript
 /**
  * @param {string} s
  * @return {boolean}
  */
 var isPalindrome = function (s) {
-	let stripped = s.toLowerCase().replace(/[^a-z0-9]/gi, "");
+  let stripped = s.toLowerCase().replace(/[^a-z0-9]/gi, "");
 
-	let reversed = stripped.split("").reverse().join("");
+  let reversed = stripped.split("").reverse().join("");
 
-	return stripped === reversed;
+  return stripped === reversed;
 };
 ```
 
-## Python
+### Python
 
 ```py
 def isPalindrome(s: str) -> bool:

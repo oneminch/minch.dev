@@ -6,12 +6,14 @@ tags:
   - prefix sum
 ---
 
-**My Solution**:
+## My Solution
+
+### Python
 
 ```py
 def runningSum(nums: List[int]) -> List[int]:
     lst = [None]*len(nums)
-    
+
     for i in range(len(nums)):
         lst[i] = sum(nums[0:i+1])
 

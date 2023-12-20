@@ -6,14 +6,16 @@ tags:
   - strings
 ---
 
-**My Solution**:
+## My Solution
+
+### JavaScript
 
 ```javascript
 /**
  * @param {string} address
  * @return {string}
  */
-var defangIPaddr = function(address) {
-    return address.split('.').join('[.]');   
+var defangIPaddr = function (address) {
+  return address.split(".").join("[.]");
 };
 ```

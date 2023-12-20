@@ -7,7 +7,9 @@ tags:
   - sorting
 ---
 
-**My Solution**:
+## My Solution
+
+### Python
 
 ```py
 def majorityElement(nums: List[int]) -> int:

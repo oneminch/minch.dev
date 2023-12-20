@@ -6,7 +6,9 @@ tags:
   - arrays
 ---
 
-**My Solution**:
+## My Solution
+
+### Python
 
 ```py
 def generate(numRows: int) -> List[List[int]]:
@@ -19,10 +21,10 @@ def generate(numRows: int) -> List[List[int]]:
         l = []
         l.append(1)
         prev_triangle = pascals_triangle[i-1]
-        
+
         for j in range(len(prev_triangle) - 1):
             l.append(prev_triangle[j] + prev_triangle[j+1])
-        
+
         l.append(1)
         pascals_triangle.append(l)
 

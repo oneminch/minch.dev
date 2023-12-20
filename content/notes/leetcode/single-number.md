@@ -5,7 +5,9 @@ tags:
   - python
 ---
 
-**My Solution**:
+## My Solution
+
+### Python
 
 ```py
 def singleNumber(nums: List[int]) -> int:
@@ -17,6 +19,6 @@ def singleNumber(nums: List[int]) -> int:
             stack.pop(i)
         else:
             stack.append(n)
-        
+
     return stack[0]
 ```

@@ -6,7 +6,9 @@ tags:
   - palindrome
 ---
 
-**My Solution**:
+## My Solution
+
+### Python
 
 ```py
 def isPalindrome(x: int) -> bool:
