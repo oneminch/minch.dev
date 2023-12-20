@@ -6,13 +6,26 @@ const resend = new Resend(resendApiKey);
 
 export default defineEventHandler(async (event) => {
   try {
-    const { senderName, senderEmail, senderMessage } = await readBody(event);
+    const { senderName, senderEmail, senderMessage, turnstileToken } =
+      await readBody(event);
 
-    // Form validation
+    // Validate Turnstile Token
+    if (!turnstileToken) {
+      throw new Error("Token not Provided.");
+    }
+
+    const turnstile = await verifyTurnstileToken(turnstileToken, event);
+
+    if (!turnstile.success) {
+      throw new Error("Invalid Token.");
+    }
+
+    // Validate Submission
     if (!senderName.trim() || !senderMessage.trim()) {
       throw new Error("Missing Field");
     }
 
+    // Construct message body and send
     const messageBody = `
     ${
       senderEmail.trim() ? "FROM: " + senderEmail.trim() + "\n\n" : ""
@@ -27,6 +40,7 @@ export default defineEventHandler(async (event) => {
 
     return { data };
   } catch (error) {
-    return { error };
+    console.log(error);
+    return error;
   }
 });

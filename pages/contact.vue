@@ -4,13 +4,13 @@
     description: "Let's talk. Send me a message using the form."
   });
 
+  // Turnstile States
+  const turnstile = ref();
+  const turnstileToken = ref("");
+
   // Feedback card props
   const feedbackVisible = ref(false);
   const feedbackMessage = ref("");
-
-  const onCloseFeedback = () => {
-    feedbackVisible.value = false;
-  };
 
   // Form control states
   const senderName = ref("");
@@ -18,6 +18,14 @@
   const senderMessage = ref("");
   const isSubmitting = ref(false);
   const isSuccessful = ref(true);
+
+  const afterFormSubmit = (feedback, success) => {
+    isSubmitting.value = false;
+    isSuccessful.value = success;
+    feedbackMessage.value = feedback;
+    feedbackVisible.value = true;
+    turnstile.value?.reset();
+  };
 
   async function submit(e) {
     // Reset state
@@ -28,40 +36,26 @@
 
     // Validate required input fields
     if (!senderName.value.trim() || !senderMessage.value.trim()) {
-      isSubmitting.value = false;
-      isSuccessful.value = false;
-      feedbackMessage.value = "A Required Field is Empty";
-      feedbackVisible.value = true;
+      afterFormSubmit("A Required Field is Empty", false);
       return;
     }
 
-    // Temporary
-    isSubmitting.value = false;
-    isSuccessful.value = false;
-    feedbackMessage.value = "Nothing Happens Yet ;)";
-    feedbackVisible.value = true;
-
     // Attempt submission
-    // $fetch("/api/submit", {
-    //   method: "post",
-    //   body: {
-    //     senderName: senderName.value.trim(),
-    //     senderEmail: senderEmail.value.trim(),
-    //     senderMessage: senderMessage.value.trim()
-    //   }
-    // })
-    //   .then((res) => {
-    //     isSubmitting.value = false;
-    //     isSuccessful.value = true;
-    //     feedbackMessage.value = "Successfully Sent";
-    //     feedbackVisible.value = true;
-    //   })
-    //   .catch((err) => {
-    //     isSubmitting.value = false;
-    //     isSuccessful.value = false;
-    //     feedbackMessage.value = "Error Sending Message";
-    //     feedbackVisible.value = true;
-    //   });
+    $fetch("/api/submit", {
+      method: "post",
+      body: {
+        senderName: senderName.value.trim(),
+        senderEmail: senderEmail.value.trim(),
+        senderMessage: senderMessage.value.trim(),
+        turnstileToken: turnstileToken.value
+      }
+    })
+      .then((res) => {
+        afterFormSubmit("Successfully Sent", true);
+      })
+      .catch((err) => {
+        afterFormSubmit("Error Sending Message", false);
+      });
   }
 </script>
 
@@ -73,7 +67,11 @@
         You can message me directly using this form.
       </p>
     </section>
-    <form @submit.prevent="submit" class="w-full md:max-w-md md:w-11/12 lg:w-2/3">
+
+    <form
+      @submit.prevent="submit"
+      class="w-full md:max-w-md md:w-11/12 lg:w-2/3"
+    >
       <label class="block w-full mb-4 space-y-2">
         <p
           class="font-medium cursor-pointer after:content-['*'] after:text-red-500"
@@ -101,7 +99,7 @@
           placeholder="email@example.com"
         />
       </label>
-      <label class="block w-full mb-4 space-y-2">
+      <label class="block w-full mb-2 space-y-2">
         <p
           class="font-medium cursor-pointer after:content-['*'] after:text-red-500"
         >
@@ -115,12 +113,23 @@
           aria-required="true"
         ></textarea>
       </label>
+
       <app-feedback-card
         :label="feedbackMessage"
         :visible="feedbackVisible"
         :is-success="isSuccessful"
-        @close-feedback="onCloseFeedback"
+        @close-feedback="() => (feedbackVisible = false)"
       ></app-feedback-card>
+
+      <div class="my-4">
+        <NuxtTurnstile
+          v-model="turnstileToken"
+          expired-callback="turnstile.reset()"
+          ref="turnstile"
+          class="rounded-lg"
+        />
+      </div>
+
       <button
         class="px-4 py-2 font-medium bg-green-500 rounded-lg w-36 text-zinc-800 global-focus focus:ring-offset-zinc-50 dark:focus:ring-offset-zinc-800 focus:ring-offset-1 disabled:cursor-not-allowed disabled:bg-zinc-400"
         :disabled="isSubmitting"
