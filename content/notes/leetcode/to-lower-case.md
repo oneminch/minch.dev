@@ -15,7 +15,8 @@ tags:
  * @param {string} str
  * @return {string}
  */
-var toLowerCase = function (str) {
+
+const toLowerCase = (str) => {
   let char_code = 0;
   let lower_case_arr = [];
   for (let i = 0; i < str.length; i++) {

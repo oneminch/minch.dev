@@ -15,7 +15,8 @@ tags:
  * @param {number[]} A
  * @return {number[]}
  */
-var sortArrayByParity = function (A) {
+
+const sortArrayByParity = (A) => {
   let sorted_A = [];
   A.forEach(function (n) {
     if (n % 2 === 0) sorted_A.unshift(n); // if even, add to beginning of array

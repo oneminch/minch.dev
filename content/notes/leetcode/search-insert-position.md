@@ -16,7 +16,8 @@ tags:
  * @param {number} target
  * @return {number}
  */
-var searchInsert = function (nums, target) {
+
+const searchInsert = (nums, target) => {
   let pos = nums.indexOf(target);
 
   if (pos < 0) {

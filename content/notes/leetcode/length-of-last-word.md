@@ -15,7 +15,8 @@ tags:
  * @param {string} s
  * @return {number}
  */
-var lengthOfLastWord = function (s) {
+
+const lengthOfLastWord = (s) => {
   return s
     .split(" ")
     .filter((str) => str.length > 0)

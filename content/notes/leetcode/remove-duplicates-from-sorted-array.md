@@ -15,7 +15,8 @@ tags:
  * @param {number[]} nums
  * @return {number}
  */
-var removeDuplicates = function (nums) {
+
+const removeDuplicates = (nums) => {
   let i = 0;
   while (i < nums.length) {
     if (nums.indexOf(nums[i]) !== i) {

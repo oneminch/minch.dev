@@ -16,6 +16,7 @@ tags:
  * @param {Array<*|Array>} arr
  * @return {Array}
  */
+
 function flatten(arr) {
   let flattenedArray = [];
 

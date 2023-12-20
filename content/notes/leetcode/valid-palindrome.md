@@ -16,7 +16,8 @@ tags:
  * @param {string} s
  * @return {boolean}
  */
-var isPalindrome = function (s) {
+
+const isPalindrome = (s) => {
   let stripped = s.toLowerCase().replace(/[^a-z0-9]/gi, "");
 
   let reversed = stripped.split("").reverse().join("");

@@ -16,7 +16,8 @@ tags:
  * @param {string} s
  * @return {number}
  */
-var lengthOfLongestSubstring = function (s) {
+
+const lengthOfLongestSubstring = (s) => {
   if (s.length < 1) return 0;
 
   let arr = [],
