@@ -3,6 +3,7 @@ title: Merge Two Sorted Lists
 problemUrl: https://leetcode.com/problems/merge-two-sorted-lists
 tags:
   - python
+  - javascript
   - linked lists
   - sorting
 ---
@@ -54,4 +55,44 @@ def mergeTwoLists(list1: Optional[ListNode], list2: Optional[ListNode]) -> Optio
         merged_list = temp
 
     return merged_head
+```
+
+### JavaScript
+
+```javascript
+// Definition for singly-linked list.
+class ListNode {
+  val: number;
+  next: ListNode | null;
+  constructor(val?: number, next?: ListNode | null) {
+    this.val = val === undefined ? 0 : val;
+    this.next = next === undefined ? null : next;
+  }
+}
+
+function mergeTwoLists(
+  list1: ListNode | null,
+  list2: ListNode | null
+): ListNode | null {
+  const mergedList = new ListNode();
+  let head1 = list1,
+    head2 = list2,
+    head3 = mergedList;
+
+  while (head1 && head2) {
+    if (head1.val <= head2.val) {
+      head3.next = new ListNode(head1.val, null);
+      head1 = head1.next;
+    } else {
+      head3.next = new ListNode(head2.val, null);
+      head2 = head2.next;
+    }
+    head3 = head3.next;
+  }
+
+  if (head1 && !head2) head3.next = head1;
+  if (head2 && !head1) head3.next = head2;
+
+  return mergedList.next;
+}
 ```
