@@ -15,16 +15,16 @@
 <!-- Navigation: Links -->
 <template>
   <nav
-    class="fixed flex-col items-center justify-center w-32 p-1 origin-bottom-right rounded-xl md:px-4 text-zinc-900 dark:text-zinc-200 md:w-full md:max-h-64 max-h-16 md:right-0 md:bottom-0 md:relative bottom-4 right-4 bg-zinc-100/75 dark:bg-zinc-900/75 md:bg-transparent dark:md:bg-transparent backdrop-blur-xl md:backdrop-blur-none print:hidden"
+    class="fixed z-50 flex-col items-center justify-center w-32 p-1 origin-bottom-right rounded-xl md:px-4 text-zinc-900 dark:text-zinc-200 md:w-full md:max-h-64 max-h-16 md:right-0 md:bottom-0 md:relative bottom-4 right-4 bg-zinc-100/75 dark:bg-zinc-900/75 md:bg-transparent dark:md:bg-transparent backdrop-blur-xl md:backdrop-blur-none print:hidden"
     :class="{ toggled: menuToggled }"
   >
     <ul
-      class="flex-col invisible hidden w-full h-full p-0 opacity-0 md:visible md:opacity-100 md:flex"
+      class="flex-col invisible hidden w-full p-1 opacity-0 md:visible md:opacity-100 md:flex"
     >
       <li
         v-for="(route, link) in navLinks"
         :key="link"
-        class="relative flex items-center h-auto mb-2 overflow-hidden font-bold rounded-md"
+        class="relative flex items-center mb-2 overflow-hidden font-bold rounded-md"
       >
         <nuxt-link
           class="global-focus focus:ring-inset focus:ring-2 w-full h-10 py-1 px-4 flex items-center rounded-md font-semibold transition-all duration-150 hover:bg-transparent md:hover:bg-zinc-200/75 md:dark:hover:bg-zinc-700 [&>svg]:hover:translate-x-1"
@@ -50,7 +50,7 @@
     >
       <button
         @click="toggleMenu()"
-        class="flex items-center justify-center w-full h-10 px-4 py-1 font-semibold bg-green-400 rounded-md global-focus md:hidden hover:bg-green-400 text-zinc-800"
+        class="flex items-center justify-center w-full h-10 px-4 py-1 font-semibold bg-green-500 rounded-lg md:hidden hover:bg-green-400 text-zinc-800"
         aria-label="Menu"
         title="Menu"
       >

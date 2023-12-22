@@ -15,10 +15,7 @@
 
   useSeoMeta({
     title: () => pageMeta.title,
-    description: () => pageMeta.description
-  });
-
-  useServerSeoMeta({
+    description: () => pageMeta.description,
     ogTitle: () => pageMeta.title,
     twitterTitle: () => pageMeta.title,
     ogDescription: () => pageMeta.description,
@@ -37,7 +34,9 @@
   </main>
 
   <!-- Mobile Navigation -->
-  <app-nav class="flex border border-green-400 md:hidden after:shadow-2xl" />
+  <app-nav
+    class="flex ring-1 ring-inset ring-green-500 md:hidden after:shadow-2xl"
+  />
 </template>
 
 <style scoped>
