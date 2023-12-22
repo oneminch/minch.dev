@@ -16,10 +16,7 @@
 
   useSeoMeta({
     title: () => route.meta.title,
-    description: () => route.meta.description
-  });
-
-  useServerSeoMeta({
+    description: () => route.meta.description,
     ogTitle: () => `${route.meta.title} · Dawit`,
     twitterTitle: () => `${route.meta.title} · Dawit`,
     ogDescription: () => route.meta.description,

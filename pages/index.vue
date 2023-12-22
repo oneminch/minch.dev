@@ -10,7 +10,7 @@
 
   const route = useRoute();
 
-  useServerSeoMeta({
+  useSeoMeta({
     ogTitle: () => route.meta.title,
     twitterTitle: () => route.meta.title
   });

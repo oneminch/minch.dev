@@ -28,10 +28,7 @@
 
   useSeoMeta({
     title: () => postTitle,
-    description: () => postDescription
-  });
-
-  useServerSeoMeta({
+    description: () => postDescription,
     ogTitle: () => `${postTitle} | Blog · Dawit`,
     twitterTitle: () => `${postTitle} | Blog · Dawit`,
     ogDescription: () => postDescription,

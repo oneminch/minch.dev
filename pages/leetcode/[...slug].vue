@@ -26,10 +26,7 @@
 
   useSeoMeta({
     title: () => postTitle,
-    description: () => postDescription
-  });
-
-  useServerSeoMeta({
+    description: () => postDescription,
     ogTitle: () => `${postTitle} (LeetCode Solution) · Dawit`,
     twitterTitle: () => `${postTitle} (LeetCode Solution) · Dawit`,
     ogDescription: () => postDescription,
