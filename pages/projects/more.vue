@@ -74,5 +74,16 @@
         />
       </template>
     </section>
+    <!-- Link to Featured Projects -->
+    <nuxt-link
+      to="/projects"
+      class="flex items-center justify-center w-24 py-2 mt-6 font-semibold no-underline duration-150 bg-green-500 rounded-md global-focus text-zinc-800 group/hover-effect"
+    >
+      <Icon
+        name="heroicons:chevron-left-20-solid"
+        class="mr-1 group-hover/hover-effect:-translate-x-1"
+      />
+      Back
+    </nuxt-link>
   </article>
 </template>
