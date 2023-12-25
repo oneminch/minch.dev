@@ -1,13 +1,6 @@
 {
   "body": [
     {
-      "name": "Thematic",
-      "description": "A product landing page for a hypothetical SaaS product",
-      "liveUrl": "https://oneminch.github.io/Thematic/",
-      "icon": "astro",
-      "visual": true
-    },
-    {
       "name": "Product Hunt Clone",
       "description": "A full-stack Product Hunt clone: Bootstrap + Node + Postgres",
       "liveUrl": "https://replit.com/@oneminch/discover-n-share",
@@ -15,16 +8,16 @@
       "visual": true
     },
     {
-      "name": "Newsfeed",
-      "description": "A news app that aggregates the top 20 headlines in a category",
-      "liveUrl": "https://oneminch.github.io/Newsfeed/",
-      "icon": "javascript",
+      "name": "Tomatoes",
+      "description": "Pomodoro timer: Vue + TailwindCSS",
+      "liveUrl": "https://tomatoes.vercel.app",
+      "icon": "vuedotjs",
       "visual": true
     },
     {
-      "name": "Draw",
-      "description": "A minimal canvas whiteboard",
-      "liveUrl": "https://oneminch.github.io/Draw/",
+      "name": "FontSearch",
+      "description": "A simple search engine for fonts available on Fontsource",
+      "liveUrl": "https://oneminch.github.io/FontSearch/",
       "icon": "javascript",
       "visual": true
     },

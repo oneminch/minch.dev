@@ -211,10 +211,10 @@
           url="/picks"
         ></app-link-card>
         <app-link-card
-          label="Notes"
-          icon="fluent-emoji:spiral-notepad"
+          label="Second Brain"
+          icon="fluent-emoji:brain"
           :is-external-url="true"
-          url="https://github.com/oneminch/garden"
+          url="https://github.com/oneminch/notes"
         ></app-link-card>
         <app-link-card
           label="Photography"
