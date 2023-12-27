@@ -39,6 +39,7 @@
         :title="name"
         :aria-label="`Link to My ${name} Profile`"
         target="_blank"
+        external
       >
         <Icon :name="`simple-icons:${name.toLowerCase()}`" />
       </nuxt-link>

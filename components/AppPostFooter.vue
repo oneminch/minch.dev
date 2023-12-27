@@ -10,6 +10,7 @@
       class="global-focus"
       to="https://twitter.com/oneminch"
       target="_blank"
+      external
       >Twitter
     </nuxt-link>
 
@@ -19,6 +20,7 @@
       class="global-focus"
       to="https://github.com/oneminch"
       target="_blank"
+      external
       >GitHub
     </nuxt-link>
 
@@ -28,6 +30,7 @@
       class="global-focus"
       to="https://linkedin.com/in/oneminch"
       target="_blank"
+      external
       >LinkedIn
     </nuxt-link>
   </section>

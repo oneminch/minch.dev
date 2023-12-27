@@ -11,6 +11,7 @@
         aria-label="NuxtJS Website"
         target="_blank"
         title="NuxtJS"
+        external
       >
         <Icon name="simple-icons:nuxtdotjs" />
       </nuxt-link>
@@ -21,6 +22,7 @@
         aria-label="Tailwind CSS Website"
         target="_blank"
         title="Tailwind CSS"
+        external
       >
         <Icon name="simple-icons:tailwindcss" />
       </nuxt-link>
@@ -31,6 +33,7 @@
         aria-label="Vercel Website"
         target="_blank"
         title="Vercel"
+        external
       >
         <Icon name="simple-icons:vercel" />
       </nuxt-link>

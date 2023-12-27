@@ -58,7 +58,12 @@
       <!-- Problem URL -->
       <p>
         <b class="mr-2">Problem URL:</b>
-        <nuxt-link v-if="doc.problemUrl" target="_blank" :to="doc.problemUrl">
+        <nuxt-link
+          v-if="doc.problemUrl"
+          target="_blank"
+          :to="doc.problemUrl"
+          external
+        >
           {{ doc.title }}
         </nuxt-link>
       </p>

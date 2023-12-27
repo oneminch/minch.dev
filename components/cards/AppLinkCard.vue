@@ -22,6 +22,7 @@
     :target="isExternalUrl || isDownloadLink ? '_blank' : '_self'"
     :to="url"
     :download="downloadLabel"
+    external
   >
     <Icon :name="icon" size="2.5rem" class="p-1 mb-2" />
 
