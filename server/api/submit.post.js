@@ -11,13 +11,13 @@ export default defineEventHandler(async (event) => {
 
     // Validate Turnstile Token
     if (!turnstileToken) {
-      throw new Error("Token not Provided.");
+      throw new Error("Token not Provided");
     }
 
     const turnstile = await verifyTurnstileToken(turnstileToken, event);
 
     if (!turnstile.success) {
-      throw new Error("Invalid Token.");
+      throw new Error("Invalid Token");
     }
 
     // Validate Submission
@@ -31,16 +31,20 @@ export default defineEventHandler(async (event) => {
       senderEmail.trim() ? "FROM: " + senderEmail.trim() + "\n\n" : ""
     }\n\nNAME: ${senderName}\nMESSAGE: \n\n${senderMessage}`;
 
-    const data = await resend.emails.send({
+    const { data, error } = await resend.emails.send({
       from: `${senderName} <${resendFrom}>`,
       to: resendTo,
-      subject: "Message from Portfolio",
+      subject: `Message from ${senderName} (Portfolio)`,
       text: messageBody
     });
 
+    if (error) {
+      throw new Error("Server Issue Sending Message");
+    }
+
     return { data };
   } catch (error) {
-    console.log(error);
+    // console.log(error);
     return error;
   }
 });
