@@ -75,7 +75,6 @@ export default defineNuxtConfig({
       }
     }
   },
-  // devtools: { enabled: false },
   modules: [
     "@nuxt/content",
     "@nuxtjs/partytown",
@@ -97,6 +96,17 @@ export default defineNuxtConfig({
     resendFrom: process.env.RESEND_FROM,
     resendTo: process.env.RESEND_TO,
     turnstile: { secretKey: process.env.TURNSTILE_SECRET_KEY }
+  },
+  tailwindcss: {
+    mode: "jit",
+    darkMode: "class",
+    content: [
+      "./app.vue",
+      "./components/**/*.vue",
+      "./layouts/**/*.vue",
+      "./pages/**/*.vue"
+    ],
+    plugins: [require("@tailwindcss/typography")]
   },
   telemetry: false,
   turnstile: {
