@@ -4,10 +4,6 @@
       "source": "/(.*)",
       "headers": [
         {
-          "key": "Content-Security-Policy",
-          "value": "default-src 'self' api.github.com api.airtable.com api.allorigins.win raw.githubusercontent.com static.cloudflareinsights.com oneminch-analytics.vercel.app measure.oneminch.dev fonts.bunny.net"
-        },
-        {
           "key": "Cross-Origin-Resource-Policy",
           "value": "same-site"
         },
