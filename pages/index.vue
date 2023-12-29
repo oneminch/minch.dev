@@ -207,7 +207,7 @@
         ></app-link-card>
         <app-link-card
           label="Bookmarks"
-          icon="fluent-emoji:leafy-green"
+          icon="fluent-emoji:bookmark"
           url="/bookmarks"
         ></app-link-card>
         <app-link-card
