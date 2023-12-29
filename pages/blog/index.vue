@@ -19,7 +19,10 @@
     </p>
     <section class="grid grid-cols-1 gap-4 lg:grid-cols-2">
       <template v-if="pending">
-        <app-blog-skeleton v-for="skeleton in generateKeys(5)" :key="skeleton" />
+        <app-blog-skeleton
+          v-for="skeleton in generateKeys(5)"
+          :key="skeleton"
+        />
       </template>
       <template v-else>
         <app-blog-card

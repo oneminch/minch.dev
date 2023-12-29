@@ -8,9 +8,6 @@ node_modules
 dist
 .DS_Store
 *.code-workspace
-about.txt
-
-vercel.json
 
 # Dendron specific stuff
 .dendron.*
