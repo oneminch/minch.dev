@@ -87,7 +87,7 @@ export default defineNuxtConfig({
   routeRules: {
     "/": { prerender: true },
     "/**": { prerender: true },
-    "/picks": { isr: 3600 }
+    "/bookmarks": { isr: 3600 }
   },
   runtimeConfig: {
     raindropToken: process.env.RAINDROP_TOKEN,

@@ -206,9 +206,9 @@
           url="/leetcode"
         ></app-link-card>
         <app-link-card
-          label="Picks"
+          label="Bookmarks"
           icon="fluent-emoji:leafy-green"
-          url="/picks"
+          url="/bookmarks"
         ></app-link-card>
         <app-link-card
           label="Second Brain"

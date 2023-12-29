@@ -15,7 +15,7 @@ export default defineEventHandler(async () => {
   try {
     const response = await axios.get(url, axiosConfig);
 
-    const picks = response.data.items.map((item) => {
+    const bookmarks = response.data.items.map((item) => {
       return {
         cover: item.cover ?? "https://fakeimg.pl/100",
         title: item.title,
@@ -23,7 +23,7 @@ export default defineEventHandler(async () => {
       };
     });
 
-    return picks;
+    return bookmarks;
   } catch (error) {
     return error;
   }
