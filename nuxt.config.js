@@ -1,3 +1,5 @@
+import tailwindTypography from "@tailwindcss/typography";
+
 export default defineNuxtConfig({
   app: {
     rootId: "app",
@@ -98,15 +100,17 @@ export default defineNuxtConfig({
     turnstile: { secretKey: process.env.TURNSTILE_SECRET_KEY }
   },
   tailwindcss: {
-    mode: "jit",
-    darkMode: "class",
-    content: [
-      "./app.vue",
-      "./components/**/*.vue",
-      "./layouts/**/*.vue",
-      "./pages/**/*.vue"
-    ],
-    plugins: [require("@tailwindcss/typography")]
+    config: {
+      mode: "jit",
+      darkMode: "class",
+      content: [
+        "./app.vue",
+        "./components/**/*.vue",
+        "./layouts/**/*.vue",
+        "./pages/**/*.vue"
+      ],
+      plugins: [tailwindTypography]
+    }
   },
   telemetry: false,
   turnstile: {
