@@ -17,7 +17,7 @@
   <article>
     <h1 class="mb-4 text-2xl font-bold">Bookmarks</h1>
     <p class="mb-6 text-zinc-700 dark:text-zinc-300">
-      Content from across the web I found interesting.
+      Stuff from across the web that I found interesting.
     </p>
     <template v-if="pending">
       <app-bookmark-skeleton
