@@ -1,5 +1,5 @@
 ---
-title: "Netflix Clone"
+title: "Netflix (Clone)"
 description: A frontend clone of Netflix made with React
 tags:
   - React

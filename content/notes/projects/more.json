@@ -1,13 +1,6 @@
 {
   "body": [
     {
-      "name": "Product Hunt Clone",
-      "description": "A full-stack Product Hunt clone: Bootstrap + Node + Postgres",
-      "liveUrl": "https://replit.com/@oneminch/discover-n-share",
-      "icon": "nodedotjs",
-      "visual": true
-    },
-    {
       "name": "Tomatoes",
       "description": "Pomodoro timer: Vue + TailwindCSS",
       "liveUrl": "https://tomatoes.vercel.app",
