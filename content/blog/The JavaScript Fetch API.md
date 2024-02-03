@@ -1,14 +1,14 @@
 ---
-id: intro-to-fetch-api
+id: the-javascript-fetch-api
 title: The JavaScript Fetch API
 description: A Simple Introduction to the JavaScript Fetch API
 tags:
   - javascript
   - web-apis
   - fetch-api
-image: /content/cover/intro-to-fetch-api.png
-cover_image: https://raw.githubusercontent.com/oneminch/portfolio/main/public/content/cover/intro-to-fetch-api.png
-canonical_url: https://oneminch.dev/blog/intro-to-fetch-api
+image: /content/cover/the-javascript-fetch-api.png
+cover_image: https://raw.githubusercontent.com/oneminch/portfolio/main/public/content/cover/the-javascript-fetch-api.png
+canonical_url: https://oneminch.dev/blog/the-javascript-fetch-api
 published_on: "2023-10-25"
 ---
 

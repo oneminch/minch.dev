@@ -290,7 +290,7 @@ For real APIs, we can continue to create another GET request to verify that the 
 
 ## Fetch
 
-Fetch is a promise-based web API. It is a modern alternative to XHR. I have explained in detail how the `fetch()` API works [here](https://oneminch.dev/blog/intro-to-fetch-api/). But let's redo the previous requests using fetch and see the difference.
+Fetch is a promise-based web API. It is a modern alternative to XHR. I have explained in detail how the `fetch()` API works [here](https://oneminch.dev/blog/the-javascript-fetch-api). But let's redo the previous requests using fetch and see the difference.
 
 **Method: GET**
 
