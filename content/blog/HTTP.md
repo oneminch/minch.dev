@@ -1,5 +1,5 @@
 ---
-id: vOpWDwrzniiD9e2YgWVwk
+id: http
 title: "Computer Networks: HTTP Basics"
 description: "What is the HyperText Transfer Protocol?"
 updated: 1688877769852

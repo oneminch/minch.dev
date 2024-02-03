@@ -10,7 +10,7 @@ tags:
 
 ### Python
 
-```py
+```python
 def search(nums: List[int], target: int) -> int:
     index = 0
     nums_copy = nums[:]

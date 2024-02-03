@@ -1,9 +1,7 @@
 ---
-id: jYZ0sR3cQogjZjo5ru0oP
+id: https
 title: "Computer Networks: HTTPS Basics"
 description: "What is HTTPS?"
-updated: 1688877769837
-created: 1645422195673
 tags:
   - http
   - https

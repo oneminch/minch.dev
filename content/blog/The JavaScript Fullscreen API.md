@@ -1,9 +1,7 @@
 ---
-id: n8ygdrjmm6e7h54n3nxtqyi
+id: js-fullscreen-api
 title: The JavaScript Fullscreen API
 description: A Simple Introduction to the JavaScript Fullscreen API
-updated: 1697836586301
-created: 1692301356027
 tags:
   - javascript
   - web-apis

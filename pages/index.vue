@@ -173,7 +173,7 @@
             :blog-title="blogPost.title"
             :title="blogPost.title"
             :url="blogPost._path"
-            :pub-date="blogPost.updated"
+            :pub-date="blogPost.published_on"
             :cover-image="blogPost.image"
           />
         </template>

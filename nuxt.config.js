@@ -54,27 +54,9 @@ export default defineNuxtConfig({
       theme: "github-dark",
       preload: ["py"]
     },
-    ignores: [
-      "root.md",
-      "drafts",
-      "template.md",
-      "/drafts/",
-      "/.vscode/",
-      "\\.code-workspace$",
-      "\\.gitignore$",
-      "\\.port$",
-      "\\.cache.json$",
-      "\\.ws$",
-      "\\.yml$"
-    ],
+    ignores: ["drafts", "template.md", "/drafts/", "\\.yml$"],
     markdown: {
       toc: { depth: 1, searchDepth: 2 }
-    },
-    sources: {
-      content: {
-        driver: "fs",
-        base: "content/notes"
-      }
     }
   },
   modules: [

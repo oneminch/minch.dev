@@ -1,9 +1,7 @@
 ---
-id: bmYRMchdQ79b4wetoTzAV
+id: dns
 title: "Computer Networks: DNS Basics"
 description: "What is the Domain Name System?"
-updated: 1688877769861
-created: 1645422712314
 tags:
   - dns
   - http

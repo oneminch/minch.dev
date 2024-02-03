@@ -1,9 +1,7 @@
 ---
-id: 596qr6314ds3ofacam7d2y8
+id: intro-to-fetch-api
 title: The JavaScript Fetch API
 description: A Simple Introduction to the JavaScript Fetch API
-updated: 1697836571522
-created: 1692301222983
 tags:
   - javascript
   - web-apis

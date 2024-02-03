@@ -32,7 +32,7 @@
           :blog-title="post.title"
           :title="post.title"
           :url="post._path"
-          :pub-date="post.updated"
+          :pub-date="post.published_on"
           :cover-image="post.image"
         />
       </template>

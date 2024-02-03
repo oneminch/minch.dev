@@ -1,9 +1,7 @@
 ---
-id: 5bnxpbo182efvf38j331nes
+id: deno-vs-node
 title: How Deno differs from Node.js
 description: "This article goes over the core differences between Deno and Node.js."
-updated: 1688877769873
-created: 1686355733170
 tags:
   - deno
   - nodejs

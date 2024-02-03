@@ -6,7 +6,7 @@
     title: String,
     tags: Array,
     readTime: String,
-    pubDate: Number,
+    pubDate: String,
     coverImage: String
   });
 
@@ -57,7 +57,7 @@
       <h3 class="font-bold">{{ blogTitle }}</h3>
       <!-- Publish Date -->
       <p class="text-xs text-zinc-400 mt-[.125rem]">
-        Updated {{ lastUpdateTime }}
+        Published {{ lastUpdateTime }}
       </p>
     </div>
   </nuxt-link>

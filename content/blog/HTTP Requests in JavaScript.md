@@ -1,9 +1,7 @@
 ---
-id: 0nu30msglamrhtkrwtzs2wl
+id: http-requests-in-javascript
 title: HTTP Requests in JavaScript
 description: How to Make HTTP Requests in JavaScript
-updated: 1697836566395
-created: 1692300081883
 tags:
   - javascript
   - web-apis
