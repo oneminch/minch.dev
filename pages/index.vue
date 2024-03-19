@@ -62,8 +62,9 @@
         aesthetically pleasing as it is functional.
       </p>
       <p class="my-2 text-zinc-700 dark:text-zinc-300">
-        I am <span class="highlight">currently seeking opportunities</span> to
-        share my passion and expertise.
+        I am
+        <span class="subtle-highlight">currently seeking opportunities</span>
+        to share my passion and expertise.
       </p>
     </section>
     <!-- Skills -->
