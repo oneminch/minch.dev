@@ -1,6 +1,6 @@
 ---
 title: "Netflix (Clone)"
-description: A frontend clone of Netflix made with React
+description: A pixel-perfect frontend clone of Netflix made with React
 tags:
   - React
   - React Router
@@ -9,12 +9,12 @@ live_url: "https://oneminch.github.io/Netflix-Clone/"
 source_url: "https://github.com/oneminch/Netflix-Clone"
 image: "https://raw.githubusercontent.com/oneminch/Netflix-Clone/main/public/screenshot.png"
 icon: "https://raw.githubusercontent.com/oneminch/Netflix-Clone/main/public/logo.svg"
-nav_order: 4
+nav_order: 5
 ---
 
 ## What
 
-Netflix Clone is a UI clone of Netflix I made using React and Tailwind CSS.
+Netflix Clone is a pixel-perfect UI clone of Netflix I made using React and Tailwind CSS.
 
 ## Why
 

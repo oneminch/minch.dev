@@ -1,6 +1,13 @@
 {
   "body": [
     {
+      "name": "Deadlines",
+      "description": "An offline deadline tracker I built to track school deadlines",
+      "liveUrl": "https://deadlines.oneminch.dev",
+      "icon": "vuedotjs",
+      "visual": true
+    },
+    {
       "name": "Tomatoes",
       "description": "Pomodoro timer: Vue + TailwindCSS",
       "liveUrl": "https://tomatoes.vercel.app",
