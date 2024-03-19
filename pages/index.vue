@@ -1,7 +1,7 @@
 <script setup>
   definePageMeta({
-    title: "Dawit · Frontend Engineer",
-    description: "I craft delightful and accessible web interfaces."
+    title: "Dawit · Full-Stack Engineer",
+    description: "I craft delightful and accessible web apps."
   });
 
   useHead({
@@ -17,14 +17,16 @@
 
   const skillset = ref({
     essentials: [
-      "HTML + CSS",
       "JavaScript",
+      "HTML + CSS",
+      "TypeScript",
       "React",
       "Vue",
       "Tailwind CSS",
-      "Git"
+      "Node + Express",
+      "Postgres"
     ],
-    tinker: ["Node.js", "Vitest", "Python", "SQL"]
+    tinker: ["Prisma", "Vitest", "Python", "Flask"]
   });
 
   // Fetch latest 2 blog posts
@@ -53,7 +55,7 @@
         I craft
         <span class="highlight">delightful</span>
         and <span class="highlight">accessible</span>
-        web interfaces...
+        web apps...
       </p>
       <p class="my-2 text-zinc-700 dark:text-zinc-300">
         My design-oriented approach ensures that every project I touch is as
@@ -73,7 +75,7 @@
         and here is my toolbox:
       </p>
       <ul
-        class="grid w-full grid-flow-col-dense grid-rows-3 p-0 pl-2 mb-3 list-disc lg:w-3/4 sm:grid-rows-2"
+        class="grid w-full grid-flow-col-dense grid-rows-4 p-0 pl-2 mb-3 list-disc gap-y-2 lg:w-3/4"
       >
         <li
           v-for="skillName in skillset.essentials"
@@ -92,7 +94,7 @@
         with other tools:
       </p>
       <ul
-        class="grid w-full grid-flow-col-dense grid-cols-2 grid-rows-2 p-0 pl-2 mb-3 list-disc lg:w-3/4 sm:grid-cols-3"
+        class="grid w-full grid-flow-col-dense grid-rows-2 p-0 pl-2 mb-3 list-disc gap-y-2 lg:w-3/4"
       >
         <li
           v-for="skillName in skillset.tinker"

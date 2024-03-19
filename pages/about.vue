@@ -12,7 +12,7 @@
     <h1 class="mb-4 text-2xl font-semibold">About Me</h1>
     <!-- Short Bio Summary -->
     <p>
-      Hello! My name is Dawit 👋. I craft web interfaces that are
+      Hello! My name is Dawit 👋. I craft web apps that are
       <span class="highlight">delightful</span> and
       <span class="highlight">accessible</span>.
     </p>
