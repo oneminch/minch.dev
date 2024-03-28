@@ -21,7 +21,7 @@
     twitterTitle: () => `${route.meta.title} · Dawit`,
     ogDescription: () => route.meta.description,
     twitterDescription: () => route.meta.description,
-    ogUrl: () => `https://oneminch.dev${route.path}`,
+    ogUrl: () => `https://minch.dev${route.path}`,
     ...serverMeta
   });
 </script>

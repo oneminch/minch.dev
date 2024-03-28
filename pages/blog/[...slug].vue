@@ -35,7 +35,7 @@
     twitterDescription: () => postDescription,
     ogImage: () => postCover,
     twitterImage: () => postCover,
-    ogUrl: () => `https://oneminch.dev${route.path}`,
+    ogUrl: () => `https://minch.dev${route.path}`,
     ...serverMeta
   });
 </script>

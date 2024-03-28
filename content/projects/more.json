@@ -3,7 +3,7 @@
     {
       "name": "Deadlines",
       "description": "An offline deadline tracker I built to track school deadlines",
-      "liveUrl": "https://deadlines.oneminch.dev",
+      "liveUrl": "https://deadlines.minch.dev",
       "icon": "vuedotjs",
       "visual": true
     },

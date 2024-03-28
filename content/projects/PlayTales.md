@@ -8,7 +8,7 @@ tags:
   - Node
   - Postgres
   - Prisma
-live_url: "https://playtales.oneminch.dev/"
+live_url: "https://playtales.minch.dev/"
 source_url: "https://github.com/oneminch/PlayTales"
 image: "https://raw.githubusercontent.com/oneminch/PlayTales/main/frontend/public/screenshot.png"
 icon: "https://raw.githubusercontent.com/oneminch/PlayTales/main/frontend/public/logo.svg"

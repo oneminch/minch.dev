@@ -35,7 +35,7 @@
     twitterDescription: () => projectDescription,
     ogImage: () => projectImage,
     twitterImage: () => projectImage,
-    ogUrl: () => `https://oneminch.dev${route.path}`,
+    ogUrl: () => `https://minch.dev${route.path}`,
     ...serverMeta
   });
 </script>

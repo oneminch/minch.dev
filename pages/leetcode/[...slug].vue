@@ -31,7 +31,7 @@
     twitterTitle: () => `${postTitle} (LeetCode Solution) · Dawit`,
     ogDescription: () => postDescription,
     twitterDescription: () => postDescription,
-    ogUrl: () => `https://oneminch.dev${route.path}`,
+    ogUrl: () => `https://minch.dev${route.path}`,
     ...serverMeta
   });
 </script>
