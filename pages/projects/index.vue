@@ -10,7 +10,6 @@
     () =>
       queryContent("/projects")
         .where({ title: { $ne: "More" } })
-        .sort({ nav_order: 1 })
         .find()
   );
 </script>
