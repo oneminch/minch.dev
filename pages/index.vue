@@ -38,7 +38,7 @@
   // Fetch 2 featured projects
   const { pending: projectsPending, data: projects } = await useLazyAsyncData(
     "featured-projects",
-    () => queryContent("/projects").sort({ nav_order: 1 }).limit(2).find()
+    () => queryContent("/projects").limit(2).find()
   );
 </script>
 
