@@ -13,5 +13,10 @@
     >
       This page doesn't exist.
     </h1>
+    <nuxt-link
+      to="/"
+      class="flex items-center justify-center w-24 py-2 font-semibold no-underline duration-150 bg-green-500 rounded-md global-focus text-zinc-800 group/hover-effect"
+      >Go Home</nuxt-link
+    >
   </div>
 </template>

@@ -58,10 +58,6 @@
     </p>
     <app-divider class="md:my-6" />
     <p>
-      I enjoy playing story-driven games (Current Favorite - 'A Plague Tale'
-      Series).
-    </p>
-    <p>
       I'm also a hobbyist photographer.
       <a
         href="https://unsplash.com/@oneminch"
@@ -70,7 +66,7 @@
         external
         >My photos on Unsplash</a
       >
-      have been viewed over 6.5 million times 🤯.
+      have been viewed close to 7 million times 🤯.
     </p>
     <div
       class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-2 my-4 [&>img]:ring [&>img]:ring-zinc-300 [&>img]:dark:ring-zinc-800"
@@ -106,6 +102,10 @@
         class="object-cover w-full text-center rounded-lg"
       />
     </div>
+    <p>
+      I enjoy playing story-driven games (Current Favorite - 'A Plague Tale'
+      Series).
+    </p>
   </article>
 </template>
 
