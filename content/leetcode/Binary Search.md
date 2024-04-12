@@ -3,6 +3,7 @@ title: Binary Search
 problemUrl: https://leetcode.com/problems/binary-search/
 tags:
   - python
+  - javascript
   - binary search
 ---
 
@@ -27,4 +28,28 @@ def search(nums: List[int], target: int) -> int:
 
 
     return index + midpoint if target == nums_copy[midpoint] else -1
+```
+
+### JavaScript / TypeScript
+
+```typescript
+const search = (nums: number[], target: number): number => {
+  let left = 0,
+    right = nums.length - 1,
+    midpoint = -1;
+
+  while (left <= right) {
+    midpoint = Math.ceil((left + right) / 2);
+
+    if (target < nums[midpoint]) {
+      right = midpoint - 1;
+    } else if (target > nums[midpoint]) {
+      left = midpoint + 1;
+    } else {
+      return midpoint;
+    }
+  }
+
+  return -1;
+};
 ```

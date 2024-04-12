@@ -9,7 +9,7 @@ tags:
 
 ## My Solution
 
-### JavaScript
+### JavaScript / TypeScript
 
 ```typescript
 const isAnagram = (s: string, t: string): boolean => {
