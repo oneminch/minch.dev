@@ -6,6 +6,8 @@ tags:
   - nuxt
   - nuxt-content
   - markdown
+  - vue
+  - github
 image: "/content/cover/nuxt-content-with-remote-markdown.png"
 cover_image: "https://raw.githubusercontent.com/oneminch/portfolio/main/public/content/cover/nuxt-content-with-remote-markdown.png"
 canonical_url: "https://minch.dev/blog/nuxt-content-with-remote-markdown"
@@ -23,7 +25,7 @@ published: true
 published_on: "2024-04-15"
 ---
 
-This article discusses how to get started with Nuxt Content to create a minimal blog, and how to work with remote Markdown files..
+This article discusses how to get started with Nuxt Content to create a minimal blog, and how to work with remote Markdown files.
 
 The first section goes over how to set up a project with Nuxt Content, and the second cover working with Markdown files. If you are already familiar with the setup steps, feel free to skip the first section.
 
