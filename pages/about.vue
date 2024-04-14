@@ -58,7 +58,7 @@
     </p>
     <app-divider class="md:my-6" />
     <p>
-      I'm also a hobbyist photographer.
+      I'm a hobbyist photographer.
       <a
         href="https://unsplash.com/@oneminch"
         class="global-focus focus:rounded no-underline border-b-[.1rem] border-b-green-500/75"
@@ -103,8 +103,8 @@
       />
     </div>
     <p>
-      I enjoy playing story-driven games (Current Favorite - 'A Plague Tale'
-      Series).
+      I also enjoy playing story-driven games (Current Favorite - 'A Plague
+      Tale' Series).
     </p>
   </article>
 </template>

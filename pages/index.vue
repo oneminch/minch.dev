@@ -17,13 +17,11 @@
 
   const skillset = ref({
     essentials: [
-      "JavaScript",
-      "HTML + CSS",
       "TypeScript",
       "React",
       "Vue",
       "Tailwind CSS",
-      "Node + Express",
+      "Node.js",
       "Postgres"
     ],
     tinker: ["Prisma", "Vitest", "Python", "Flask"]
@@ -58,10 +56,6 @@
         web apps...
       </p>
       <p class="my-2 text-zinc-700 dark:text-zinc-300">
-        My design-oriented approach ensures that every project I touch is as
-        aesthetically pleasing as it is functional.
-      </p>
-      <p class="my-2 text-zinc-700 dark:text-zinc-300">
         I am
         <span class="subtle-highlight">currently seeking opportunities</span>
         to share my passion and expertise.
@@ -73,10 +67,10 @@
       <!-- Primary Tools -->
       <p class="mb-3 text-zinc-700 dark:text-zinc-300">
         My specialty is <span class="subtle-highlight">solving problems</span>,
-        and here is my toolbox:
+        and my toolbox includes:
       </p>
       <ul
-        class="grid w-full grid-flow-col-dense grid-rows-4 p-0 pl-2 mb-3 list-disc gap-y-2 lg:w-3/4"
+        class="grid w-full grid-flow-col-dense grid-rows-3 p-0 pl-2 mb-3 list-disc gap-y-2 lg:w-3/4"
       >
         <li
           v-for="skillName in skillset.essentials"
@@ -90,9 +84,8 @@
       </ul>
       <!-- Secondary Tools -->
       <p class="mb-3 text-zinc-700 dark:text-zinc-300">
-        I'm infinitely curious.
-        <span class="subtle-highlight">Always learning</span> and experimenting
-        with other tools:
+        I'm
+        <span class="subtle-highlight">always learning</span> and exploring:
       </p>
       <ul
         class="grid w-full grid-flow-col-dense grid-rows-2 p-0 pl-2 mb-3 list-disc gap-y-2 lg:w-3/4"
