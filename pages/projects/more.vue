@@ -30,7 +30,7 @@
       I build things in the open. Check out
       <nuxt-link
         to="https://github.com/oneminch"
-        class="border-b-[.1rem] border-b-green-500/75"
+        class="border-b-[.1rem] border-b-green-500/75 focus-visible:global-focus"
         external
         >my GitHub profile</nuxt-link
       >.
@@ -77,7 +77,7 @@
     <!-- Link to Featured Projects -->
     <nuxt-link
       to="/projects"
-      class="flex items-center justify-center w-24 py-2 mt-6 font-semibold no-underline duration-150 bg-green-500 rounded-md global-focus text-zinc-800 group/hover-effect"
+      class="flex items-center justify-center w-24 py-2 mt-6 font-semibold no-underline duration-150 bg-green-500 rounded-md focus-visible:global-focus text-zinc-800 group/hover-effect"
     >
       <Icon
         name="heroicons:chevron-left-20-solid"

@@ -36,7 +36,7 @@
     <button
       type="button"
       @click="close"
-      class="flex items-center justify-center w-6 h-6 ml-auto rounded-full global-focus focus:ring-zinc-100"
+      class="flex items-center justify-center w-6 h-6 ml-auto rounded-full focus-visible:global-focus focus-visible:ring-zinc-100"
       aria-label="Close Status Feedback"
     >
       <Icon name="heroicons:x-mark-20-solid" />

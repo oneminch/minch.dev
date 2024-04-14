@@ -13,7 +13,7 @@
   <!-- Skip Navigation Link -->
   <a
     href="#main-content"
-    class="flex items-center justify-center bg-green-600 h-8 absolute top-0 left-1/2 -translate-x-1/2 py-2 px-4 rounded-md mx-auto z-50 transform duration-300 -translate-y-[125%] opacity-0 focus:translate-y-2 focus:opacity-100 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-50 text-zinc-100"
+    class="flex items-center justify-center bg-green-600 h-8 absolute top-0 left-1/2 -translate-x-1/2 py-2 px-4 rounded-md mx-auto z-50 transform duration-300 -translate-y-[125%] opacity-0 focus-visible:translate-y-2 focus-visible:opacity-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green-500 focus-visible:ring-opacity-50 text-zinc-100"
     >Skip to Main Content</a
   >
 
@@ -41,7 +41,7 @@
     }
 
     .global-focus {
-      @apply focus:outline-none focus:ring-2 ring-offset-0 focus:ring-green-400 focus:ring-opacity-75;
+      @apply outline-none ring-2 ring-offset-0 ring-green-400 ring-opacity-75;
     }
 
     .icon-link {

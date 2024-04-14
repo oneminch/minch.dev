@@ -24,7 +24,7 @@
 <!-- Blog: Card -->
 <template>
   <nuxt-link
-    class="global-focus rounded-xl w-full p-0 overflow-hidden flex flex-col border-none bg-none bg-transparent dark:bg-transparent [&_img]:hover:scale-105"
+    class="focus-visible:global-focus rounded-xl w-full p-0 overflow-hidden flex flex-col border-none bg-none bg-transparent dark:bg-transparent [&_img]:hover:scale-105"
     :to="url"
   >
     <!-- Blog Cover Image -->

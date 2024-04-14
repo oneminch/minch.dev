@@ -18,7 +18,7 @@
 <!-- Link: Card -->
 <template>
   <nuxt-link
-    class="relative flex flex-col items-center justify-center px-2 pt-2 pb-3 overflow-hidden font-medium rounded-md global-focus card-style hover:ring-2 hover:ring-offset-0 hover:ring-green-400 hover:ring-opacity-75"
+    class="relative flex flex-col items-center justify-center px-2 pt-2 pb-3 overflow-hidden font-medium rounded-md focus-visible:global-focus card-style hover:ring-2 hover:ring-offset-0 hover:ring-green-400 hover:ring-opacity-75"
     :target="isExternalUrl || isDownloadLink ? '_blank' : '_self'"
     :to="url"
     :download="downloadLabel"

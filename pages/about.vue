@@ -61,7 +61,7 @@
       I'm a hobbyist photographer.
       <a
         href="https://unsplash.com/@oneminch"
-        class="global-focus focus:rounded no-underline border-b-[.1rem] border-b-green-500/75"
+        class="focus-visible:global-focus focus-visible:rounded no-underline border-b-[.1rem] border-b-green-500/75"
         target="_blank"
         external
         >My photos on Unsplash</a

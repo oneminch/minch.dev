@@ -7,9 +7,9 @@
 <!-- Theme Toggle -->
 <template>
   <label
-    class="flex h-6 w-10 p-[.125rem] items-center cursor-pointer rounded-full bg-zinc-200 dark:bg-zinc-700 border border-zinc-300 dark:border-zinc-600 text-zinc-700 focus-within:outline-none focus-within:ring-2 focus-within:ring-green-500 focus-within:ring-opacity-50 focus-within:ring-offset-0"
+    class="flex h-6 w-10 p-[.125rem] items-center cursor-pointer rounded-full bg-zinc-200 dark:bg-zinc-700 border border-zinc-300 dark:border-zinc-600 text-zinc-700 [&:has(:focus-visible)]:outline-none [&:has(:focus-visible)]:ring-2 [&:has(:focus-visible)]:ring-green-500 [&:has(:focus-visible)]:ring-opacity-50 [&:has(:focus-visible)]:ring-offset-0"
     title="Toggle Theme"
-    aria-label="Change Website Theme"
+    aria-label="Toggle Website Theme"
   >
     <input type="checkbox" class="peer sr-only" v-model="isDark" />
     <span

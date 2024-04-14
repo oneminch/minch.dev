@@ -49,7 +49,7 @@
       >
         <nuxt-link
           to="/projects"
-          class="no-underline border-b-[.1rem] border-b-green-500/75"
+          class="no-underline focus-visible:global-focus border-b-[.1rem] border-b-green-500/75"
           >Projects</nuxt-link
         >
         <Icon

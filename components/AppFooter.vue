@@ -6,7 +6,7 @@
     >
       Built from scratch with:
       <nuxt-link
-        class="icon-link global-focus text-[#00DC82]"
+        class="icon-link focus-visible:global-focus text-[#00DC82]"
         to="https://nuxt.com/"
         aria-label="NuxtJS Website"
         target="_blank"
@@ -17,7 +17,7 @@
       </nuxt-link>
       <span>&bull;</span>
       <nuxt-link
-        class="icon-link global-focus text-[#38bdf8]"
+        class="icon-link focus-visible:global-focus text-[#38bdf8]"
         to="https://tailwindcss.com/"
         aria-label="Tailwind CSS Website"
         target="_blank"
@@ -28,7 +28,7 @@
       </nuxt-link>
       <span>&bull;</span>
       <nuxt-link
-        class="text-black icon-link global-focus dark:text-white"
+        class="text-black icon-link focus-visible:global-focus dark:text-white"
         to="https://vercel.com"
         aria-label="Vercel Website"
         target="_blank"

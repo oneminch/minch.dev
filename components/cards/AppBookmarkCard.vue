@@ -12,7 +12,7 @@
 <!-- Bookmark: Card -->
 <template>
   <nuxt-link
-    class="relative flex items-center justify-start w-full px-2 py-2 mb-2 transition-colors duration-150 rounded-lg global-focus hover:bg-zinc-200 dark:hover:bg-zinc-800"
+    class="relative flex items-center justify-start w-full px-2 py-2 mb-2 transition-colors duration-150 rounded-lg focus-visible:global-focus hover:bg-zinc-200 dark:hover:bg-zinc-800"
     target="_blank"
     external
     :to="bookmark.url"

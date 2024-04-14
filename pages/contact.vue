@@ -82,7 +82,7 @@
           type="text"
           name="name"
           v-model="senderName"
-          class="w-full px-3 py-2 border rounded-lg bg-zinc-100 dark:bg-zinc-900 border-zinc-200 dark:border-zinc-600 global-focus"
+          class="w-full px-3 py-2 border rounded-lg bg-zinc-100 dark:bg-zinc-900 border-zinc-200 dark:border-zinc-600 focus:global-focus"
           placeholder="Your name..."
           aria-required="true"
         />
@@ -95,7 +95,7 @@
           type="email"
           name="email"
           v-model="senderEmail"
-          class="w-full px-3 py-2 border rounded-lg bg-zinc-100 dark:bg-zinc-900 border-zinc-200 dark:border-zinc-600 global-focus"
+          class="w-full px-3 py-2 border rounded-lg bg-zinc-100 dark:bg-zinc-900 border-zinc-200 dark:border-zinc-600 focus:global-focus"
           placeholder="email@example.com"
         />
       </label>
@@ -108,7 +108,7 @@
         <textarea
           name="message"
           v-model="senderMessage"
-          class="w-full min-h-[8rem] h-40 px-3 py-2 border rounded-lg resize-y max-h-80 bg-zinc-100 dark:bg-zinc-900 border-zinc-200 dark:border-zinc-600 global-focus"
+          class="w-full min-h-[8rem] h-40 px-3 py-2 border rounded-lg resize-y max-h-80 bg-zinc-100 dark:bg-zinc-900 border-zinc-200 dark:border-zinc-600 focus:global-focus"
           placeholder="Your message..."
           aria-required="true"
         ></textarea>
@@ -131,7 +131,7 @@
       </div>
 
       <button
-        class="px-4 py-2 font-medium bg-green-500 rounded-lg w-36 text-zinc-800 global-focus focus:ring-offset-zinc-50 dark:focus:ring-offset-zinc-800 focus:ring-offset-1 disabled:cursor-not-allowed disabled:bg-zinc-400"
+        class="px-4 py-2 font-medium bg-green-500 rounded-lg w-36 text-zinc-800 focus-visible:global-focus focus-visible:ring-offset-zinc-50 dark:focus-visible:ring-offset-zinc-800 focus-visible:ring-offset-1 disabled:cursor-not-allowed disabled:bg-zinc-400"
         :disabled="isSubmitting"
       >
         <Icon v-if="isSubmitting" name="svg-spinners:3-dots-fade" />

@@ -68,16 +68,16 @@
           class="flex items-center self-start px-4 py-3 mb-2 bg-white border rounded-lg dark:bg-zinc-800 border-zinc-200 dark:border-zinc-700"
         >
           <summary
-            class="flex items-center list-none appearance-none cursor-pointer"
+            class="flex items-center list-none appearance-none cursor-pointer focus:outline-none group"
           >
             <span class="inline-block mr-2 text-lg font-bold">Outline</span>
             <Icon
-              class="text-green-500 arrow-right"
+              class="text-green-500 arrow-right group-focus-visible:global-focus rounded-full"
               name="heroicons:chevron-right-20-solid"
               size="1.5rem"
             />
             <Icon
-              class="text-green-500 arrow-down"
+              class="text-green-500 arrow-down group-focus-visible:global-focus rounded-full"
               name="heroicons:chevron-down-20-solid"
               size="1.5rem"
             />

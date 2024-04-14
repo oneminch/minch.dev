@@ -106,7 +106,7 @@
       <h2 class="w-auto mb-2 text-xl font-semibold group">
         <nuxt-link
           to="/projects"
-          class="flex items-center w-full py-2 rounded-lg global-focus"
+          class="flex items-center w-full py-2 rounded-lg focus-visible:global-focus"
         >
           My Projects
           <Icon
@@ -142,7 +142,7 @@
       <h2 class="w-auto mb-2 text-xl font-semibold group">
         <nuxt-link
           to="/blog"
-          class="flex items-center w-full py-2 rounded-lg global-focus"
+          class="flex items-center w-full py-2 rounded-lg focus-visible:global-focus"
         >
           My Articles
           <Icon
@@ -189,7 +189,7 @@
           >
             <p class="text-lg font-bold">Let's Chat.</p>
             <nuxt-link
-              class="px-4 py-2 bg-green-500 rounded-lg focus:outline-none text-zinc-800"
+              class="px-4 py-2 bg-green-500 rounded-lg focus-visible:outline-none text-zinc-800"
               to="/contact"
               id="contact-btn"
               >Message</nuxt-link
