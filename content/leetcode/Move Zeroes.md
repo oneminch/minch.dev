@@ -3,10 +3,36 @@ title: Move Zeroes
 problemUrl: https://leetcode.com/problems/move-zeroes/
 tags:
   - python
+  - javascript
   - in-place
+  - two pointers
 ---
 
 ## My Solution
+
+### JavaScript / TypeScript
+
+**Modified In-Place.**
+
+```typescript
+const moveZeroes = (nums: number[]): void => {
+  let i = 0,
+    j = 1;
+
+  while (j < nums.length) {
+    if (nums[i] === 0 && nums[j] !== 0) {
+      [nums[i], nums[j]] = [nums[j], nums[i]];
+      i += 1;
+      j += 1;
+    } else if (nums[i] === 0 && nums[j] === 0) {
+      j += 1;
+    } else {
+      j += 1;
+      i += 1;
+    }
+  }
+};
+```
 
 ### Python
 
