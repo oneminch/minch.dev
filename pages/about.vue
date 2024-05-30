@@ -16,9 +16,11 @@
       <span class="highlight">delightful</span> and
       <span class="highlight">accessible</span>.
     </p>
-    <p>
-      I am currently seeking opportunities to share my passion and expertise.
-    </p>
+    <!-- <p class="my-2 text-zinc-700 dark:text-zinc-300">
+      I am
+      <span class="subtle-highlight">currently seeking opportunities</span>
+      to share my passion and expertise.
+    </p> -->
     <app-divider class="md:my-6" />
     <p>
       My interest in web development started back in 2016 when I came across the
