@@ -70,6 +70,7 @@
       >
       have been viewed close to 7 million times 🤯.
     </p>
+    <br />
     <div
       class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-2 my-4 [&>img]:ring [&>img]:ring-zinc-300 [&>img]:dark:ring-zinc-800"
     >
@@ -104,9 +105,17 @@
         class="object-cover w-full text-center rounded-lg"
       />
     </div>
+    <br />
     <p>
-      I also enjoy playing story-driven games (Current Favorite - 'A Plague
-      Tale' Series).
+      I also enjoy playing story-driven games. So much so that I built
+      <a
+        href="https://playtales.minch.dev"
+        class="focus-visible:global-focus focus-visible:rounded no-underline border-b-[.1rem] border-b-green-500/75"
+        target="_blank"
+      >
+        a full-stack project
+      </a>
+      around the idea. My current favorite - 'Banishers: Ghosts of New Eden'.
     </p>
   </article>
 </template>
