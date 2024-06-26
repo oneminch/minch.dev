@@ -9,11 +9,19 @@ const axiosConfig = {
   }
 };
 
-const url = `https://api.raindrop.io/rest/v1/raindrops/${raindropCollectionId}`;
+const PER_PAGE = 10;
 
-export default defineEventHandler(async () => {
+export default defineEventHandler(async (event) => {
+  const { page } = getQuery(event);
+
+  const currentPage = parseInt(page) < 0 ? 0 : parseInt(page) - 1;
+
+  const url = `https://api.raindrop.io/rest/v1/raindrops/${raindropCollectionId}?perpage=${PER_PAGE}&page=${currentPage}`;
+
   try {
     const response = await axios.get(url, axiosConfig);
+
+    const totalCount = response.data.count;
 
     const bookmarks = response.data.items.map((item) => {
       return {
@@ -23,7 +31,7 @@ export default defineEventHandler(async () => {
       };
     });
 
-    return bookmarks;
+    return { bookmarks, totalCount };
   } catch (error) {
     return error;
   }
