@@ -8,15 +8,8 @@
       "visual": true
     },
     {
-      "name": "Tomatoes",
-      "description": "Pomodoro timer: Vue + TailwindCSS",
-      "liveUrl": "https://tomatoes.vercel.app",
-      "icon": "vuedotjs",
-      "visual": true
-    },
-    {
       "name": "FontSearch",
-      "description": "A simple search engine for fonts available on Fontsource",
+      "description": "A simple search engine for web fonts available on Fontsource",
       "liveUrl": "https://oneminch.github.io/FontSearch/",
       "icon": "javascript",
       "visual": true
@@ -26,6 +19,13 @@
       "description": "A search engine for free-to-play games: AlpineJS + WindiCSS",
       "liveUrl": "https://oneminch.github.io/GameSearch/",
       "icon": "alpinedotjs",
+      "visual": true
+    },
+    {
+      "name": "Tomatoes",
+      "description": "Pomodoro timer: Vue + TailwindCSS",
+      "liveUrl": "https://tomatoes.vercel.app",
+      "icon": "vuedotjs",
       "visual": true
     },
     {
