@@ -12,13 +12,16 @@
   const PER_PAGE = 10;
   const page = ref(parseInt(route.query.page) || INITIAL_PAGE);
 
-  const { data, pending, refresh } = await useLazyAsyncData(
-    `bookmarks-${page.value}`,
-    () => $fetch(`/api/bookmarks?page=${page.value}`),
+  const { data, pending } = await useLazyAsyncData(
+    () =>
+      $fetch(`/api/bookmarks`, {
+        query: { page: page.value },
+        method: "GET"
+      }),
     {
-      getCachedData(key) {
-        return nuxtApp.payload.data[key] || nuxtApp.static.data[key];
-      }
+      getCachedData: (key) =>
+        nuxtApp.payload.data[key] ?? nuxtApp.static.data[key],
+      watch: [page]
     }
   );
 
@@ -30,7 +33,6 @@
     goTo(newPage) {
       page.value = newPage;
       router.push({ query: { page: newPage } });
-      refresh();
     },
     prev() {
       if (page.value > INITIAL_PAGE) {
@@ -48,7 +50,6 @@
     () => route.query.page,
     (newPage) => {
       page.value = parseInt(newPage) || INITIAL_PAGE;
-      refresh();
     }
   );
 </script>
