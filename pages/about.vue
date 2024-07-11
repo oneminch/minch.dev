@@ -12,7 +12,7 @@
     <h1 class="mb-4 text-2xl font-semibold">About Me</h1>
     <!-- Short Bio Summary -->
     <p>
-      Hello! My name is Dawit 👋. I craft web apps that are
+      Hello! My name is Dawit 👋. I craft systems that are
       <span class="highlight">delightful</span> and
       <span class="highlight">accessible</span>.
     </p>
@@ -23,9 +23,9 @@
     </p> -->
     <app-divider class="md:my-6" />
     <p>
-      My interest in web development started back in 2016 when I came across the
-      web development community on Instagram. I developed a keen interest and
-      started to learn more about it from sources like Codecademy and W3Schools.
+      My interest in software development started back in 2016 when I came
+      across the developer community on Instagram. I became deeply fascinated by
+      it and started to learn more from sources like Codecademy and W3Schools.
     </p>
     <figure class="my-4">
       <picture>

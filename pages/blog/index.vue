@@ -1,7 +1,7 @@
 <script setup>
   definePageMeta({
     title: "Blog",
-    description: "My articles on various software and web development topics."
+    description: "My articles on various software development topics."
   });
 
   // Fetch all blog posts

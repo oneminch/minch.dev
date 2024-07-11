@@ -1,7 +1,7 @@
 <script setup>
   definePageMeta({
     title: "Dawit · Full-Stack Engineer",
-    description: "I craft delightful and accessible web apps."
+    description: "I craft delightful and accessible systems."
   });
 
   useHead({
@@ -53,7 +53,7 @@
         I craft
         <span class="highlight">delightful</span>
         and <span class="highlight">accessible</span>
-        web apps...
+        systems.
       </p>
       <!-- <p class="my-2 text-zinc-700 dark:text-zinc-300">
         I am
