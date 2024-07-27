@@ -9,7 +9,7 @@
     },
     {
       "name": "FontSearch",
-      "description": "A simple search engine for web fonts available on Fontsource",
+      "description": "A search engine for web fonts available on Fontsource",
       "liveUrl": "https://oneminch.github.io/FontSearch/",
       "icon": "javascript",
       "visual": true
@@ -19,6 +19,13 @@
       "description": "A search engine for free-to-play games: AlpineJS + WindiCSS",
       "liveUrl": "https://oneminch.github.io/GameSearch/",
       "icon": "alpinedotjs",
+      "visual": true
+    },
+    {
+      "name": "Netflix UI Clone",
+      "description": "A pixel-perfect frontend clone of Netflix made with React",
+      "liveUrl": "https://oneminch.github.io/Netflix-Clone/",
+      "icon": "react",
       "visual": true
     },
     {
