@@ -37,9 +37,9 @@ export default defineNuxtConfig({
       script: [
         {
           type: "text/partytown",
-          src: "https://measure.minch.dev/minch-measure",
+          src: process.env.UMAMI_BASE_URL,
           async: true,
-          "data-website-id": "1e0e9daa-a25b-4943-af4e-68c91b2d3c72"
+          "data-website-id": process.env.UMAMI_WEBSITE_ID
         }
       ]
     },
@@ -96,6 +96,6 @@ export default defineNuxtConfig({
   },
   telemetry: false,
   turnstile: {
-    siteKey: "0x4AAAAAAABlDwSHN3HVmFWH"
+    siteKey: process.env.TURNSTILE_SITE_KEY
   }
 });
