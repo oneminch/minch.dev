@@ -1,0 +1,587 @@
+$box-shadow: 1px 1px 50px rgba(166, 166, 166, 0.3);
+$box-shadow-hover: 1px 1px 50px rgba(100, 100, 100, 0.4);
+
+@import "responsive";
+// Mixin: Transition
+@mixin transition($seconds) {
+  transition: $seconds;
+  -o-transition: $seconds;
+  -moz-transition: $seconds;
+  -webkit-transition: $seconds;
+}
+@mixin box-shadow($prop) {
+  box-shadow: $prop;
+  -o-box-shadow: $prop;
+  -ms-box-shadow: $prop;
+  -moz-box-shadow: $prop;
+  -webkit-box-shadow: $prop;
+}
+@mixin transform($property) {
+  transform: $property;
+  -o-transform: $property;
+  -ms-transform: $property;
+  -moz-transform: $property;
+  -webkit-transform: $property;
+}
+// Mixin: Animation (Loader) - common properties for animation components
+@mixin animation-dur-iter-timing($duration,$iteration,$timing) {
+  -webkit-animation-duration: $duration;
+  -moz-animation-duration: $duration;
+  -ms-animation-duration: $duration;
+  -o-animation-duration: $duration;
+  animation-duration: $duration;
+  -webkit-animation-iteration-count: $iteration;
+  -moz-animation-iteration-count: $iteration;
+  -ms-animation-iteration-count: $iteration;
+  -o-animation-iteration-count: $iteration;
+  animation-iteration-count: $iteration;
+  -webkit-animation-timing-function: $timing;
+  -moz-animation-timing-function: $timing;
+  -ms-animation-timing-function: $timing;
+  -o-animation-timing-function: $timing;
+  animation-timing-function: $timing;
+}
+// Mixin: animation for each loader
+@mixin animation-name-delay($name, $delay) {
+  animation-name: $name;
+  -o-animation-name: $name;
+  -ms-animation-name: $name;
+  -moz-animation-name: $name;
+  -webkit-animation-name: $name;
+  animation-delay: $delay;
+  -o-animation-delay: $delay;
+  -ms-animation-delay: $delay;
+  -moz-animation-delay: $delay;
+  -webkit-animation-delay: $delay;
+}
+
+// Every Element
+* {
+  -webkit-appearance: none !important;
+     -moz-appearance: none !important;
+      -ms-appearance: none !important;
+       -o-appearance: none !important;
+          appearance: none !important;
+  outline: none !important;
+  font-family: 'muli', sans-serif;
+}
+// Body Element
+body {
+  background-color: #e7e8e6;
+  scroll-behavior: smooth;
+}
+// Every Link
+a {
+  text-decoration: none !important;
+  &:hover {
+    text-decoration: none !important;
+  }
+}
+// Every Element with class thumbnail
+.thumbnail {
+  border: none !important;
+}
+// Line breaks
+hr {
+  width: 50%;
+}
+// all texts
+p {
+  text-align: justify;
+}
+// Loader
+#loader {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 10000;
+  background-color: #34495e;
+  .loader-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -26px;
+    margin-left: -26px;
+    .square {
+      width: 20px;
+      height: 20px;
+      border: 1px solid #34495e;
+      display: inline-block;
+      margin: 3px;
+      @include transition(1s);
+      @include animation-dur-iter-timing(.5s,1,ease-in-out);
+    }
+  }
+  .square-one {
+    background-color: #16a085;
+    @include animation-name-delay(loader-one, 0s) ;
+  }
+  .square-two {
+    background-color: #2c3e50;
+    @include animation-name-delay(loader-two, 0.5s) ;
+  }
+  .square-three {
+    background-color: #c0392b;
+    @include animation-name-delay(loader-three, 1.0s) ;
+  }
+  .square-four {
+    background-color: #f39c12;
+    @include animation-name-delay(loader-four, 1.5s) ;
+  }
+  @keyframes loader-one {
+    from {@include transform(rotateZ(0deg));}
+    to {@include transform(rotateZ(90deg));}
+  }
+  @-moz-keyframes loader-one {
+    from {@include transform(rotateZ(0deg));}
+    to {@include transform(rotateZ(90deg));}
+  }
+  @-webkit-keyframes loader-one {
+    from {@include transform(rotateZ(0deg));}
+    to {@include transform(rotateZ(90deg));}
+  }
+  @keyframes loader-two {
+    from {@include transform(rotateZ(0deg));}
+    to {@include transform(rotateZ(90deg));}
+  }
+  @-moz-keyframes loader-two {
+    from {@include transform(rotateZ(0deg));}
+    to {@include transform(rotateZ(90deg));}
+  }
+  @-webkit-keyframes loader-two {
+    from {@include transform(rotateZ(0deg));}
+    to {@include transform(rotateZ(90deg));}
+  }
+  @keyframes loader-three {
+    from {@include transform(rotateZ(0deg));}
+    to {@include transform(rotateZ(90deg));}
+  }
+  @-moz-keyframes loader-three {
+    from {@include transform(rotateZ(0deg));}
+    to {@include transform(rotateZ(90deg));}
+  }
+  @-webkit-keyframes loader-three {
+    from {@include transform(rotateZ(0deg));}
+    to {@include transform(rotateZ(90deg));}
+  }
+  @keyframes loader-four {
+    from {@include transform(rotateZ(0deg));}
+    to {@include transform(rotateZ(90deg));}
+  }
+  @-moz-keyframes loader-four {
+    from {@include transform(rotateZ(0deg));}
+    to {@include transform(rotateZ(90deg));}
+  }
+  @-webkit-keyframes loader-four {
+    from {@include transform(rotateZ(0deg));}
+    to {@include transform(rotateZ(90deg));}
+  }
+
+}
+// lANDING PORTFOLIO
+#portrait {
+  padding: 0 !important;
+  z-index: -100;
+  // Portfolio Image
+  img {
+    width: 100%;
+    height: auto;
+  }
+  #nav-icon {
+    border-radius: 100%;
+    width: 45px;
+    height: 45px;
+    background: none;
+    border: none;
+    color: #000;
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    z-index: 1500;
+    opacity: .4;
+    .material-icons {
+      font-size: 30px !important;
+    }
+    filter: Alpha(opacity=40);
+    &:hover {
+      opacity: 1 !important;
+      filter: Alpha(opacity=100) !important;
+    }
+  }
+
+}
+// NAVIGATION MENUS
+#nav {
+  border: none !important;
+  padding: 0px 5%;
+  // Navigation menus
+  .nav-menu {
+    background-color: #fff;
+    border: none;
+    color: #000;
+    padding: 10px;
+    margin: 5px 20px;
+    border-radius: 20px;
+    position: relative;
+    top: -25px;
+    width: 175px;
+    margin: auto;
+    cursor: pointer;
+    @include transition(0.4s);
+    @include box-shadow($box-shadow);
+    // navigation menus on hover
+    &:hover {
+      @include transform(translateY(-5px));
+      @include box-shadow($box-shadow-hover);
+
+    }
+  }
+}
+//navigation for narrow screen
+#nav-narrow {
+  width: 100%;
+  min-height: 100%;
+  background: rgb(0, 0, 0);
+  opacity: .9;
+  filter: Alpha(opacity=90);
+  z-index: 1000;
+  position: fixed;
+  top: 0px;
+  right: -3599px;
+  padding: 20% 50%;
+  @include transition(.4s);
+  .nav-menu-narrow {
+    background-color: #fff;
+    border: none;
+    color: #000;
+    padding: 10px;
+    margin: 5px 20px;
+    border-radius: 20px;
+    @include transition(.4s);
+    width: 140px;
+    z-index: 1100;
+    display: block;
+    margin-left: -70px;
+    margin-top: 50px;
+    cursor: pointer;
+    &:hover {
+      @include transform(scale(1.1,1.1));
+    }
+  }
+}
+// ABOUT SECTION
+#about-me  {
+  width: 95%;
+  z-index: 2;
+  // About section
+  .about {
+    margin: 5px 0px 0px 0px;
+    border:{
+      left: 5px solid #000;
+      right: 5px solid #000;
+    }
+    background-color: #fff;
+    @include box-shadow($box-shadow);
+    z-index: -1;
+    position: relative;
+    top: -5px;
+    // text inside all of about section
+    .about-text {
+      padding: 25px 25px 30px 25px;
+      line-height: 25px;
+    }
+  }
+  // second about section
+  #about-two {
+    position: relative;
+    top: -52px;
+    // text inside second about
+    .about-text {
+      padding: 33px 25px 30px 25px !important;
+    }
+  }
+  // devices of responsive design
+  .devices-container {
+    position: relative;
+    top: -35px;
+    z-index: 99;
+    .devices {
+      width: 75px;
+      height: 75px;
+      border-radius: 100%;
+      background-color: #000;
+      background-position: center !important;
+      background-repeat: no-repeat;
+      background-size: cover !important;
+      @include box-shadow($box-shadow);
+      @include animation-name-delay(devices , 1.5s);
+      @include animation-dur-iter-timing(6s, 200, ease-in-out);
+      -webkit-animation-iteration-count: infinite;
+      -moz-animation-iteration-count: infinite;
+      -ms-animation-iteration-count: infinite;
+      -o-animation-iteration-count: infinite;
+      animation-iteration-count: infinite;
+    }
+  }
+  // Devices animation
+    @keyframes devices {
+      0% {background-image: url('../media/devices-phone.png');}
+      40% {@include transform(rotateZ(90deg));
+          background-image: url('../media/devices-tablet.png');}
+      70% {@include transform(rotateZ(90deg));
+          background-image: url('../media/devices-pc.png');}
+      100% {background-image: url('../media/devices-phone.png');}
+    }
+    @-moz-keyframes devices {
+      0% {background-image: url('../media/devices-phone.png');}
+      40% {@include transform(rotateZ(90deg));
+          background-image: url('../media/devices-tablet.png');}
+      70% {@include transform(rotateZ(90deg));
+          background-image: url('../media/devices-pc.png');}
+      100% {background-image: url('../media/devices-phone.png');}
+    }
+    @-webkit-keyframes devices {
+      0% {background-image: url('../media/devices-phone.png');}
+      40% {@include transform(rotateZ(90deg));
+          background-image: url('../media/devices-tablet.png');}
+      70% {@include transform(rotateZ(90deg));
+          background-image: url('../media/devices-pc.png');}
+      100% {background-image: url('../media/devices-phone.png');}
+    }
+  // Scroll Down Animation
+  #anim-scroll {
+    width: 100%;
+    position: relative;
+    top: -15px;
+    color: #000;
+    z-index: 1000;
+    // Scroll down icon
+    .scroll-down {
+      width: 10px;
+      margin-left: -10px;
+      position: absolute;
+      left: 50%;
+      display: inline-block;
+      @include animation-name-delay(scroll-down, 0);
+      @include animation-dur-iter-timing(2s, infinite, ease-out);
+    }
+    // Scroll down animation
+    @keyframes scroll-down {
+      0%   {@include transform(translateY(-15px));}
+      100%  {opacity: 0;
+            filter: Alpha(opacity=40);
+            @include transform(translateY(15px));}
+    }
+    @-moz-keyframes scroll-down {
+      0%   {@include transform(translateY(-15px));}
+      100%  {opacity: 0;
+            filter: Alpha(opacity=40);
+            @include transform(translateY(15px));}
+    }
+    @-webkit-keyframes scroll-down {
+      0%   {@include transform(translateY(-15px));}
+      100%  {opacity: 0;
+            filter: Alpha(opacity=40);
+            @include transform(translateY(15px));}
+    }
+  }
+}
+// WHAT I DO SECTION
+#what-i-do {
+  margin-bottom: 20px;
+  width: 85%;
+  // header
+  .header {
+    width: 160px;
+    height: 40px;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: #fff;
+    @include box-shadow($box-shadow);
+    margin-top: 10px;
+    margin-bottom: 30px;
+  }
+  // content
+  .thumbnail {
+    padding: 20px 30px 20px 30px;
+    border-radius: 0px;
+    // What I do images
+    img {
+      max-width: 85%;
+    }
+  }
+}
+// SKILLS SECTION
+#skills {
+  // header
+  .header {
+    width: 120px;
+    height: 40px;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: #fff;
+    @include box-shadow($box-shadow);
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+  // skills illustration
+  .skill-image {
+    padding: 20px;
+    text-align: center;
+    .code-skills, .design-skills {
+      display: inline;
+      width: 100px;
+      height: auto;
+      margin: 20px;
+    }
+  }
+}
+// PORTFOLIO
+#portfolio {
+  width: 90%;
+  // header
+  .header {
+    height: 40px;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: #fff;
+    @include box-shadow($box-shadow);
+    margin-top: 20px;
+    margin-bottom: 30px;
+    width: 150px;
+  }
+  // Portfolio Carousel
+  #portfolio-crsl {
+    // Carousel left and right control
+    .carousel-control {
+      background: none !important;
+      color: #000 !important;
+      @include transition(.4s);
+    }
+    // worklist buttons
+    .worklist-btn {
+      width: 200px;
+      height: auto;
+      border-radius: 15px;
+      color: #fff;
+      background-color: #000;
+      border: 1px solid #000;
+    }
+    // Carousel left and right control icons
+    #left i,
+    #right i {
+      position: absolute;
+      top: 40%;
+      text-shadow: none !important;
+      @include transition(.5s);
+    }
+    #left:hover i {
+      @include transform(translateX(-5px));
+    }
+    #right:hover i {
+      @include transform(translateX(5px));
+    }
+  }
+
+}
+// TESTIMONIALS
+#testimonials {
+  padding: 0 45px 0 45px;
+  width: 90%;
+  // testimonial header
+  .header {
+    width: 175px;
+    height: 40px;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: #fff;
+    @include box-shadow($box-shadow);
+    margin-top: 20px;
+    margin-bottom: 25px;
+  }
+  // each testimonial
+  .testimonial-list {
+    margin-bottom: 20px;
+    border:{
+      left: 1px solid rgba(153, 153, 153, 0.27);
+      right: 1px solid rgba(153, 153, 153, 0.27);
+    }
+    // line break after each testimonial
+    hr {
+      width: 30%;
+    }
+  }
+
+}
+// GET IN TOUCH
+#get-in-touch {
+  width: 100%;
+  border: 3px solid #212121;
+  padding: 20px 60px 20px 60px;
+  margin-top: 30px;
+  // get in touch text
+  p {
+    width: 60%;
+    text-align: center;
+    margin: auto;
+  }
+  // header
+  h3 {
+    width: 50%;
+    text-align: center;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  // get in touch button
+  .get-in-touch-btn {
+    width: 175px;
+    height: 40px;
+    padding: 7px;
+    border-radius: 20px;
+    border: 2px solid #000;
+    background-color: #fff;
+    color: #000;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    @include transition(.5s);
+    // get in touch button on hover
+    &:hover {
+      @include transform(translateY(-4px));
+      background-color: #000;
+      color: #fff;
+    }
+  }
+}
+// FOOTER
+#footer {
+  height: 120px;
+  background-color: #212121;
+  padding-top: 15px;
+  margin-bottom: 0px;
+  // social media icons
+  i {
+    font-size: 30px;
+    color: #fff;
+    margin: 10px 10px 20px 10px;
+    @include transition(.4s);
+    // social media icons on hover
+    &:hover {
+      color: rgba(254, 254, 254, 0.75);
+      @include transform(translateY(-2px));
+    }
+  }
+  // footer copyright text
+  p {
+    font-size: 13px;
+    color: #626262;
+  }
+}
+// Everything that is affected by screen size change
+// Add smooth transition
+#nav, #nav-icon, #about-me, #about-wide, #about-one, #about-two,
+#what-i-do, #portfolio, #skills, #get-in-touch,
+.about, .about-text, .devices, .skills-image, .scroll-down,
+.carousel-caption, hr {
+  @include transition(.4s);
+}

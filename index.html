@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Dawit Codes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- custom stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- favicon -->
+    <link rel="shortcut icon" href="media/favicon.ico" type="image/x-icon">
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- font awesome -->
+    <script src="https://use.fontawesome.com/512a791d9f.js"></script>
+    <!-- google material icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Muli|Quicksand|Titillium+Web" rel="stylesheet">
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- bootstrap js -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <!-- Animation loader -->
+    <div id="loader">
+      <div class="loader-container">
+        <div class="square square-one"></div>
+        <div class="square square-two"></div>
+        <br>
+        <div class="square square-four"></div>
+        <div class="square square-three"></div>
+      </div>
+    </div>
+    <!-- PERSONAL PORTRAIT-->
+    <div class="container-fluid" id="portrait">
+      <img src="media/portrait.svg" alt="My Picture" id='port-img'>
+      <button id="nav-icon">
+        <i class="material-icons">menu</i>
+      </button>
+    </div>
+    <!-- NAVIGATION -->
+    <div class='container-fluid' id='nav'>
+      <div class='row'>
+        <div class='col-xs-4'>
+          <!-- Navigation skills -->
+          <div class='nav-menu nav-skills center-block text-center'>SKILLS</div>
+        </div>
+        <div class='col-xs-4'>
+          <!-- Navigation contact -->
+          <div class='nav-menu nav-contact center-block text-center'>CONTACT</div>
+        </div>
+        <div class='col-xs-4'>
+          <!-- Navigation portfolio -->
+          <div class='nav-menu nav-portfolio center-block text-center'>PORTFOLIO</div>
+        </div>
+      </div>
+    </div>
+    <!-- Navigation fo small screens -->
+    <div class="container-fluid" id="nav-narrow">
+        <!-- Navigation skills -->
+        <div class='nav-menu-narrow nav-skills center-block text-center'>SKILLS</div>
+        <!-- Navigation contact -->
+        <div class='nav-menu-narrow nav-contact center-block text-center'>CONTACT</div>
+        <!-- Navigation portfolio -->
+        <div class='nav-menu-narrow nav-portfolio center-block text-center'>PORTFOLIO</div>
+    </div>
+    <!-- ABOUT -->
+    <div class='container' id='about-me'>
+      <!-- About content  for bigger screen-->
+      <div class="row about" id='about-wide'>
+        <div class="col-xs-12 about-text">
+          <p>Hello. I'm Dawit. I'm a 20 year old UI/UX/Web Designer and Front-End Developer.
+            I work as a freelancer and I help individuals and businesses providing creative solutions for their businesses as a developer and a designer. I believe in true simplicity: delivering more content with a simple and intriguing design. I also do some graphic designing.</p>
+        </div>
+      </div>
+      <!-- first about content for smaller screen -->
+      <div class="row about" id="about-one">
+        <div class="col-xs-12 about-text">
+          <p>Hello. I'm Dawit. I'm a 20 year old UI/UX/Web Designer and Front-End Developer.
+            I work as a freelancer and I help individuals and businesses by providing creative solutions for their businesses as a developer and a designer.</p>
+        </div>
+      </div>
+      <!-- Devices of responsive design with animation -->
+      <div class="row">
+        <div class="col-xs-12 devices-container">
+          <div class="devices center-block"></div>
+        </div>
+      </div>
+      <!-- about second content for smaller screen -->
+      <div class="row about" id="about-two">
+        <div class="col-xs-12 about-text">
+          <p>I believe in true simplicity: delivering more content with a simple and intriguing design. I also do some graphic designing.</p>
+        </div>
+      </div>
+      <!-- scroll down animation -->
+      <div id="anim-scroll">
+        <i class="scroll-down center-block material-icons">arrow_downward</i>
+      </div>
+    </div>
+    <hr id='first-break'>
+    <!-- WHAT I DO -->
+    <div class='container' id='what-i-do'>
+      <div class='row'>
+        <!-- What I do - header -->
+        <div class="header center-block">
+          <p class='text-center'>WHAT I DO</p>
+        </div>
+        <!-- what i do - content -->
+        <div class='col-sm-4'>
+          <div class='thumbnail text-center'>
+            <img src='media/gfxdesign.svg' class='desktop-svg img-responsive' alt="Device Illustrations"/>
+            <h4>Web &amp; Graphic Design</h4>
+          </div>
+        </div>
+        <div class='col-sm-4'>
+          <div class='thumbnail text-center'>
+            <img src='media/ux-ui.svg' class='desktop-svg img-responsive' alt="Device Illustrations"/>
+            <h4>UX / UI</h4>
+          </div>
+        </div>
+        <div class='col-sm-4'>
+          <div class='thumbnail text-center'>
+            <img src='media/web-dev.svg' class='desktop-svg img-responsive' alt="Device Illustrations"/>
+            <h4>Front-End Web Development</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr>
+    <!-- SKILLS -->
+    <div class="container" id='skills'>
+      <div class="row">
+        <!-- skills header -->
+        <div class="header center-block">
+          <p class='text-center'>SKILLS</p>
+        </div>
+        <!-- code skills -->
+        <div class="col-sm-6 skill-image">
+          <h4>CODE</h4>
+          <img src="media/html.svg" alt="Code Skills" title="HTML" class='code-skills img-responsive center-block'>
+          <img src="media/css.svg" alt="Code Skills" title="CSS" class='code-skills img-responsive center-block'>
+          <img src="media/js.svg" alt="Code Skills" title="JavaScript" class='code-skills img-responsive center-block'>
+        </div>
+        <!-- graphics skills -->
+        <div class="col-sm-6 skill-image">
+          <h4>DESIGN</h4>
+          <img src="media/photoshop.svg" alt="Design Skills" title="Photoshop" class='design-skills img-responsive center-block'>
+          <img src="media/illustrator.svg" alt="Design Skills" title="Illustrator" class='design-skills img-responsive center-block'>
+          <img src="media/experience-design.svg" alt="Design Skills" title="Experience Design" class='design-skills img-responsive center-block'>
+        </div>
+      </div>
+    </div>
+    <hr>
+    <!-- PORTFOLIO -->
+    <div class="container" id='portfolio'>
+      <!-- portfolio header -->
+      <div class="header center-block">
+        <p class='text-center'>MY WORK</p>
+      </div>
+      <p class="text-center">Here are Some of My Projects</p>
+      <!-- carousel begin -->
+      <div id='portfolio-crsl' class='carousel slide' data-ride='carousel'>
+        <div class='carousel-inner'>
+          <!-- Work one: Tribute page -->
+          <div class='item active'>
+            <a href="https://codepen.io/dawwito/full/qXbBqr/" target="_blank" title="A Tribute Page">
+              <img src='media/work-one.svg' alt="Portfolio images"/>
+              <button class="worklist-btn center-block">A Tribute Page</button>
+            </a>
+          </div>
+          <!-- Work two: Quote Generator -->
+          <div class='item'>
+            <img src='media/work-two.svg' alt="Portfolio images"/>
+            <a href="https://codepen.io/dawwito/full/zzvbjg/" target="_blank" title="Quote Generator">
+              <button class="worklist-btn center-block">Quote Generator</button>
+            </a>
+          </div>
+          <!-- Work three: Guess the Number -->
+          <div class='item'>
+            <img src='media/work-three.svg' alt="Portfolio images"/>
+            <a href="https://codepen.io/dawwito/full/PKbrGP/" target="_blank" title="Guess The Number">
+              <button class="worklist-btn center-block">Guess the Number</button>
+            </a>
+          </div>
+          <!-- Work four: To Do list -->
+          <div class='item'>
+            <img src='media/work-four.svg' alt="Portfolio images"/>
+            <a href="https://oneminch.github.io/dolist/" target="_blank" title="To Do List">
+              <button class="worklist-btn center-block">To Do List</button>
+            </a>
+          </div>
+          <!-- Work five: Z-Score Calculator -->
+          <div class='item'>
+            <img src='media/work-five.svg' alt="Portfolio images"/>
+            <a href="https://codepen.io/dawwito/full/mMrrPX/" target="_blank" title="Z-Score Calculator">
+              <button class="worklist-btn center-block">Z-Score Calculator</button>
+            </a>
+          </div>
+        </div>
+        <!-- Left Carousel control  -->
+        <a id='left' class='left carousel-control' href='#portfolio-crsl' role='button' data-slide='prev'>
+          <i class="material-icons">arrow_back</i>
+        </a>
+        <!-- Right Carousel control -->
+        <a id='right' class='right carousel-control' href='#portfolio-crsl' role='button' data-slide='next'>
+          <i class="material-icons">arrow_forward</i>
+        </a>
+      </div>
+      <!-- carousel end -->
+    </div>
+    <hr id='portfolio-break'>
+    <!-- TESTIMONIALS -->
+    <!-- <div class="container" id='testimonials'> -->
+      <!-- <div class="row"> -->
+        <!-- testimonials header -->
+        <!-- <div class="header center-block"> -->
+          <!-- <p class='text-center'>TESTIMONIALS</p> -->
+        <!-- </div> -->
+        <!-- Testimonial one -->
+        <!-- <div class="col-sm-4 testimonial-list text-center"> -->
+          <!-- "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et." -->
+          <!-- quote indicator svg icon -->
+          <!-- <div class="quote-indicator"> -->
+            <!-- <img src="media/quote-indicator.svg" alt="quote indicator icon" class='img-responsive'> -->
+          <!-- </div> -->
+          <!-- <h5>-Lorem Ipsum, CEO, iPsum Co.</h5> -->
+          <!-- <hr> -->
+        <!-- </div> -->
+        <!-- Testimonial two -->
+        <!-- <div class="col-sm-4 testimonial-list text-center"> -->
+          <!-- "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et." -->
+          <!-- quote indicator svg icon -->
+          <!-- <div class="quote-indicator"> -->
+            <!-- <img src="media/quote-indicator.svg" alt="quote indicator icon" class='img-responsive'> -->
+          <!-- </div> -->
+          <!-- <h5>-Lorem Ipsum, CEO, iPsum Co.</h5> -->
+          <!-- <hr> -->
+        <!-- </div> -->
+        <!-- Testimonial three -->
+        <!-- <div class="col-sm-4 testimonial-list text-center"> -->
+          <!-- "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et." -->
+          <!-- quote indicator svg icon -->
+          <!-- <div class="quote-indicator center-block"> -->
+            <!-- <img src="media/quote-indicator.svg" alt="quote indicator icon" class='img-responsive'> -->
+          <!-- </div> -->
+          <!-- <h5>-Lorem Ipsum, CEO, iPsum Co.</h5> -->
+          <!-- <hr> -->
+        <!-- </div> -->
+      <!-- </div> -->
+    <!-- </div> -->
+    <!-- GET IN TOUCH -->
+    <div class="container" id="get-in-touch">
+      <div class="row">
+        <div class="col-sm-12 text-center">
+          <!-- header and info text -->
+          <h3>INTERESTED IN WORKING TOGETHER?</h3>
+          <p>I'm Currently Available For Hire. I would love to help you with your projects. Please take a few minutes of your time to let me know about them. </p>
+          <!-- get in touch button -->
+          <a href="mailto:email@gmail.com">
+            <button type="button" class='get-in-touch-btn'>GET IN TOUCH</button>
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- FOOTER -->
+    <footer id='footer'>
+      <!-- social media icons -->
+      <div class="text-center">
+        <!-- <a href='https://www.instagram.com/dawwito' target="_blank"><i class='fa fa-instagram'></i></a> -->
+        <!-- <a href='https://www.dribbble.com/dawit' target="_blank"><i class='fa fa-dribbble'></i></a> -->
+        <a href='https://www.github.com/oneminch' target="_blank"><i class='fa fa-github'></i></a>
+        <!-- <a href="https://www.codepen.io/dawwito" target="_blank"><i class='fa fa-codepen'></i></a> -->
+        <!-- <a href='https://www.twitter.com/dawwito' target="_blank"><i class='fa fa-twitter'></i></a> -->
+      </div>
+      <!-- copyright text -->
+      <p class='footer-text text-center'>Dawit Mesfin &copy; </p>
+    </footer>
+    <!-- Javascript file -->
+    <script src=js/main.js></script>
+  </body>
+</html>

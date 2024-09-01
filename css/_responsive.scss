@@ -1,0 +1,137 @@
+// For Screens Bigger Than 575px Wide
+@media only screen and (min-width: 575px) {
+  // about section
+  #about-me {
+    width: 85%;
+  }
+  #portfolio {
+    #portfolio-crsl {
+      .carousel-caption {
+        position: absolute;
+        top: 60%;
+      }
+    }
+  }
+  // hr#portfolio-break {
+  //   position: relative;
+  //   // top: -30px;
+  // }
+}
+// For Screens Bigger Than 760px Wide
+@media only screen and (min-width: 760px) {
+  // apprearance of navigation icon
+  #nav-icon {
+    display: none;
+  }
+  #nav-narrow {
+    display: none;
+  }
+  // about section
+  #about-me {
+    .about-text {
+      padding: 25px 45px 30px 45px;
+    }
+    // about one and two for small screen
+    #about-one, #about-two {
+      display: none;
+    }
+  }
+  #skills {
+    width: 65%;
+  }
+}
+// For very big screens
+@media only screen and (min-width: 1024px) {
+  #nav {
+    width: 80%;
+  }
+  // about section for very wide screens
+  #about-me {
+    width: 60%;
+    .about-text {
+      padding: 25px 45px 30px 45px;
+    }
+    #anim-scroll {
+      position: relative;
+      top: -25px;
+    }
+  }
+  // WHAT I DO SECTION
+  #what-i-do {
+    width: 80%;
+  }
+  #portfolio {
+    width: 70%;
+  }
+}
+// For Screens Smaller Than 760px Wide
+@media only screen and (max-width: 760px) {
+  #nav {
+    .nav-menu {
+      display: none;
+    }
+  }
+  //about
+  #about-me {
+    position: relative;
+    top: -45px;
+    margin-top: 25px;
+    .about {
+      margin: 0px;
+      .about-text {
+        padding: 20px;
+        width: 95% !important;
+      }
+    }
+    // About section for wide screens
+    #about-wide {
+      display: none;
+    }
+    .devices {
+        top: -27px;
+    }
+  }
+  // SKILLS
+  #skills {
+    width: 90%;
+    // image inside skills
+    .skill-image {
+      width: 100%;
+    }
+  }
+  // portfolio
+  #portfolio {
+    width: 100%;
+  }
+  // GET IN TOUCH
+  #get-in-touch {
+    width: 100%;
+    border: 3px solid #212121;
+    padding: 20px 40px;
+  }
+  hr#first-break {
+    position: relative;
+    top: -30px;
+  }
+}
+// For Screens Smaller Than 575px Wide
+@media only screen and (max-width: 575px) {
+  // NAVIGATION MENUS
+  #nav {
+    // Scroll down icon
+    .scroll-down {
+      position: relative;
+      top: 20px;
+    }
+  }
+
+  #portfolio {
+    // Portfolio Carousel
+    #portfolio-crsl {
+      // Carousel caption
+      .carousel-caption {
+        margin-bottom: -20px !important;
+      }
+    }
+  }
+}
