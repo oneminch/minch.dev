@@ -1,0 +1,270 @@
+$roundCorners: 3px; // Round corner radius
+
+// Screen size: < 1024px
+@media only screen and (max-width: 1024px) {
+
+   // Projects: Top Projects
+   body {
+
+      // Projects: Top Projects
+      .projects {
+         width: 75%;
+         padding: 0 1rem;
+
+         &__container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: .5rem 0 1rem 0;
+         }
+
+         &__project {
+            width: 90%;
+            height: 125px;
+            padding: 10px; // used for absolute positioning of children
+            margin: .75rem auto;
+            position: relative;
+            text-align: left;
+
+            >* {
+               display: inline;
+               position: absolute;
+               padding: .25rem;
+               border-radius: $roundCorners + 2px;
+            }
+
+            .icon {
+               width: 115px; // (125px - 10px (padding))
+               height: 115px; // (125px - 10px (padding))
+               top: 5px; // (125px - padding/2)
+               left: 5px; // (125px - padding/2)
+               padding: 1.5rem;
+            }
+
+            .name {
+               height: 45px; // (50px - 5px (padding/2))
+               font-size: 1rem;
+               font-weight: bold;
+               top: 5px;
+               left: 120px;
+            }
+
+            .desc {
+               padding-right: 1.25rem;
+               height: 70px; // (75px - padding/2)
+               overflow: hidden;
+               font-size: .9rem;
+               top: 50px; // (45px + padding/2)
+               left: 120px; // (125px - padding/2)
+            }
+         }
+      }
+   }
+}
+
+// Screen size: < 900px
+@media only screen and (max-width: 900px) {
+   body {
+
+      // First Introduction
+      .intro {
+         height: auto;
+         display: flex;
+         flex-direction: column;
+         justify-content: start;
+         align-items: center;
+         padding: 1.5em 0;
+
+         >* {
+            width: 90%;
+            margin: 0;
+         }
+
+         // Intro Right: Profile Image/Illustration
+         &__img {
+            img {
+               width: 125px;
+               height: 125px;
+            }
+         }
+
+         // Intro Left:  Name, Title & Social
+         &__text {
+            text-align: center;
+         }
+
+         // Social Accounts
+         &__social {
+            width: auto;
+            height: 45px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+         }
+      }
+
+      // Scroll Down Icon
+      .scroll-down {
+         width: 75px;
+         height: 75px;
+      }
+
+      // Bio Container
+      .bio {
+         &__text {
+            width: 80%;
+         }
+
+         &__icon {
+            width: 50px;
+            height: 50px;
+            margin-top: calc(-25px - 1rem);
+         }
+      }
+
+      // Timeline: Experience
+      .experience {
+         &__current {
+            width: 80%;
+         }
+
+         &__list {
+            width: 80%;
+         }
+      }
+
+      // Projects: Top Projects
+      .projects {
+         width: 100%;
+      }
+
+      // Skills: List of skills and tools
+      .skills {
+         &__container {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+         }
+
+         &__side {
+            width: 75%;
+         }
+
+         &__list {
+            width: 100%;
+         }
+      }
+
+      // Interests
+      .interests {
+         width: 100%;
+         padding: 0 1rem;
+
+         &__interest {
+            margin: 0 1.25rem;
+         }
+      }
+   }
+
+}
+
+// Screen size: < 768px
+@media only screen and (max-width: 768px) {
+   body {
+      hr {
+         margin: 15px auto;
+      }
+
+      // Bio Container
+      .bio {
+         &__text {
+            width: 90%;
+         }
+
+         &__icon {
+            width: 50px;
+            height: 50px;
+            margin-top: calc(-25px - 1rem);
+         }
+      }
+
+      // Timeline: Experience
+      .experience {
+         &__current {
+            width: 90%;
+         }
+
+         &__list {
+            width: 90%;
+         }
+      }
+
+      // Skills: List of skills and tools
+      .skills {
+         &__side {
+            width: 85%;
+         }
+      }
+
+      // Interests
+      .interests {
+         padding: 0 1rem;
+
+         &__container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: .5rem 0 1rem 0;
+         }
+
+         &__interest {
+            width: 75%;
+            height: 75px;
+            margin: .75rem auto;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            >* {
+               height: 65px;
+               margin: 0 1rem;
+            }
+
+            .icon {
+               margin: 0;
+               width: 65px;
+            }
+
+            .name {
+               width: 125px;
+               font-size: 1rem;
+               font-weight: bold;
+               line-height: auto;
+            }
+         }
+      }
+   }
+}
+
+// Screen size: < 480px
+@media only screen and (max-width: 480px) {
+   body {
+      .banner {
+         width: 90%;
+      }
+      .projects {
+         font-size: .85rem;
+
+         &__project {
+            .desc {
+               font-size: .75rem;
+            }
+         }
+      }
+   }
+}

@@ -1,0 +1,640 @@
+@import "responsive";
+
+// Colors
+$mOrange: #edae49; // Minch Orange color
+$inactive: #353535; // Inactive color: gray
+$darkColor: #121212; // Light color: White
+$lightColor: #f1f1f1; // Dark color: Black
+$shadowDrop: #222222; // Drop shadow
+$mediumColor: #3b3b3b; // Grey in between
+$formBkg: rgba(18, 18, 18, 0.90); // Form background
+
+$roundCorners: 3px; // Round corner radius
+$active: 2px solid $mediumColor; // Active Border
+$disabled: 2px solid $inactive; // Disabled Border
+$tinyShadow: -4px 4px 0px $shadowDrop; // Box shadow for small containers
+$inactivShadow: -4px 4px 0px $inactive; // Box shadow for inactive containers
+$tinyHoverShadow: -5px 5px 0px $mOrange; // Box shadow on hover for small containers
+$bigShadow: -7.5px 7.5px 0px $shadowDrop; // Box shadow for bigger containers
+$bigHoverShadow: -8.5px 8.5px 0px $mOrange; // Box shadow on hover for bigger containers
+
+
+// Import regular font
+@font-face {
+   font-family: 'Metropolis-Regular';
+   src: url('fonts/Metropolis-Regular.eot');
+   src: url('fonts/Metropolis-Regular.eot?#iefix') format('embedded-opentype'),
+      url('fonts/Metropolis-Regular.woff2') format('woff2'),
+      url('fonts/Metropolis-Regular.woff') format('woff'),
+      url('fonts/Metropolis-Regular.ttf') format('truetype');
+   font-weight: normal;
+   font-style: normal;
+}
+
+// Import bold font
+@font-face {
+   font-family: 'Metropolis-Bold';
+   src: url('fonts/Metropolis-Bold.eot');
+   src: url('fonts/Metropolis-Bold.eot?#iefix') format('embedded-opentype'),
+      url('fonts/Metropolis-Bold.woff2') format('woff2'),
+      url('fonts/Metropolis-Bold.woff') format('woff'),
+      url('fonts/Metropolis-Bold.ttf') format('truetype');
+   font-weight: normal;
+   font-style: normal;
+}
+
+* {
+   outline: none;
+   appearance: none;
+   -moz-appearance: none;
+   -webkit-appearance: none;
+   box-sizing: border-box;
+   text-decoration: none;
+   font-family: 'Metropolis-Regular', sans-serif;
+   transition-duration: 0.25s;
+   background-color: $darkColor;
+   color: $lightColor;
+}
+
+html {
+   font-size: 100%;
+}
+
+body {
+   margin: 0;
+   padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+   margin: .5rem 0;
+   font-family: 'Metropolis-Bold', sans-serif;
+}
+
+// Each Section/Container
+.section {
+   width: 100%;
+   max-width: 1560px;
+   margin: 1rem auto;
+}
+
+// Section Break
+hr {
+   width: 50%;
+   max-width: 960px;
+   border: .5px solid #4d4d4d;
+   margin: 25px auto;
+   text-align: center;
+}
+
+.banner {
+   text-align: center;
+   text-decoration: underline;
+   height: 3rem;
+   width: 65%;
+   max-width: 480px;
+   padding: 0;
+   // padding-bottom: 2.5rem;
+   box-shadow: $bigShadow;
+   border-radius: $roundCorners;
+   border: $active;
+   box-sizing: content-box;
+   margin: 2rem auto;
+   h3 {
+      margin: 0;
+      height: 3rem;
+      line-height: 3rem;
+   }
+}
+
+// First Introduction
+.intro {
+   height: 25rem;
+   margin-top: 0;
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+
+   >* {
+      width: 50%;
+      text-align: center;
+   }
+
+   // Intro Left: Profile Image/Illustration
+   &__img {
+      margin-left: 2em;
+
+      img {
+         width: 225px;
+         height: 225px;
+         border-radius: 50%;
+      }
+   }
+
+   // Intro Right:  Name, Title & Social
+   &__text {
+      text-align: left;
+      margin-right: 2em;
+
+      >* {
+         width: 50%;
+         margin: 15px auto;
+      }
+   }
+
+   // Social Accounts
+   &__social {
+      width: 50%;
+      height: 45px;
+      display: flex;
+      justify-content: start;
+      align-items: center;
+
+      >* {
+         width: 45px;
+         min-width: 45px;
+         height: 45px;
+         box-shadow: $tinyShadow;
+         border-radius: $roundCorners;
+         margin: 7.5px;
+         border: $active;
+         background: $lightColor;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+
+         &:hover {
+            box-shadow: $tinyHoverShadow;
+         }
+
+         img {
+            width: 30px;
+            height: 30px;
+            background: $lightColor;
+         }
+      }
+   }
+}
+
+// Scroll Down Icon
+.scroll-down {
+   width: 100px;
+   height: 100px;
+   margin: 0 auto;
+   text-align: center;
+}
+
+// Bio Container
+.bio {
+   &__text {
+      width: 65%;
+      padding: 1.5rem;
+      padding-bottom: 2.5rem;
+      box-shadow: $bigShadow;
+      border-radius: $roundCorners;
+      border: $active;
+      margin: 0 auto 1rem auto;
+   }
+
+   &__icon {
+      width: 75px;
+      height: 75px;
+      margin: 0 auto;
+      margin-top: calc(-36px - 1rem);
+      border-radius: 50%;
+
+      img {
+         width: 100%;
+         border-radius: 50%;
+      }
+   }
+}
+
+// Timeline: Experience
+.experience {
+   text-align: center;
+   padding-bottom: .5rem;
+
+   >* {
+      margin: 1rem auto;
+   }
+
+   h1 {
+      margin: 0 auto;
+   }
+
+   &__current {
+      width: 65%;
+      min-height: 150px;
+      padding: .75rem;
+      border: $active;
+      box-shadow: $bigShadow;
+      border-radius: $roundCorners;
+
+      >* {
+         width: 90%;
+         margin: .5rem auto;
+      }
+
+      &__link {
+         width: 150px;
+         height: 40px;
+         line-height: 40px;
+         display: block;
+         margin-top: 1rem;
+         border: $active;
+         background-color: $mediumColor;
+         border-radius: $roundCorners;
+
+         &:hover {
+            border-color: $mOrange;
+            background-color: $mOrange;
+            color: $darkColor;
+         }
+
+         // if no link to experience
+         &--inexistent {
+            display: none;
+         }
+      }
+   }
+
+   &__list {
+      width: 65%;
+      padding: .5rem 0;
+      margin: 1.5rem auto 0 auto;
+
+      &__items {
+         display: flex;
+         align-items: center;
+         justify-content: space-around;
+      }
+
+      &__item {
+         width: 20px;
+         height: 20px;
+         cursor: pointer;
+         margin: 0 .5rem;
+         border-radius: 50%;
+         border: $active;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         z-index: 1;
+
+         span {
+            width: 50%;
+            height: 50%;
+            border: none;
+            border-radius: 50%;
+            display: block;
+         }
+
+         &--active {
+            span {
+               background-color: $lightColor;
+            }
+         }
+      }
+
+      // Time-line
+      hr {
+         width: 100%;
+         border: 1px solid $lightColor;
+         border-radius: 1px;
+         margin: 0 auto;
+         position: relative;
+         top: -12px; // -(item_height + item_border + hr_height)/2 px
+         z-index: 0;
+      }
+   }
+}
+
+// Projects: Top Projects
+.projects {
+   width: 100%;
+   padding: 0 2rem;
+   text-align: center;
+
+   &__container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 1rem 0 2rem 0;
+   }
+
+   &__project {
+      width: 250px;
+      padding: 1rem;
+      box-shadow: $bigShadow;
+      border-radius: $roundCorners;
+      border: $active;
+      margin: 0 2em;
+      cursor: pointer;
+
+      &:hover {
+         box-shadow: $bigHoverShadow;
+      }
+
+      .icon {
+         width: 60px;
+         height: 60px;
+         margin: 0 auto;
+         background: transparent;
+
+         img {
+            width: 100%;
+            height: 100%;
+         }
+      }
+
+      .name {
+         height: 50px;
+         font-size: 1.5rem;
+         font-weight: bold;
+         line-height: 50px;
+      }
+
+      .desc {
+         height: 125px;
+         overflow: hidden;
+      }
+   }
+
+   &__more {
+      width: 150px;
+      height: 50px;
+      display: block;
+      cursor: pointer;
+      border: $active;
+      background-color: $mediumColor;
+      border-radius: $roundCorners;
+      line-height: 47.5px;
+      margin: 1.5rem auto;
+
+      &:hover {
+         border-color: $mOrange;
+         background-color: $mOrange;
+         color: $darkColor;
+      }
+   }
+}
+
+// Skills: List of skills and tools
+.skills {
+   text-align: center;
+   padding: 0 2rem;
+
+   h1 {
+      margin: 0;
+   }
+
+   &__container {
+      width: 100%;
+      text-align: left;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+   }
+
+   &__side {
+      width: 325px;
+      margin: 0 4rem;
+   }
+
+   &__list {
+      width: 325px;
+      padding: 1rem;
+      box-shadow: $bigShadow;
+      border-radius: $roundCorners;
+      border: $active;
+
+      li {
+         list-style-type: square;
+      }
+   }
+
+   &__icon {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background-color: $darkColor;
+      padding: .75rem;
+      margin: -25px 0 0 -25px;
+      border: $active;
+
+      >* {
+         background-color: $darkColor;
+      }
+   }
+}
+
+// Interests
+.interests {
+   width: 100%;
+   padding: 0 2rem;
+   text-align: center;
+
+   &__container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 1rem 0 2rem 0;
+   }
+
+   &__interest {
+      width: 175px;
+      height: 225px;
+      padding: .75rem;
+      box-shadow: $bigShadow;
+      border-radius: $roundCorners;
+      border: $active;
+      margin: 0 3rem;
+
+      >* {
+         height: 100px;
+      }
+
+      .icon {
+         width: 100px;
+         padding: .5rem;
+         margin: 0 auto;
+
+         img {
+            width: 100%;
+         }
+      }
+
+      .name {
+         font-size: 1.25rem;
+         font-weight: bold;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+      }
+   }
+
+   &__more {
+      max-width: 200px;
+      height: 50px;
+      line-height: 47.5px;
+      margin: 1.5rem auto;
+   }
+}
+
+// Contact
+.contact {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 100%;
+   max-width: 100%;
+}
+
+.hide-form {
+   text-align: center;
+
+   .contact-btn {
+      width: 150px;
+      height: 50px;
+      cursor: pointer;
+      color: $lightColor;
+      background-color: $mediumColor;
+      border-radius: $roundCorners;
+      border: $active;
+      font-weight: bold;
+      line-height: 47.5px;
+      margin: 1.5rem auto;
+
+      &:hover {
+         border-color: $mOrange;
+         background-color: $mOrange;
+         color: $darkColor;
+      }
+   }
+
+   .contact__form {
+      display: none;
+   }
+}
+
+.show-form {
+   height: 100vh;
+   position: fixed;
+   top: 0;
+   left: 0;
+   z-index: 2;
+   // max-width: 100%;
+   margin: 0;
+   background-color: $formBkg;
+
+   .contact-btn {
+      display: none;
+   }
+
+   // Contact form
+   .contact__form {
+      width: 80%;
+      min-width: 350px;
+      max-width: 768px;
+      padding: 1rem;
+      color: $lightColor;
+      background-color: $darkColor;
+      border-radius: $roundCorners;
+      box-shadow: none;
+      border: $active;
+      text-align: left;
+
+      >* {
+         width: 75%;
+         display: block;
+         margin: 1rem auto;
+         border-radius: $roundCorners;
+         box-shadow: none;
+      }
+   }
+
+   // Input fields
+   input,
+   textarea {
+      height: 40px;
+      padding: 5px;
+      text-indent: 10px;
+      color: $lightColor;
+      border: $active;
+      font-size: 16px;
+      background-color: $darkColor;
+
+      &::placeholder {
+         color: $mediumColor;
+         opacity: 1;
+      }
+   }
+
+   textarea {
+      height: 150px;
+      resize: none;
+   }
+
+   .contact__buttons {
+      width: 75%;
+      height: 40px;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+
+      >* {
+         width: 100px;
+         border-radius: $roundCorners;
+         cursor: pointer;
+         border: $active;
+         color: $lightColor;
+      }
+
+      input:first-child {
+         border: 2px solid $darkColor;
+         background-color: $mOrange !important;
+         color: $darkColor;
+      }
+   }
+
+}
+
+
+// Footer
+.footer {
+   max-width: 100%;
+   min-height: 115px;
+   font-size: .75rem;
+   margin: 0 auto;
+   padding: 1rem;
+   text-align: center;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   background-color: $darkColor;
+   border-top: $active;
+
+   &__text {
+      color: $lightColor;
+      background-color: transparent;
+   }
+
+   a {
+      background-color: $darkColor;
+
+      &:hover {
+         box-shadow: none;
+      }
+
+      img {
+         background-color: $darkColor;
+         width: 75px;
+         height: auto;
+      }
+   }
+}
