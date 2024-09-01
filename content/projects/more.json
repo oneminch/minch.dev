@@ -1,16 +1,16 @@
 {
   "body": [
     {
-      "name": "Deadlines",
-      "description": "An offline deadline tracker I built to track school deadlines",
-      "liveUrl": "https://deadlines.minch.dev",
-      "icon": "vuedotjs",
-      "visual": true
-    },
-    {
       "name": "FontSearch",
       "description": "A search engine for web fonts available on Fontsource",
       "liveUrl": "https://oneminch.github.io/FontSearch/",
+      "icon": "javascript",
+      "visual": true
+    },
+    {
+      "name": "Breathe",
+      "description": "Practice common breathing techniques to reduce stress",
+      "liveUrl": "https://oneminch.github.io/Vanilla-Apps/Breathe/",
       "icon": "javascript",
       "visual": true
     },
@@ -26,13 +26,6 @@
       "description": "A pixel-perfect frontend clone of Netflix made with React",
       "liveUrl": "https://oneminch.github.io/Netflix-Clone/",
       "icon": "react",
-      "visual": true
-    },
-    {
-      "name": "Tomatoes",
-      "description": "Pomodoro timer: Vue + TailwindCSS",
-      "liveUrl": "https://tomatoes.vercel.app",
-      "icon": "vuedotjs",
       "visual": true
     },
     {
