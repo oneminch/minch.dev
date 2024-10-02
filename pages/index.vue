@@ -1,7 +1,8 @@
 <script setup>
   definePageMeta({
     title: "Dawit · Full-Stack Engineer",
-    description: "I craft delightful and accessible systems."
+    description:
+      "I craft delightful and accessible systems using React and Java."
   });
 
   useHead({
@@ -13,18 +14,6 @@
   useSeoMeta({
     ogTitle: () => route.meta.title,
     twitterTitle: () => route.meta.title
-  });
-
-  const skillset = ref({
-    essentials: [
-      "TypeScript",
-      "React",
-      "Vue",
-      "Tailwind CSS",
-      "Node.js",
-      "Postgres"
-    ],
-    tinker: ["Prisma", "Vitest", "Python", "Flask"]
   });
 
   // Fetch latest 2 blog posts
@@ -45,12 +34,12 @@
   <article class="[&>*]:my-4 first:[&>*]:mt-0 [&>hr]:my-6 md:[&>hr]:my-10">
     <!-- Introduction -->
     <section>
-      <h1 class="mb-4 text-2xl md:text-4xl font-semibold">
+      <h1 class="mb-8 text-2xl md:text-4xl font-semibold">
         Hi, I'm Dawit
         <span id="wave">👋</span>
       </h1>
       <p
-        class="mb-8 text-xl md:text-3xl font-medium text-zinc-700 dark:text-zinc-300">
+        class="mb-10 text-xl md:text-3xl font-medium text-zinc-700 dark:text-zinc-300">
         I craft
         <span class="highlight">delightful</span>
         and <span class="highlight">accessible</span>
