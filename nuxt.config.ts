@@ -46,7 +46,9 @@ export default defineNuxtConfig({
     pageTransition: { name: "slide", mode: "out-in" },
     layoutTransition: { name: "slide", mode: "out-in" }
   },
+
   components: [{ path: "~/components", pathPrefix: false }],
+
   content: {
     contentHead: false,
     documentDriven: false,
@@ -59,6 +61,7 @@ export default defineNuxtConfig({
       toc: { depth: 1, searchDepth: 2 }
     }
   },
+
   modules: [
     "@nuxt/content",
     "@nuxtjs/partytown",
@@ -66,13 +69,15 @@ export default defineNuxtConfig({
     "@nuxt/image",
     "@nuxtjs/tailwindcss",
     "@vueuse/nuxt",
-    "nuxt-icon"
+    "@nuxt/icon"
   ],
+
   routeRules: {
     "/": { prerender: true },
     "/**": { prerender: true },
     "/bookmarks": { isr: 3600 }
   },
+
   runtimeConfig: {
     raindropToken: process.env.RAINDROP_TOKEN,
     raindropCollectionId: process.env.RAINDROP_COLLECTION_ID,
@@ -81,6 +86,7 @@ export default defineNuxtConfig({
     resendTo: process.env.RESEND_TO,
     turnstile: { secretKey: process.env.TURNSTILE_SECRET_KEY }
   },
+
   tailwindcss: {
     config: {
       mode: "jit",
@@ -94,8 +100,12 @@ export default defineNuxtConfig({
       plugins: [tailwindTypography]
     }
   },
+
   telemetry: false,
+
   turnstile: {
     siteKey: process.env.TURNSTILE_SITE_KEY
-  }
+  },
+
+  compatibilityDate: "2024-10-02"
 });
