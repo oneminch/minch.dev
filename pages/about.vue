@@ -31,8 +31,7 @@
       <picture>
         <source
           media="(max-width: 1023px)"
-          srcset="/google-search-mobile.png"
-        />
+          srcset="/google-search-mobile.png" />
         <source media="(min-width: 1024px)" srcset="/google-search-wide.png" />
         <nuxt-img
           loading="lazy"
@@ -42,8 +41,7 @@
           height="100"
           src="/google-search-wide.png"
           alt="A screenshot of searching on google 'where do you write code'"
-          class="object-cover w-full mb-1 text-center border rounded-lg border-zinc-200 dark:border-transparent"
-        />
+          class="object-cover w-full mb-1 text-center border rounded-lg border-zinc-200 dark:border-transparent" />
       </picture>
       <figcaption class="text-sm text-center text-zinc-500">
         One of my first ever dev-related lookups: Googling 'where do you write
@@ -58,6 +56,42 @@
       While building a strong technical foundation in college, I dedicated a lot
       of my free time teaching myself web development and building things out.
     </p>
+    <!-- Skills -->
+    <section>
+      <h2 class="py-2 mb-1 text-xl font-semibold">Skills</h2>
+      <!-- Primary Tools -->
+      <p class="mb-3 text-zinc-700 dark:text-zinc-300">
+        My specialty is <span class="subtle-highlight">solving problems</span>,
+        and my toolbox includes:
+      </p>
+      <ul
+        class="grid w-full grid-flow-col-dense grid-rows-3 p-0 pl-2 mb-3 list-disc gap-y-2 lg:w-3/4">
+        <li
+          v-for="skillName in skillset.essentials"
+          :key="skillName"
+          class="text-green-500 list-inside">
+          <span class="font-medium text-zinc-700 dark:text-zinc-300">{{
+            skillName
+          }}</span>
+        </li>
+      </ul>
+      <!-- Secondary Tools -->
+      <p class="mb-3 text-zinc-700 dark:text-zinc-300">
+        I'm
+        <span class="subtle-highlight">always learning</span> and exploring:
+      </p>
+      <ul
+        class="grid w-full grid-flow-col-dense grid-rows-2 p-0 pl-2 mb-3 list-disc gap-y-2 lg:w-3/4">
+        <li
+          v-for="skillName in skillset.tinker"
+          :key="skillName"
+          class="text-green-500 list-inside">
+          <span class="font-medium text-zinc-700 dark:text-zinc-300">{{
+            skillName
+          }}</span>
+        </li>
+      </ul>
+    </section>
     <app-divider class="md:my-6" />
     <p>
       I'm a hobbyist photographer.
@@ -68,12 +102,11 @@
         external
         >My photos on Unsplash</a
       >
-      have been viewed close to 7 million times 🤯.
+      have over 7 million views 🤯.
     </p>
     <br />
     <div
-      class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-2 my-4 [&>img]:ring [&>img]:ring-zinc-300 [&>img]:dark:ring-zinc-800"
-    >
+      class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-2 my-4 [&>img]:ring [&>img]:ring-zinc-300 [&>img]:dark:ring-zinc-800">
       <nuxt-img
         preload
         placeholder
@@ -82,8 +115,7 @@
         height="200"
         src="https://images.unsplash.com/photo-1547847041-a626718b4017"
         alt="A long exposure shot of City Lake Falls in Cookeville, TN"
-        class="object-cover w-full text-center rounded-lg"
-      />
+        class="object-cover w-full text-center rounded-lg" />
       <nuxt-img
         preload
         placeholder
@@ -92,8 +124,7 @@
         height="200"
         src="https://images.unsplash.com/photo-1635372708431-64774de60e20"
         alt="An Xbox controller"
-        class="object-cover w-full text-center rounded-lg"
-      />
+        class="object-cover w-full text-center rounded-lg" />
       <nuxt-img
         preload
         placeholder
@@ -102,8 +133,7 @@
         height="200"
         src="https://images.unsplash.com/photo-1580408485028-225972105876"
         alt="My laptop in a dark environment with a colorful display"
-        class="object-cover w-full text-center rounded-lg"
-      />
+        class="object-cover w-full text-center rounded-lg" />
     </div>
     <br />
     <p>
@@ -111,8 +141,7 @@
       <a
         href="https://playtales.minch.dev"
         class="focus-visible:global-focus focus-visible:rounded no-underline border-b-[.1rem] border-b-green-500/75"
-        target="_blank"
-      >
+        target="_blank">
         a full-stack project
       </a>
       around the idea. My current favorite - 'Banishers: Ghosts of New Eden'.
