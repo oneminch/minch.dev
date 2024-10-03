@@ -62,7 +62,8 @@
       <h3 class="font-bold">{{ blogTitle }}</h3>
       <!-- Publish Date -->
       <p class="text-xs text-zinc-400 mt-[.125rem]">
-        Published {{ lastUpdateTime }} &bull; {{ pageviews }} Views
+        Published {{ lastUpdateTime }}
+        <span v-if="pageviews !== null"> &bull; {{ pageviews }} Views </span>
       </p>
     </div>
   </nuxt-link>
