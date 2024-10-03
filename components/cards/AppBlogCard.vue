@@ -63,7 +63,7 @@
       <!-- Publish Date -->
       <p class="text-xs text-zinc-400 mt-[.125rem]">
         Published {{ lastUpdateTime }}
-        <span v-if="pageviews !== null"> &bull; {{ pageviews }} Views </span>
+        <span v-if="pageviews !== null"> &bull; {{ pageviews }} Views</span>
       </p>
     </div>
   </nuxt-link>
