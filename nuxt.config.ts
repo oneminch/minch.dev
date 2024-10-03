@@ -1,5 +1,3 @@
-import tailwindTypography from "@tailwindcss/typography";
-
 export default defineNuxtConfig({
   app: {
     rootId: "app",
@@ -46,9 +44,7 @@ export default defineNuxtConfig({
     pageTransition: { name: "slide", mode: "out-in" },
     layoutTransition: { name: "slide", mode: "out-in" }
   },
-
   components: [{ path: "~/components", pathPrefix: false }],
-
   content: {
     contentHead: false,
     documentDriven: false,
@@ -56,28 +52,24 @@ export default defineNuxtConfig({
       theme: "github-dark",
       preload: ["py"]
     },
-    ignores: ["drafts", "template.md", "/drafts/", "\\.yml$"],
     markdown: {
       toc: { depth: 1, searchDepth: 2 }
     }
   },
-
   modules: [
     "@nuxt/content",
-    "@nuxtjs/partytown",
-    "@nuxtjs/turnstile",
+    "@nuxt/icon",
     "@nuxt/image",
+    "@nuxtjs/partytown",
     "@nuxtjs/tailwindcss",
-    "@vueuse/nuxt",
-    "@nuxt/icon"
+    "@nuxtjs/turnstile",
+    "@vueuse/nuxt"
   ],
-
   routeRules: {
     "/": { prerender: true },
     "/**": { prerender: true },
     "/bookmarks": { isr: 3600 }
   },
-
   runtimeConfig: {
     raindropToken: process.env.RAINDROP_TOKEN,
     raindropCollectionId: process.env.RAINDROP_COLLECTION_ID,
@@ -88,30 +80,8 @@ export default defineNuxtConfig({
     umamiWebsiteId: process.env.UMAMI_WEBSITE_ID,
     turnstile: { secretKey: process.env.TURNSTILE_SECRET_KEY }
   },
-
-  tailwindcss: {
-    config: {
-      mode: "jit",
-      darkMode: "class",
-      content: [
-        "./app.vue",
-        "./components/**/*.vue",
-        "./layouts/**/*.vue",
-        "./pages/**/*.vue"
-      ],
-      plugins: [tailwindTypography]
-    }
-  },
-
   telemetry: false,
-
   turnstile: {
     siteKey: process.env.TURNSTILE_SITE_KEY
-  },
-
-  compatibilityDate: "2024-10-02",
-
-  devtools: {
-    enabled: true
   }
 });
