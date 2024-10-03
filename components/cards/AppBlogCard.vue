@@ -19,19 +19,26 @@
       day: "numeric"
     });
   });
+
+  const { data } = await useLazyAsyncData(() =>
+    $fetch(`/api/pageviews`, {
+      query: { url },
+      method: "GET"
+    })
+  );
+
+  const pageviews = computed(() => data.value.pageviews);
 </script>
 
 <!-- Blog: Card -->
 <template>
   <nuxt-link
     class="focus-visible:global-focus rounded-xl w-full p-0 overflow-hidden flex flex-col border-none bg-none bg-transparent dark:bg-transparent [&_img]:hover:scale-105"
-    :to="url"
-  >
+    :to="url">
     <!-- Blog Cover Image -->
     <div
       v-if="coverImage"
-      class="flex items-center justify-center flex-shrink-0 w-full h-32 mr-1 overflow-hidden card-style rounded-xl"
-    >
+      class="flex items-center justify-center flex-shrink-0 w-full h-32 mr-1 overflow-hidden card-style rounded-xl">
       <nuxt-img
         preload
         placeholder
@@ -39,8 +46,7 @@
         height="325"
         :src="coverImage"
         :alt="`Cover Image for an Article Titled ${blogTitle}`"
-        class="object-cover w-full h-auto text-center"
-      />
+        class="object-cover w-full h-auto text-center" />
     </div>
     <div class="flex flex-col justify-between flex-shrink-0 w-full p-2">
       <!-- Blog Tags -->
@@ -48,8 +54,7 @@
         <li
           class="px-2 py-[.125rem] inline-block rounded-full font-medium font-mono text-xs mr-1 bg-zinc-300/75 dark:bg-zinc-700/75 text-zinc-800 dark:text-zinc-100"
           v-for="tag in tags"
-          :key="tag"
-        >
+          :key="tag">
           {{ tag }}
         </li>
       </ul>
@@ -57,7 +62,7 @@
       <h3 class="font-bold">{{ blogTitle }}</h3>
       <!-- Publish Date -->
       <p class="text-xs text-zinc-400 mt-[.125rem]">
-        Published {{ lastUpdateTime }}
+        Published {{ lastUpdateTime }} &bull; {{ pageviews }} Views
       </p>
     </div>
   </nuxt-link>

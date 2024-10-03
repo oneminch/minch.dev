@@ -84,6 +84,8 @@ export default defineNuxtConfig({
     resendApiKey: process.env.RESEND_API_KEY,
     resendFrom: process.env.RESEND_FROM,
     resendTo: process.env.RESEND_TO,
+    umamiApiToken: process.env.UMAMI_API_TOKEN,
+    umamiWebsiteId: process.env.UMAMI_WEBSITE_ID,
     turnstile: { secretKey: process.env.TURNSTILE_SECRET_KEY }
   },
 
@@ -107,5 +109,9 @@ export default defineNuxtConfig({
     siteKey: process.env.TURNSTILE_SITE_KEY
   },
 
-  compatibilityDate: "2024-10-02"
+  compatibilityDate: "2024-10-02",
+
+  devtools: {
+    enabled: true
+  }
 });
