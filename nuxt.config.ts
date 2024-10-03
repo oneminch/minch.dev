@@ -107,11 +107,5 @@ export default defineNuxtConfig({
 
   turnstile: {
     siteKey: process.env.TURNSTILE_SITE_KEY
-  },
-
-  compatibilityDate: "2024-10-02",
-
-  devtools: {
-    enabled: true
   }
 });
