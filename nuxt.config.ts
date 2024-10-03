@@ -47,7 +47,6 @@ export default defineNuxtConfig({
   components: [{ path: "~/components", pathPrefix: false }],
   content: {
     contentHead: false,
-    documentDriven: false,
     highlight: {
       theme: "github-dark",
       preload: ["py"]
@@ -57,13 +56,13 @@ export default defineNuxtConfig({
     }
   },
   modules: [
-    "@nuxt/content",
-    "@nuxt/icon",
     "@nuxt/image",
     "@nuxtjs/partytown",
-    "@nuxtjs/tailwindcss",
     "@nuxtjs/turnstile",
-    "@vueuse/nuxt"
+    "@vueuse/nuxt",
+    "nuxt-icon",
+    "@nuxtjs/tailwindcss",
+    "@nuxt/content"
   ],
   routeRules: {
     "/": { prerender: true },
