@@ -6,12 +6,12 @@
 
   const skillset = ref({
     essentials: [
-      "TypeScript",
       "React",
-      "Vue",
+      "Java",
+      "TypeScript",
       "Tailwind CSS",
-      "Node.js",
-      "Postgres"
+      "Postgres",
+      "Node.js"
     ],
     tinker: ["Prisma", "Vitest", "Python", "Flask"]
   });

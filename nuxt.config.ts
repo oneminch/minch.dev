@@ -49,7 +49,6 @@ export default defineNuxtConfig({
   components: [{ path: "~/components", pathPrefix: false }],
   content: {
     contentHead: false,
-    documentDriven: false,
     highlight: {
       theme: "github-dark",
       preload: ["py"]
@@ -79,6 +78,8 @@ export default defineNuxtConfig({
     resendApiKey: process.env.RESEND_API_KEY,
     resendFrom: process.env.RESEND_FROM,
     resendTo: process.env.RESEND_TO,
+    umamiApiToken: process.env.UMAMI_API_TOKEN,
+    umamiWebsiteId: process.env.UMAMI_WEBSITE_ID,
     turnstile: { secretKey: process.env.TURNSTILE_SECRET_KEY }
   },
   tailwindcss: {
