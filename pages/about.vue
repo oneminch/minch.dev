@@ -3,6 +3,18 @@
     title: "About",
     description: "Things About Me."
   });
+
+  const skillset = ref({
+    essentials: [
+      "TypeScript",
+      "React",
+      "Vue",
+      "Tailwind CSS",
+      "Node.js",
+      "Postgres"
+    ],
+    tinker: ["Prisma", "Vitest", "Python", "Flask"]
+  });
 </script>
 
 <!-- About Page -->
@@ -57,41 +69,39 @@
       of my free time teaching myself web development and building things out.
     </p>
     <!-- Skills -->
-    <section>
-      <h2 class="py-2 mb-1 text-xl font-semibold">Skills</h2>
-      <!-- Primary Tools -->
-      <p class="mb-3 text-zinc-700 dark:text-zinc-300">
-        My specialty is <span class="subtle-highlight">solving problems</span>,
-        and my toolbox includes:
-      </p>
-      <ul
-        class="grid w-full grid-flow-col-dense grid-rows-3 p-0 pl-2 mb-3 list-disc gap-y-2 lg:w-3/4">
-        <li
-          v-for="skillName in skillset.essentials"
-          :key="skillName"
-          class="text-green-500 list-inside">
-          <span class="font-medium text-zinc-700 dark:text-zinc-300">{{
-            skillName
-          }}</span>
-        </li>
-      </ul>
-      <!-- Secondary Tools -->
-      <p class="mb-3 text-zinc-700 dark:text-zinc-300">
-        I'm
-        <span class="subtle-highlight">always learning</span> and exploring:
-      </p>
-      <ul
-        class="grid w-full grid-flow-col-dense grid-rows-2 p-0 pl-2 mb-3 list-disc gap-y-2 lg:w-3/4">
-        <li
-          v-for="skillName in skillset.tinker"
-          :key="skillName"
-          class="text-green-500 list-inside">
-          <span class="font-medium text-zinc-700 dark:text-zinc-300">{{
-            skillName
-          }}</span>
-        </li>
-      </ul>
-    </section>
+    <h2 class="py-2 mb-1 text-xl font-semibold">Skills</h2>
+    <!-- Primary Tools -->
+    <p class="mb-3 text-zinc-700 dark:text-zinc-300">
+      My specialty is <span class="subtle-highlight">solving problems</span>,
+      and my toolbox includes:
+    </p>
+    <ul
+      class="grid w-full grid-flow-col-dense grid-rows-3 p-0 pl-2 mb-3 list-disc gap-y-2 lg:w-3/4">
+      <li
+        v-for="skillName in skillset.essentials"
+        :key="skillName"
+        class="text-green-500 list-inside">
+        <span class="font-medium text-zinc-700 dark:text-zinc-300">{{
+          skillName
+        }}</span>
+      </li>
+    </ul>
+    <!-- Secondary Tools -->
+    <p class="mb-3 text-zinc-700 dark:text-zinc-300">
+      I'm
+      <span class="subtle-highlight">always learning</span> and exploring:
+    </p>
+    <ul
+      class="grid w-full grid-flow-col-dense grid-rows-2 p-0 pl-2 mb-3 list-disc gap-y-2 lg:w-3/4">
+      <li
+        v-for="skillName in skillset.tinker"
+        :key="skillName"
+        class="text-green-500 list-inside">
+        <span class="font-medium text-zinc-700 dark:text-zinc-300">{{
+          skillName
+        }}</span>
+      </li>
+    </ul>
     <app-divider class="md:my-6" />
     <p>
       I'm a hobbyist photographer.
