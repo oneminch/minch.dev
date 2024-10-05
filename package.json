@@ -18,7 +18,7 @@
     "@tailwindcss/typography": "^0.5.15",
     "@vueuse/nuxt": "^11.1.0",
     "nuxt": "^3.13.2",
-    "nuxt-icon": "1.0.0-beta.7"
+    "@nuxt/icon": "^1.5.3"
   },
   "dependencies": {
     "@fontsource/roboto-mono": "^5.1.0",

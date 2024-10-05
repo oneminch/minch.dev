@@ -66,7 +66,7 @@ export default defineNuxtConfig({
     "@nuxt/image",
     "@nuxtjs/tailwindcss",
     "@vueuse/nuxt",
-    "nuxt-icon"
+    "@nuxt/icon"
   ],
   routeRules: {
     "/": { prerender: true },
