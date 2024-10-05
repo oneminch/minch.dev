@@ -9,22 +9,22 @@
     "postinstall": "nuxi prepare"
   },
   "devDependencies": {
-    "@nuxt/content": "^2.11.0",
+    "@nuxt/content": "^2.13.2",
     "@nuxt/devtools": "1.0.0-beta.1",
-    "@nuxt/image": "^1.3.0",
-    "@nuxtjs/partytown": "^1.4.0",
-    "@nuxtjs/tailwindcss": "^6.11.2",
+    "@nuxt/image": "^1.8.1",
+    "@nuxtjs/partytown": "^1.5.0",
+    "@nuxtjs/tailwindcss": "^6.12.1",
     "@nuxtjs/turnstile": "^0.6.3",
-    "@tailwindcss/typography": "^0.5.10",
-    "@vueuse/nuxt": "^10.7.2",
-    "nuxt": "^3.11.2",
+    "@tailwindcss/typography": "^0.5.15",
+    "@vueuse/nuxt": "^10.11.1",
+    "nuxt": "^3.13.2",
     "nuxt-icon": "^0.4.2"
   },
   "dependencies": {
-    "@fontsource/roboto-mono": "^5.0.16",
-    "@fontsource/space-grotesk": "^5.0.16",
-    "@vueuse/components": "^10.7.2",
-    "axios": "^1.6.7",
+    "@fontsource/roboto-mono": "^5.1.0",
+    "@fontsource/space-grotesk": "^5.1.0",
+    "@vueuse/components": "^10.11.1",
+    "axios": "^1.7.7",
     "resend": "^2.1.0"
   }
 }
