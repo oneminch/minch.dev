@@ -58,6 +58,10 @@ export default defineNuxtConfig({
       toc: { depth: 1, searchDepth: 2 }
     }
   },
+  icon: {
+    mode: "svg",
+    serverBundle: "local"
+  },
   modules: [
     "@nuxt/content",
     "@nuxtjs/partytown",
