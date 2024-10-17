@@ -60,7 +60,9 @@ export default defineNuxtConfig({
   },
   icon: {
     mode: "svg",
-    serverBundle: "local"
+    clientBundle: {
+      scan: true
+    }
   },
   modules: [
     "@nuxt/content",
