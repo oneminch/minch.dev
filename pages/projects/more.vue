@@ -40,8 +40,7 @@
       <template v-if="pending">
         <app-project-skeleton
           v-for="skeletonId in generateKeys(4)"
-          :key="skeletonId"
-        />
+          :key="skeletonId" />
       </template>
       <template v-else>
         <app-project-card
@@ -50,13 +49,12 @@
           :project-title="project.name"
           :project-description="project.description"
           :project-url="project.liveUrl"
-          :icon="project.icon"
-        />
+          :icon="project.icon" />
       </template>
     </section>
-    <app-divider class="my-6 md:my-8" />
+    <!-- <app-divider class="my-6 md:my-8" /> -->
     <!-- Non-visual Projects -->
-    <section class="grid grid-cols-1 gap-4 mb-4 lg:grid-cols-2">
+    <!-- <section class="grid grid-cols-1 gap-4 mb-4 lg:grid-cols-2">
       <template v-if="pending">
         <app-project-skeleton
           v-for="skeletonId in generateKeys(2)"
@@ -73,16 +71,14 @@
           :icon="project.icon"
         />
       </template>
-    </section>
+    </section> -->
     <!-- Link to Featured Projects -->
     <nuxt-link
       to="/projects"
-      class="flex items-center justify-center w-24 py-2 mt-6 font-semibold no-underline duration-150 bg-green-500 rounded-md focus-visible:global-focus text-zinc-800 group/hover-effect"
-    >
+      class="flex items-center justify-center w-24 py-2 mt-6 font-semibold no-underline duration-150 bg-green-500 rounded-md focus-visible:global-focus text-zinc-800 group/hover-effect">
       <Icon
         name="heroicons:chevron-left-20-solid"
-        class="mr-1 group-hover/hover-effect:-translate-x-1"
-      />
+        class="mr-1 group-hover/hover-effect:-translate-x-1" />
       Back
     </nuxt-link>
   </article>
