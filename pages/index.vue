@@ -43,7 +43,7 @@
         I craft
         <span class="highlight">delightful</span>
         and <span class="highlight">accessible</span>
-        systems using React and Java.
+        systems using React.
       </p>
       <!-- <p class="my-2 text-zinc-700 dark:text-zinc-300">
         I am
