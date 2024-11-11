@@ -53,7 +53,7 @@ export default defineNuxtConfig({
     contentHead: false,
     highlight: {
       theme: "github-dark",
-      langs: ["python"]
+      preload: ["py"] // new API: langs
     },
     ignores: ["drafts", "template.md", "/drafts/", "\\.yml$"],
     markdown: {
