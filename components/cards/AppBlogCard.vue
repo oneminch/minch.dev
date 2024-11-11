@@ -61,7 +61,7 @@
       <!-- Publish Date -->
       <p class="text-xs text-zinc-400 mt-[.125rem]">
         Published {{ lastUpdateTime }}
-        <span v-show="data.pageviews !== null">
+        <span v-show="data.pageviews !== null && data.pageviews > 5">
           &bull; {{ data.pageviews }} reads
         </span>
       </p>
