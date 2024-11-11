@@ -26,7 +26,8 @@ Create a plugin file in your `plugins/` directory, which is where we'll have acc
 
 We can define and register our custom directive there:
 
-```ts [~/plugins/my-directives.ts]
+```ts
+// ~/plugins/my-directives.ts
 export default defineNuxtPlugin((nuxtApp) => {
   nuxtApp.vueApp.directive("highlight", {
     mounted(el, binding) {
@@ -66,7 +67,7 @@ app.directive("highlight", {
 We can then use the directive on any element globally within our app:
 
 ```html
-<p v-highlight="'yellow'">This text will be yello</p>
+<p v-highlight="'yellow'">This text will be highlighted!</p>
 ```
 
 ### How about in Nuxt?
@@ -77,7 +78,8 @@ Plugins in Nuxt can be used to add functionality to an application at the Vue ap
 
 In Nuxt, we can create a plugin file in the `plugins/` directory, which we can use to globally define and register our custom directives:
 
-```ts [~/plugins/my-directives.ts]
+```ts
+// ~/plugins/my-directives.ts
 export default defineNuxtPlugin((nuxtApp) => {
   nuxtApp.vueApp.directive("highlight", {
     mounted(el, binding) {
