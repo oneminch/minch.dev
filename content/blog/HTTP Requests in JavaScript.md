@@ -10,6 +10,7 @@ image: /content/cover/http-requests-in-javascript.png
 cover_image: https://raw.githubusercontent.com/oneminch/portfolio/main/public/content/cover/http-requests-in-javascript.png
 canonical_url: https://minch.dev/blog/http-requests-in-javascript
 published_on: "2023-10-24"
+featured: true
 ---
 
 Making requests is the heart of the Internet. Whenever you are browsing the internet, all what you are doing is requesting information from servers, which are basically interconnected computers. It's the foundation of how websites work. A simple case is a person typing "www.duckduckgo.com" and getting the DuckDuckGo search page. A request is made to a web server, which then sends back the files for that page, which will be rendered in the browser as a web page. This is made possible by a protocol known as HTTP (HyperText Transfer Protocol). On MDN web docs, the HTTP protocol is described as:

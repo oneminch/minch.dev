@@ -23,6 +23,7 @@ head:
       content: summary_large_image
 published: true
 published_on: "2024-04-15"
+featured: true
 ---
 
 This article discusses how to get started with Nuxt Content to create a minimal blog, and how to work with remote Markdown files.

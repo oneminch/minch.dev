@@ -16,10 +16,14 @@
     twitterTitle: () => route.meta.title
   });
 
-  // Fetch latest 2 blog posts
+  // Fetch 2 featured blog posts
   const { pending: blogsPending, data: blogPosts } = await useLazyAsyncData(
     "featured-posts",
-    () => queryContent("/blog").sort({ published_on: -1 }).limit(2).find()
+    () =>
+      queryContent("/blog")
+        .where({ featured: true })
+        .sort({ published_on: -1 })
+        .find()
   );
 
   // Fetch 2 featured projects
