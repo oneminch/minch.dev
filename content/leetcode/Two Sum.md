@@ -46,6 +46,33 @@ def twoSum(nums: List[int], target: int) -> List[int]:
 
 **(TypeScript, technically)**
 
+#### Two Pointer Approach (Sorted Input)
+
+```typescript
+function twoSum(nums: number[], target: number): number[] {
+  let i = 0,
+    j = nums.length - 1;
+
+  while (i < j) {
+    const currSum = nums[i] + nums[j];
+
+    if (currSum === target) {
+      break;
+    }
+
+    if (currSum < target) {
+      i += 1;
+    } else {
+      j -= 1;
+    }
+  }
+
+  return [i, j];
+}
+```
+
+#### Hash Table Approach
+
 ```typescript
 function twoSum(nums: number[], target: number): number[] {
   const hashTable = {};
