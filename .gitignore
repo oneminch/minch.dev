@@ -23,3 +23,5 @@ seeds
 .next
 pods/service-connections
 
+# Misc
+TODO.md

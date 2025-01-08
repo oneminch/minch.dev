@@ -4,7 +4,7 @@
     description: "Things About Me."
   });
 
-  const skillset = ref({
+  const skillset = {
     essentials: [
       "React",
       "Java",
@@ -14,7 +14,7 @@
       "Node.js"
     ],
     tinker: ["Prisma", "Vitest", "Python", "Flask"]
-  });
+  };
 </script>
 
 <!-- About Page -->
