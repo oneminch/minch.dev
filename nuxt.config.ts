@@ -1,5 +1,4 @@
 import tailwindcss from "@tailwindcss/vite";
-// import tailwindTypography from "@tailwindcss/typography";
 
 export default defineNuxtConfig({
   app: {
@@ -71,10 +70,6 @@ export default defineNuxtConfig({
     }
   },
 
-  imports: {
-    autoImport: true
-  },
-
   modules: [
     "@nuxt/content",
     "@nuxtjs/partytown",
@@ -100,20 +95,6 @@ export default defineNuxtConfig({
     umamiWebsiteId: process.env.UMAMI_WEBSITE_ID,
     turnstile: { secretKey: process.env.TURNSTILE_SECRET_KEY }
   },
-
-  // tailwindcss: {
-  //   config: {
-  //     mode: "jit",
-  //     darkMode: "class",
-  //     content: [
-  //       "./app.vue",
-  //       "./components/**/*.vue",
-  //       "./layouts/**/*.vue",
-  //       "./pages/**/*.vue"
-  //     ],
-  //     plugins: [tailwindTypography]
-  //   }
-  // },
 
   telemetry: false,
 
