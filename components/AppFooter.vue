@@ -2,8 +2,7 @@
 <template>
   <footer class="flex items-center justify-start h-8">
     <p
-      class="flex items-center text-base font-medium text-zinc-400 dark:text-zinc-500"
-    >
+      class="flex items-center text-base font-medium text-zinc-400 dark:text-zinc-500">
       Built from scratch with:
       <nuxt-link
         class="icon-link focus-visible:global-focus text-[#00DC82]"
@@ -11,8 +10,7 @@
         aria-label="NuxtJS Website"
         target="_blank"
         title="NuxtJS"
-        external
-      >
+        external>
         <Icon name="simple-icons:nuxtdotjs" />
       </nuxt-link>
       <span>&bull;</span>
@@ -22,8 +20,7 @@
         aria-label="Tailwind CSS Website"
         target="_blank"
         title="Tailwind CSS"
-        external
-      >
+        external>
         <Icon name="simple-icons:tailwindcss" />
       </nuxt-link>
       <span>&bull;</span>
@@ -33,8 +30,7 @@
         aria-label="Vercel Website"
         target="_blank"
         title="Vercel"
-        external
-      >
+        external>
         <Icon name="simple-icons:vercel" />
       </nuxt-link>
     </p>
@@ -42,11 +38,13 @@
 </template>
 
 <style scoped>
+  @reference "../assets/css/main.css";
+
   footer {
-    @apply mt-10 mb-6 !important;
+    @apply !mt-10 !mb-6;
   }
 
   a:last-of-type {
-    @apply mr-0 !important;
+    @apply !mr-0;
   }
 </style>

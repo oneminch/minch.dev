@@ -35,11 +35,12 @@
 
   <!-- Mobile Navigation -->
   <app-nav
-    class="flex ring-1 ring-inset ring-green-500 md:hidden after:shadow-2xl"
-  />
+    class="flex ring-1 ring-inset ring-green-500 md:hidden after:shadow-2xl" />
 </template>
 
 <style scoped>
+  @reference "./assets/css/main.css";
+
   #main-content.main-error {
     @apply h-full flex flex-col items-center justify-center;
   }

@@ -14,7 +14,6 @@
     "@nuxt/icon": "^1.10.3",
     "@nuxt/image": "^1.9.0",
     "@nuxtjs/partytown": "^1.6.0",
-    "@nuxtjs/tailwindcss": "^6.13.1",
     "@nuxtjs/turnstile": "^0.9.11",
     "@tailwindcss/typography": "^0.5.16",
     "@vueuse/nuxt": "^11.3.0",
@@ -23,8 +22,10 @@
   "dependencies": {
     "@fontsource/roboto-mono": "^5.1.1",
     "@fontsource/space-grotesk": "^5.1.1",
+    "@tailwindcss/vite": "^4.0.1",
     "@vueuse/components": "^11.3.0",
     "axios": "^1.7.9",
-    "resend": "^4.1.1"
+    "resend": "^4.1.1",
+    "tailwindcss": "^4.0.1"
   }
 }

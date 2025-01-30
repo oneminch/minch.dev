@@ -23,6 +23,6 @@ export default defineEventHandler(async (event) => {
 
     return { pageviews: data.pageviews.value };
   } catch (error) {
-    return error;
+    return { pageviews: 0 };
   }
 });

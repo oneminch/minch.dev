@@ -1,4 +1,5 @@
-import tailwindTypography from "@tailwindcss/typography";
+import tailwindcss from "@tailwindcss/vite";
+// import tailwindTypography from "@tailwindcss/typography";
 
 export default defineNuxtConfig({
   app: {
@@ -61,6 +62,8 @@ export default defineNuxtConfig({
     }
   },
 
+  css: ["~/assets/css/main.css"],
+
   icon: {
     mode: "svg",
     clientBundle: {
@@ -68,12 +71,15 @@ export default defineNuxtConfig({
     }
   },
 
+  imports: {
+    autoImport: true
+  },
+
   modules: [
     "@nuxt/content",
     "@nuxtjs/partytown",
     "@nuxtjs/turnstile",
     "@nuxt/image",
-    "@nuxtjs/tailwindcss",
     "@vueuse/nuxt",
     "@nuxt/icon"
   ],
@@ -95,19 +101,19 @@ export default defineNuxtConfig({
     turnstile: { secretKey: process.env.TURNSTILE_SECRET_KEY }
   },
 
-  tailwindcss: {
-    config: {
-      mode: "jit",
-      darkMode: "class",
-      content: [
-        "./app.vue",
-        "./components/**/*.vue",
-        "./layouts/**/*.vue",
-        "./pages/**/*.vue"
-      ],
-      plugins: [tailwindTypography]
-    }
-  },
+  // tailwindcss: {
+  //   config: {
+  //     mode: "jit",
+  //     darkMode: "class",
+  //     content: [
+  //       "./app.vue",
+  //       "./components/**/*.vue",
+  //       "./layouts/**/*.vue",
+  //       "./pages/**/*.vue"
+  //     ],
+  //     plugins: [tailwindTypography]
+  //   }
+  // },
 
   telemetry: false,
 
@@ -115,5 +121,6 @@ export default defineNuxtConfig({
     siteKey: process.env.TURNSTILE_SITE_KEY
   },
 
-  compatibilityDate: "2024-11-04"
+  compatibilityDate: "2024-11-04",
+  vite: { plugins: [tailwindcss()] }
 });
