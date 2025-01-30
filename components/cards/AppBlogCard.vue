@@ -36,7 +36,7 @@
     <!-- Blog Cover Image -->
     <div
       v-if="coverImage"
-      class="flex items-center justify-center flex-shrink-0 w-full h-32 mr-1 overflow-hidden card-style rounded-xl">
+      class="flex items-center justify-center shrink-0 w-full h-32 mr-1 overflow-hidden card-style rounded-xl">
       <nuxt-img
         preload
         placeholder
@@ -46,7 +46,7 @@
         :alt="`Cover Image for an Article Titled ${blogTitle}`"
         class="object-cover w-full h-auto text-center" />
     </div>
-    <div class="flex flex-col justify-between flex-shrink-0 w-full p-2">
+    <div class="flex flex-col justify-between shrink-0 w-full p-2">
       <!-- Blog Tags -->
       <ul class="p-0 mb-2">
         <li
@@ -61,7 +61,7 @@
       <!-- Publish Date -->
       <p class="text-xs text-zinc-400 mt-[.125rem]">
         Published {{ lastUpdateTime }}
-        <span v-show="data.pageviews !== null && data.pageviews > 5">
+        <span v-if="data && data.pageviews > 10">
           &bull; {{ data.pageviews }} reads
         </span>
       </p>

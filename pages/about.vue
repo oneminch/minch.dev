@@ -107,7 +107,7 @@
       I'm a hobbyist photographer.
       <a
         href="https://unsplash.com/@oneminch"
-        class="focus-visible:global-focus focus-visible:rounded no-underline border-b-[.1rem] border-b-green-500/75"
+        class="focus-visible:global-focus focus-visible:rounded-sm no-underline border-b-[.1rem] border-b-green-500/75"
         target="_blank"
         external
         >My photos on Unsplash</a
@@ -150,7 +150,7 @@
       I also enjoy playing story-driven games. So much so that I built
       <a
         href="https://playtales.minch.dev"
-        class="focus-visible:global-focus focus-visible:rounded no-underline border-b-[.1rem] border-b-green-500/75"
+        class="focus-visible:global-focus focus-visible:rounded-sm no-underline border-b-[.1rem] border-b-green-500/75"
         target="_blank">
         a full-stack project
       </a>
@@ -160,6 +160,8 @@
 </template>
 
 <style scoped>
+  @reference "../assets/css/main.css";
+
   p {
     @apply text-zinc-700 dark:text-zinc-300 my-4 text-base leading-relaxed;
   }

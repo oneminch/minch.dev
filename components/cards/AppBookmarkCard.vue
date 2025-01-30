@@ -16,8 +16,7 @@
     target="_blank"
     external
     :to="bookmark.url"
-    noPrefetch
-  >
+    noPrefetch>
     <nuxt-img
       preload
       placeholder
@@ -26,15 +25,13 @@
       width="48"
       height="48"
       :src="bookmark.cover"
-      class="flex-shrink-0 object-cover w-10 h-8 mr-3 overflow-hidden text-xs text-center rounded bg-zinc-200 dark:bg-zinc-700"
-      :alt="`Cover Image for External Article Titled ${bookmark.title}`"
-    />
+      class="shrink-0 object-cover w-10 h-8 mr-3 overflow-hidden text-xs text-center rounded-sm bg-zinc-200 dark:bg-zinc-700"
+      :alt="`Cover Image for External Article Titled ${bookmark.title}`" />
     <span>{{ bookmark.title }}</span>
     <Icon
       name="heroicons:arrow-up-right-20-solid"
       size="1.25rem"
       aria-label="Opens in a new tab"
-      class="flex-shrink-0 p-1 ml-auto text-green-500 rounded-full bg-zinc-200 dark:bg-zinc-800 w-7 h-7"
-    />
+      class="shrink-0 p-1 ml-auto text-green-500 rounded-full bg-zinc-200 dark:bg-zinc-800 w-7 h-7" />
   </nuxt-link>
 </template>

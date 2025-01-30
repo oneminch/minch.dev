@@ -58,29 +58,24 @@
         height="300"
         :src="doc.image"
         :alt="doc.title"
-        class="text-center"
-      />
+        class="text-center" />
 
       <!-- Table of Contents -->
       <template v-if="doc.body.toc.links.length > 0">
         <details
           open
-          class="flex items-center self-start px-4 py-3 mb-2 bg-white border rounded-lg dark:bg-zinc-800 border-zinc-200 dark:border-zinc-700"
-        >
+          class="flex items-center self-start px-4 py-3 mb-2 bg-white border rounded-lg dark:bg-zinc-800 border-zinc-200 dark:border-zinc-700">
           <summary
-            class="flex items-center list-none appearance-none cursor-pointer focus:outline-none group"
-          >
+            class="flex items-center list-none appearance-none cursor-pointer focus:outline-hidden group">
             <span class="inline-block mr-2 text-lg font-bold">Outline</span>
             <Icon
               class="text-green-500 arrow-right group-focus-visible:global-focus rounded-full"
               name="heroicons:chevron-right-20-solid"
-              size="1.5rem"
-            />
+              size="1.5rem" />
             <Icon
               class="text-green-500 arrow-down group-focus-visible:global-focus rounded-full"
               name="heroicons:chevron-down-20-solid"
-              size="1.5rem"
-            />
+              size="1.5rem" />
           </summary>
 
           <ol class="my-1">
@@ -106,6 +101,8 @@
 </template>
 
 <style scoped>
+  @reference "../../assets/css/main.css";
+
   img {
     @apply w-full h-auto object-cover bg-cover origin-center border border-zinc-300 dark:border-zinc-600;
   }
