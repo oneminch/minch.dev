@@ -41,10 +41,10 @@
   @reference "../assets/css/main.css";
 
   footer {
-    @apply !mt-10 !mb-6;
+    @apply mt-10! mb-6!;
   }
 
   a:last-of-type {
-    @apply !mr-0;
+    @apply mr-0!;
   }
 </style>

@@ -45,12 +45,11 @@
       </h1>
 
       <!-- Solution Tags -->
-      <ul class="p-0 mb-1">
+      <ul class="p-0! mb-1 flex items-center gap-x-1">
         <li
-          class="px-2 py-[.125rem] inline-block rounded-full font-semibold font-mono text-xs mr-1 border border-zinc-300 dark:border-zinc-500 bg-zinc-200 dark:bg-zinc-600 text-zinc-800 dark:text-zinc-100"
+          class="px-2 py-[.125rem] inline-block rounded-full font-semibold font-mono text-xs border border-zinc-300 dark:border-zinc-500 bg-zinc-200 dark:bg-zinc-600 text-zinc-800 dark:text-zinc-100"
           v-for="tag in doc.tags"
-          :key="tag"
-        >
+          :key="tag">
           {{ tag }}
         </li>
       </ul>
@@ -62,8 +61,7 @@
           v-if="doc.problemUrl"
           target="_blank"
           :to="doc.problemUrl"
-          external
-        >
+          external>
           {{ doc.title }}
         </nuxt-link>
       </p>

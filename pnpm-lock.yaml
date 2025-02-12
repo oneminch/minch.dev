@@ -46,7 +46,7 @@ importers:
         specifier: ^1.6.0
         version: 1.6.0(magicast@0.3.5)
       '@nuxtjs/turnstile':
-        specifier: ^0.9.12
+        specifier: ^0.9.11
         version: 0.9.12(@nuxt/scripts@0.9.4(@nuxt/devtools@1.7.0(rollup@4.34.6)(vite@6.1.0(@types/node@22.13.1)(jiti@2.4.2)(lightningcss@1.29.1)(terser@5.38.2)(tsx@4.19.2)(yaml@2.7.0))(vue@3.5.13(typescript@5.6.3)))(@unocss/webpack@0.65.4(rollup@4.34.6)(webpack@5.95.0(esbuild@0.24.2)))(@vue/compiler-core@3.5.13)(axios@1.7.9)(change-case@5.4.4)(db0@0.2.4)(fuse.js@7.1.0)(ioredis@5.5.0)(magicast@0.3.5)(nuxt@3.15.4(@parcel/watcher@2.5.1)(@types/node@22.13.1)(db0@0.2.4)(encoding@0.1.13)(ioredis@5.5.0)(lightningcss@1.29.1)(magicast@0.3.5)(rollup@4.34.6)(terser@5.38.2)(tsx@4.19.2)(typescript@5.6.3)(vite@6.1.0(@types/node@22.13.1)(jiti@2.4.2)(lightningcss@1.29.1)(terser@5.38.2)(tsx@4.19.2)(yaml@2.7.0))(yaml@2.7.0))(postcss@8.5.2)(rollup@4.34.6)(typescript@5.6.3)(vite@6.1.0(@types/node@22.13.1)(jiti@2.4.2)(lightningcss@1.29.1)(terser@5.38.2)(tsx@4.19.2)(yaml@2.7.0))(vue@3.5.13(typescript@5.6.3))(webpack@5.95.0(esbuild@0.24.2)))(magicast@0.3.5)
       '@tailwindcss/typography':
         specifier: ^0.5.16

@@ -27,9 +27,9 @@
 
   #sidebar {
     /* Gradient Border: Content Backdrop */
-    @apply before:content-[''] before:-z-10 before:absolute before:inset-0 md:before:-bottom-2 before:rounded-[calc(.75rem-2px)] dark:before:rounded-[calc(.75rem-1px)] md:before:rounded-b-none dark:md:before:rounded-b-none before:bg-gradient-to-b before:from-white before:to-zinc-50 dark:before:from-zinc-900 dark:before:to-zinc-950;
+    @apply before:content-[''] before:-z-10 before:absolute before:inset-0 md:before:-bottom-2 before:rounded-[calc(.75rem-2px)] dark:before:rounded-[calc(.75rem-1px)] md:before:rounded-b-none dark:md:before:rounded-b-none before:bg-linear-to-b before:from-white before:to-zinc-50 dark:before:from-zinc-900 dark:before:to-zinc-950;
 
     /* Gradient Border: Colorful Backdrop */
-    @apply after:content-[''] after:-z-20 after:absolute after:inset-[-2px] dark:after:inset-[-1px] after:rounded-[.75rem] md:after:rounded-b-none after:bg-gradient-to-b after:from-green-500 after:via-lime-400 after:to-lime-400 md:after:to-transparent after:opacity-75 dark:after:opacity-60;
+    @apply after:content-[''] after:-z-20 after:absolute after:inset-[-2px] dark:after:inset-[-1px] after:rounded-[.75rem] md:after:rounded-b-none after:bg-linear-to-b after:from-green-500 after:via-lime-400 after:to-lime-400 md:after:to-transparent after:opacity-75 dark:after:opacity-60;
   }
 </style>

@@ -40,7 +40,7 @@ span.subtle-highlight {
 }
 
 span.highlight::after {
-  @apply w-full h-px content-[''] rounded-sm absolute -bottom-[1.5px] -left-0 -right-0 bg-gradient-to-r from-green-400 to-lime-400 -z-10 transition-all duration-150 opacity-75 hover:opacity-100;
+  @apply w-full h-px content-[''] rounded-sm absolute -bottom-[1.5px] -left-0 -right-0 bg-linear-to-r from-green-400 to-lime-400 -z-10 transition-all duration-150 opacity-75 hover:opacity-100;
 }
 
 .slide-enter-active,
