@@ -33,14 +33,6 @@ export default defineNuxtConfig({
           rel: "manifest",
           href: "/site.webmanifest"
         }
-      ],
-      script: [
-        {
-          type: "text/partytown",
-          src: process.env.UMAMI_BASE_URL,
-          async: true,
-          "data-website-id": process.env.UMAMI_WEBSITE_ID
-        }
       ]
     },
     pageTransition: { name: "slide", mode: "out-in" },
