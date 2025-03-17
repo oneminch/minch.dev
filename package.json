@@ -11,21 +11,21 @@
   "devDependencies": {
     "@nuxt/content": "^2.13.4",
     "@nuxt/devtools": "^1.7.0",
-    "@nuxt/icon": "^1.10.3",
+    "@nuxt/icon": "^1.11.0",
     "@nuxt/image": "^1.9.0",
     "@nuxtjs/partytown": "^1.6.0",
-    "@nuxtjs/turnstile": "^0.9.12",
+    "@nuxtjs/turnstile": "^0.9.15",
     "@tailwindcss/typography": "^0.5.16",
     "@vueuse/nuxt": "^11.3.0",
-    "nuxt": "^3.15.4"
+    "nuxt": "^3.16.0"
   },
   "dependencies": {
     "@fontsource/roboto-mono": "^5.2.5",
-    "@fontsource/space-grotesk": "^5.2.5",
-    "@tailwindcss/vite": "^4.0.11",
+    "@fontsource/space-grotesk": "^5.2.6",
+    "@tailwindcss/vite": "^4.0.14",
     "@vueuse/components": "^11.3.0",
-    "axios": "^1.8.1",
+    "axios": "^1.8.3",
     "resend": "^4.1.2",
-    "tailwindcss": "^4.0.11"
+    "tailwindcss": "^4.0.14"
   }
 }
