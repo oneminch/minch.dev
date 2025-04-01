@@ -17,15 +17,15 @@
     "@nuxtjs/turnstile": "^0.9.16",
     "@tailwindcss/typography": "^0.5.16",
     "@vueuse/nuxt": "^11.3.0",
-    "nuxt": "^3.16.1"
+    "nuxt": "^3.16.2"
   },
   "dependencies": {
     "@fontsource/roboto-mono": "^5.2.5",
     "@fontsource/space-grotesk": "^5.2.6",
-    "@tailwindcss/vite": "^4.0.16",
+    "@tailwindcss/vite": "^4.1.0",
     "@vueuse/components": "^11.3.0",
     "axios": "^1.8.4",
     "resend": "^4.2.0",
-    "tailwindcss": "^4.0.16"
+    "tailwindcss": "^4.1.0"
   }
 }
