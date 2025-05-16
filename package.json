@@ -27,6 +27,5 @@
     "axios": "^1.9.0",
     "resend": "^4.5.1",
     "tailwindcss": "^4.1.7"
-  },
-  "packageManager": "pnpm@10.11.0"
+  }
 }
