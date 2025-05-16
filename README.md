@@ -5,9 +5,9 @@ The current & third iteration of my portfolio rebuilt from scratch using [Nuxt 3
 - Multi-page
 - Self-hosted Blog
 - Dark Mode
-- Custom Contact Form 
+- Custom Contact Form
 
-![Blog Post Screenshot](/public/blog-post-screenshot.png)
+![Screenshot](/public/screenshot.png)
 
 ## Stack
 
