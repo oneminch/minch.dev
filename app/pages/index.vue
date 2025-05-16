@@ -140,13 +140,10 @@
           </div>
         </div>
         <app-link-card
+          class="row-span-2"
           label="LeetCode"
           icon="fluent-emoji:teacup-without-handle"
           url="/leetcode"></app-link-card>
-        <app-link-card
-          label="Bookmarks"
-          icon="fluent-emoji:bookmark"
-          url="/bookmarks"></app-link-card>
         <app-link-card
           label="Second Brain"
           icon="fluent-emoji:brain"
@@ -167,10 +164,10 @@
   @reference "../assets/css/main.css";
 
   #contact-btn {
-    animation: 1500ms linear 2000ms infinite pulse;
+    animation: 1500ms linear 2000ms infinite pulse-fade;
   }
 
-  @keyframes pulse {
+  @keyframes pulse-fade {
     0% {
       box-shadow: #4ade80 0 0 0 0;
     }
