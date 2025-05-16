@@ -64,7 +64,7 @@
       <template v-if="doc.body.toc.links.length > 0">
         <details
           open
-          class="flex items-center self-start px-4 py-3 mb-2 bg-white border rounded-lg dark:bg-zinc-800 border-zinc-200 dark:border-zinc-700">
+          class="flex flex-col self-start px-4 py-3 mb-2 bg-white border rounded-lg dark:bg-zinc-800 border-zinc-200 dark:border-zinc-700">
           <summary
             class="flex items-center list-none appearance-none cursor-pointer focus:outline-hidden group">
             <span class="inline-block mr-2 text-lg font-bold">Outline</span>

@@ -20,12 +20,12 @@
     });
   });
 
-  const { data } = await useLazyAsyncData(props.url, () =>
-    $fetch(`/api/pageviews`, {
-      query: { url: props.url },
-      method: "GET"
-    })
-  );
+  // const { data } = await useLazyAsyncData(props.url, () =>
+  //   $fetch(`/api/pageviews`, {
+  //     query: { url: props.url },
+  //     method: "GET"
+  //   })
+  // );
 </script>
 
 <!-- Blog: Card -->
@@ -61,9 +61,9 @@
       <!-- Publish Date -->
       <p class="text-xs text-zinc-400 mt-[.125rem]">
         Published {{ lastUpdateTime }}
-        <span v-if="data && data.pageviews > 10">
+        <!-- <span v-if="data && data.pageviews > 10">
           &bull; {{ data.pageviews }} reads
-        </span>
+        </span> -->
       </p>
     </div>
   </nuxt-link>
