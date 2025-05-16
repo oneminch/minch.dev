@@ -1,16 +1,17 @@
 <script setup>
   definePageMeta({
-    title: "Projects",
-    description: "Projects that I am currently working on and have worked on."
+    title: 'Projects',
+    description: 'Projects that I am currently working on and have worked on.'
   });
 
   // Fetch all featured projects
   const { pending, data: allProjects } = await useLazyAsyncData(
-    "projects",
+    'projects',
     () =>
-      queryContent("/projects")
-        .where({ title: { $ne: "More" } })
-        .find()
+      queryCollection('projects')
+        .select('description', 'icon', 'title', 'path')
+        .where('title', 'IS NOT', 'More')
+        .all()
   );
 </script>
 
@@ -23,13 +24,11 @@
     </p>
     <!-- Featured Projects -->
     <section
-      class="grid grid-cols-1 grid-rows-2 gap-4 mb-10 lg:grid-cols-2 lg:grid-flow-row"
-    >
+      class="grid grid-cols-1 grid-rows-2 gap-4 mb-10 lg:grid-cols-2 lg:grid-flow-row">
       <template v-if="pending">
         <app-project-skeleton
           v-for="skeletonId in generateKeys(5)"
-          :key="skeletonId"
-        />
+          :key="skeletonId" />
       </template>
       <template v-else>
         <app-project-card
@@ -38,8 +37,7 @@
           :icon="project.icon"
           :project-title="project.title"
           :project-description="project.description"
-          :project-url="project._path"
-        />
+          :project-url="project.path" />
       </template>
     </section>
     <!-- Link to More Projects -->
@@ -49,8 +47,7 @@
       >More
       <Icon
         name="heroicons:chevron-right-20-solid"
-        class="ml-1 group-hover/hover-effect:translate-x-1"
-      />
+        class="ml-1 group-hover/hover-effect:translate-x-1" />
     </nuxt-link>
   </article>
 </template>

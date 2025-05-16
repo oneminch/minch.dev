@@ -1,84 +1,89 @@
-import tailwindcss from "@tailwindcss/vite";
+import tailwindcss from '@tailwindcss/vite';
 
 export default defineNuxtConfig({
   app: {
-    rootId: "app",
-    rootTag: "body",
+    rootId: 'app',
+    rootTag: 'body',
     head: {
       htmlAttrs: {
-        lang: "en"
+        lang: 'en'
       },
       meta: [
-        { "http-equiv": "X-UA-Compatible", content: "IE=edge" },
-        { name: "author", content: "Dawit (@oneminch)" },
-        { name: "robots", content: "index, follow" }
+        { 'http-equiv': 'X-UA-Compatible', content: 'IE=edge' },
+        { name: 'author', content: 'Dawit (@oneminch)' },
+        { name: 'robots', content: 'index, follow' }
       ],
       link: [
         {
-          rel: "apple-touch-icon",
-          sizes: "180x180",
-          href: "/apple-touch-icon.png"
+          rel: 'apple-touch-icon',
+          sizes: '180x180',
+          href: '/apple-touch-icon.png'
         },
         {
-          rel: "icon",
-          sizes: "32x32",
-          href: "/favicon-32x32.png"
+          rel: 'icon',
+          sizes: '32x32',
+          href: '/favicon-32x32.png'
         },
         {
-          rel: "icon",
-          sizes: "16x16",
-          href: "/favicon-16x16.png"
+          rel: 'icon',
+          sizes: '16x16',
+          href: '/favicon-16x16.png'
         },
         {
-          rel: "manifest",
-          href: "/site.webmanifest"
+          rel: 'manifest',
+          href: '/site.webmanifest'
         }
       ]
     },
-    pageTransition: { name: "slide", mode: "out-in" },
-    layoutTransition: { name: "slide", mode: "out-in" }
+    pageTransition: { name: 'slide', mode: 'out-in' },
+    layoutTransition: { name: 'slide', mode: 'out-in' }
   },
 
-  components: [{ path: "~/components", pathPrefix: false }],
+  compatibilityDate: '2025-05-16',
+
+  components: [{ path: '~/components', pathPrefix: false }],
 
   content: {
-    contentHead: false,
-    highlight: {
-      theme: "github-dark",
-      preload: ["py"] // new API: langs
-    },
-    ignores: ["drafts", "template.md", "/drafts/", "\\.yml$"],
-    markdown: {
-      toc: { depth: 1, searchDepth: 2 }
+    ignores: ['drafts', 'template.md', '/drafts/', '\\.yml$'],
+    build: {
+      markdown: {
+        toc: { depth: 1, searchDepth: 2 },
+        highlight: {
+          theme: 'github-dark',
+          langs: ['js', 'md', 'py']
+        }
+      }
     }
   },
 
-  css: ["~/assets/css/main.css"],
+  css: ['~/assets/css/main.css'],
+
+  future: {
+    compatibilityVersion: 4
+  },
 
   icon: {
-    mode: "svg",
+    mode: 'svg',
     clientBundle: {
       scan: true
     }
   },
 
   modules: [
-    "@nuxt/content",
-    "@nuxtjs/partytown",
-    "@nuxtjs/turnstile",
-    "@nuxt/image",
-    "@vueuse/nuxt",
-    "@nuxt/icon"
+    '@nuxt/content',
+    '@nuxtjs/partytown',
+    '@nuxtjs/turnstile',
+    '@nuxt/image',
+    '@vueuse/nuxt',
+    '@nuxt/icon'
   ],
 
   routeRules: {
-    "/": { prerender: true },
-    "/**": { prerender: true }
+    '/': { prerender: true },
+    '/**': { prerender: true }
   },
 
   runtimeConfig: {
-    raindropToken: process.env.RAINDROP_TOKEN,
-    raindropCollectionId: process.env.RAINDROP_COLLECTION_ID,
     resendApiKey: process.env.RESEND_API_KEY,
     resendFrom: process.env.RESEND_FROM,
     resendTo: process.env.RESEND_TO,
@@ -91,11 +96,5 @@ export default defineNuxtConfig({
     siteKey: process.env.TURNSTILE_SITE_KEY
   },
 
-  // compatibilityDate: "2024-11-04",
-  future: {
-    compatibilityVersion: 4
-  },
-
-  vite: { plugins: [tailwindcss()] },
-  compatibilityDate: "2025-05-16"
+  vite: { plugins: [tailwindcss()] }
 });

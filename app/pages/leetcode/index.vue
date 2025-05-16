@@ -1,12 +1,16 @@
 <script setup>
   definePageMeta({
-    title: "LeetCode Solutions",
-    description: "My (imperfect) solutions to some LeetCode problems."
+    title: 'LeetCode Solutions',
+    description: 'My (imperfect) solutions to some LeetCode problems.'
   });
 
   // Fetch all LeetCode solutions
-  const { pending, data: codeSolutions } = await useAsyncData("leetcode", () =>
-    queryContent("/leetcode").find()
+  const { pending, data: codeSolutions } = await useLazyAsyncData(
+    'leetcode',
+    () =>
+      queryCollection('leetcode')
+        .select('problemUrl', 'meta', 'title', 'path')
+        .all()
   );
 </script>
 
@@ -29,18 +33,16 @@
       <template v-if="pending">
         <app-code-solution-skeleton
           v-for="skeleton in generateKeys(5)"
-          :key="skeleton"
-        />
+          :key="skeleton" />
       </template>
       <template v-else>
         <app-code-solution-card
           v-for="solution in codeSolutions"
-          :key="solution._path"
+          :key="solution.path"
           :problem-title="solution.title"
-          :url="solution._path"
-          :tags="solution.tags"
-          :problem-url="solution.problemUrl"
-        />
+          :url="solution.path"
+          :tags="solution.meta.tags"
+          :problem-url="solution.problemUrl" />
       </template>
     </section>
   </article>

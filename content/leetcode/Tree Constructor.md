@@ -10,7 +10,7 @@ tags:
 
 ### JavaScript
 
-```javascript
+```js
 function Node(v) {
   this.value = v;
   this.childCount = 0;
@@ -21,7 +21,7 @@ function TreeConstructor(strArr) {
 
   // convert string pairs to array pairs
   const numArr = strArr.map((item) => {
-    let strPairs = item.substring(1, item.length - 1).split(",");
+    let strPairs = item.substring(1, item.length - 1).split(',');
     return strPairs.map((item) => {
       return parseInt(item);
     });

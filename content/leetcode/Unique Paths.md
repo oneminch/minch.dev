@@ -10,7 +10,7 @@ tags:
 
 ### JavaScript
 
-```javascript
+```js
 var uniquePaths = (function (m, n) {
   let cache = {};
 

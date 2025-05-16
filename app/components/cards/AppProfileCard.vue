@@ -1,10 +1,5 @@
 <script setup>
-  const profiles = {
-    GitHub: "https://github.com/oneminch",
-    Bluesky: "https://bsky.app/profile/minch.dev",
-    X: "https://twitter.com/oneminch",
-    LinkedIn: "https://linkedin.com/in/oneminch"
-  };
+  const { socials } = useAppConfig();
 </script>
 
 <!-- Profile card: Profile Picture, Name, Title + Social Profiles -->
@@ -30,7 +25,7 @@
     <div
       class="flex items-center justify-center w-full h-8 text-zinc-900 dark:text-zinc-200">
       <nuxt-link
-        v-for="(profileUrl, name) in profiles"
+        v-for="(profileUrl, name) in socials"
         :key="name"
         class="focus-visible:global-focus icon-link"
         :to="profileUrl"

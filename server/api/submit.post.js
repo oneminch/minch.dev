@@ -27,9 +27,8 @@ export default defineEventHandler(async (event) => {
 
     // Construct message body and send
     const messageBody = `
-    ${
-      senderEmail.trim() ? "FROM: " + senderEmail.trim() + "\n\n" : ""
-    }\n\nNAME: ${senderName}\nMESSAGE: \n\n${senderMessage}`;
+    ${senderEmail.trim() ? "FROM: " + senderEmail.trim() + "\n\n" : ""
+      }\n\nNAME: ${senderName}\nMESSAGE: \n\n${senderMessage}`;
 
     const { data, error } = await resend.emails.send({
       from: `${senderName} <${resendFrom}>`,

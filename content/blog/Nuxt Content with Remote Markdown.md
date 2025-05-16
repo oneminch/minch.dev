@@ -1,32 +1,32 @@
 ---
 id: nuxt-content-with-remote-markdown
-title: "Using Nuxt Content: Working with Remote Markdown Files"
-description: "This post goes over how to get started with Nuxt Content to create a minimal blog, and how to work with remote markdown files."
+title: 'Using Nuxt Content: Working with Remote Markdown Files'
+description: 'This post goes over how to get started with Nuxt Content to create a minimal blog, and how to work with remote markdown files.'
 tags:
   - nuxt
   - nuxt-content
   - markdown
   - vue
   - github
-image: "/content/cover/nuxt-content-with-remote-markdown.png"
-cover_image: "https://raw.githubusercontent.com/oneminch/portfolio/main/public/content/cover/nuxt-content-with-remote-markdown.png"
-canonical_url: "https://minch.dev/blog/nuxt-content-with-remote-markdown"
+image: '/content/cover/nuxt-content-with-remote-markdown.png'
+cover_image: 'https://raw.githubusercontent.com/oneminch/portfolio/main/public/content/cover/nuxt-content-with-remote-markdown.png'
+canonical_url: 'https://minch.dev/blog/nuxt-content-with-remote-markdown'
 head:
   meta:
     - name: robots
-      content: "index, follow"
+      content: 'index, follow'
     - name: author
       content: Dawit (@oneminch)
-    - property: "og:type"
+    - property: 'og:type'
       content: article
-    - name: "twitter:card"
+    - name: 'twitter:card'
       content: summary_large_image
 published: true
-published_on: "2024-04-15"
+published_on: '2024-04-15'
 featured: true
 ---
 
-This article discusses how to get started with Nuxt Content to create a minimal blog, and how to work with remote Markdown files.
+This article discusses how to get started with Nuxt Content (v2) to create a minimal blog, and how to work with remote Markdown files.
 
 The first section goes over how to set up a project with Nuxt Content, and the second cover working with Markdown files. If you are already familiar with the setup steps, feel free to skip the first section.
 
@@ -60,7 +60,7 @@ npm install @nuxt/content
 
 ```js
 export default defineNuxtConfig({
-  modules: ["@nuxt/content"]
+  modules: ['@nuxt/content']
 });
 ```
 
@@ -145,16 +145,16 @@ export default defineNuxtConfig({
   content: {
     sources: {
       blog: {
-        driver: "fs",
-        prefix: "/blog",
-        base: resolve(__dirname, "articles")
+        driver: 'fs',
+        prefix: '/blog',
+        base: resolve(__dirname, 'articles')
       },
       github: {
-        driver: "github",
-        prefix: "/notes",
-        repo: "oneminch/notes",
-        branch: "main",
-        dir: "Glossary"
+        driver: 'github',
+        prefix: '/notes',
+        repo: 'oneminch/notes',
+        branch: 'main',
+        dir: 'Glossary'
       }
     }
   }
@@ -180,8 +180,8 @@ We can also use our prefix in different parts of our code that require a path fo
 
 ```vue
 <script setup>
-  const { data: notes } = await useLazyAsyncData("my-notes", () =>
-    queryContent("/notes").find()
+  const { data: notes } = await useLazyAsyncData('my-notes', () =>
+    queryContent('/notes').find()
   );
 </script>
 ```

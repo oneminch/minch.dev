@@ -11,7 +11,7 @@ tags:
 
 ### JavaScript
 
-```javascript
+```js
 /**
  * @param {number[]} nums
  * @return {number[]}

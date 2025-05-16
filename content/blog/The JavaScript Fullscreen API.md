@@ -8,7 +8,7 @@ tags:
 image: /content/cover/js-fullscreen-api.png
 cover_image: https://raw.githubusercontent.com/oneminch/portfolio/main/public/content/cover/js-fullscreen-api.png
 canonical_url: https://minch.dev/blog/js-fullscreen-api
-published_on: "2023-10-23"
+published_on: '2023-10-23'
 ---
 
 Whenever you want to watch a YouTube video, play a video game or just want to do a focused work in your browser, the fullscreen feature makes the experience even more immersive. This article explains how this particular API works in JavaScript and how you can easily implement one in your projects.
@@ -32,7 +32,7 @@ For example, consider the following HTML code:
 
 We can then simply call the method `requestFullscreen()` on the video element. The method is applied to an `Element` interface (and its child elements) to present it in fullscreen. This method can also be used to check whether fullscreen is available on this particular element. To exit fullscreen mode, the `exitFullscreen()` method is called on the `Document` interface. As in the case of the previous method, this method can also be used to check if it's supported on the document or in the browser.
 
-```javascript
+```js
 const el = document.querySelector("#intro");
 if (el.requestFullscreen) {
     el.requestFullscreen();
@@ -55,7 +55,7 @@ Two events are defined by the API:
 - `document.onfullscreenerror` - fired on the `Document` whenever an error occurs when trying to enter or exit fullscreen mode.
 - `document.onfullscreenchange` - fired whenever there is a change in fullscreen status on the entire `Document`, whether it's entering or exiting fullscreen, or switching tabs while in fullscreen mode.
 
-```javascript
+```js
 document.addEventListener("fullscreenerror", () => { ... });
 ...
 document.addEventListener("fullscreenchange", () => { ... });
@@ -82,7 +82,7 @@ We can further customize the element when it is in fullscreen mode using CSS. Th
 
 ## A Detailed Example
 
-```javascript
+```js
 function toggleFS() {
   /*  
     Checks if there is an element in
@@ -124,8 +124,8 @@ function toggleFS() {
     }
   }
 }
-const el = document.querySelector("#fs-btn");
-el.addEventListener("click", toggleFS);
+const el = document.querySelector('#fs-btn');
+el.addEventListener('click', toggleFS);
 ```
 
 The fullscreen API is a very simple and handy tool for developers to apply to their web applications. It makes content more immersive, and help users with smaller screens to view content conveniently on their devices.

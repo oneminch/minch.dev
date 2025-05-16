@@ -12,7 +12,7 @@ tags:
 
 ### JavaScript
 
-```javascript
+```js
 /**
  * @param {number[]} nums1
  * @param {number} m

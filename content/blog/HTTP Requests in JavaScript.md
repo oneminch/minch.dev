@@ -9,7 +9,7 @@ tags:
 image: /content/cover/http-requests-in-javascript.png
 cover_image: https://raw.githubusercontent.com/oneminch/portfolio/main/public/content/cover/http-requests-in-javascript.png
 canonical_url: https://minch.dev/blog/http-requests-in-javascript
-published_on: "2023-10-24"
+published_on: '2023-10-24'
 featured: true
 ---
 
@@ -27,7 +27,7 @@ JavaScript has a set of great tools and methods that allow us to make HTTP reque
 
 The `XMLHttpRequest()` method works as a constructor for us to create an instance and call our AJAX requests on.
 
-```javascript
+```js
 const xhr = new XMLHttpRequest();
 ```
 
@@ -46,7 +46,7 @@ We can then use the `open()` method on our `xhr` object to initialize or configu
 
 It follows the syntax:
 
-```javascript
+```js
 xhr.open(Method, URL[, Async]);
 ```
 
@@ -54,7 +54,7 @@ xhr.open(Method, URL[, Async]);
 
 This method allows us to open and send our request. It takes an optional parameter that contains our request body, which is useful when making POST requests.
 
-```javascript
+```js
 xhr.send([body]);
 ```
 
@@ -62,19 +62,19 @@ xhr.send([body]);
 
 This method is used to set HTTP headers for our request, such as `Content-Type` & `Accept`. Similarly, we can use `xhr.getResponseHeader()` to get header values from our response.
 
-```javascript
+```js
 // Set header for request
-xhr.setRequestHeader("Content-Type", "application/json");
+xhr.setRequestHeader('Content-Type', 'application/json');
 
 // Get header for response
-xhr.getResponseHeader("Content-Type");
+xhr.getResponseHeader('Content-Type');
 ```
 
 #### xhr.abort()
 
 This method is useful when we want to cancel a request. Imagine a scenario where a user wants to cancel a request because it's taking too long. `xhr.abort()` can be used to stop the request.
 
-```javascript
+```js
 xhr.abort();
 ```
 
@@ -84,7 +84,7 @@ xhr.abort();
 
 This value contains the response body we receive from our request. `xhr.responseText` is also a similar property, which is used if our response is in a string format.
 
-```javascript
+```js
 const res = xhr.response;
 ```
 
@@ -97,15 +97,15 @@ This is used to set the response type for our `xhr` object. It can be in any one
 - `document`
 - `blob`
 
-```javascript
-xhr.responseType = "json";
+```js
+xhr.responseType = 'json';
 ```
 
 #### xhr.readyState
 
 Our request changes states as it progresses, and the current state of our request can be accessed by this property. Its values range from 0 (initial state) to 4 (completed state). The event `onreadystatechange` can be used to detect whenever there is a change in state.
 
-```javascript
+```js
 xhr.onreadystatechange = function () {
   if (xhr.readyState == 1) {
     /* request opened */
@@ -128,7 +128,7 @@ xhr.onreadystatechange = function () {
 
 This event is fired when our request is successful and the result is sent back. This can also be computed with `xhr.onreadystatechange` when `xhr.readyState` is 4.
 
-```javascript
+```js
 xhr.onload = () => {
   // Code to run when results are ready
 };
@@ -138,7 +138,7 @@ xhr.onload = () => {
 
 This event is invoked when there is an error in our request, which could be due to network error or invalid configuration of our request.
 
-```javascript
+```js
 xhr.onerror = () => {
   // Code to run when request has failed
 };
@@ -148,7 +148,7 @@ xhr.onerror = () => {
 
 This event is called repeatedly while our request is processed. It can be used to figure out the loading progress of a download or even a page load to let the user know how far along their request has been processed. An **event** parameter can be passed to `xhr.onprogress` and it has properties `event.loaded` and `event.total`, which can be used to show the actual progress feedback.
 
-```javascript
+```js
 xhr.onprogress = (event) => {
   // Code to run while request is being processed
   console.log(`Loaded ${event.loaded} of ${event.total}`);
@@ -161,18 +161,18 @@ We are going to use a simple fake online REST API called [JSONPlaceholder](https
 
 **Method: GET** - is used to retrieve data.
 
-```javascript
+```js
 // Our path to the resource
-let reqURL = "https://jsonplaceholder.typicode.com/posts";
+let reqURL = 'https://jsonplaceholder.typicode.com/posts';
 
 // 1. CREATE OUR XHR OBJECT
 const xhr = new XMLHttpRequest();
 
 // 2. SET OUR RESPONSE TYPE
-xhr.responseType = "json";
+xhr.responseType = 'json';
 
 // 3. CONFIGURE OUR REQUEST
-xhr.open("GET", reqURL, true);
+xhr.open('GET', reqURL, true);
 
 // 4. SEND THE REQUEST
 xhr.send();
@@ -188,13 +188,13 @@ xhr.onprogress = (event) => {
 };
 
 xhr.onerror = () => {
-  console.log("Request failed!");
+  console.log('Request failed!');
 };
 ```
 
 As an output, we get a list of objects in the form of an array.
 
-```javascript
+```js
 // An example object from the array we get
 {
     id: 1,
@@ -206,25 +206,25 @@ As an output, we get a list of objects in the form of an array.
 
 **Method: POST** - is used to send new or updated data to the specified resource.
 
-```javascript
+```js
 // Our path to the resource
-let reqUrl = "https://jsonplaceholder.typicode.com/posts";
+let reqUrl = 'https://jsonplaceholder.typicode.com/posts';
 
 // 1. CREATE OUR XHR OBJECT
 const xhr = new XMLHttpRequest();
 
 // 2. Configure a `POST` request
-xhr.open("POST", reqUrl);
+xhr.open('POST', reqUrl);
 
 // 3. Create a JSON 'post' object
 const json_data = {
-  title: "this is title",
-  body: "this is body",
+  title: 'this is title',
+  body: 'this is body',
   userId: 1
 };
 
 // 4. Set the `Content-Type` header
-xhr.setRequestHeader("Content-Type", "application/json");
+xhr.setRequestHeader('Content-Type', 'application/json');
 
 // 5. Pass a string form of our
 //    json_data object to `send()`
@@ -241,7 +241,7 @@ xhr.onprogress = (event) => {
 };
 
 xhr.onerror = () => {
-  console.log("Request failed!");
+  console.log('Request failed!');
 };
 ```
 
@@ -251,7 +251,7 @@ For our demo API, the object we 'posted' is not actually added to their database
 
 **Method: PUT** - is used to update or modify data at the specified path. This is almost identical to our POST method process. The only things that change are the path, the method name and the object we are updating. Other than these values, the rest is the same.
 
-```javascript
+```js
 // 1. Our path to the object we want to update
 //    Notice the '/1' added to the end
 let reqUrl = "https://jsonplaceholder.typicode.com/posts/1";
@@ -272,16 +272,16 @@ const json_data = {
 
 **Method: DELETE** - is used to delete the specified resource. Based on the documentation for the API, we use a different path to our resource to target and delete an entry.
 
-```javascript
+```js
 // 1. Our path to the object we want to delete
 //    Notice the '/1' added to the end
-let reqUrl = "https://jsonplaceholder.typicode.com/posts/1";
+let reqUrl = 'https://jsonplaceholder.typicode.com/posts/1';
 
 // 2. CREATE OUR XHR OBJECT
 const xhr = new XMLHttpRequest();
 
 // 3. Configure a `DELETE` request
-xhr.open("DELETE", reqUrl);
+xhr.open('DELETE', reqUrl);
 
 // 4. SEND THE REQUEST
 xhr.send();
@@ -295,8 +295,8 @@ Fetch is a promise-based web API. It is a modern alternative to XHR. I have expl
 
 **Method: GET**
 
-```javascript
-let reqUrl = "https://jsonplaceholder.typicode.com/posts";
+```js
+let reqUrl = 'https://jsonplaceholder.typicode.com/posts';
 
 fetch(reqUrl)
   .then((res) => res.json())
@@ -306,16 +306,16 @@ fetch(reqUrl)
 
 **Method: POST**
 
-```javascript
+```js
 fetch(reqUrl, {
-  method: "POST",
+  method: 'POST',
   body: JSON.stringify({
-    title: "this is title",
-    body: "this is body",
+    title: 'this is title',
+    body: 'this is body',
     userId: 1
   }),
   headers: {
-    "Content-type": "application/json"
+    'Content-type': 'application/json'
   }
 })
   .then((res) => res.json())
@@ -325,20 +325,20 @@ fetch(reqUrl, {
 
 **Method: PUT**
 
-```javascript
+```js
 // Our path to the object we want to update
-let reqUrl = "https://jsonplaceholder.typicode.com/posts/1";
+let reqUrl = 'https://jsonplaceholder.typicode.com/posts/1';
 
 fetch(reqUrl, {
-  method: "PUT",
+  method: 'PUT',
   body: JSON.stringify({
     id: 1,
-    title: "this is title",
-    body: "this is body",
+    title: 'this is title',
+    body: 'this is body',
     userId: 1
   }),
   headers: {
-    "Content-type": "application/json"
+    'Content-type': 'application/json'
   }
 })
   .then((res) => res.json())
@@ -348,12 +348,12 @@ fetch(reqUrl, {
 
 **Method: DELETE**
 
-```javascript
+```js
 // 1. Our path to the object we want to delete
-let reqUrl = "https://jsonplaceholder.typicode.com/posts/1";
+let reqUrl = 'https://jsonplaceholder.typicode.com/posts/1';
 
 fetch(reqUrl, {
-  method: "DELETE"
+  method: 'DELETE'
 });
 ```
 

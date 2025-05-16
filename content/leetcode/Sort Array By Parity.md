@@ -10,7 +10,7 @@ tags:
 
 ### JavaScript
 
-```javascript
+```js
 /**
  * @param {number[]} A
  * @return {number[]}
@@ -19,7 +19,8 @@ tags:
 const sortArrayByParity = (A) => {
   let sorted_A = [];
   A.forEach(function (n) {
-    if (n % 2 === 0) sorted_A.unshift(n); // if even, add to beginning of array
+    if (n % 2 === 0)
+      sorted_A.unshift(n); // if even, add to beginning of array
     else sorted_A.push(n); // if odd, add to end of array
   });
 

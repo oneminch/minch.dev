@@ -10,7 +10,7 @@ tags:
 
 ### JavaScript
 
-```javascript
+```js
 /**
  * @param {string} str
  * @return {string}

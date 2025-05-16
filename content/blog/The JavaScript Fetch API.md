@@ -9,7 +9,7 @@ tags:
 image: /content/cover/the-javascript-fetch-api.png
 cover_image: https://raw.githubusercontent.com/oneminch/portfolio/main/public/content/cover/the-javascript-fetch-api.png
 canonical_url: https://minch.dev/blog/the-javascript-fetch-api
-published_on: "2023-10-25"
+published_on: '2023-10-25'
 ---
 
 One of the ways of making [HTTP requests in JavaScript](https://minch.dev/blog/http-requests-in-javascript) is the `fetch()` API. The `fetch()` API is a modern JavaScript API that allows web developers to send/retrieve data across the web.
@@ -34,9 +34,9 @@ In the above analogy:
 
 For example, GitHub offers an API to retrieve some data about its users. A simple request using this API will look like this:
 
-```javascript
+```js
 // JavaScript Code
-fetch("https://api.github.com/users").then(function (res) {
+fetch('https://api.github.com/users').then(function (res) {
   /* Code to be executed */
 });
 ```
@@ -53,10 +53,10 @@ When a Promise gets fulfilled, the `then()` method can be called to deal with wh
 
 Going back to our previous example, after retrieving our user list data from the GitHub API, we can convert that data into JSON format. Then we can simply log it to the console or write a function that could display this data on an HTML page.
 
-```javascript
+```js
 // JavaScript Code
 
-fetch("https://api.github.com/users")
+fetch('https://api.github.com/users')
   .then(function (res) {
     return res.json(); // Convert the data into JSON
   })
@@ -76,10 +76,10 @@ In such a case, an error will occur. It is important that these errors are dealt
 
 The `catch()` block is chained at the end of the then() blocks, and it is where error handling is performed. It takes an error object as an argument.
 
-```javascript
+```js
 // JavaScript Code
 
-fetch("https://api.github.com/users")
+fetch('https://api.github.com/users')
   .then(function (res) {
     return res.json(); // Convert the data into JSON
   })
@@ -97,10 +97,10 @@ This code uses a fake REST API called [JSONPlaceholder](https://jsonplaceholder.
 
 **Code**:
 
-```javascript
+```js
 // JavaScript Code
 
-fetch("https://jsonplaceholder.typicode.com/users/2")
+fetch('https://jsonplaceholder.typicode.com/users/2')
   .then(function (res) {
     return res.json(); // Convert the data into JSON
   })
@@ -114,7 +114,7 @@ fetch("https://jsonplaceholder.typicode.com/users/2")
 
 **Output**:
 
-```javascript
+```js
 {
     "id":2,
     "name":"Ervin Howell",
@@ -141,7 +141,7 @@ From the output, it's clear that a user is an object with a set of properties. W
 
 **Code**:
 
-```javascript
+```js
 // JavaScript Code
 
 ...

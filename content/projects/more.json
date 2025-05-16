@@ -4,22 +4,19 @@
       "name": "FontSearch",
       "description": "A search engine for web fonts available on Fontsource",
       "liveUrl": "https://oneminch.github.io/FontSearch/",
-      "icon": "javascript",
-      "visual": true
+      "icon": "javascript"
     },
     {
       "name": "Breathe",
       "description": "Practice common breathing techniques to reduce stress",
       "liveUrl": "https://oneminch.github.io/Vanilla-Apps/Breathe/",
-      "icon": "javascript",
-      "visual": true
+      "icon": "javascript"
     },
     {
       "name": "Netflix UI Clone",
       "description": "A pixel-perfect frontend clone of Netflix made with React",
       "liveUrl": "https://oneminch.github.io/Netflix-Clone/",
-      "icon": "react",
-      "visual": true
+      "icon": "react"
     }
   ]
 }

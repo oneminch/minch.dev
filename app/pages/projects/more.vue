@@ -1,22 +1,14 @@
 <script setup>
   definePageMeta({
-    title: "More Projects",
+    title: 'More Projects',
     description:
-      "More projects that I am currently working on and have worked on."
+      'More projects that I am currently working on and have worked on.'
   });
 
   // Fetch all other projects
   const { pending, data: projects } = await useLazyAsyncData(
-    "all-projects",
-    () => queryContent("/projects/more").findOne(),
-    {
-      transform: (projects) => {
-        return {
-          visual: projects.body.filter((project) => project.visual),
-          nonVisual: projects.body.filter((project) => !project.visual)
-        };
-      }
-    }
+    'all-projects',
+    () => queryCollection('projects').where('title', 'IS', 'More').first()
   );
 </script>
 
@@ -35,7 +27,7 @@
         >my GitHub profile</nuxt-link
       >.
     </p>
-    <!-- Visual Projects -->
+
     <section class="grid grid-cols-1 gap-4 mb-4 lg:grid-cols-2">
       <template v-if="pending">
         <app-project-skeleton
@@ -44,7 +36,7 @@
       </template>
       <template v-else>
         <app-project-card
-          v-for="project in projects.visual"
+          v-for="project in projects.body"
           :key="project.name"
           :project-title="project.name"
           :project-description="project.description"
@@ -52,27 +44,8 @@
           :icon="project.icon" />
       </template>
     </section>
-    <!-- <app-divider class="my-6 md:my-8" /> -->
-    <!-- Non-visual Projects -->
-    <!-- <section class="grid grid-cols-1 gap-4 mb-4 lg:grid-cols-2">
-      <template v-if="pending">
-        <app-project-skeleton
-          v-for="skeletonId in generateKeys(2)"
-          :key="skeletonId"
-        />
-      </template>
-      <template v-else>
-        <app-project-card
-          v-for="project in projects.nonVisual"
-          :key="project.name"
-          :project-title="project.name"
-          :project-description="project.description"
-          :project-url="project.liveUrl"
-          :icon="project.icon"
-        />
-      </template>
-    </section> -->
-    <!-- Link to Featured Projects -->
+
+    <!-- Link Back to Featured Projects -->
     <nuxt-link
       to="/projects"
       class="flex items-center justify-center w-24 py-2 mt-6 font-semibold no-underline duration-150 bg-green-500 rounded-md focus-visible:global-focus text-zinc-800 group/hover-effect">

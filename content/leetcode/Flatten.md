@@ -11,7 +11,7 @@ tags:
 
 ### JavaScript
 
-```javascript
+```js
 /**
  * @param {Array<*|Array>} arr
  * @return {Array}

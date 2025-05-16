@@ -1,20 +1,10 @@
 <script setup>
   definePageMeta({
-    title: "About",
-    description: "Things About Me."
+    title: 'About',
+    description: 'Things About Me.'
   });
 
-  const skillset = {
-    essentials: [
-      "React",
-      "Java",
-      "TypeScript",
-      "Tailwind CSS",
-      "Postgres",
-      "Node.js"
-    ],
-    tinker: ["Prisma", "Vitest", "Python", "Flask"]
-  };
+  const { skillset } = useAppConfig();
 </script>
 
 <!-- About Page -->

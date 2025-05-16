@@ -11,7 +11,7 @@ tags:
 
 ### JavaScript
 
-```javascript
+```js
 /**
  * @param {string} s
  * @return {boolean}
@@ -20,7 +20,7 @@ tags:
 // Checks if string passed
 // is a palindrome or not
 const isPalindrome = function (s) {
-  return s === s.split("").reverse().join("");
+  return s === s.split('').reverse().join('');
 };
 
 const validPalindrome = function (s) {
