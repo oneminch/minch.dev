@@ -1,4 +1,6 @@
 <script setup>
+  import { Analytics } from "@vercel/analytics/nuxt";
+
   import "@fontsource/roboto-mono/400.css";
   import "@fontsource/roboto-mono/500.css";
   import "@fontsource/roboto-mono/600.css";
@@ -10,6 +12,8 @@
 </script>
 
 <template>
+  <Analytics />
+
   <!-- Skip Navigation Link -->
   <a
     href="#main-content"

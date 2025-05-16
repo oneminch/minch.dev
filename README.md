@@ -1,4 +1,4 @@
-# Portfolio V3
+# Portfolio (V3)
 
 The current & third iteration of my portfolio rebuilt from scratch using [Nuxt 3](https://nuxt.com/) and [TailwindCSS](https://tailwindcss.com/).
 
