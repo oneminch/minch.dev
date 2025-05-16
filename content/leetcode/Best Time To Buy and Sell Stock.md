@@ -10,7 +10,7 @@ tags:
 
 ### JavaScript
 
-```javascript
+```js
 function maxProfit(prices: number[]): number {
   let min = prices[0],
     max = 0;

@@ -11,16 +11,16 @@ tags:
 
 ### JavaScript
 
-```javascript
+```js
 /**
  * @param {string} s
  * @return {boolean}
  */
 
 const isPalindrome = (s) => {
-  let stripped = s.toLowerCase().replace(/[^a-z0-9]/gi, "");
+  let stripped = s.toLowerCase().replace(/[^a-z0-9]/gi, '');
 
-  let reversed = stripped.split("").reverse().join("");
+  let reversed = stripped.split('').reverse().join('');
 
   return stripped === reversed;
 };

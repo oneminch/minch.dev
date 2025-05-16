@@ -1,12 +1,15 @@
 <script setup>
   definePageMeta({
-    title: "Blog",
-    description: "My articles on various software development topics."
+    title: 'Blog',
+    description: 'My articles on various software development topics.'
   });
 
   // Fetch all blog posts
-  const { pending, data: posts } = await useLazyAsyncData("all-posts", () =>
-    queryContent("/blog").sort({ published_on: -1 }).find()
+  const { pending, data: posts } = await useLazyAsyncData('all-posts', () =>
+    queryCollection('blog')
+      .select('id', 'meta', 'title', 'path', 'published_on')
+      .order('published_on', 'DESC')
+      .all()
   );
 </script>
 
@@ -21,20 +24,18 @@
       <template v-if="pending">
         <app-blog-skeleton
           v-for="skeleton in generateKeys(5)"
-          :key="skeleton"
-        />
+          :key="skeleton" />
       </template>
       <template v-else>
         <app-blog-card
           v-for="post in posts"
-          :key="post._id"
-          :tags="post.tags"
+          :key="post.id"
+          :tags="post.meta.tags"
           :blog-title="post.title"
           :title="post.title"
-          :url="post._path"
+          :url="post.path"
           :pub-date="post.published_on"
-          :cover-image="post.image"
-        />
+          :cover-image="post.meta.image" />
       </template>
     </section>
   </article>

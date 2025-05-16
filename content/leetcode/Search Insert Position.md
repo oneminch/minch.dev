@@ -10,7 +10,7 @@ tags:
 
 ### JavaScript
 
-```javascript
+```js
 /**
  * @param {number[]} nums
  * @param {number} target

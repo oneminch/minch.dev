@@ -54,7 +54,7 @@ class Solution:
 
 **Memoized Recursive Approach (using Closures)**
 
-```javascript
+```js
 const climbStairs = (function () {
   let cache = {};
 

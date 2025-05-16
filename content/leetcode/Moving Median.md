@@ -11,7 +11,7 @@ tags:
 
 ### JavaScript
 
-```javascript
+```js
 function MovingMedian(arr) {
   let subArr = [],
     midpoint = 0,
@@ -38,6 +38,6 @@ function MovingMedian(arr) {
   });
 
   // return median list as string
-  return nums.join(",");
+  return nums.join(',');
 }
 ```

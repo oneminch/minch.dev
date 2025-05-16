@@ -35,7 +35,7 @@ def isValid(s: str) -> bool:
 
 ### JavaScript
 
-```javascript
+```js
 function isValid(s: string): boolean {
   const mappings = {
     "(": ")",

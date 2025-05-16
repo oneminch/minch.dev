@@ -1,12 +1,11 @@
 <script setup>
   definePageMeta({
-    title: "Dawit · Full-Stack Engineer",
-    description:
-      "I craft delightful and accessible systems using React and Java."
+    title: 'Dawit · Full-Stack Engineer',
+    description: 'I craft delightful and accessible systems using React.'
   });
 
   useHead({
-    titleTemplate: ""
+    titleTemplate: ''
   });
 
   const route = useRoute();
@@ -18,18 +17,23 @@
 
   // Fetch 2 featured blog posts
   const { pending: blogsPending, data: blogPosts } = await useLazyAsyncData(
-    "featured-posts",
+    'featured-posts',
     () =>
-      queryContent("/blog")
-        .where({ featured: true })
-        .sort({ published_on: -1 })
-        .find()
+      queryCollection('blog')
+        .select('id', 'meta', 'title', 'path', 'published_on')
+        .where('featured', 'IS NOT NULL')
+        .order('published_on', 'DESC')
+        .all()
   );
 
   // Fetch 2 featured projects
   const { pending: projectsPending, data: projects } = await useLazyAsyncData(
-    "featured-projects",
-    () => queryContent("/projects").limit(2).find()
+    'featured-projects',
+    () =>
+      queryCollection('projects')
+        .select('description', 'icon', 'title', 'path')
+        .limit(2)
+        .all()
   );
 </script>
 
@@ -55,6 +59,7 @@
         to share my passion and expertise.
       </p> -->
     </section>
+
     <!-- Projects -->
     <section>
       <h2 class="w-auto mb-2 text-xl font-semibold group">
@@ -83,10 +88,11 @@
             :icon="project.icon"
             :project-title="project.title"
             :project-description="project.description"
-            :project-url="project._path" />
+            :project-url="project.path" />
         </template>
       </div>
     </section>
+
     <!-- Latest Blog Posts -->
     <section>
       <h2 class="w-auto mb-2 text-xl font-semibold group">
@@ -111,13 +117,13 @@
         <template v-else>
           <app-blog-card
             v-for="blogPost in blogPosts"
-            :key="blogPost._id"
-            :tags="blogPost.tags"
+            :key="blogPost.id"
+            :tags="blogPost.meta.tags"
             :blog-title="blogPost.title"
             :title="blogPost.title"
-            :url="blogPost._path"
+            :url="blogPost.path"
             :pub-date="blogPost.published_on"
-            :cover-image="blogPost.image" />
+            :cover-image="blogPost.meta.image" />
         </template>
       </div>
     </section>

@@ -10,13 +10,13 @@ tags:
 
 ### JavaScript
 
-```javascript
+```js
 /**
  * @param {string} address
  * @return {string}
  */
 
 const defangIPaddr = (address) => {
-  return address.split(".").join("[.]");
+  return address.split('.').join('[.]');
 };
 ```

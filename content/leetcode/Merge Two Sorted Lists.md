@@ -59,7 +59,7 @@ def mergeTwoLists(list1: Optional[ListNode], list2: Optional[ListNode]) -> Optio
 
 ### JavaScript
 
-```javascript
+```js
 // Definition for singly-linked list.
 class ListNode {
   val: number;

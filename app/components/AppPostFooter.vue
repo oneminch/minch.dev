@@ -1,36 +1,26 @@
+<script setup>
+  const { socials } = useAppConfig();
+</script>
+
 <template>
   <section
-    class="flex items-center gap-x-3 [&>span]:text-zinc-300 [&>span]:dark:text-zinc-700 text-zinc-400 [&>a]:border-b-[.1rem]">
+    class="flex items-center gap-x-3 [&>span]:text-zinc-300 [&>span]:dark:text-zinc-700 text-zinc-400">
     <p class="my-0 font-bold">Let's Connect</p>
 
     <Icon name="heroicons:chevron-right-20-solid" class="text-green-500" />
 
-    <nuxt-link
-      class="focus-visible:global-focus"
-      to="https://twitter.com/oneminch"
-      target="_blank"
-      external
-      >Twitter
-    </nuxt-link>
+    <template v-for="(profileUrl, name, index) in socials" :key="name">
+      <nuxt-link
+        class="focus-visible:global-focus icon-link border-none"
+        :to="profileUrl"
+        :title="name"
+        :aria-label="`Link to My ${name} Profile`"
+        target="_blank"
+        external>
+        <Icon :name="`simple-icons:${name.toLowerCase()}`" />
+      </nuxt-link>
 
-    <span>&bull;</span>
-
-    <nuxt-link
-      class="focus-visible:global-focus"
-      to="https://github.com/oneminch"
-      target="_blank"
-      external
-      >GitHub
-    </nuxt-link>
-
-    <span>&bull;</span>
-
-    <nuxt-link
-      class="focus-visible:global-focus"
-      to="https://linkedin.com/in/oneminch"
-      target="_blank"
-      external
-      >LinkedIn
-    </nuxt-link>
+      <span v-if="index !== Object.keys(socials).length - 1">&bull;</span>
+    </template>
   </section>
 </template>

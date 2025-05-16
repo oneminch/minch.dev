@@ -10,7 +10,7 @@ tags:
 
 ### JavaScript
 
-```javascript
+```js
 /**
  * @param {string} s
  * @return {number}
@@ -18,7 +18,7 @@ tags:
 
 const lengthOfLastWord = (s) => {
   return s
-    .split(" ")
+    .split(' ')
     .filter((str) => str.length > 0)
     .pop().length;
 };

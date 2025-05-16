@@ -18,7 +18,7 @@
   };
 </script>
 
-<!-- Link: Feedback Toast -->
+<!-- Feedback Toast -->
 <template>
   <section
     :class="`flex items-center px-3 py-1 my-4 rounded-md text-zinc-800 text-sm ring-1 ${

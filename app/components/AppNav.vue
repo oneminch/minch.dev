@@ -1,15 +1,10 @@
 <script setup>
-  import { OnClickOutside } from "@vueuse/components";
+  import { OnClickOutside } from '@vueuse/components';
 
   const menuToggled = ref(false);
   const toggleMenu = useToggle(menuToggled);
 
-  const navLinks = {
-    Home: "",
-    About: "about",
-    Projects: "projects",
-    Blog: "blog"
-  };
+  const { navLinks } = useAppConfig();
 </script>
 
 <!-- Navigation: Links -->
@@ -24,13 +19,13 @@
         :key="link"
         class="relative flex items-center mb-2 overflow-hidden font-bold rounded-md">
         <nuxt-link
-          class="focus-visible:global-focus focus-visible:ring-inset focus-visible:ring-2 w-full h-10 py-1 px-4 flex items-center rounded-md font-semibold transition-all duration-150 hover:bg-transparent md:hover:bg-zinc-200/75 md:dark:hover:bg-zinc-700 [&>svg]:hover:translate-x-1"
+          class="focus-visible:global-focus focus-visible:ring-inset focus-visible:ring-2 w-full h-10 py-1 px-4 flex items-center rounded-md font-semibold transition-all duration-150 hover:bg-transparent md:hover:bg-zinc-200/75 md:dark:hover:bg-zinc-700 group"
           activeClass="bg-zinc-600/10 dark:bg-zinc-700/75 md:bg-zinc-200 md:dark:bg-zinc-700/75 focus-visible:ring-transparent"
           :to="`/${route}`">
           {{ link }}
           <Icon
             name="heroicons:chevron-right-20-solid"
-            class="ml-2 text-green-500" />
+            class="ml-2 text-green-500 group-hover:translate-x-1" />
         </nuxt-link>
       </li>
     </ul>
