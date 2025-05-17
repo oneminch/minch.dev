@@ -1,6 +1,14 @@
 import tailwindcss from '@tailwindcss/vite';
 
 export default defineNuxtConfig({
+  modules: [
+    '@nuxt/content',
+    '@nuxtjs/partytown',
+    '@nuxtjs/turnstile',
+    '@nuxt/image',
+    '@vueuse/nuxt',
+    '@nuxt/icon'
+  ],
   app: {
     rootId: 'app',
     rootTag: 'body',
@@ -30,6 +38,11 @@ export default defineNuxtConfig({
           href: '/favicon-16x16.png'
         },
         {
+          rel: 'icon',
+          type: 'image/x-icon',
+          href: '/favicon.ico'
+        },
+        {
           rel: 'manifest',
           href: '/site.webmanifest'
         }
@@ -44,7 +57,6 @@ export default defineNuxtConfig({
   components: [{ path: '~/components', pathPrefix: false }],
 
   content: {
-    ignores: ['drafts', 'template.md', '/drafts/', '\\.yml$'],
     build: {
       markdown: {
         toc: { depth: 1, searchDepth: 2 },
@@ -58,6 +70,10 @@ export default defineNuxtConfig({
 
   css: ['~/assets/css/main.css'],
 
+  devtools: {
+    enabled: true
+  },
+
   future: {
     compatibilityVersion: 4
   },
@@ -68,15 +84,6 @@ export default defineNuxtConfig({
       scan: true
     }
   },
-
-  modules: [
-    '@nuxt/content',
-    '@nuxtjs/partytown',
-    '@nuxtjs/turnstile',
-    '@nuxt/image',
-    '@vueuse/nuxt',
-    '@nuxt/icon'
-  ],
 
   routeRules: {
     '/': { prerender: true },

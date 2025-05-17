@@ -13,7 +13,7 @@
     queryCollection('leetcode').path(route.path).first()
   );
 
-  const { title: postTitle, description: postDescription } = page.value;
+  const { title: postTitle, problemUrl: postDescription } = page.value;
 
   const serverMeta = {
     ogImage: '/og-image.png',
@@ -26,11 +26,11 @@
 
   useSeoMeta({
     title: () => postTitle,
-    description: () => postDescription,
+    description: () => `Problem URL: ${postDescription}`,
     ogTitle: () => `${postTitle} (LeetCode Solution) · Dawit`,
     twitterTitle: () => `${postTitle} (LeetCode Solution) · Dawit`,
-    ogDescription: () => postDescription,
-    twitterDescription: () => postDescription,
+    ogDescription: () => `Problem URL: ${postDescription}`,
+    twitterDescription: () => `Problem URL: ${postDescription}`,
     ogUrl: () => `https://minch.dev${route.path}`,
     ...serverMeta
   });

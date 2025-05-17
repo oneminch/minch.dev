@@ -4,7 +4,10 @@ export default defineContentConfig({
   collections: {
     blog: defineCollection({
       type: 'page',
-      source: 'blog/*.md',
+      source: {
+        include: 'blog/*.md',
+        exclude: ['drafts', 'template.md', '/drafts/', '\\.yml$']
+      },
       schema: z.object({
         published_on: z.string(),
         featured: z.optional(z.boolean())

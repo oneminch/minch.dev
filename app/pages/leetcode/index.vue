@@ -1,7 +1,7 @@
 <script setup>
   definePageMeta({
     title: 'LeetCode Solutions',
-    description: 'My (imperfect) solutions to some LeetCode problems.'
+    description: 'My solutions to some LeetCode problems.'
   });
 
   // Fetch all LeetCode solutions
@@ -20,6 +20,7 @@
     <h1 class="flex items-center gap-2 mb-4 text-3xl font-bold text-left">
       LeetCode Solutions
       <span
+        v-if="!pending"
         class="inline-flex items-center justify-center w-8 h-8 text-base font-medium rounded-full dark:bg-zinc-800 dark:text-zinc-300 bg-zinc-200 text-zinc-600"
         aria-label="Total Number of Solutions"
         title="Total Number of Solutions"
