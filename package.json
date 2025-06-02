@@ -10,7 +10,7 @@
   },
   "devDependencies": {
     "@nuxt/content": "^3.5.1",
-    "@nuxt/devtools": "^1.7.0",
+    "@nuxt/devtools": "^2.4.1",
     "@nuxt/icon": "^1.13.0",
     "@nuxt/image": "1.10.0",
     "@nuxtjs/partytown": "^1.6.0",
