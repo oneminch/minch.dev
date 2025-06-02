@@ -20,7 +20,7 @@
     "nuxt": "^3.17.3"
   },
   "dependencies": {
-    "@fontsource/roboto-mono": "^5.2.5",
+    "@fontsource/roboto-mono": "^5.2.6",
     "@fontsource/space-grotesk": "^5.2.7",
     "@tailwindcss/vite": "^4.1.7",
     "@vercel/analytics": "^1.5.0",
