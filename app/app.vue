@@ -1,6 +1,4 @@
 <script setup>
-  import { Analytics } from "@vercel/analytics/nuxt";
-
   import "@fontsource/roboto-mono/400.css";
   import "@fontsource/roboto-mono/500.css";
   import "@fontsource/roboto-mono/600.css";
@@ -9,11 +7,19 @@
   import "@fontsource/space-grotesk/500.css";
   import "@fontsource/space-grotesk/600.css";
   import "@fontsource/space-grotesk/700.css";
+
+  useHead({
+    script: [
+      {
+        src: "/measure/script.js",
+        async: true,
+        "data-endpoint": "/measure"
+      }
+    ]
+  });
 </script>
 
 <template>
-  <Analytics />
-
   <!-- Skip Navigation Link -->
   <a
     href="#main-content"
