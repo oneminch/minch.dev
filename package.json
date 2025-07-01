@@ -22,7 +22,7 @@
   "dependencies": {
     "@fontsource/roboto-mono": "^5.2.6",
     "@fontsource/space-grotesk": "^5.2.8",
-    "@tailwindcss/vite": "^4.1.8",
+    "@tailwindcss/vite": "^4.1.11",
     "@vueuse/components": "^13.3.0",
     "axios": "^1.9.0",
     "resend": "^4.5.2",
