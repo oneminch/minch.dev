@@ -9,7 +9,6 @@
     "postinstall": "nuxi prepare"
   },
   "devDependencies": {
-    "@nuxt/content": "^3.6.3",
     "@nuxt/devtools": "^2.6.2",
     "@nuxt/icon": "^1.15.0",
     "@nuxt/image": "1.10.0",
@@ -17,16 +16,17 @@
     "@nuxtjs/turnstile": "^1.0.0",
     "@tailwindcss/typography": "^0.5.16",
     "@vueuse/nuxt": "^13.5.0",
-    "nuxt": "^3.17.7"
+    "nuxt": "^4.0.1"
   },
   "dependencies": {
     "@fontsource/roboto-mono": "^5.2.6",
     "@fontsource/space-grotesk": "^5.2.8",
+    "@nuxt/content": "^3.6.3",
     "@tailwindcss/vite": "^4.1.11",
     "@vueuse/components": "^13.5.0",
     "axios": "^1.10.0",
     "resend": "^4.7.0",
     "tailwindcss": "^4.1.11"
   },
-  "packageManager": "pnpm@10.11.0"
+  "packageManager": "pnpm@10.13.1"
 }

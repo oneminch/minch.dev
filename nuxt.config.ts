@@ -74,10 +74,6 @@ export default defineNuxtConfig({
     enabled: true
   },
 
-  future: {
-    compatibilityVersion: 4
-  },
-
   icon: {
     mode: 'svg',
     clientBundle: {
