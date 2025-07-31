@@ -10,7 +10,6 @@
     () =>
       queryCollection('projects')
         .select('description', 'icon', 'title', 'path')
-        .where('title', 'IS NOT', 'More')
         .all()
   );
 </script>
@@ -40,14 +39,5 @@
           :project-url="project.path" />
       </template>
     </section>
-    <!-- Link to More Projects -->
-    <nuxt-link
-      to="/projects/more"
-      class="flex items-center justify-center w-24 py-2 font-semibold no-underline duration-150 bg-green-500 rounded-md focus-visible:global-focus text-zinc-800 group/hover-effect"
-      >More
-      <Icon
-        name="heroicons:chevron-right-20-solid"
-        class="ml-1 group-hover/hover-effect:translate-x-1" />
-    </nuxt-link>
   </article>
 </template>
