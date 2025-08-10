@@ -1,12 +1,12 @@
 {
   "private": true,
   "scripts": {
-    "build": "nuxi build",
-    "dev": "nuxi dev",
-    "generate": "nuxi generate",
-    "preview": "nuxi preview",
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
     "preinstall": "npx only-allow pnpm",
-    "postinstall": "nuxi prepare"
+    "postinstall": "nuxt prepare"
   },
   "devDependencies": {
     "@nuxt/devtools": "^2.6.2",
@@ -25,8 +25,9 @@
     "@tailwindcss/vite": "^4.1.11",
     "@vueuse/components": "^13.6.0",
     "axios": "^1.11.0",
+    "better-sqlite3": "^12.2.0",
     "resend": "^5.0.0",
     "tailwindcss": "^4.1.11"
   },
-  "packageManager": "pnpm@10.13.1"
+  "packageManager": "pnpm@10.14.0"
 }
