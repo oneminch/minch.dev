@@ -81,6 +81,10 @@ export default defineNuxtConfig({
     }
   },
 
+  image: {
+    quality: 90
+  },
+
   routeRules: {
     "/": { prerender: true },
     "/**": { prerender: true }
