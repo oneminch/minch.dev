@@ -1,6 +1,6 @@
 # Portfolio (V3)
 
-The current & third iteration of my portfolio rebuilt from scratch using [Nuxt 3](https://nuxt.com/) and [TailwindCSS](https://tailwindcss.com/).
+The current & third iteration of my portfolio rebuilt from scratch using [Nuxt](https://nuxt.com/) and [Tailwind CSS](https://tailwindcss.com/).
 
 - Multi-page
 - Self-hosted Blog
@@ -12,7 +12,7 @@ The current & third iteration of my portfolio rebuilt from scratch using [Nuxt 3
 ## Stack
 
 - [Nuxt](https://nuxt.com/)
-- [TailwindCSS](https://tailwindcss.com/)
+- [Tailwind CSS](https://tailwindcss.com/)
 
 ## Design Inspirations
 
