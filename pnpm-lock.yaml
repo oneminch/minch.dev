@@ -30,8 +30,8 @@ importers:
         specifier: ^12.2.0
         version: 12.2.0
       resend:
-        specifier: ^5.0.0
-        version: 5.0.0(@react-email/render@1.1.2(react-dom@19.1.0(react@19.1.0))(react@19.1.0))
+        specifier: ^6.0.2
+        version: 6.0.2(@react-email/render@1.1.2(react-dom@19.1.0(react@19.1.0))(react@19.1.0))
       tailwindcss:
         specifier: ^4.1.12
         version: 4.1.12
@@ -4195,8 +4195,8 @@ packages:
   require-package-name@2.0.1:
     resolution: {integrity: sha512-uuoJ1hU/k6M0779t3VMVIYpb2VMJk05cehCaABFhXaibcbvfgR8wKiozLjVFSzJPmQMRqIcO0HMyTFqfV09V6Q==}
 
-  resend@5.0.0:
-    resolution: {integrity: sha512-LhYs1lzpV+jrgEuLdXSehe+xOrdwHWvjdxzdvIcAzMW3qW5Fqz0nS4k+xXgUH7dR3ihzB3NutzoPkGZedwYBlQ==}
+  resend@6.0.2:
+    resolution: {integrity: sha512-um08qWpSVvEVqAePEy/bsa7pqtnJK+qTCZ0Et7YE7xuqM46J0C9gnSbIJKR3LIcRVMgO9jUeot8rH0UI84eqMQ==}
     engines: {node: '>=18'}
     peerDependencies:
       '@react-email/render': ^1.1.0
@@ -10105,7 +10105,7 @@ snapshots:
 
   require-package-name@2.0.1: {}
 
-  resend@5.0.0(@react-email/render@1.1.2(react-dom@19.1.0(react@19.1.0))(react@19.1.0)):
+  resend@6.0.2(@react-email/render@1.1.2(react-dom@19.1.0(react@19.1.0))(react@19.1.0)):
     optionalDependencies:
       '@react-email/render': 1.1.2(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
 
