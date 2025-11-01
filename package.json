@@ -13,7 +13,7 @@
     "@nuxt/devtools": "^2.6.5",
     "@nuxt/icon": "^2.0.0",
     "@nuxt/image": "1.11.0",
-    "@nuxtjs/partytown": "^1.6.0",
+    "@nuxtjs/partytown": "^2.0.0",
     "@nuxtjs/turnstile": "^1.0.0",
     "@tailwindcss/typography": "^0.5.19",
     "@vueuse/nuxt": "^13.9.0",
