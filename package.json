@@ -10,7 +10,7 @@
   },
   "devDependencies": {
     "@iconify-json/heroicons": "^1.2.3",
-    "@nuxt/devtools": "^2.6.5",
+    "@nuxt/devtools": "^3.0.1",
     "@nuxt/icon": "^2.0.0",
     "@nuxt/image": "1.11.0",
     "@nuxtjs/partytown": "^1.6.0",
