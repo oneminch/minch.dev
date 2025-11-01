@@ -24,7 +24,7 @@
     "@fontsource/space-grotesk": "^5.2.10",
     "@nuxt/content": "^3.7.1",
     "@tailwindcss/vite": "^4.1.14",
-    "@vueuse/components": "^13.9.0",
+    "@vueuse/components": "^14.0.0",
     "axios": "^1.12.2",
     "better-sqlite3": "^12.4.1",
     "resend": "^6.1.2",
