@@ -16,7 +16,7 @@
     "@nuxtjs/partytown": "^2.0.0",
     "@nuxtjs/turnstile": "^1.1.1",
     "@tailwindcss/typography": "^0.5.19",
-    "@vueuse/nuxt": "^14.0.0",
+    "@vueuse/nuxt": "^14.1.0",
     "nuxt": "^4.2.1"
   },
   "dependencies": {
@@ -24,11 +24,12 @@
     "@fontsource/space-grotesk": "^5.2.10",
     "@nuxt/content": "^3.8.2",
     "@tailwindcss/vite": "^4.1.17",
-    "@vueuse/components": "^14.0.0",
+    "@vueuse/components": "^14.1.0",
     "axios": "^1.13.2",
-    "better-sqlite3": "^12.4.6",
+    "better-sqlite3": "^12.5.0",
     "resend": "^6.5.2",
-    "tailwindcss": "^4.1.17"
+    "tailwindcss": "^4.1.17",
+    "zod": "^3.25.76"
   },
-  "packageManager": "pnpm@10.14.0"
+  "packageManager": "pnpm@10.24.0"
 }
