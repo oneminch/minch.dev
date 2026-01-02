@@ -11,7 +11,7 @@
   "devDependencies": {
     "@iconify-json/heroicons": "^1.2.3",
     "@nuxt/devtools": "^3.1.1",
-    "@nuxt/icon": "^2.1.0",
+    "@nuxt/icon": "^2.1.1",
     "@nuxt/image": "1.11.0",
     "@nuxtjs/partytown": "^2.0.0",
     "@nuxtjs/turnstile": "^1.1.1",
@@ -22,13 +22,13 @@
   "dependencies": {
     "@fontsource/roboto-mono": "^5.2.8",
     "@fontsource/space-grotesk": "^5.2.10",
-    "@nuxt/content": "^3.9.0",
-    "@tailwindcss/vite": "^4.1.17",
+    "@nuxt/content": "^3.10.0",
+    "@tailwindcss/vite": "^4.1.18",
     "@vueuse/components": "^14.1.0",
     "axios": "^1.13.2",
     "better-sqlite3": "^12.5.0",
     "resend": "^6.6.0",
-    "tailwindcss": "^4.1.17",
+    "tailwindcss": "^4.1.18",
     "zod": "^3.25.76"
   },
   "packageManager": "pnpm@10.24.0"
