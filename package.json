@@ -26,10 +26,10 @@
     "@tailwindcss/vite": "^4.1.18",
     "@vueuse/components": "^14.1.0",
     "axios": "^1.13.2",
-    "better-sqlite3": "^12.6.0",
+    "better-sqlite3": "^12.6.2",
     "resend": "^6.7.0",
     "tailwindcss": "^4.1.18",
     "zod": "^3.25.76"
   },
-  "packageManager": "pnpm@10.24.0"
+  "packageManager": "pnpm@10.28.0"
 }
