@@ -10,26 +10,26 @@
   },
   "devDependencies": {
     "@iconify-json/heroicons": "^1.2.3",
-    "@nuxt/devtools": "^3.2.2",
+    "@nuxt/devtools": "^3.2.4",
     "@nuxt/icon": "^2.2.1",
     "@nuxt/image": "1.11.0",
     "@nuxtjs/partytown": "^2.0.0",
-    "@nuxtjs/turnstile": "^1.1.1",
+    "@nuxtjs/turnstile": "^1.1.2",
     "@tailwindcss/typography": "^0.5.19",
     "@vueuse/nuxt": "^14.2.1",
-    "nuxt": "^4.3.1"
+    "nuxt": "^4.4.2"
   },
   "dependencies": {
     "@fontsource/roboto-mono": "^5.2.8",
     "@fontsource/space-grotesk": "^5.2.10",
     "@nuxt/content": "^3.12.0",
-    "@tailwindcss/vite": "^4.2.1",
+    "@tailwindcss/vite": "^4.2.2",
     "@vueuse/components": "^14.2.1",
     "axios": "^1.13.6",
-    "better-sqlite3": "^12.6.2",
-    "resend": "^6.9.3",
-    "tailwindcss": "^4.2.1",
+    "better-sqlite3": "^12.8.0",
+    "resend": "^6.9.4",
+    "tailwindcss": "^4.2.2",
     "zod": "^3.25.76"
   },
-  "packageManager": "pnpm@10.28.0"
+  "packageManager": "pnpm@10.33.0"
 }
