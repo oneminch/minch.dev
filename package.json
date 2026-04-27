@@ -22,14 +22,14 @@
   "dependencies": {
     "@fontsource/roboto-mono": "^5.2.8",
     "@fontsource/space-grotesk": "^5.2.10",
-    "@nuxt/content": "^3.12.0",
-    "@tailwindcss/vite": "^4.2.2",
+    "@nuxt/content": "^3.13.0",
+    "@tailwindcss/vite": "^4.2.4",
     "@vueuse/components": "^14.2.1",
-    "axios": "^1.13.6",
-    "better-sqlite3": "^12.8.0",
-    "resend": "^6.9.4",
-    "tailwindcss": "^4.2.2",
+    "axios": "^1.15.2",
+    "better-sqlite3": "^12.9.0",
+    "resend": "^6.12.2",
+    "tailwindcss": "^4.2.4",
     "zod": "^3.25.76"
   },
-  "packageManager": "pnpm@10.33.0"
+  "packageManager": "pnpm@10.33.2"
 }
