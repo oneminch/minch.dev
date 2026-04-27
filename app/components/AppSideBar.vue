@@ -1,6 +1,5 @@
-<script setup>
-  // Regex pattern for any blog post route
-  const routeRegEx = /(\/blog|\/leetcode)\/.*/i;
+<script setup lang="ts">
+  defineProps<{isHidden: boolean}>()
 </script>
 
 <!-- Sidebar -->
@@ -8,7 +7,7 @@
   <aside
     id="sidebar"
     class="flex flex-col items-center justify-start rounded-xl md:rounded-b-none w-full md:max-w-[18rem] h-full p-5 pb-2 md:mr-4 md:mb-0 mb-6 text-zinc-900 bg-white dark:bg-zinc-950 border border-transparent print:hidden relative md:sticky md:top-4 -z-0"
-    :class="{ hidden: routeRegEx.test($route.fullPath) }">
+    :class="{ hidden: isHidden }">
     <!-- Theme Toggle -->
     <app-theme-toggle class="absolute z-10 top-2 left-2" />
 

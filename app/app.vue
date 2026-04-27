@@ -17,6 +17,13 @@
       }
     ]
   });
+
+  const route = useRoute();
+
+  // Regex pattern for non-sidebar routes
+  const routeRegEx = /(\/blog|\/leetcode)\/.*/i;
+
+  const isSidebarHidden = computed(() => routeRegEx.test(route.fullPath) || route.path === '/repos')
 </script>
 
 <template>
@@ -28,7 +35,7 @@
   >
 
   <!-- Sidebar -->
-  <app-side-bar />
+  <app-side-bar :is-hidden="isSidebarHidden" />
 
   <!-- Main Content -->
   <NuxtLayout>
