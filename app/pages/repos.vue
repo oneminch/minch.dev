@@ -46,10 +46,12 @@
     );
   });
 
-  // Redirect to home if no query params
-  if (Object.keys(route.query).length === 0) {
-    navigateTo('/');
-  }
+  // Redirect to home if no query params (client-side only after hydration)
+  onMounted(() => {
+    if (Object.keys(route.query).length === 0) {
+      navigateTo('/');
+    }
+  });
 </script>
 
 <template>
