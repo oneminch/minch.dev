@@ -14,9 +14,6 @@
   // Parse query parameters and build repo list
   const repos = computed(() => {
     const query = route.query;
-
-    console.log('query', query)
-    console.log('obj', Object.entries(query))
     const repoList = [];
 
     // Iterate through query params: owner:repo1,repo2&owner2:repo3
@@ -48,8 +45,6 @@
       `${a.owner}/${a.name}`.localeCompare(`${b.owner}/${b.name}`)
     );
   });
-
-  console.log(repos)
 
   // Redirect to home if no query params
   if (Object.keys(route.query).length === 0) {
