@@ -1,5 +1,3 @@
-shamefullyHoist: true
-strictPeerDependencies: false
 allowBuilds:
   '@parcel/watcher': true
   '@tailwindcss/oxide': true
