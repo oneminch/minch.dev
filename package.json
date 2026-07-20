@@ -25,7 +25,7 @@
     "@nuxt/content": "^3.14.0",
     "@tailwindcss/vite": "^4.3.0",
     "@vueuse/components": "^14.3.0",
-    "axios": "^1.16.1",
+    "axios": "^1.18.0",
     "better-sqlite3": "^12.10.0",
     "resend": "^6.12.3",
     "tailwindcss": "^4.3.0",
