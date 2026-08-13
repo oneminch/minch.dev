@@ -7,8 +7,16 @@ allowBuilds:
 minimumReleaseAgeExclude:
   - ws@8.20.1
   - sharp@0.35.0
-  - brace-expansion@5.0.8
+  - brace-expansion@5.0.8 || 5.0.9
+  - postcss@8.5.23
+  - undici@8.9.0
+  - nuxt@4.5.1
+  - '@nuxt/devtools@3.3.1'
+  - js-yaml@4.3.1
+  - nanoid@3.3.18
 overrides:
   brace-expansion@<=5.0.7: ^5.0.8
+  nanoid@<3.3.18: ^3.3.18
+  postcss@<=8.5.22: ^8.5.23
   sharp@<0.35.0: ^0.35.0
   ws@>=8.0.0 <8.20.1: ^8.20.1
