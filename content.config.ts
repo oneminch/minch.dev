@@ -1,13 +1,15 @@
 import { defineContentConfig, defineCollection } from '@nuxt/content';
 import { z } from 'zod';
 
+const CONTENT_EXCLUSIONS = ['template.md', '/drafts/', '\\.yml$']
+
 export default defineContentConfig({
   collections: {
     blog: defineCollection({
       type: 'page',
       source: {
         include: 'blog/*.md',
-        exclude: ['drafts', 'template.md', '/drafts/', '\\.yml$']
+        exclude: process.env.NODE_ENV === 'production' ? ['blog/drafts/**', ...CONTENT_EXCLUSIONS] : CONTENT_EXCLUSIONS
       },
       schema: z.object({
         published_on: z.string(),
