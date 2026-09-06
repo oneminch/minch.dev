@@ -85,6 +85,12 @@ export default defineNuxtConfig({
     quality: 90
   },
 
+  nitro: {
+    prerender: {
+      crawlLinks: true
+    }
+  },
+
   routeRules: {
     "/": { prerender: true },
     "/**": { prerender: true }
