@@ -88,7 +88,8 @@ export default defineNuxtConfig({
 
   nitro: {
     prerender: {
-      crawlLinks: true
+      crawlLinks: true,
+      ignore: ["/_vercel/image"]
     }
   },
 
