@@ -8,15 +8,7 @@
   import "@fontsource/space-grotesk/600.css";
   import "@fontsource/space-grotesk/700.css";
 
-  useHead({
-    script: [
-      {
-        src: "/measure/script.js",
-        async: true,
-        "data-endpoint": "/measure"
-      }
-    ]
-  });
+  useScriptVercelAnalytics();
 
   const route = useRoute();
 

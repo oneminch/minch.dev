@@ -7,7 +7,8 @@ export default defineNuxtConfig({
     "@nuxtjs/turnstile",
     "@nuxt/image",
     "@vueuse/nuxt",
-    "@nuxt/icon"
+    "@nuxt/icon",
+    "@nuxt/scripts"
   ],
   app: {
     rootId: "app",
@@ -95,6 +96,12 @@ export default defineNuxtConfig({
     resendFrom: process.env.RESEND_FROM,
     resendTo: process.env.RESEND_TO,
     turnstile: { secretKey: process.env.TURNSTILE_SECRET_KEY }
+  },
+
+  scripts: {
+    registry: {
+      vercelAnalytics: { trigger: "onNuxtReady" }
+    }
   },
 
   telemetry: false,
