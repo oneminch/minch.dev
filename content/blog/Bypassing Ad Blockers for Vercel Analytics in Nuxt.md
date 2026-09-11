@@ -51,11 +51,11 @@ useScriptVercelAnalytics();
 </script>
 ```
 
-Since Nuxt Scripts handles loading the script, the `@vercel/analytics` package is no longer needed. This is now the approach used on this site.
+Since Nuxt Scripts handles loading the script, the `@vercel/analytics` package is no longer needed. This is now the approach I use on this site.
 
 ## Option 2: Proxying Analytics with Nuxt Middleware
 
-By proxying your analytics through a unique, project-specific endpoint rather than the default one, these blocklists can be avoided. Nuxt allows you to create custom endpoints directly within your application with its powerful server middleware feature powered by Nitro. You can use this feature to proxy Vercel Analytics requests through a unique path, effectively disguising them from most blockers.
+By proxying your analytics through a unique, project-specific endpoint rather than the default one, these blocklists can be avoided. Nuxt allows you to create custom endpoints directly within your application with its powerful server middleware feature powered by Nitro. You can use this feature to proxy Vercel Analytics requests through a unique path, effectively disguising them from most blockers. This was my initial solution to this problem before I switched to Nuxt Scripts.
 
 ### Create a Proxy Middleware
 
