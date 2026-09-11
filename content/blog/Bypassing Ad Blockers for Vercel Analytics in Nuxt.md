@@ -6,6 +6,7 @@ tags:
   - nuxt
   - vercel-analytics
   - middleware
+  - nuxt-scripts
 image: /content/cover/bypass-ad-blockers-for-vercel-analytics-nuxt.png
 published_on: "2025-06-24"
 head:
@@ -24,9 +25,37 @@ head:
 
 Vercel Analytics offers a seamless & privacy-friendly way to track page views and performance for apps hosted on the platform. However, many ad blockers and VPN providers recognize and block requests to known analytics endpoints, such as `/_vercel/insights/script.js`, which could result in missing valuable data from users.
 
-## The Solution: Proxying Analytics with Nuxt Middleware
+## Option 1 (Recommended): Using Nuxt Scripts
 
-By proxying your analytics through a unique, project-specific endpoint rather than the default one, these blocklists can be avoided. Nuxt allows you to create custom endpoints directly within your application with its powerful server middleware feature powered by Nitro. You can use this feature to proxy Vercel Analytics requests through a unique path, effectively disguising them from most blockers.
+The simplest way to work around this today is to let [Nuxt Scripts](https://scripts.nuxt.com/) manage the analytics script for you. Its `vercelAnalytics` registry script proxies and bundles the script through your own origin instead of loading it directly from `/_vercel/insights/script.js`, which is enough to avoid most blocklists without any custom middleware.
+
+Install the module and add it to `nuxt.config.ts`:
+
+```ts
+// nuxt.config.ts
+export default defineNuxtConfig({
+  modules: ["@nuxt/scripts"],
+  scripts: {
+    registry: {
+      vercelAnalytics: { trigger: "onNuxtReady" }
+    }
+  }
+});
+```
+
+Then register the script wherever you want it to load, e.g. in `app.vue`:
+
+```vue
+<script setup>
+useScriptVercelAnalytics();
+</script>
+```
+
+Since Nuxt Scripts handles loading the script, the `@vercel/analytics` package is no longer needed. This is now the approach I use on this site.
+
+## Option 2: Proxying Analytics with Nuxt Middleware
+
+By proxying your analytics through a unique, project-specific endpoint rather than the default one, these blocklists can be avoided. Nuxt allows you to create custom endpoints directly within your application with its powerful server middleware feature powered by Nitro. You can use this feature to proxy Vercel Analytics requests through a unique path, effectively disguising them from most blockers. This was my initial solution to this problem before I switched to Nuxt Scripts.
 
 ### Create a Proxy Middleware
 
