@@ -1,7 +1,7 @@
 import { defineContentConfig, defineCollection } from '@nuxt/content';
 import { z } from 'zod';
 
-const CONTENT_EXCLUSIONS = ['template.md', '/drafts/', '\\.yml$']
+const CONTENT_EXCLUSIONS = ['template.md', '/drafts/', '/archive/', '\\.yml$']
 
 export default defineContentConfig({
   collections: {
@@ -25,7 +25,10 @@ export default defineContentConfig({
     }),
     projects: defineCollection({
       type: 'page',
-      source: 'projects/*.*',
+      source: {
+        include: 'projects/*.*',
+        exclude: process.env.NODE_ENV === 'production' ? ['projects/archive/**', ...CONTENT_EXCLUSIONS] : CONTENT_EXCLUSIONS
+      },
       schema: z.object({
         live_url: z.string(),
         source_url: z.string(),
