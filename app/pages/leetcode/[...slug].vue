@@ -16,8 +16,8 @@
   const { title: postTitle, problemUrl: postDescription } = page.value;
 
   const serverMeta = {
-    ogImage: '/og-image.png',
-    twitterImage: '/og-image.png',
+    ogImage: toAbsoluteUrl('/og-image.png'),
+    twitterImage: toAbsoluteUrl('/og-image.png'),
     ogType: 'article',
     ogLocale: 'en_US',
     twitterCard: 'summary',

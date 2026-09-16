@@ -33,8 +33,8 @@
 		twitterTitle: () => `${projectTitle} (Project) · Dawit`,
 		ogDescription: () => projectDescription,
 		twitterDescription: () => projectDescription,
-		ogImage: () => projectImage,
-		twitterImage: () => projectImage,
+		ogImage: () => toAbsoluteUrl(projectImage),
+		twitterImage: () => toAbsoluteUrl(projectImage),
 		ogUrl: () => `https://minch.dev${route.path}`,
 		...serverMeta
 	});
