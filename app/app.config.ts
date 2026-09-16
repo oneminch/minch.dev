@@ -7,14 +7,14 @@ export default defineAppConfig({
   },
   skillset: {
     essentials: [
-      'React',
-      'Java',
+      'Vue',
+      'Nuxt',
       'TypeScript',
       'Tailwind CSS',
       'Postgres',
       'Node.js'
     ],
-    tinker: ['Prisma', 'Vitest', 'Python', 'Flask']
+    tinker: ['Prisma', 'Vitest', 'Java']
   },
   socials: {
     Bluesky: 'https://bsky.app/profile/minch.dev',

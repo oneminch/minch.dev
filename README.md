@@ -16,7 +16,8 @@ The current & third iteration of my portfolio rebuilt from scratch using [Nuxt](
 
 ## Design Inspirations
 
-- [Vincent Rodriguez](https://www.rmoon.me/#)
+- [Maxi](https://onmax.me/#)
+- [Vincent Rodriguez](https://www.rmoon.com/#)
 - [Maggie Appleton](https://maggieappleton.com/)
 - [Fayaz](https://fayazahmed.com/)
 - [Anthony Fu](https://antfu.me/)
