@@ -9,6 +9,7 @@
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
+    "@iconify-json/fluent-emoji": "^1.2.7",
     "@iconify-json/heroicons": "^1.2.3",
     "@nuxt/devtools": "^3.4.1",
     "@nuxt/icon": "^2.3.1",

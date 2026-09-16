@@ -46,6 +46,9 @@ importers:
         specifier: ^3.25.76
         version: 3.25.76
     devDependencies:
+      '@iconify-json/fluent-emoji':
+        specifier: ^1.2.7
+        version: 1.2.7
       '@iconify-json/heroicons':
         specifier: ^1.2.3
         version: 1.2.3
@@ -456,6 +459,9 @@ packages:
 
   '@fontsource/space-grotesk@5.3.0':
     resolution: {integrity: sha512-ksnGizDPXIDuvqcTYTSrmZ+evx9sDlS8rp7+42BQ7wU+spt3twEoXfbJz672C+5CLg6VeUQwRy5RXshWb67LcQ==}
+
+  '@iconify-json/fluent-emoji@1.2.7':
+    resolution: {integrity: sha512-D8G6bKAyIsyxP1rzZtIWr/gg/fO4Rg1+DyCWlfqKK4h8W+4Em/Y0P6QYgJUQTlUcagzJvSyg+9OBv4hz4Hc/QA==}
 
   '@iconify-json/heroicons@1.2.3':
     resolution: {integrity: sha512-n+vmCEgTesRsOpp5AB5ILB6srsgsYK+bieoQBNlafvoEhjVXLq8nIGN4B0v/s4DUfa0dOrjwE/cKJgIKdJXOEg==}
@@ -5525,6 +5531,10 @@ snapshots:
   '@fontsource/roboto-mono@5.3.0': {}
 
   '@fontsource/space-grotesk@5.3.0': {}
+
+  '@iconify-json/fluent-emoji@1.2.7':
+    dependencies:
+      '@iconify/types': 2.0.0
 
   '@iconify-json/heroicons@1.2.3':
     dependencies:
