@@ -6,8 +6,8 @@
   const route = useRoute();
 
   const serverMeta = {
-    ogImage: "/og-image.png",
-    twitterImage: "/og-image.png",
+    ogImage: toAbsoluteUrl("/og-image.png"),
+    twitterImage: toAbsoluteUrl("/og-image.png"),
     ogType: "website",
     ogLocale: "en_US",
     twitterCard: "summary",

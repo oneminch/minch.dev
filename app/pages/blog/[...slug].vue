@@ -33,8 +33,8 @@
     twitterTitle: () => `${postTitle} | Blog · Dawit`,
     ogDescription: () => postDescription,
     twitterDescription: () => postDescription,
-    ogImage: () => postCover,
-    twitterImage: () => postCover,
+    ogImage: () => toAbsoluteUrl(postCover),
+    twitterImage: () => toAbsoluteUrl(postCover),
     ogUrl: () => `https://minch.dev${route.path}`,
     ...serverMeta
   });
