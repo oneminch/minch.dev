@@ -9,7 +9,7 @@ export default defineContentConfig({
       type: 'page',
       source: {
         include: 'blog/*.md',
-        exclude: process.env.NODE_ENV === 'production' ? ['blog/drafts/**', ...CONTENT_EXCLUSIONS] : CONTENT_EXCLUSIONS
+        exclude: CONTENT_EXCLUSIONS
       },
       schema: z.object({
         published_on: z.string(),
@@ -26,8 +26,8 @@ export default defineContentConfig({
     projects: defineCollection({
       type: 'page',
       source: {
-        include: 'projects/*.*',
-        exclude: process.env.NODE_ENV === 'production' ? ['projects/archive/**', ...CONTENT_EXCLUSIONS] : CONTENT_EXCLUSIONS
+        include: 'projects/*.md',
+        exclude: CONTENT_EXCLUSIONS
       },
       schema: z.object({
         live_url: z.string(),
