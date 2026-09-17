@@ -102,7 +102,7 @@
 				external
 				>My photos on Unsplash</a
 			>
-			have over 7 million views 🤯.
+			have over 9 million views 🤯.
 		</p>
 		<br />
 		<div
