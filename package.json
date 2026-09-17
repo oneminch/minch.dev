@@ -10,6 +10,8 @@
   },
   "devDependencies": {
     "@iconify-json/heroicons": "^1.2.3",
+    "@iconify-json/simple-icons": "^1.2.96",
+    "@iconify-json/svg-spinners": "^1.2.4",
     "@nuxt/devtools": "^3.4.2",
     "@nuxt/icon": "^2.5.1",
     "@nuxt/image": "1.11.0",
