@@ -78,7 +78,14 @@ export default defineNuxtConfig({
   icon: {
     mode: "svg",
     clientBundle: {
-      scan: true
+      scan: true,
+      icons: [
+        "svg-spinners:3-dots-fade",
+        "simple-icons:bluesky",
+        "simple-icons:github",
+        "simple-icons:linkedin",
+        "simple-icons:x",
+      ],
     }
   },
 
@@ -86,16 +93,8 @@ export default defineNuxtConfig({
     quality: 90
   },
 
-  nitro: {
-    prerender: {
-      crawlLinks: true,
-      ignore: ["/_vercel/image"]
-    }
-  },
-
   routeRules: {
-    "/": { prerender: true },
-    "/**": { prerender: true }
+    "/**": { isr: true }
   },
 
   runtimeConfig: {
