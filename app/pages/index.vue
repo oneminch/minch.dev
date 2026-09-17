@@ -148,16 +148,16 @@
 				<app-link-card
 					class="row-span-2"
 					label="LeetCode"
-					icon="fluent-emoji:teacup-without-handle"
+					icon="fluent-emoji-flat:teacup-without-handle"
 					url="/leetcode"></app-link-card>
 				<app-link-card
 					label="Second Brain"
-					icon="fluent-emoji:brain"
+					icon="fluent-emoji-flat:brain"
 					:is-external-url="true"
 					url="https://github.com/oneminch/notes"></app-link-card>
 				<app-link-card
 					label="Photography"
-					icon="fluent-emoji:camera"
+					icon="fluent-emoji-flat:camera"
 					:is-external-url="true"
 					url="https://unsplash.com/@oneminch"></app-link-card>
 			</div>

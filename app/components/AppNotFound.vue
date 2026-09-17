@@ -3,7 +3,7 @@
   <div class="flex flex-col items-center justify-center h-96">
     <Icon
       aria-labelledby="not-found"
-      name="fluent-emoji:construction"
+      name="fluent-emoji-flat:construction"
       size="10rem"
       class="mb-8"
     />
